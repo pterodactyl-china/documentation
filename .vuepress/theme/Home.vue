@@ -8,65 +8,63 @@
                     </div>
                     <div class="mt-4">
                         <!-- <a class="btn hidden md:inline-block" href="https://demo.pterodactyl.io" target="_blank" rel="nofollow noopener">Demo</a> -->
-                        <router-link class="btn inline-block" to="/panel/getting_started.html">Let's Get Started!</router-link>
+                        <router-link class="btn inline-block" to="/panel/getting_started.html">让我们开始吧！</router-link>
                     </div>
                 </div>
             </div>
         </div>
         <div class="section bg-white">
             <div class="container text-center">
-                <h1 class="text-blue mb-4">Pterodactyl Panel</h1>
+                <h1 class="text-blue mb-4">翼龙面板</h1>
                 <h3 class="border-0 font-normal leading-normal mx-auto" style="max-width: 50rem">
-                    Pterodactyl&reg; is a free, open-source game server management panel built with PHP, React, and Go.
-                    Designed with security in mind, Pterodactyl runs all game servers in isolated Docker containers
-                    while exposing a beautiful and intuitive UI to end users.
+                    翼龙&reg; 是一个免费的开源游戏服务器管理面板，使用 PHP、React 和 Go 构建。 Pterodactyl 在设计时考虑了安全性，在隔离的 Docker 容器中运行所有游戏服务器，同时向最终用户展示了美观直观的 UI。
                 </h3>
                 <h3 class="border-0 leading-normal mx-auto mt-4" style="max-width: 50rem">
-                    Stop settling for less. Make game servers a first class citizen on your platform.
+                    不要再安于现状了。 让游戏服务器成为您平台上的一等公民。
                 </h3>
                 <img class="max-w-lg w-full m-4 inline-block" src="https://cdn.pterodactyl.io/site-assets/mockup-macbook-grey-1.0.png">
             </div>
         </div>
         <div class="section bg-blue text-grey-lightest">
             <div class="container text-center">
-                <h1 class="mb-4">Why Pterodactyl&reg;</h1>
+                <h1 class="mb-4">为什么选择翼龙&reg;</h1>
                 <div class="flex flex-wrap">
                     <div class="feature">
                         <span><i class="icon icon-lock"></i></span>
-                        <h3>Security First</h3>
-                        <p>Security is a first-class citizen on this platform with bcrypt hashing, AES-256-CBC encryption, and HTTPS support out of the box.</p>
+                        <h3>安全至上</h3>
+                        <p>安全性是该平台上的一等公民，具有 bcrypt 哈希、AES-256-CBC 加密和开箱即用的 HTTPS 支持。</p>
                     </div>
                     <div class="feature">
                         <span><i class="icon icon-beaker"></i></span>
-                        <h3>Modern Tooling</h3>
-                        <p>Built on a modern stack utilizing the best design practices that make it easy to jump in and make modifications.</p>
+                        <h3>现代化的工具</h3>
+                        <p>建立在现代堆栈上，利用最佳设计实践，使其易于进入和修改。</p>
                     </div>
                     <div class="feature">
                         <span><i class="icon icon-anchor"></i></span>
-                        <h3>Docker to the Core</h3>
-                        <p>All servers run in isolated Docker containers that limit attack vectors, provide strict resource limits, and provide environments tailored to each specific game.</p>
+                        <h3>Docker的核心</h3>
+                        <p>所有服务器都在隔离的Docker容器中运行，限制了攻击媒介，提供了严格的资源限制，并提供了为每个特定游戏量身定做的环境。</p>
                     </div>
                     <div class="feature">
                         <span><i class="icon icon-wallet"></i></span>
-                        <h3>Free & Open Source</h3>
-                        <p>Pterodactyl is 100% free and licensed under a MIT license. All of our code is completely open source as well.</p>
+                        <h3>免费和开源</h3>
+                        <p>翼龙是100%免费的，并在MIT许可下授权。我们所有的代码也是完全开源的。</p>
                     </div>
                     <div class="feature">
                         <span><i class="icon icon-browser"></i></span>
-                        <h3>User Friendly</h3>
-                        <p>Save the furious clicking and screaming for Overwatch. Pterodactyl's interface is designed so well even Hanzo can use it.</p>
+                        <h3>用户友好</h3>
+                        <p>把愤怒的点击和尖叫留给《守望先锋》吧。翼龙的界面设计得非常好，甚至连半藏都能使用它。</p>
                     </div>
                     <div class="feature">
                         <span><i class="icon icon-expand"></i></span>
-                        <h3>Scalable</h3>
-                        <p>Whether you're a hosting company, the next Hyplex, or just some dudes playing video games, we've got you covered.</p>
+                        <h3>可扩展性</h3>
+                        <p>无论你是一家托管公司，还是下一个Hyplex，或者只是一些玩视频游戏的家伙，我们都能为你提供服务。</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="section bg-white">
             <div class="text-center">
-                <h1>Screenshots</h1>
+                <h1>屏幕截图</h1>
                 <div class="screenshots">
                     <slick ref="slick" :options="slickOptions">
                         <a href="https://cdn.pterodactyl.io/site-assets/carousel/screenshot-1.png">
@@ -108,10 +106,10 @@
         </div>
         <div class="section bg-blue text-grey-lightest">
             <div class="container text-center">
-                <h1>Get Started</h1>
-                <p class="m-4">Ready to fly on the Pterodactyl?</p>
+                <h1>开始吧</h1>
+                <p class="m-4">准备好在翼龙号上飞翔了吗？</p>
                 <div class="mt-4">
-                    <router-link class="btn inline-block" to="/project/introduction.html">About the project</router-link>
+                    <router-link class="btn inline-block" to="/project/introduction.html">关于本项目</router-link>
                     <a class="btn inline-block" href="https://discord.gg/pterodactyl">Discord</a>
                 </div>
             </div>
@@ -124,21 +122,18 @@
                 <div class="text-left md:flex">
                     <div class="flex-none w-full md:w-1/2 md:pr-12">
                         <p class="my-4">
-                            Since 2015 Pterodactyl&reg; has been delivering robust, performant, and secure software that allows
-                            individuals, networks, and hosting companies to run game servers at scale; easily. Best of all?
-                            No exorbitant monthly costs.
+                            自2015年以来，翼龙&reg;一直在提供强大、高性能和安全的软件，使个人、网络和托管公司轻松地大规模运行游戏服务器。最重要的是？没有高昂的月费！
                         </p>
                         <p class="my-4">
-                            Take the plunge today and discover why thousands of users trust Pterodactyl&reg; to manage their
-                            game servers.
+                            今天就开始吧，看看为什么成千上万的用户信任翼龙&reg;来管理他们的游戏服务器。
                         </p>
                     </div>
                     <div class="hidden md:block md:flex-1 md:pr-12">
                         <p><a class="text-grey-lightest" href="https://github.com/pterodactyl">GitHub</a></p>
-                        <p><a class="text-grey-lightest" href="https://github.com/sponsors/DaneEveritt">Sponsor</a></p>
-                        <p><a class="text-grey-lightest" href="https://paypal.me/PterodactylSoftware">Donate</a></p>
-                        <p><a class="text-grey-lightest" href="/panel/troubleshooting.html">Troubleshooting</a></p>
-                        <p><a class="text-grey-lightest" href="https://github.com/parkervcp/eggs">Additional Game Configurations</a></p>
+                        <p><a class="text-grey-lightest" href="https://github.com/sponsors/DaneEveritt">赞助商</a></p>
+                        <p><a class="text-grey-lightest" href="https://paypal.me/PterodactylSoftware">捐助</a></p>
+                        <p><a class="text-grey-lightest" href="/panel/troubleshooting.html">故障处理</a></p>
+                        <p><a class="text-grey-lightest" href="https://github.com/parkervcp/eggs">额外的游戏配置</a></p>
                     </div>
                     <div class="text-center mt-8 md:flex-1 md:mt-0">
                         <a href="https://discord.gg/pterodactyl" target="_blank" rel="nofollow noopener">
@@ -146,7 +141,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="footer">MIT Licensed | Pterodactyl&reg; Copyright &copy; 2015 - 2022 Dane Everitt & contributors.</div>
+                <div class="footer">MIT Licensed | Pterodactyl&reg; Copyright &copy; 2015 - 2022 Dane Everitt & contributors. | which Sinicizated by Pterodactyl-China.</div>
             </div>
         </div>
     </div>
