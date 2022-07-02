@@ -1,11 +1,18 @@
 module.exports = {
     base: '/documentation/',
-    title: 'Pterodactyl',
-    description: 'Pterodactyl is an open-source game server management panel built with PHP, React, and Go. Designed with security in mind, Pterodactyl runs all game servers in isolated Docker containers while exposing a beautiful and intuitive UI to end users.',
+    title: 'Pterodactyl-China',
+    description: 'Pterodactyl 是一个使用 PHP、React 和 Go 构建的开源游戏服务器管理面板。Pterodactyl 在设计时考虑了安全性，在隔离的 Docker 镜像中运行所有游戏服务器，同时向最终用户展示了美观直观的 UI。',
+    locales: {
+      // 键名是该语言所属的子路径
+      // 作为特例，默认语言可以使用 '/' 作为其路径。
+      '/': {
+        lang: 'zh-CN',
+      }
+    },
     plugins: [
-        ['@vuepress/google-analytics', {
+        /*['@vuepress/google-analytics', {
             ga: 'UA-87324178-3'
-        },],
+        },],*/
         ['@vuepress/search', {
             searchMaxSuggestions: 10
         }],
@@ -38,23 +45,23 @@ module.exports = {
         ['meta', { name: 'theme-color', content: '#0e4688' }],
     ],
     themeConfig: {
-        repo: 'pterodactyl/panel',
-        docsRepo: 'pterodactyl/documentation',
+        repo: 'pterodactyl-china/panel',
+        docsRepo: 'pterodactyl-china/documentation',
         repoLabel: 'GitHub',
-        editLinkText: 'Help us improve this page.',
+        editLinkText: '帮助我们改进此页面。',
         editLinks: true,
         logo: '/logos/pterry.svg',
         nav: [
             {
-                text: 'Documentation',
+                text: '文档',
                 link: '/project/introduction.md',
             },
             {
-                text: 'Community Guides',
+                text: '社区指南',
                 link: '/community/about.md',
             },
             {
-                text: 'Get Help',
+                text: '获取帮助',
                 link: 'https://discord.gg/pterodactyl'
             },
             {
@@ -65,14 +72,14 @@ module.exports = {
         sidebar: {
             '/community/': [
                 {
-                    title: 'Community Guides',
+                    title: '社区指南',
                     collapsable: false,
                     children: [
                         '/community/about.md',
                     ]
                 },
                 {
-                    title: 'Panel Installation',
+                    title: '面板安装',
                     collapsable: false,
                     children: [
                         '/community/installation-guides/panel/centos7.md',
@@ -82,7 +89,7 @@ module.exports = {
                     ]
                 },
                 {
-                    title: 'Wings Installation',
+                    title: 'Wings 安装',
                     collapsable: false,
                     children: [
                         '/community/installation-guides/wings/centos7.md',
@@ -92,7 +99,7 @@ module.exports = {
                     ]
                 },
                 {
-                    title: 'Creating Eggs',
+                    title: '创建预设',
                     collapsable: false,
                     children: [
                         '/community/config/eggs/creating_a_custom_egg.md',
@@ -100,14 +107,14 @@ module.exports = {
                     ],
                 },
                 {
-                    title: 'Game Configuration',
+                    title: '游戏配置',
                     collapsable: false,
                     children: [
                         '/community/games/minecraft.md',
                     ],
                 },
                 {
-                    title: 'Tutorials',
+                    title: '教程',
                     collapsable: false,
                     children: [
                         '/community/config/nodes/add_node.md',
@@ -115,7 +122,7 @@ module.exports = {
                     ],
                 },
                 {
-                    title: 'Customization',
+                    title: '定制',
                     collapsable: false,
                     children: [
                         '/community/customization/panel.md',
@@ -125,7 +132,7 @@ module.exports = {
             ],
             '/': [
                 {
-                    title: 'Project Information',
+                    title: '项目信息',
                     collapsable: false,
                     children: [
                         '/project/introduction.md',
@@ -135,7 +142,7 @@ module.exports = {
                     ]
                 },
                 {
-                    title: 'Panel',
+                    title: '面板',
                     collapsable: false,
                     path: '/panel/',
                     currentVersion: '1.0',
@@ -175,7 +182,7 @@ module.exports = {
                     ]
                 },
                 {
-                    title: 'Tutorials',
+                    title: '教程',
                     collapsable: false,
                     children: [
                         '/tutorials/mysql_setup.md',
@@ -183,14 +190,14 @@ module.exports = {
                     ],
                 },
                 {
-                    title: 'Guides',
+                    title: '指南',
                     collapsable: false,
                     children: [
                         '/guides/mounts.md',
                     ],
                 },
                 {
-                    title: 'Development & Ops',
+                    title: '开发与运营',
                     collapsable: true,
                     children: [
                         '/ops/publish_release.md',

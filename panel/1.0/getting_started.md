@@ -1,100 +1,89 @@
-# Getting Started
+# 开始入门
 
 [[toc]]
 
-Pterodactyl Panel is designed to run on your own web server. You will need to have root access to your server in order to run and use this panel.
+翼龙面板运行在您自己的 Web 服务器上。为了运行和使用这个面板，您需要对您的服务器具有 root 访问权限。
 
-You are expected to understand how to read documentation to use this Panel. We have spent many hours detailing how to install or upgrade our
-software; take some time and read rather than copy and pasting and then complaining when things do not work. This panel does
-not exist as a drag-and-drop service to run your servers. It is a highly complex system requiring multiple dependencies and
-administrators willing to spend some time learning how to use it. **If you expect to be able to install this with no understanding
-of basic linux system administration you should stop and turn around now.**
+您需要了解如何阅读文档以使用此面板。我们花了很多时间详细介绍如何安装或升级我们的软件； 所以你也要花点时间去阅读而不是复制粘贴，然后在事情不起作用时候而抱怨。此面板不作为运行服务器的拖放服务存在。这是一个高度复杂的系统，需要多个依赖项，并且使用搭建他的网站管理人员需要付出一些时间学习如何使用它。**如果您希望能够在不了解基本 linux 系统管理的情况下安装它，您现在应该停下来然后出门左拐。**
 
-::: tip Looking for something simple to setup?
-[WISP](https://wisp.gg) is a Pterodactyl powered SaaS suitable for enterprise and personal use. Offering all the features without the setup hassle, and fully compatible with Pterodactyl eggs. Comparable to MultiCraft or TCAdmin while offering new and unique features. Click here to [learn more](https://wisp.gg/features).
+::: tip 想要更简单的设置？
+[WISP](https://wisp.gg) 是一款由翼龙驱动的 SaaS，适合企业和个人使用。提供所有功能，无需设置麻烦，并与翼龙预设完全兼容。与 MultiCraft 或 TCAdmin 相媲美，同时提供新的和独特的功能。单击此处 [了解更多](https://wisp.gg/features)。
 :::
 
-## Picking a Server OS
+## 选择服务器操作系统
 
-Pterodactyl runs on a wide range of operating systems, so pick whichever you are most comfortable using.
+翼龙可在多种操作系统上运行，因此请选择最适合您使用的操作系统。
 
 ::: warning
-Pterodactyl does not support most OpenVZ systems due to incompatibilities with Docker. If you are planning on running
-this software on an OpenVZ based system you will &mdash; most likely &mdash; not be successful.
+由于与 Docker 不兼容，翼龙不支持大多数 OpenVZ 系统。如果您计划在基于 OpenVZ 的系统上运行此软件，您将很大概率不会成功。
 :::
 
-| Operating System | Version |     Supported      | Notes                                                       |
+| 操作系统 | 版本 |     支持      | 注意事项                                                       |
 | ---------------- | ------- | :----------------: | ----------------------------------------------------------- |
-| **Ubuntu**       | 18.04   | :white_check_mark: | Documentation written assuming Ubuntu 18.04 as the base OS. |
+| **Ubuntu**       | 18.04   | :white_check_mark: | 文档基础 Ubuntu 18.04 作为操作系统所编写的。|
 |                  | 20.04   | :white_check_mark: |                                                             |
-|                  | 22.04   | :white_check_mark: | MariaDB can be installed without the repo setup script.     |
-| **CentOS**       | 7       | :white_check_mark: | Extra repos are required.                                   |
-|                  | 8       | :white_check_mark: | Note that CentOS 8 is EOL. Use Rocky or Alma Linux.         |
-| **Debian**       | 9       | :white_check_mark: | Extra repos are required.                                   |
+|                  | 22.04   | :white_check_mark: | MariaDB 无需 repo 安装脚本即可安装。   |
+| **CentOS**       | 7       | :white_check_mark: | 需要额外的 repos。                                 |
+|                  | 8       | :white_check_mark: | 请注意，CentOS 8 已停运。使用 Rocky 或 Alma Linux。       |
+| **Debian**       | 9       | :white_check_mark: | 需要额外的 repos。                                 |
 |                  | 10      | :white_check_mark: |                                                             |
 |                  | 11      | :white_check_mark: |                                                             |
 
-## Dependencies
+## 依赖项
 
-* PHP `7.4`, `8.0` or `8.1` (recommended) with the following extensions: `cli`, `openssl`, `gd`, `mysql`, `PDO`, `mbstring`, `tokenizer`, `bcmath`, `xml` or `dom`, `curl`, `zip`, and `fpm` if you are planning to use NGINX.
-* MySQL `5.7.22` and higher (MySQL `8` recommended) **or** MariaDB `10.2` and higher.
+* PHP `7.4`、`8.0` 或 `8.1`（推荐），带有以下扩展名：`cli`、`openssl`、`gd`、`mysql`、`PDO`、`mbstring` `tokenizer`、`bcmath `、`xml` 或 `dom`、`curl`、`zip` 和 `fpm` 如果你打算使用 NGINX。
+* MySQL `5.7.22` 及更高版本（推荐 MySQL `8`）**或** MariaDB `10.2` 及更高版本。
 * Redis (`redis-server`)
-* A webserver (Apache, NGINX, Caddy, etc.)
+* 一个 Web 服务器（Apache、NGINX、Caddy 等）
 * `curl`
 * `tar`
 * `unzip`
 * `git`
 * `composer` v2
 
-### Example Dependency Installation
+### 依赖项安装示例
 
-The commands below are simply an example of how you might install these dependencies. Please consult with your
-operating system's package manager to determine the correct packages to install.
+下面的命令只是一个示例，说明如何安装这些依赖项。每个系统安装方式都不一样，请确定自己的操作系统来确定要安装的软件包是否正确。
 
 ``` bash
-# Add "add-apt-repository" command
+# 添加 "add-apt-repository" 命令
 apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
 
-# Add additional repositories for PHP, Redis, and MariaDB
+# 为 PHP、Redis 和 MariaDB 添加额外的存储库
 LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
 add-apt-repository ppa:redislabs/redis -y
 
-# MariaDB repo setup script can be skipped on Ubuntu 22.04
+# 在 Ubuntu 22.04 上可以跳过 MariaDB 存储库设置脚本
 curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
 
-# Update repositories list
+# 更新存储库列表
 apt update
 
-# Add universe repository if you are on Ubuntu 18.04
+# 如果您使用的是 Ubuntu 18.04，请添加 Universe 存储库
 apt-add-repository universe
 
-# Install Dependencies
+# 安装依赖项
 apt -y install php8.1 php8.1-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
 ```
 
-### Installing Composer
+### 安装 Composer
 
-Composer is a dependency manager for PHP that allows us to ship everything you'll need code wise to operate the Panel. You'll
-need composer installed before continuing in this process.
+Composer 是 PHP 的依赖管理器，它允许我们发送您需要的所有代码来操作面板。在继续此过程之前，您需要安装 composer。
 
 ``` bash
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 ```
 
-## Download Files
+## 下载文件
 
-The first step in this process is to create the folder where the panel will live and then move ourselves into that
-newly created folder. Below is an example of how to perform this operation.
+此过程的第一步是创建面板所在的文件夹，然后进入新创建的文件夹中。以下是如何执行此操作的示例。
 
 ``` bash
 mkdir -p /var/www/pterodactyl
 cd /var/www/pterodactyl
 ```
 
-Once you have created a new directory for the Panel and moved into it you'll need to download the Panel files. This
-is as simple as using `curl` to download our pre-packaged content. Once it is downloaded you'll need to unpack the archive
-and then set the correct permissions on the `storage/` and `bootstrap/cache/` directories. These directories
-allow us to store files as well as keep a speedy cache available to reduce load times.
+一旦您为面板创建了一个新目录并移入其中，您需要下载面板文件。这就像使用 `curl` 下载我们预打包的内容一样简单。下载后，您需要解压文件，然后在 `storage/` 和 `bootstrap/cache/` 目录上设置正确的权限。这些目录允许我们存储文件以及保持可用的快速缓存以减少加载时间。
 
 ``` bash
 curl -Lo panel.tar.gz https://github.com/pterodactyl/panel/releases/latest/download/panel.tar.gz
@@ -102,19 +91,17 @@ tar -xzvf panel.tar.gz
 chmod -R 755 storage/* bootstrap/cache/
 ```
 
-## Installation
+## 安装
 
-Now that all of the files have been downloaded we need to configure some core aspects of the Panel.
+现在所有文件都已下载，我们需要配置面板的一些核心方面的内容。
 
-::: tip Database Configuration
-You will need a database setup and a user with the correct permissions created for that database before
-continuing any further. See below to create a user and database for your Pterodactyl panel quickly. To find more detailed information
-please have a look at [Setting up MySQL](/tutorials/mysql_setup.html).
+::: tip 数据库配置
+您将需要一个数据库设置和一个具有为该数据库创建正确权限的用户，然后才能继续进行。请参阅下文以快速为您的翼龙面板创建用户和数据库。要查找更多详细信息，请查看 [设置 MySQL](/tutorials/mysql_setup.html)。
 
 ```sql
 mysql -u root -p
 
-# Remember to change 'yourPassword' below to be a unique password
+# 记得把下面的 'yourPassword' 改成唯一的密码
 CREATE USER 'pterodactyl'@'127.0.0.1' IDENTIFIED BY 'yourPassword';
 CREATE DATABASE panel;
 GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1' WITH GRANT OPTION;
@@ -123,96 +110,85 @@ exit
 
 :::
 
-First we will copy over our default environment settings file, install core dependencies, and then generate a
-new application encryption key.
+首先，我们将复制默认环境设置文件，安装核心依赖项，然后生成新的应用程序加密密钥。
 
 ``` bash
 cp .env.example .env
 composer install --no-dev --optimize-autoloader
 
-# Only run the command below if you are installing this Panel for
-# the first time and do not have any Pterodactyl Panel data in the database.
+# 如果您要安装此面板，请仅运行以下命令
+# 第一次并且数据库中没有任何翼龙面板数据的话。
 php artisan key:generate --force
 ```
 
 ::: danger
-Back up your encryption key (APP_KEY in the `.env` file). It is used as an encryption key for all data that needs to be stored securely (e.g. api keys).
-Store it somewhere safe - not just on your server. If you lose it all encrypted data is irrecoverable -- even if you have database backups.
+备份您的加密密钥（`.env` 文件中的 APP_KEY）。它用作所有需要安全存储的数据的加密密钥（例如 api 密钥）。将其存储在安全的地方 - 不仅仅是在您的服务器上。如果您丢失它，所有加密数据都将无法恢复——即使您有数据库备份。
 :::
 
-### Environment Configuration
+### 环境配置
 
-Pterodactyl's core environment is easily configured using a few different CLI commands built into the app. This step
-will cover setting up things such as sessions, caching, database credentials, and email sending.
+翼龙的核心环境可以使用应用程序中内置的几个不同的 CLI 命令进行更轻松的配置。此步骤将涵盖设置诸如会话、缓存、数据库凭证和电子邮件发送之类的内容。
 
 ``` bash
 php artisan p:environment:setup
 php artisan p:environment:database
 
-# To use PHP's internal mail sending (not recommended), select "mail". To use a
-# custom SMTP server, select "smtp".
+# 如果你要使用PHP的内部邮件发送（不推荐），选择 "mail"。
+# 如果你自定义 SMTP 服务器，选择 "smtp"。
 php artisan p:environment:mail
 ```
 
-### Database Setup
+### 数据库设置
 
-Now we need to setup all of the base data for the Panel in the database you created earlier. **The command below
-may take some time to run depending on your machine. Please _DO NOT_ exit the process until it is completed!** This
-command will setup the database tables and then add all of the Nests & Eggs that power Pterodactyl.
+现在我们需要在您之前创建的数据库中设置面板的所有基本数据。**以下命令可能需要一些时间才能运行，具体取决于您的计算机。请_不要_退出该过程，直到完成！**此命令将设置数据库表，然后添加所有为翼龙提供动力的预设组和预设。
 
 ``` bash
 php artisan migrate --seed --force
 ```
 
-### Add The First User
+### 添加首位用户
 
-You'll then need to create an administrative user so that you can log into the panel. To do so, run the command below.
-At this time passwords **must** meet the following requirements: 8 characters, mixed case, at least one number.
+然后您需要创建一个管理用户，以便您可以登录到面板。为此，请运行以下命令。此时密码**必须**满足以下要求：8个字符，大小写不一，至少有一个数字。
 
 ``` bash
 php artisan p:user:make
 ```
 
-### Set Permissions
+### 设置权限
 
-The last step in the installation process is to set the correct permissions on the Panel files so that the webserver can
-use them correctly.
+安装过程的最后一步是对 Panel 文件设置正确的权限，以便 Web 服务器可以正确使用它们。
 
 ``` bash
-# If using NGINX or Apache (not on CentOS):
+# 如果使用 NGINX 或 Apache (不在 CentOS 上):
 chown -R www-data:www-data /var/www/pterodactyl/*
 
-# If using NGINX on CentOS:
+# 如果在 CentOS 上使用 NGINX：
 chown -R nginx:nginx /var/www/pterodactyl/*
 
-# If using Apache on CentOS
+# 如果在 CentOS 上使用 Apache
 chown -R apache:apache /var/www/pterodactyl/*
 ```
 
-## Queue Listeners
+## 工作队列程序
 
-We make use of queues to make the application faster and handle sending emails and other actions in the background.
-You will need to setup the queue worker for these actions to be processed.
+我们使用队列来使应用程序更快，并在后台处理发送电子邮件和其他操作。您需要设置工作队列以处理这些操作。
 
-### Crontab Configuration
+### 定时任务配置
 
-The first thing we need to do is create a new cronjob that runs every minute to process specific Pterodactyl tasks, such
-as session cleanup and sending scheduled tasks to daemons. You'll want to open your crontab using `sudo crontab -e` and
-then paste the line below.
+我们需要做的第一件事是创建一个新的定时任务，它每分钟运行一次以处理特定的翼龙任务，例如会话清理和将计划任务发送到守护进程。您需要使用 `sudo crontab -e` 打开您的 crontab，然后粘贴下面的一行内容，不要忘记`/var/www/pterodactyl/`指的是你的翼龙面板在你服务器的绝对位置。
 
 ```bash
 * * * * * php /var/www/pterodactyl/artisan schedule:run >> /dev/null 2>&1
 ```
 
-### Create Queue Worker
+### 创建工作队列
 
-Next you need to create a new systemd worker to keep our queue process running in the background. This queue is responsible
-for sending emails and handling many other background tasks for Pterodactyl.
+接下来，您需要创建一个新的 systemd 工作线程来保持我们的队列进程在后台运行。该队列负责发送电子邮件并为翼龙处理许多其他后台任务。
 
-Create a file called `pteroq.service` in `/etc/systemd/system` with the contents below.
+在 `/etc/systemd/system` 文件夹中创建一个名为 `pteroq.service` 的文件，其内容如下。
 
 ``` text
-# Pterodactyl Queue Worker File
+# 翼龙工作队列文件
 # ----------------------------------
 
 [Unit]
@@ -220,8 +196,8 @@ Description=Pterodactyl Queue Worker
 After=redis-server.service
 
 [Service]
-# On some systems the user and group might be different.
-# Some systems use `apache` or `nginx` as the user and group.
+# 在某些系统上用户和组可能不同。
+# 有些系统使用 `apache` 或 `nginx` 作为用户和组。
 User=www-data
 Group=www-data
 Restart=always
@@ -234,25 +210,24 @@ RestartSec=5s
 WantedBy=multi-user.target
 ```
 
-::: tip Redis on CentOS
-If you are using CentOS, you will need to replace `redis-server.service` with `redis.service` at the `After=` line in order to ensure `redis` starts before the queue worker.
+::: tip CentOS 上的 Redis
+如果您使用的是 CentOS，则需要在 `After=` 一行将 `redis-server.service` 替换为 `redis.service`，以确保 `redis` 在工作队列之前启动。
 :::
 
 ::: tip
-If you are not using `redis` for anything you should remove the `After=` line, otherwise you will encounter errors
-when the service starts.
+如果你没有使用 `redis` 做任何事情，你应该删除 `After=` 一行，否则服务启动时会遇到错误。
 :::
 
-If you are using redis for your system, you will want to make sure to enable that it will start on boot. You can do that by running the following command:
+如果您在系统中使用 redis，则需要确保启用它会在引导时启动。您可以通过运行以下命令来执行此操作：
 
 ```bash
 sudo systemctl enable --now redis-server
 ```
 
-Finally, enable the service and set it to boot on machine start.
+最后，启用该服务并将其设置为在计算机启动时启动。
 
 ``` bash
 sudo systemctl enable --now pteroq.service
 ```
 
-#### Next Step: [Webserver Configuration](./webserver_configuration)
+#### 下一步：[网络服务器配置](./webserver_configuration)
