@@ -4,7 +4,8 @@
             <div class="container z-10">
                 <div class="text-center">
                     <div>
-                        <img class="max-w-xl w-full inline-block" src="https://cdn.pterodactyl.io/logos/new/pterodactyl_logo_transparent.png" alt="Pterodactyl">
+                        <img class="max-w-xl w-full inline-block" src="./banner_china_logo.png"
+                            alt="Pterodactyl">
                     </div>
                     <div class="mt-4">
                         <!-- <a class="btn hidden md:inline-block" href="https://demo.pterodactyl.io" target="_blank" rel="nofollow noopener">Demo</a> -->
@@ -17,12 +18,14 @@
             <div class="container text-center">
                 <h1 class="text-blue mb-4">翼龙面板</h1>
                 <h3 class="border-0 font-normal leading-normal mx-auto" style="max-width: 50rem">
-                    翼龙&reg; 是一个免费的开源游戏服务器管理面板，使用 PHP、React 和 Go 构建。 Pterodactyl 在设计时考虑了安全性，在隔离的 Docker 容器中运行所有游戏服务器，同时向最终用户展示了美观直观的 UI。
+                    翼龙&reg; 是一个免费的开源游戏服务器管理面板，使用 PHP、React 和 Go 构建。Pterodactyl 在设计时考虑了安全性，在隔离的 Docker
+                    容器中运行所有游戏服务器，同时向最终用户展示了美观直观的 UI。
                 </h3>
                 <h3 class="border-0 leading-normal mx-auto mt-4" style="max-width: 50rem">
-                    不要再安于现状了。 让游戏服务器成为您平台上的一等公民。
+                    不要再安于现状了。让游戏服务器成为您平台上的一等公民。
                 </h3>
-                <img class="max-w-lg w-full m-4 inline-block" src="https://cdn.pterodactyl.io/site-assets/mockup-macbook-grey-1.0.png">
+                <img class="max-w-lg w-full m-4 inline-block"
+                    src="https://cdn.pterodactyl.io/site-assets/mockup-macbook-grey-1.0.png">
             </div>
         </div>
         <div class="section bg-blue text-grey-lightest">
@@ -141,7 +144,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="footer">MIT Licensed | Pterodactyl&reg; Copyright &copy; 2015 - 2022 Dane Everitt & contributors. | which Sinicizated by Pterodactyl-China.</div>
+                <div class="footer">MIT Licensed | Pterodactyl&reg; Copyright &copy; 2015 - 2022 Dane Everitt &
+                    contributors. | which Sinicizated by Pterodactyl-China.</div>
             </div>
         </div>
     </div>
