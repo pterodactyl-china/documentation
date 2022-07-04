@@ -31,7 +31,7 @@ chmod u+x /usr/local/bin/wings
 
 ## 重启进程
 
-最后,，重启 wings 进程。正在运行的服务器不会受到影响，与实例的连线将会自动重新连接。
+最后，重启 wings 进程。正在运行的服务器不会受到影响，与实例的连线将会自动重新连接。
 
 ``` bash
 systemctl restart wings
