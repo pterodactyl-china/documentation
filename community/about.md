@@ -1,8 +1,6 @@
-# Community Guides and Tutorials
+# 社区指南和教程
 
-## About
-This section of Pterodactyl's site is dedicated to more complex topics, tutorials, and features that we
-feel are important to share with the community, but do not fit into the theme of our core documentation.
+## 关于
+翼龙网站的这一部分致力于更复杂的主题、教程和功能，我们认为与社区分享很重要，但不符合我们核心文档的主题。
 
-Here you'll find in-depth OS-specific installation guides, advanced network configurations, individual game
-setup instructions, and so much more.
+在这里，您将找到深入的操作系统特定安装指南、高级网络配置、单个游戏设置说明等等。
