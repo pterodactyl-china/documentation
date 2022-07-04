@@ -1,0 +1,7 @@
+{
+	"daemon": "0.9.999",
+	"panel": "1.9.2.0",
+	"wings": "1.6.4",
+	"sftp": "1.0.5",
+	"discord": "https://discord.gg/pterodactyl"
+}
