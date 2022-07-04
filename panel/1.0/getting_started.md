@@ -89,7 +89,7 @@ cd /var/www/pterodactyl
 一旦您为面板创建了一个新目录并移入其中，您需要下载面板文件。这就像使用 `curl` 下载我们预打包的内容一样简单。下载后，您需要解压文件，然后在 `storage/` 和 `bootstrap/cache/` 目录上设置正确的权限。这些目录允许我们存储文件以及保持可用的快速缓存以减少加载时间。
 
 ``` bash
-curl -Lo panel.tar.gz https://github.com/pterodactyl/panel/releases/latest/download/panel.tar.gz
+curl -Lo panel.tar.gz https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
 tar -xzvf panel.tar.gz
 chmod -R 755 storage/* bootstrap/cache/
 ```
