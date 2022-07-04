@@ -1,7 +1,7 @@
 # 网络服务器配置
 
 ::: warning
-使用 SSL 配置时，您必须创建 SSL 证书，否则您的网络服务器将无法启动。 请参阅 [创建 SSL 证书](/tutorials/creating_ssl_certificates.html) 文档页面以了解如何在继续之前创建这些证书。
+使用 SSL 配置时，您必须创建 SSL 证书，否则您的网络服务器将无法启动。请参阅 [创建 SSL 证书](/tutorials/creating_ssl_certificates.html) 文档页面以了解如何在继续之前创建这些证书。
 :::
 
 :::: tabs
@@ -68,7 +68,7 @@ a2dissite 000-default.conf
 
 ### 启用配置
 
-创建上面的文件后，只需运行以下命令。 如果你在 CentOS 上_你不需要运行下面的命令！_你只需要运行 `systemctl restart httpd`。
+创建上面的文件后，只需运行以下命令。如果你在 CentOS 上_你不需要运行下面的命令！_你只需要运行 `systemctl restart httpd`。
 
 ```bash
 # 你不需要在 CentOS 上运行这部分的任何命令
@@ -94,7 +94,7 @@ a2dissite 000-default.conf
 
 ### 启用配置
 
-创建上面的文件后，只需运行以下命令。 如果你在 CentOS 上_你不需要运行下面的命令！_你只需要运行 `systemctl restart httpd`。
+创建上面的文件后，只需运行以下命令。如果你在 CentOS 上_你不需要运行下面的命令！_你只需要运行 `systemctl restart httpd`。
 
 ```bash
 # 你不需要在 CentOS 上运行这部分的任何命令

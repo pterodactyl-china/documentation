@@ -1,10 +1,8 @@
 module.exports = {
-    base: '/documentation/',
+    base: '/',
     title: 'Pterodactyl-China',
-    description: 'Pterodactyl 是一个使用 PHP、React 和 Go 构建的开源游戏服务器管理面板。Pterodactyl 在设计时考虑了安全性，在隔离的 Docker 镜像中运行所有游戏服务器，同时向最终用户展示了美观直观的 UI。',
+    description: '翼龙是一个使用 PHP、React 和 Go 构建的开源游戏服务器管理面板。翼龙在设计时考虑了安全性，在隔离的 Docker 镜像中运行所有游戏服务器，同时向最终用户展示了美观直观的 UI。',
     locales: {
-      // 键名是该语言所属的子路径
-      // 作为特例，默认语言可以使用 '/' 作为其路径。
       '/': {
         lang: 'zh-CN',
       }
