@@ -4,8 +4,7 @@
       <div class="h-12 w-full bg-black flex items-center justify-center px-4">
         <p class="text-grey-lightest font-semibold">
           欢迎支持 翼龙中国 CN&nbsp;
-          <a class="text-blue-lighter" href="https://github.com/pterodactyl-china/documentation" target="_blank" rel="noindex nofollow noopener">肯定</a>
-          <a class="text-blue-lighter" href="https://github.com/pterodactyl-china/documentation" target="_blank" rel="noindex nofollow noopener">支持.</a>
+          <a class="text-blue-lighter" href="https://github.com/pterodactyl-china/documentation" target="_blank" rel="noindex nofollow noopener">现在就支持</a>
         </p>
       </div>
     </div>

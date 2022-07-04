@@ -142,7 +142,7 @@ module.exports = {
                     ]
                 },
                 {
-                    title: '面板',
+                    title: '面板 (前端)',
                     collapsable: false,
                     path: '/panel/',
                     currentVersion: '1.0',
@@ -163,7 +163,7 @@ module.exports = {
                     ]
                 },
                 {
-                    title: 'Wings',
+                    title: 'Wings (后端)',
                     collapsable: false,
                     path: '/wings/',
                     currentVersion: '1.0',
