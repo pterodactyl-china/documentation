@@ -2,9 +2,9 @@
   <div class="search-box">
     <input
       @input="query = $event.target.value"
-      aria-label="Search"
+      aria-label="搜索"
       :value="query"
-      placeholder="Search"
+      placeholder="搜索"
       autocomplete="off"
       spellcheck="false"
       @focus="focused = true"

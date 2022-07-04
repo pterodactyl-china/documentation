@@ -11,7 +11,7 @@ export default ({
         if (route.path.startsWith(vp.path + vp.currentVersion)) {
           return [
             {
-              path: route.path.replace(vp.currentVersion, "current"),
+              path: route.path.replace(vp.currentVersion, "当前版本"),
               redirect: route.path
             }, {
               path: route.path.replace(vp.currentVersion + "/", ""),
