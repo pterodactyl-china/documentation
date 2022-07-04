@@ -1,39 +1,37 @@
-# Upgrading Wings
+# 升级 Wings
 
-Upgrading Wings is a painless process and should take less than a minute to complete.
+升级Wings并不困难，只需不到一分钟就可以完成。
 
-## Wings Version Requirements
+## Wings 版本需求
 
-Each version of Pterodactyl Panel also has a corresponding minimum version of Wings that
-is required for it to run. Please see the chart below for how these versions line up. In
-most cases your base Wings version should match that of your Panel.
+每个翼龙面板版本要求的最低版本Wings都不相同，具体情况可参考下方图表，在大多数情况下Wings版本保持跟面板版本相匹配即可。
 
-| Panel Version | Wings Version | Supported |
-| ------------- | ------------- | --------- |
-| 1.0.x         | 1.0.x         |           |
-| 1.1.x         | 1.1.x         |           |
-| 1.2.x         | 1.2.x         |           |
-| 1.3.x         | 1.3.x         |           |
-| 1.4.x         | 1.4.x         |           |
-| 1.5.x         | 1.4.x         |           |
-| 1.6.x         | 1.4.x         |           |
-| 1.7.x         | 1.5.x         |           |
-| 1.8.x         | 1.6.x         |           |
-| **1.9.x**     | **1.6.x**     | ✅        |
+| 面板版本      | Wings版本   | 支持状况 |
+|-----------|-----------|------|
+| 1.0.x     | 1.0.x     |      |
+| 1.1.x     | 1.1.x     |      |
+| 1.2.x     | 1.2.x     |      |
+| 1.3.x     | 1.3.x     |      |
+| 1.4.x     | 1.4.x     |      |
+| 1.5.x     | 1.4.x     |      |
+| 1.6.x     | 1.4.x     |      |
+| 1.7.x     | 1.5.x     |      |
+| 1.8.x     | 1.6.x     |      |
+| **1.9.x** | **1.6.x** | ✅    |
 
-## Download Updated Binary
 
-First, download the updated wings binary into `/usr/local/bin`.
+## 下载最新 Wings 可执行文件
+
+首先，下载最新 Wings 可执行文件到 `/usr/local/bin`。
 
 ``` bash
 curl -L -o /usr/local/bin/wings "https://github.com/pterodactyl/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
 chmod u+x /usr/local/bin/wings
 ```
 
-## Restart Process
+## 重启进程
 
-Finally, restart the wings process. Your running servers will not be affected and any open
-connections to the instance will re-connect automatically.
+最后，重启 wings 进程。正在运行的服务器不会受到影响，与实例的连线将会自动重新连接。
 
 ``` bash
 systemctl restart wings
