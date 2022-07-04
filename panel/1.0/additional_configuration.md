@@ -1,60 +1,55 @@
-# Additional Configuration
+# 其他配置
 
 [[toc]]
 
-## Backups
+## 备份
 
-Pterodactyl Panel allows users to create backups of their servers. In order to create backups, a backup storage method has to be configured.
+翼龙面板允许用户为其服务器创建备份。为了创建备份，必须配置一个备份存储方法。
 
-When changing Pterodactyl Panel's backup storage method, users may still download or delete existing backups from the prior storage driver. In the instance of migrating from S3 to local backups, S3 credentials must remain configured after switching to the local backup storage method.
+当改变翼龙面板的备份存储方式时，用户仍然可以从以前的存储驱动下载或删除现有的备份。在从S3迁移到本地备份的例子中，切换到本地备份存储方式后，S3凭证必须保持配置。
 
-### Using Local Backups
+### 使用本地备份
 
-By default, Pterodactyl Panel uses local storage via Wings for backups. That said, this method of backup storage can be explicitly set with the following configuration in the `.env` file:
+默认情况下，翼龙面板通过 Wings (后端) 使用本地存储进行备份。也就是说，这种备份存储方式可以在 `.env` 文件中通过以下配置明确设置。
 
 ```bash
-# Sets your panel to use local storage via Wings for backups
+# 将你的面板设置为通过 Wings 使用本地存储进行备份
 APP_BACKUP_DRIVER=wings
 ```
 
-Do note that, when using local storage via Wings, the destination for backups is set in Wings' `config.yml` with the following setting key:
+请注意，当通过 Wings 使用本地存储时，备份的目的地是在 Wings 的 `config.yml` 中设置的，设置内容如下。
 
 ```yml
 system:
   backup_directory: /path/to/backup/storage
 ```
 
-### Using S3 Backups
+### 使用 S3 备份
 
-AWS S3 (or compatible storage) can be used to store remote or cloud-based backups. The following configuration options have to be set in the `.env` file or as environment variables in order to enable it:
+AWS S3（或兼容的存储）可以用来存储远程或基于云的备份。必须在 `.env` 文件中设置以下配置选项或作为环境变量，以便启用它。
 
 ```bash
-# Sets your panel to use s3 for backups
+# 将你的面板设置为使用 s3 进行备份
 APP_BACKUP_DRIVER=s3
 
-# Info to actually use s3
+# 实际使用 s3 的信息
 AWS_DEFAULT_REGION=
 AWS_ACCESS_KEY_ID=
 AWS_SECRET_ACCESS_KEY=
 AWS_BACKUPS_BUCKET=
 AWS_ENDPOINT=
 ```
-For some configurations, you might have to change your S3 URL from `bucket.domain.com` to `domain.com/bucket`. To accomplish this, add `AWS_USE_PATH_STYLE_ENDPOINT=true` to your `.env` file.
+对于某些配置，你可能需要将你的 S3 URL 从 `bucket.domain.com` 改为 `domain.com/bucket`。为了达到这个目的，在你的 `.env` 文件中添加 `AWS_USE_PATH_STYLE_ENDPOINT=true`。
 
-## Reverse Proxy Setup
+## 反向代理设置
 
-When running Pterodactyl behind a reverse proxy, such as [Cloudflare's Flexible SSL](https://support.cloudflare.com/hc/en-us/articles/200170416-What-do-the-SSL-options-mean-)
-or Nginx/Apache/Caddy, etc., you will need to make a quick modification to the Panel to ensure things continue to work as expected. By default, when using these reverse proxies,
-your Panel will not correctly handle requests. You'll most likely be unable to login or see security warnings in your browser console as it attempts to load insecure assets.
-This is because the internal logic the Panel uses to determine how links should be generated thinks it is running over HTTP and not over HTTPS.
+在反向代理后面运行 Pterodactyl 时，例如 [Cloudflare 的灵活 SSL](https://support.cloudflare.com/hc/en-us/articles/200170416-What-do-the-SSL-options-mean-) 或 Nginx/Apache/Caddy 等，您将需要对面板进行快速修改，以确保一切按预期继续工作。默认情况下，当使用这些反向代理时，您的面板将无法正确处理请求。您很可能无法登录或在浏览器控制台中看到安全警告，因为它试图加载不安全的资源。这是因为面板用来确定如何生成链接的内部逻辑认为它是通过 HTTP 而不是通过 HTTPS 运行的。
 
-You will need to edit the `.env` file in the Panel's root directory to contain `TRUSTED_PROXIES=*` at minimum. We highly suggest providing a specific IP address
-(or comma-separated list of IPs) rather than allowing `*`. For example, if your proxy is running on the same machine as the server,
-the chances are that something like `TRUSTED_PROXIES=127.0.0.1` will work for you.
+您需要编辑面板根目录中的 `.env` 文件以至少包含 `TRUSTED_PROXIES=*`。我们强烈建议提供特定的 IP 地址（或以英文逗号分隔的 IP 列表），而不是允许使用 `*`。例如，如果您的代理与服务器在同一台机器上运行，那么类似  `TRUSTED_PROXIES=127.0.0.1` 之类的东西很可能适合您。
 
-### NGINX Specific Configuration
+### NGINX 特定配置
 
-For Pterodactyl to properly respond to an NGINX reverse proxy, the NGINX `location` config must contain the following lines:
+为了使翼龙正确响应 NGINX 反向代理，NGINX `location` 配置必须包含以下内容：
 
 ```Nginx
 proxy_set_header X-Real-IP $remote_addr;
@@ -66,9 +61,8 @@ proxy_buffering off;
 proxy_request_buffering off;
 ```
 
-### Cloudflare Specific Configuration
-If you're using Cloudflare's Flexible SSL you should set `TRUSTED_PROXIES` to contain [their IP addresses](https://www.cloudflare.com/ips/).
-Below is an example of how to set this.
+### Cloudflare 特定配置
+如果您使用 Cloudflare 的灵活 SSL，您应该设置 `TRUSTED_PROXIES` 以包含 [他们的 IP 地址](https://www.cloudflare.com/ips/)。以下是如何设置的示例。
 
 ```text
 TRUSTED_PROXIES=173.245.48.0/20,103.21.244.0/22,103.22.200.0/22,103.31.4.0/22,141.101.64.0/18,108.162.192.0/18,190.93.240.0/20,188.114.96.0/20,197.234.240.0/22,198.41.128.0/17,162.158.0.0/15,104.16.0.0/13,104.24.0.0/14,172.64.0.0/13,131.0.72.0/22
@@ -76,29 +70,29 @@ TRUSTED_PROXIES=173.245.48.0/20,103.21.244.0/22,103.22.200.0/22,103.31.4.0/22,14
 
 ## reCAPTCHA
 
-The Panel uses invisible reCAPTCHA to secure the login page from brute-force attacks. If the login attempt is considered suspicious, users may be required to perform a reCAPTCHA challenge.
+面板使用隐形 reCAPTCHA 来保护登录页面免受暴力攻击。如果登录尝试被认为可疑，则可能会要求用户执行 reCAPTCHA 质询。
 
-### Configuring reCAPTCHA
+### 配置 reCAPTCHA
 
-While we provide a global Site Key and Secret Key by default, we highly recommend changing it for your own setup.
+虽然我们默认提供全局 Site Key 和 Secret Key，但我们强烈建议您根据自己的设置更改它。
 
-You can generate your own keys in the [reCAPTCHA Admin Console](https://www.google.com/recaptcha/admin).
+您可以在 [reCAPTCHA 管理控制台](https://www.google.com/recaptcha/admin) 中生成自己的密钥。
 
-The keys can then be applied using the Settings in the admin panel. The reCAPTCHA settings can be found on the **Advanced** tab.
+然后可以使用管理面板中的设置来应用这些密钥。reCAPTCHA 设置可以在**高级**选项卡上找到。
 
-### Disabling reCAPTCHA
+### 禁用 reCAPTCHA
 
-:::warning SECURITY WARNING
-We do not recommend disabling reCAPTCHA. It is a security mechanism that makes it harder to perform brute-force attacks on user accounts.
+:::warning 安全警告
+我们不建议禁用 reCAPTCHA。这是一种安全机制，使对用户帐户执行暴力攻击时变得更加困难。
 :::
 
-If users have trouble logging in, or your Panel isn't exposed to the internet, it can make sense to disable reCAPTCHA.
+如果用户在登录时遇到问题，或者您的面板没有暴露在互联网上，禁用 reCAPTCHA 是有意义的。
 
-reCAPTCHA can easily be disabled using the admin panel. In the Settings, select the **Advanced** tab and set the **Status** of reCAPTCHA to **disabled**.
+使用管理面板可以轻松禁用 reCAPTCHA。在设置中，选择**高级**选项卡并将 reCAPTCHA 的**状态**设置为**禁用**。
 
-#### Editing your database
+#### 编辑你的数据库
 
-If you cannot access your panel, you can modify the database directly using the following commands.
+如果您无法访问面板，可以使用以下命令直接修改数据库。
 
 
 ```sql
@@ -106,20 +100,20 @@ mysql -u root -p
 UPDATE panel.settings SET value = 'false' WHERE `key` = 'settings::recaptcha:enabled';
 ```
 
-## 2FA
+## 双因素认证
 
-If possible you should use the panel to update your 2FA settings. If you can't access your panel for what ever reason you can use the following steps.
+如果可能，您应该使用面板更新您的双因素认证设置。 如果您出于某种原因无法访问您的面板，您可以使用以下步骤。
 
-### Disable 2FA requirement
+### 禁用双因素认证
 
 ```sql
 mysql -u root -p
 UPDATE panel.settings SET value = 0 WHERE `key` = 'settings::pterodactyl:auth:2fa_required';
 ```
 
-### Disable 2FA for a specific user
+### 为特定用户禁用双因素认证
 
-Run the following command in your `/var/www/pterodactyl` directory.
+在 `/var/www/pterodactyl` (这里指翼龙所在的目录) 目录中运行以下命令。
 
 ``` bash
 php artisan p:user:disable2fa

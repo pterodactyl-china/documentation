@@ -79,7 +79,7 @@ sudo systemctl restart apache2
 ```
 
 :::
-::: tab "没有 SSL 的 Apache"
+::: tab "没有使用 SSL 的 Apache"
 首先，删除默认的 Apache 配置。
 
 ``` bash
