@@ -62,7 +62,7 @@ apt update
 # 如果您使用的是 Ubuntu 18.04，请添加 Universe 存储库
 apt-add-repository universe
 
-# Install Dependencies
+# 安装依赖项
 apt -y install php8.1 php8.1-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
 ```
 

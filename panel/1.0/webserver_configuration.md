@@ -1,81 +1,77 @@
-# Webserver Configuration
+# 网络服务器配置
 
 ::: warning
-When using the SSL configuration you MUST create SSL certificates, otherwise your webserver will fail to start. See the [Creating SSL Certificates](/tutorials/creating_ssl_certificates.html) documentation page to learn how to create these certificates before continuing.
+使用 SSL 配置时，您必须创建 SSL 证书，否则您的网络服务器将无法启动。 请参阅 [创建 SSL 证书](/tutorials/creating_ssl_certificates.html) 文档页面以了解如何在继续之前创建这些证书。
 :::
 
 :::: tabs
-::: tab "Nginx With SSL"
-First, remove the default NGINX configuration.
+::: tab "使用 SSL 的 Nginx"
+首先，删除默认的 NGINX 配置。
 
 ``` bash
 rm /etc/nginx/sites-enabled/default
 ```
 
-Now, you should paste the contents of the file below, replacing `<domain>` with your domain name being used in a file called
-`pterodactyl.conf` and place the file in `/etc/nginx/sites-available/`, or &mdash; if on CentOS, `/etc/nginx/conf.d/`.
+现在，您应该粘贴下面文件的内容，将 `<domain>` 替换为您在名为 `pterodactyl.conf` 的文件中使用的域名，并将该文件放在 `/etc/nginx/sites-available/` 中， 或 &mdash; 如果在 CentOS 上，则为 `/etc/nginx/conf.d/`。
 
 <<< @/.snippets/webservers/nginx-php8.1.conf{5,11,26-27}
 
-### Enabling Configuration
+### 启用配置
 
-The final step is to enable your NGINX configuration and restart it.
+最后一步是启用 NGINX 配置并重新启动它。
 
 ```bash
-# You do not need to symlink this file if you are using CentOS.
+# 如果您使用的是 CentOS，则不需要符号链接此文件。
 sudo ln -s /etc/nginx/sites-available/pterodactyl.conf /etc/nginx/sites-enabled/pterodactyl.conf
 
-# You need to restart nginx regardless of OS.
+# 无论操作系统如何，您都需要重新启动 nginx。
 sudo systemctl restart nginx
 ```
 
 :::
-::: tab "Nginx Without SSL"
-First, remove the default NGINX configuration.
+::: tab "没有使用 SSL 的 Nginx"
+首先，删除默认的 NGINX 配置。
 
 ``` bash
 rm /etc/nginx/sites-enabled/default
 ```
 
-Now, you should paste the contents of the file below, replacing `<domain>` with your domain name being used in a file called
-`pterodactyl.conf` and place the file in `/etc/nginx/sites-available/`, or &mdash; if on CentOS, `/etc/nginx/conf.d/`.
+现在，您应该粘贴下面文件的内容，将 `<domain>` 替换为您在名为 `pterodactyl.conf` 的文件中使用的域名，并将该文件放在 `/etc/nginx/sites-available/` 中， 或 &mdash; 如果在 CentOS 上，则为 `/etc/nginx/conf.d/`。
 
 <<< @/.snippets/webservers/nginx-php8.1-nossl.conf{4}
 
-### Enabling Configuration
+### 启用配置
 
-The final step is to enable your NGINX configuration and restart it.
+最后一步是启用 NGINX 配置并重新启动它。
 
 ```bash
-# You do not need to symlink this file if you are using CentOS.
+# 如果您使用的是 CentOS，则不需要符号链接此文件。
 sudo ln -s /etc/nginx/sites-available/pterodactyl.conf /etc/nginx/sites-enabled/pterodactyl.conf
 
-# You need to restart nginx regardless of OS.
+# 无论操作系统如何，您都需要重新启动 nginx。
 sudo systemctl restart nginx
 ```
 
 :::
-::: tab "Apache With SSL"
-First, remove the default Apache configuration.
+::: tab "使用 SSL 的 Apache"
+首先，删除默认的 Apache 配置。
 
 ``` bash
 a2dissite 000-default.conf
 ```
 
-Now, you should paste the contents of the file below, replacing `<domain>` with your domain name being used in a file called
-`pterodactyl.conf` and place the file in `/etc/apache2/sites-available`, or &mdash; if on CentOS, `/etc/httpd/conf.d/`.
+现在，您应该粘贴下面文件的内容，将 `<domain>` 替换为您在名为 `pterodactyl.conf` 的文件中使用的域名，并将该文件放在 `/etc/apache2/sites-available` 中， 或 &mdash; 如果在 CentOS 上，则为 `/etc/httpd/conf.d/`。
 
-Note: When using Apache, make sure you have the `libapache2-mod-php` package installed or else PHP will not display on your webserver.
+注意：使用 Apache 时，请确保您已安装 `libapache2-mod-php` 包，否则 PHP 将不会显示在您的网络服务器上。
 
 <<< @/.snippets/webservers/apache.conf{2,10,24-25}
 
-### Enabling Configuration
+### 启用配置
 
-Once you've created the file above, simply run the commands below. If you are on CentOS _you do not need to run the commands
-below!_ You only need to run `systemctl restart httpd`.
+创建上面的文件后，只需运行以下命令。 如果你在 CentOS 上_你不需要运行下面的命令！_你只需要运行 `systemctl restart httpd`。
 
 ```bash
-# You do not need to run any of these commands on CentOS
+# 你不需要在 CentOS 上运行这部分的任何命令
 sudo ln -s /etc/apache2/sites-available/pterodactyl.conf /etc/apache2/sites-enabled/pterodactyl.conf
 sudo a2enmod rewrite
 sudo a2enmod ssl
@@ -83,27 +79,25 @@ sudo systemctl restart apache2
 ```
 
 :::
-::: tab "Apache Without SSL"
-First, remove the default Apache configuration.
+::: tab "没有 SSL 的 Apache"
+首先，删除默认的 Apache 配置。
 
 ``` bash
 a2dissite 000-default.conf
 ```
 
-Now, you should paste the contents of the file below, replacing `<domain>` with your domain name being used in a file called
-`pterodactyl.conf` and place the file in `/etc/apache2/sites-available`, or &mdash; if on CentOS, `/etc/httpd/conf.d/`.
+现在，您应该粘贴下面文件的内容，将 `<domain>` 替换为您在名为 `pterodactyl.conf` 的文件中使用的域名，并将该文件放在 `/etc/apache2/sites-available` 中， 或 &mdash; 如果在 CentOS 上，则为 `/etc/httpd/conf.d/`。
 
-Note: When using Apache, make sure you have the `libapache2-mod-php` package installed or else PHP will not display on your webserver.
+注意：使用 Apache 时，请确保您已安装 `libapache2-mod-php` 包，否则 PHP 将不会显示在您的网络服务器上。
 
 <<< @/.snippets/webservers/apache-nossl.conf{2}
 
-### Enabling Configuration
+### 启用配置
 
-Once you've created the file above, simply run the commands below. If you are on CentOS _you do not need to run the commands
-below!_ You only need to run `systemctl restart httpd`.
+创建上面的文件后，只需运行以下命令。 如果你在 CentOS 上_你不需要运行下面的命令！_你只需要运行 `systemctl restart httpd`。
 
 ```bash
-# You do not need to run any of these commands on CentOS
+# 你不需要在 CentOS 上运行这部分的任何命令
 sudo ln -s /etc/apache2/sites-available/pterodactyl.conf /etc/apache2/sites-enabled/pterodactyl.conf
 sudo a2enmod rewrite
 sudo systemctl restart apache2
@@ -112,4 +106,4 @@ sudo systemctl restart apache2
 :::
 ::::
 
-#### Next Step: [Wings Installation](../../wings/installing.md)
+#### 下一步：[Wings (后端) 安装](../../wings/installing.md)
