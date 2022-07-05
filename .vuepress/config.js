@@ -151,6 +151,7 @@ module.exports = {
                             status: 'stable',
                             children: [
                                 '/getting_started',
+								'/btpanel_getstarted',
                                 '/webserver_configuration',
                                 '/additional_configuration',
                                 '/updating',
