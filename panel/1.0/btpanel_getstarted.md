@@ -61,7 +61,7 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 ### 新建站点
 我觉得你应该会使用宝塔面板来新建一个网站
 
-![如果你看到我说明图挂了](https://s1.ax1x.com/2022/07/05/jN314H.jpg)
+![如果你看到我说明图挂了](./images/bg_1.jpg)
 
 ### 下载并上传程序文件至网站目录
 二选一即可
@@ -90,15 +90,15 @@ https://hub.fastgit.xyz/pterodactyl-china/panel/releases/latest/download/panel.t
 
 现在所有文件都已下载，我们需要进入网站目录解压刚刚上传的 `panel.tar.gz` 压缩包，并全选设置文件权限为 `755` 所有者为 `www`
 
-![如果你看到我说明图挂了](https://s1.ax1x.com/2022/07/05/jN8gWd.jpg)
+![如果你看到我说明图挂了](./images/bg_2.jpg)
 
 然后将 `.env.example`  文件重命名为 `.env`
 
 ### 使用 Composer 安装相关依赖
 
 点击 网站的 `设置` ，再点击 `设置` 里的 `Composer`  
-![如果你看到我说明图挂了](https://s1.ax1x.com/2022/07/05/jNGc7T.jpg)
-![如果你看到我说明图挂了](https://s1.ax1x.com/2022/07/05/jNG2AU.jpg)
+![如果你看到我说明图挂了](./images/bg_3.jpg)
+![如果你看到我说明图挂了](./images/bg_4.jpg)
 
 
 先点击 `升级Composer` 确保其为最新版本，并按红圈所示选择  
