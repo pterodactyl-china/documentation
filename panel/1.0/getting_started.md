@@ -71,28 +71,35 @@ apt -y install php8.1 php8.1-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,z
 
 ### 安装 Composer
 
-Composer 是 PHP 的依赖管理器，它允许我们发送您需要的所有代码来操作面板。在继续此过程之前，您需要安装 composer。
+Composer 是一个 PHP 依赖管理器（类似于 Node.js 的 npm，或者 Python 的 pip）。  
+Composer 将会拉取你的项目所依赖的所有 PHP 软件包，并且为你管理它们。它被所有现代化的 PHP 框架和平台所使用，例如： Laravel, Symfony, Drupal, 和 Magento 2。 而翼龙面板前端正是使用的 Laravel ！
 
 ``` bash
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 ```
 
 ## 下载文件
-
-此过程的第一步是创建面板所在的文件夹，然后进入新创建的文件夹中。以下是如何执行此操作的示例。
+在进行此步骤之前，我们要为面板前端创建它的工作目录。  
+此过程的第一步是创建面板所在的文件夹，然后进入新创建的文件夹中。以下是如何执行此操作的示例。  
+::: warning
+以下命令使用的路径仅为示例，阁下大可自己自定义路径，但是我在此提醒您，若您不用我示例使用的路径，请务必记住自己设置的程序所在的目录，并在后续各种涉及到程序运行目录的地方灵活操作！
+:::
 
 ``` bash
 mkdir -p /var/www/pterodactyl
 cd /var/www/pterodactyl
 ```
 
-一旦您为面板创建了一个新目录并移入其中，您需要下载面板文件。这就像使用 `curl` 下载我们预打包的内容一样简单。下载后，您需要解压文件，然后在 `storage/` 和 `bootstrap/cache/` 目录上设置正确的权限。这些目录允许我们存储文件以及保持可用的快速缓存以减少加载时间。
+在为面板创建好它的工作目录后，我们将使用 curl 命令，从 Github 拉取翼龙中国汉化完成的程序文件压缩包，拉取完成后，我们需要对压缩包进行解压操作，并赋予 storage/ 与 bootstrap/cache/ 目录 755 权限。这两个目录作用是缓存动态资源以加速访问。
 
 ::: tip 使用翼龙中国稳定版程序
 翼龙中国稳定版 是在 翼龙官方最新的发行版 基础上进行的汉化，若阁下喜欢稳定，则可使用以下命令下载稳定版程序
 
 ``` bash
 curl -Lo panel.tar.gz https://github.com/pterodactyl-china/pterodactyl-chinese-stable/releases/latest/download/panel.tar.gz
+# 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 Fastgit 提供的国内反向代理来拉取
+curl -Lo panel.tar.gz https://hub.fastgit.xyz/pterodactyl-china/pterodactyl-china-stable/releases/latest/download/panel.tar.gz
+# 解压并设置目录权限
 tar -xzvf panel.tar.gz
 chmod -R 755 storage/* bootstrap/cache/
 ```
@@ -103,21 +110,24 @@ chmod -R 755 storage/* bootstrap/cache/
 
 ``` bash
 curl -Lo panel.tar.gz https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
+# 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 Fastgit 提供的国内反向代理来拉取
+curl -Lo panel.tar.gz https://hub.fastgit.xyz/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
+# 解压并设置目录权限
 tar -xzvf panel.tar.gz
 chmod -R 755 storage/* bootstrap/cache/
 ```
 :::
 ## 安装
 
-现在所有文件都已下载，我们需要配置面板的一些核心方面的内容。
+假设阁下已经完成之前的步骤且现在所有文件都已下载，接下来我们需进行配置面板的一些核心部分。
 
-::: tip 数据库配置
-您将需要一个数据库设置和一个具有为该数据库创建正确权限的用户，然后才能继续进行。请参阅下文以快速为您的翼龙面板创建用户和数据库。要查找更多详细信息，请查看 [设置 MySQL](/tutorials/mysql_setup.html)。
+::: tip 数据库配置  
+翼龙面板前端内的数据，例如：用户/用户账户下的服务器实例等。均需要 MYSQL 数据库进行存储。您将需要一个数据库设置和一个具有为该数据库创建正确权限的用户，然后才能继续进行。请参阅下文以快速为您的翼龙面板创建用户和数据库。要查找更多详细信息，请查看 [设置 MySQL](/tutorials/mysql_setup.html)。
 
 ```sql
 mysql -u root -p
 
-# 记得把下面的 'yourPassword' 改成唯一的密码
+# 记得把下面的 'yourPassword' 改成阁下自己想设置的密码
 CREATE USER 'pterodactyl'@'127.0.0.1' IDENTIFIED BY 'yourPassword';
 CREATE DATABASE panel;
 GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1' WITH GRANT OPTION;
@@ -126,19 +136,19 @@ exit
 
 :::
 
-首先，我们将复制默认环境设置文件，安装核心依赖项，然后生成新的应用程序加密密钥。
+首先，我们将复制我们的默认环境设置文件 `.env` ，并使用  `Composer` 安装核心依赖项，然后生成新的应用程序加密密钥。
 
 ``` bash
 cp .env.example .env
 composer install --no-dev --optimize-autoloader
 
-# 如果您要安装此面板，请仅运行以下命令
-# 第一次并且数据库中没有任何翼龙面板数据的话。
+# 注意，以下指令仅针对于第一次安装部署翼龙面板前端
+# 且对应数据库内无数据时执行，若阁下并非第一次安装且数据库内有数据，请忽略以下指令
 php artisan key:generate --force
 ```
 
 ::: danger
-备份您的加密密钥（`.env` 文件中的 APP_KEY）。它用作所有需要安全存储的数据的加密密钥（例如 api 密钥）。将其存储在安全的地方 - 不仅仅是在您的服务器上。如果您丢失它，所有加密数据都将无法恢复——即使您有数据库备份。
+请备份您的加密密钥（`.env` 文件中的 `APP_KEY`）！ 它用作所有需要安全存储的数据的加密密钥（例如 api 密钥）。 请将其存储在安全的地方！ 如果您丢失它，所有加密数据都将无法恢复！即使您有数据库备份也无济于事！！！
 :::
 
 ### 环境配置
@@ -149,14 +159,15 @@ php artisan key:generate --force
 php artisan p:environment:setup
 php artisan p:environment:database
 
-# 如果你要使用PHP的内部邮件发送（不推荐），选择 "mail"。
-# 如果你自定义 SMTP 服务器，选择 "smtp"。
+# 若使用 PHP 自带的 mail 拓展 (不推荐使用), 请在执行以下指令后选择 "mail"。
+# 若使用自定义 SMTP 服务器，请在执行以下指令后选择 "smtp"。
 php artisan p:environment:mail
 ```
 
 ### 数据库设置
 
-现在我们需要在您之前创建的数据库中设置面板的所有基本数据。**以下命令可能需要一些时间才能运行，具体取决于您的计算机。请_不要_退出该过程，直到完成！**此命令将设置数据库表，然后添加所有为翼龙提供动力的预设组和预设。
+现在我们要将面板所有的核心数据写入我们之前为面板准备的数据库内。  
+**此步骤可能花费较长时间来进行执行，花费的时间取决于您的主机性能，主机与数据库主机的网络连接状态等因素。请耐心等待数据导入完成，切勿中途使用 CTRL+C 强制中断执行！**
 
 ``` bash
 php artisan migrate --seed --force
@@ -164,15 +175,15 @@ php artisan migrate --seed --force
 
 ### 添加首位用户
 
-然后您需要创建一个管理用户，以便您可以登录到面板。为此，请运行以下命令。此时密码**必须**满足以下要求：8个字符，大小写不一，至少有一个数字。
+数据库配置完成后，您需要为面板创建一个管理用户，以便您可以登录面板。 为此，请运行以下命令。 并保证账户密码满足以下要求：8 个字符，大小写混合，至少一个数字。
 
 ``` bash
 php artisan p:user:make
 ```
 
-### 设置权限
+### 为 WEB 程序用户设置权限
 
-安装过程的最后一步是对 Panel 文件设置正确的权限，以便 Web 服务器可以正确使用它们。
+安装过程的最后一步是对 面板程序文件设置正确的权限，以便 WEB 服务器程序（例如Nginx 或者 Apache）可以正确执行文件。
 
 ``` bash
 # 如果使用 NGINX 或 Apache (不在 CentOS 上):
@@ -185,11 +196,11 @@ chown -R nginx:nginx /var/www/pterodactyl/*
 chown -R apache:apache /var/www/pterodactyl/*
 ```
 
-## 工作队列程序
+## 注册队列监听服务
 
 我们使用队列来使应用程序更快，并在后台处理发送电子邮件和其他操作。您需要设置工作队列以处理这些操作。
 
-### 定时任务配置
+### Crontab 定时任务设置
 
 我们需要做的第一件事是创建一个新的定时任务，它每分钟运行一次以处理特定的翼龙任务，例如会话清理和将计划任务发送到守护进程。您需要使用 `sudo crontab -e` 打开您的 crontab，然后粘贴下面的一行内容，不要忘记`/var/www/pterodactyl/`指的是你的翼龙面板在你服务器的绝对位置。
 
@@ -197,7 +208,7 @@ chown -R apache:apache /var/www/pterodactyl/*
 * * * * * php /var/www/pterodactyl/artisan schedule:run >> /dev/null 2>&1
 ```
 
-### 创建工作队列
+### 创建队列监听服务
 
 接下来，您需要创建一个新的 systemd 工作线程来保持我们的队列进程在后台运行。该队列负责发送电子邮件并为翼龙处理许多其他后台任务。
 
