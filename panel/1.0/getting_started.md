@@ -21,16 +21,16 @@
 由于与 Docker 不兼容，翼龙不支持大多数 OpenVZ 系统。如果您计划在基于 OpenVZ 的系统上运行此软件，您将很大概率不会成功。
 :::
 
-| 操作系统 | 版本 |     支持情况      | 注意事项                                                       |
-| ---------------- | ------- | :----------------: | ----------------------------------------------------------- |
-| **Ubuntu**       | 18.04   | :white_check_mark: | 文档基于 Ubuntu 18.04 作为操作系统所编写的。|
-|                  | 20.04   | :white_check_mark: |                                                             |
-|                  | 22.04   | :white_check_mark: | MariaDB 无需 repo 安装脚本即可安装。   |
-| **CentOS**       | 7       | :white_check_mark: | 需要额外的 repos。                                 |
-|                  | 8       | :white_check_mark: | 请注意，CentOS 8 已停运。使用 Rocky 或 Alma Linux。       |
-| **Debian**       | 9       | :white_check_mark: | 需要额外的 repos。                                 |
-|                  | 10      | :white_check_mark: |                                                             |
-|                  | 11      | :white_check_mark: |                                                             |
+| 操作系统   | 版本  |      支持情况      | 注意事项                           |
+|:-----------|:------|:------------------:|:-----------------------------------|
+| **Ubuntu** | 18.04 | :white_check_mark: | 文档基于 Ubuntu 18.04 作为操作系统所编写的。 |
+|            | 20.04 | :white_check_mark: |                                    |
+|            | 22.04 | :white_check_mark: | MariaDB 无需 repo 安装脚本即可安装。 |
+| **CentOS** | 7     | :white_check_mark: | 需要额外的 repos。                 |
+|            | 8     | :white_check_mark: | 请注意，CentOS 8 已停运。使用 Rocky 或 Alma Linux。 |
+| **Debian** | 9     | :white_check_mark: | 需要额外的 repos。                 |
+|            | 10    | :white_check_mark: |                                    |
+|            | 11    | :white_check_mark: |                                    |
 
 ## 依赖项
 
@@ -88,12 +88,25 @@ cd /var/www/pterodactyl
 
 一旦您为面板创建了一个新目录并移入其中，您需要下载面板文件。这就像使用 `curl` 下载我们预打包的内容一样简单。下载后，您需要解压文件，然后在 `storage/` 和 `bootstrap/cache/` 目录上设置正确的权限。这些目录允许我们存储文件以及保持可用的快速缓存以减少加载时间。
 
+::: tip 使用翼龙中国稳定版程序
+翼龙中国稳定版 是在 翼龙官方最新的发行版 基础上进行的汉化，若阁下喜欢稳定，则可使用以下命令下载稳定版程序
+
+``` bash
+curl -Lo panel.tar.gz https://github.com/pterodactyl-china/pterodactyl-china-stable/releases/latest/download/panel.tar.gz
+tar -xzvf panel.tar.gz
+chmod -R 755 storage/* bootstrap/cache/
+```
+:::
+
+::: tip 使用翼龙中国开发版程序
+翼龙中国开发版 是在 翼龙官方上游仓库上实时同步 进行的汉化，包含了翼龙官方最新的功能更新/修复，同时也可能带来了新的问题，若阁下喜欢使用开发版，则可使用以下命令下载开发版程序
+
 ``` bash
 curl -Lo panel.tar.gz https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
 tar -xzvf panel.tar.gz
 chmod -R 755 storage/* bootstrap/cache/
 ```
-
+:::
 ## 安装
 
 现在所有文件都已下载，我们需要配置面板的一些核心方面的内容。
