@@ -113,18 +113,18 @@ mysql -u root -p
 UPDATE panel.settings SET value = 'false' WHERE `key` = 'settings::recaptcha:enabled';
 ```
 
-## 双因素认证
+## 动态口令认证
 
-如果可能，您应该使用面板更新您的双因素认证设置。如果您出于某种原因无法访问您的面板，您可以使用以下步骤。
+如果可能，您应该使用面板更新您的动态口令认证设置。如果您出于某种原因无法访问您的面板，您可以使用以下步骤。
 
-### 禁用双因素认证
+### 禁用动态口令认证
 
 ```sql
 mysql -u root -p
 UPDATE panel.settings SET value = 0 WHERE `key` = 'settings::pterodactyl:auth:2fa_required';
 ```
 
-### 为特定用户禁用双因素认证
+### 为特定用户禁用动态口令认证
 
 在 `/var/www/pterodactyl` (这里指翼龙所在的目录) 目录中运行以下命令。
 
