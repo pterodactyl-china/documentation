@@ -92,7 +92,7 @@ cd /var/www/pterodactyl
 翼龙中国稳定版 是在 翼龙官方最新的发行版 基础上进行的汉化，若阁下喜欢稳定，则可使用以下命令下载稳定版程序
 
 ``` bash
-curl -Lo panel.tar.gz https://github.com/pterodactyl-china/pterodactyl-china-stable/releases/latest/download/panel.tar.gz
+curl -Lo panel.tar.gz https://github.com/pterodactyl-china/pterodactyl-chinese-stable/releases/latest/download/panel.tar.gz
 tar -xzvf panel.tar.gz
 chmod -R 755 storage/* bootstrap/cache/
 ```
