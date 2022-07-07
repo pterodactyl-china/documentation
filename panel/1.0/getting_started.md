@@ -106,7 +106,7 @@ chmod -R 755 storage/* bootstrap/cache/
 :::
 
 ::: tip 使用翼龙中国开发版程序
-翼龙中国开发版 是在 翼龙官方上游仓库上实时同步 进行的汉化，包含了翼龙官方最新的功能更新/修复，同时也可能带来了新的问题，若阁下喜欢使用开发版，则可使用以下命令下载开发版程序
+翼龙中国开发版 是在 翼龙官方上游仓库上实时同步 进行的汉化，包含了翼龙官方最新的功能更新/修复，同时也可能带来了新的问题，但一般不会出现太大问题，更新可能比较勤。若阁下喜欢使用开发版，则可使用以下命令下载开发版程序
 
 ``` bash
 curl -Lo panel.tar.gz https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
