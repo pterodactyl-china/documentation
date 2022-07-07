@@ -41,6 +41,7 @@ php artisan down
 curl -L -o panel.tar.gz https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
 # 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 Fastgit 提供的国内反向代理来拉取
 curl -Lo panel.tar.gz https://hub.fastgit.xyz/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
+
 rm -rf $(find app public resources -depth | head -n -1 | grep -Fv "$(tar -tf panel.tar.gz)")
 # 下载更新文件并删除存档文件。
 tar -xzvf panel.tar.gz && rm -f panel.tar.gz
@@ -56,6 +57,7 @@ tar -xzvf panel.tar.gz && rm -f panel.tar.gz
 curl -L -o panel.tar.gz https://github.com/pterodactyl-china/pterodactyl-chinese-stable/releases/latest/download/panel.tar.gz
 # 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 Fastgit 提供的国内反向代理来拉取
 curl -Lo panel.tar.gz https://hub.fastgit.xyz/pterodactyl-china/pterodactyl-china-stable/releases/latest/download/panel.tar.gz
+
 rm -rf $(find app public resources -depth | head -n -1 | grep -Fv "$(tar -tf panel.tar.gz)")
 # 下载更新文件并删除存档文件。
 tar -xzvf panel.tar.gz && rm -f panel.tar.gz
