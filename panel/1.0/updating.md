@@ -74,12 +74,16 @@ php artisan down
 ::: tip 使用翼龙中国稳定版程序
 ```bash
 curl -L https://github.com/pterodactyl-china/pterodactyl-chinese-stable/releases/latest/download/panel.tar.gz | tar -xzv
+# 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 Fastgit 提供的国内反向代理来拉取
+curl -L https://hub.fastgit.xyz/https://github.com/pterodactyl-china/pterodactyl-chinese-stable/releases/latest/download/panel.tar.gz | tar -xzv
 ```
 :::
 
 ::: tip 使用翼龙中国开发版程序
 ```bash
 curl -L https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz | tar -xzv
+# 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 Fastgit 提供的国内反向代理来拉取
+curl -L https://hub.fastgit.xyz/https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz | tar -xzv
 ```
 :::
 
