@@ -60,7 +60,7 @@ module.exports = {
             },
             {
                 text: '获取帮助',
-                link: 'https://discord.gg/pterodactyl'
+                link: 'https://kook.top/0Grsf5'
             },
             {
                 text: 'API',

@@ -113,7 +113,7 @@
                 <p class="m-4">准备好在翼龙号上飞翔了吗？</p>
                 <div class="mt-4">
                     <router-link class="btn inline-block" to="/project/introduction.html">关于本项目</router-link>
-                    <a class="btn inline-block" href="https://discord.gg/pterodactyl">Discord</a>
+                    <a class="btn inline-block" href="https://kook.top/0Grsf5">Discord</a>
                 </div>
             </div>
         </div>
@@ -132,15 +132,13 @@
                         </p>
                     </div>
                     <div class="hidden md:block md:flex-1 md:pr-12">
-                        <p><a class="text-grey-lightest" href="https://github.com/pterodactyl">GitHub</a></p>
-                        <p><a class="text-grey-lightest" href="https://github.com/sponsors/DaneEveritt">赞助商</a></p>
-                        <p><a class="text-grey-lightest" href="https://paypal.me/PterodactylSoftware">捐助</a></p>
-                        <p><a class="text-grey-lightest" href="/panel/troubleshooting.html">故障处理</a></p>
+                        <p><a class="text-grey-lightest" href="https://github.com/pterodactyl-china">GitHub</a></p>
+                        <p><a class="text-grey-lightest" href="/panel/troubleshooting.html">疑难解答</a></p>
                         <p><a class="text-grey-lightest" href="https://github.com/parkervcp/eggs">额外的游戏配置</a></p>
                     </div>
                     <div class="text-center mt-8 md:flex-1 md:mt-0">
-                        <a href="https://discord.gg/pterodactyl" target="_blank" rel="nofollow noopener">
-                            <img src="https://cdn.pterodactyl.io/site-assets/discord.png" class="w-3/4">
+                        <a href="https://kook.top/0Grsf5" target="_blank" rel="nofollow noopener">
+                            <img src="https://img.kookapp.cn/assets/logo_1024.png" class="w-3/4">
                         </a>
                     </div>
                 </div>
