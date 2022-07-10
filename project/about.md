@@ -1,27 +1,32 @@
-# About
+# 关于
 [[toc]]
 
-## Core Project Team
-| Name | Discord Name | Primary Role |
+## 翼龙中国项目核心团队
+| 名字 | Discord 名称 | 联系方式 | 负责内容 |
+| ---- | ------------ | ------ | ---- |
+| [飒爽师叔](https://vlssu.com/) | `vlssu#9657` | vlssu@vlssu.com | 汉化主要负责人 |
+| [冰凌](https://ilwork.cn/) | `a1an#5788` | iceling@ilwork.cn | 汉化主要负责人 |
+
+## 翼龙项目核心团队
+| 名字 | Discord 名称 | 负责内容 |
 | ---- | ------------ | ---- |
-| [Dane Everitt](https://daneeveritt.com/) | `Tactical Fish#8008` | Project Maintainer |
-| Stepan Fedotov | `Trixter#0001` | WISP & WHMCS Module Maintainer |
-| Michael Parker | `parkervcp#6789` | Egg Developer, Docker Integration |
-| [Anand Capur](https://anand.io/) | `Arcdigital#1337` | Mobile/Cloud Project Lead |
-| [Jakob Schrettenbrunner](https://schrej.net/) | `schrej#1337` | Developer |
-| [Lance Pioch](https://lancepioch.com/) | `ShadowLancer#5209` | Developer |
-| [Matthew Penner](https://matthewp.io/) | `matthewp#0001` | Developer |
+| [Dane Everitt](https://daneeveritt.com/) | `Tactical Fish#8008` | 项目维护人员 |
+| Stepan Fedotov | `Trixter#0001` | WISP 和 WHMCS 模块维护人员 |
+| Michael Parker | `parkervcp#6789` | Egg 开发人员，Docker 整合 |
+| [Anand Capur](https://anand.io/) | `Arcdigital#1337` | 移动/云项目负责人 |
+| [Jakob Schrettenbrunner](https://schrej.net/) | `schrej#1337` | 开发人员 |
+| [Lance Pioch](https://lancepioch.com/) | `ShadowLancer#5209` | 开发人员 |
+| [Matthew Penner](https://matthewp.io/) | `matthewp#0001` | 开发人员 |
 
-Members of the project team have a red username in our Discord server.
+翼龙项目团队的成员用红色用户名在翼龙官方的 Discord 服务器中显示。
 
-## Community Team
-Pterodactyl would not be as successful as it is today without the help of our fantastic community support team. These
-members can be found in our Discord server and are distinguished with a yellow username.
+## 社区团队
+如果没有我们出色的社区团队帮助，翼龙就不会像今天这样成功。 这些成员可以在翼龙官方的 Discord 服务器中找到，并以黄色用户名显示。
 
-## Sponsors
-The following companies help to fund Pterodactyl's developement. [Interested in becoming a sponsor?](https://github.com/sponsors/DaneEveritt)
+## 翼龙的赞助商
+以下公司帮助资助翼龙的发展。 [有兴趣成为赞助商吗？](https://github.com/sponsors/DaneEveritt)
 
-| Company | About |
+| 公司 | 关于 |
 | ------- | ----- |
 | [**WISP**](https://wisp.gg) | Extra features. |
 | [**Bloom.host**](https://bloom.host) | Bloom.host offers dedicated core VPS and Minecraft hosting with Ryzen 9 processors. With owned-hardware, we offer truly unbeatable prices on high-performance hosting. |
@@ -35,7 +40,7 @@ The following companies help to fund Pterodactyl's developement. [Interested in 
 | [**HostBend**](https://hostbend.com/) | HostBend offers a variety of solutions for developers, students, and others who have a tight budget but don't want to compromise quality and support. |
 | [**Capitol Hosting Solutions**](https://capitolsolutions.cloud/) | CHS is *the* budget friendly hosting company for Australian and American gamers, offering a variety of plans from Web Hosting to Game Servers; Custom Solutions too! |
 
-## License
+## 许可证
 ``` text
 Copyright (c) 2015 - 2021 Dane Everitt <dane@daneeveritt.com>.
 
@@ -58,10 +63,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-## GPG Signature
-Starting with Panel `v0.4.0` all releases are signed with the GPG key below. All releases include a detached key as
-well to verify your download against.
+## GPG 签名
+从 面板 `v0.4.0` 开始，所有版本都使用以下 GPG 密钥进行签名。 所有版本都包含一个分离的密钥，用于验证您的下载。
 
-Releases also include a SHA256 checksum.
+发行版还包括一个 SHA256 校验和。
 
 <<< @/.snippets/gpg.txt
