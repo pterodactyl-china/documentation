@@ -138,7 +138,7 @@
                     </div>
                     <div class="text-center mt-8 md:flex-1 md:mt-0">
                         <a href="https://kook.top/0Grsf5" target="_blank" rel="nofollow noopener">
-                            <img src="https://img.kookapp.cn/assets/logo_1024.png" class="w-3/4">
+                            <img src="https://api.pterodactyl.top/site-assets/kook.png" class="w-3/4">
                         </a>
                     </div>
                 </div>
