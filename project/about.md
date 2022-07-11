@@ -4,8 +4,8 @@
 ## 翼龙中国项目核心团队
 | 名字 | Discord 名称 | 联系方式 | 负责内容 |
 | ---- | ------------ | ------ | ---- |
-| [飒爽师叔](https://vlssu.com/) | `vlssu#9657` | vlssu@vlssu.com | 汉化主要负责人 |
-| [冰凌](https://ilwork.cn/) | `a1an#5788` | iceling@ilwork.cn | 汉化主要负责人 |
+| [飒爽师叔](https://vlssu.com/) | `vlssu#9657` | [vlssu@vlssu.com](mailto:vlssu@vlssu.com) | 汉化主要负责人 |
+| [冰凌](https://ilwork.cn/) | `a1an#5788` | [iceling@ilwork.cn](mailto:iceling@ilwork.cn) | 汉化主要负责人 |
 
 ## 翼龙项目核心团队
 | 名字 | Discord 名称 | 负责内容 |
