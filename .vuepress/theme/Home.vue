@@ -140,13 +140,10 @@
                         <a href="https://kook.top/0Grsf5" target="_blank" rel="nofollow noopener">
                             <img src="https://api.pterodactyl.top/site-assets/kook.png" class="w-3/4">
                         </a>
-                        <a href="https://beian.miit.gov.cn" target="_blank" rel="nofollow noopener">
-                            沪ICP备2022002870号-18
-                        </a>
                     </div>
                 </div>
                 <div class="footer">MIT Licensed | Pterodactyl&reg; Copyright &copy; 2015 - 2022 Dane Everitt &
-                    contributors. | which Sinicizated by Pterodactyl-China.</div>
+                    contributors. | which Sinicizated by Pterodactyl-China. | <a href="https://beian.miit.gov.cn">沪ICP备2022002870号-18</a></div>
             </div>
         </div>
     </div>
