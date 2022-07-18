@@ -1,5 +1,5 @@
 # 创建自定义预设
-::: 警告
+::: warning
 You should not edit existing services or options that ship with the Panel. Each upgrade we push can make minor
 changes to these, and you'll lose any changes you've made.
 :::
