@@ -1,10 +1,9 @@
-# 添加服务器节点
+# 创建新的节点服务器
 
 [[toc]]
  
-## 服务器节点
-Head to the admin panel and click the Nodes tab on the left sidebar. After that, click 'Create New' on the
-top right side to open the page to add a node.
+## 位置
+前往管理面板并单击左侧边栏上的节点服务器选项卡。然后点击右上角的“新建”，打开添加节点服务器的页面。
 
 ![](../../../.vuepress/public/community/config/nodes/pterodactyl_add_node_create_button.png)
 
@@ -20,7 +19,7 @@ top right side to open the page to add a node.
 * **代理**: 如果后端程序套有代理,如CF等就需要开启它,没有则不需要管
 * **守护程序服务器文件目录**: 服务器后端用来储存服务端数据的文件夹,一般是 `/var/lib/pterodactyl/volumes`.
 
-::: 对OVH虚拟化类型的用户的小提示
+::: tip OVH 用户
 一些OVH虚拟化类型的服务器的 `/home` 文件夹是储存空间最大的,你也许可以用 `/home/pterodactyl/volumes` 来储存数据
 :::
 
@@ -29,8 +28,8 @@ top right side to open the page to add a node.
 * **总储存容量**: 允许服务器自动创建的最大储存容量
 * **储存过额分配**: 同内存过额分配
 
-::: 危险
-Don't forget to account for OS overhead and other software requirements on machines.
+::: danger
+不要忘记考虑操作系统开销和机器上的其他软件要求。
 ::: 
 
 * **守护进程端口**: 守护进程监听端口
