@@ -1,17 +1,13 @@
 # 创建自定义预设
 ::: warning
-You should not edit existing services or options that ship with the Panel. Each upgrade we push can make minor
-changes to these, and you'll lose any changes you've made.
+您不应编辑面板随附的现有预设。我们每次对这些预设的更新，在你更新数据库时会覆盖面板的原有预设，也就是说你将丢失这些所有改动的内容。
 :::
 
 [[toc]]
 
-The first thing you'll need to do is create a new service. In this case, the name and description speak for themselves
-in this case. The `Folder Name` _must be a unique name_ not being used by any other service, and should only
-contain letters, numbers, underscores, and dashes. This is the name of the folder where the daemon will be storing
-the service options on the daemon.
+您需要做的第一件事是创建一个新的预设组(类似文件夹)。名称和描述就不言而喻了。`预设组名称` _需要确保唯一性_ ，不被其他任何预设组使用，并且只能包含字母、数字、下划线和破折号(中文也是可以的)。这是守护进程存储预设的预设组名称。
 
-The default start command is also required, however it can be changed per-option.
+预设的默认启动命令也是必需的，但是可以根据变量进行动态更改。
 
 ## Create New Option
 After creating the service, in the bottom right of the page you should see a button titled `New Egg`, press it.
