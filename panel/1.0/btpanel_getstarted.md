@@ -61,7 +61,7 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 ### 新建站点
 我觉得你应该会使用宝塔面板来新建一个网站
 
-![如果你看到我说明图挂了](./images/bg_1.jpg)
+![如果你看到我说明图挂了](./images/bt_1.jpg)
 
 ### 下载并上传程序文件至网站目录
 二选一即可
@@ -90,15 +90,15 @@ https://hub.fastgit.xyz/pterodactyl-china/panel/releases/latest/download/panel.t
 
 现在所有文件都已下载，我们需要进入网站目录解压刚刚上传的 `panel.tar.gz` 压缩包，并全选设置文件权限为 `755` 所有者为 `www`
 
-![如果你看到我说明图挂了](./images/bg_2.jpg)
+![如果你看到我说明图挂了](./images/bt_2.jpg)
 
 然后将 `.env.example`  文件重命名为 `.env`
 
 ### 使用 Composer 安装相关依赖
 
 点击 网站的 `设置` ，再点击 `设置` 里的 `Composer`  
-![如果你看到我说明图挂了](./images/bg_3.jpg)
-![如果你看到我说明图挂了](./images/bg_4.jpg)
+![如果你看到我说明图挂了](./images/bt_3.jpg)
+![如果你看到我说明图挂了](./images/bt_4.jpg)
 
 
 先点击 `升级Composer` 确保其为最新版本，并按红圈所示选择  
@@ -108,6 +108,15 @@ https://hub.fastgit.xyz/pterodactyl-china/panel/releases/latest/download/panel.t
 ::: warning
 在进行以下步骤之前，请阁下为面板前端新建一个数据库，我相信阁下的聪明脑袋一定会用宝塔面板新建一个数据库吧。
 :::
+
+### 伪静态设置
+
+点击 网站的 `设置` ，再点击 `设置` 里的 `伪静态`  
+![如果你看到我说明图挂了](./images/bt_3.jpg)
+![如果你看到我说明图挂了](./images/bt_5.png)
+
+先点击左上角的伪静态模板，并使用 `laravel5` 伪静态模板
+点击 `保存` 即可设置成功。
 
 ### 生成APP_KEY并进行环境配置
 
