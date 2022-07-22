@@ -41,6 +41,14 @@ module.exports = {
         ['link', { rel: 'shortcut icon', href: '/favicons/favicon.ico' }],
         ['meta', { name: 'msapplication-config', content: '/favicons/browserconfig.xml' }],
         ['meta', { name: 'theme-color', content: '#0e4688' }],
+        ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-KWVNS6PXK2' }],
+        ['script', {}, `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KWVNS6PXK2');
+        `],
     ],
     themeConfig: {
         repo: 'pterodactyl-china/panel',
