@@ -60,7 +60,7 @@
                     <div class="feature">
                         <span><i class="icon icon-expand"></i></span>
                         <h3>可扩展性</h3>
-                        <p>无论你是一家托管公司，还是下一个Hyplex，或者只玩一些网络游戏的人，我们都能为你提供服务。</p>
+                        <p>无论你是一家托管公司，还是下一个Hyplex，或者是玩网络游戏的人，我们都能为你提供服务。</p>
                     </div>
                 </div>
             </div>
