@@ -86,11 +86,9 @@ https://hub.fastgit.xyz/pterodactyl-china/panel/releases/latest/download/panel.t
 ```
 :::
 
-### 进入网站目录解压程序文件并设置文件权限和环境文件
+### 进入网站目录解压程序文件并设置环境文件
 
-现在所有文件都已下载，我们需要进入网站目录解压刚刚上传的 `panel.tar.gz` 压缩包，并全选设置文件权限为 `755` 所有者为 `www`
-
-![如果你看到我说明图挂了](./images/bt_2.jpg)
+现在所有文件都已下载，我们需要进入网站目录解压刚刚上传的 `panel.tar.gz` 压缩包
 
 然后将 `.env.example`  文件重命名为 `.env`
 
@@ -159,6 +157,11 @@ php artisan migrate --seed --force
 php artisan p:user:make
 ```
 
+## 设置网站文件权限
+
+我们需要进入网站目录并全选设置文件权限为 `755` 所有者为 `www`
+
+![如果你看到我说明图挂了](./images/bt_2.jpg)
 
 ## 注册队列监听服务
 
