@@ -157,7 +157,7 @@ php artisan migrate --seed --force
 php artisan p:user:make
 ```
 
-## 设置网站文件权限
+### 设置程序文件权限
 
 我们需要进入网站目录并全选设置文件权限为 `755` 所有者为 `www`
 
