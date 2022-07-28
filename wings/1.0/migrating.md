@@ -87,7 +87,7 @@ systemctl daemon-reload
 systemctl enable --now wings
 ```
 
-::: 如果 Wings 没有启动怎么办？
+::: warning 如果 Wings 没有启动怎么办？
 如果此时您在启动 Wings 时遇到问题，请运行以下命令直接启动 Wings 并检查是否有任何特定的错误输出。
 
 ```
