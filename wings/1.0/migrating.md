@@ -19,7 +19,10 @@ chmod u+x /usr/local/bin/wings
 ## 复制新的配置文件
 安装 Wings 后，您需要从面板中复制一个新的配置文件。此文件采用新格式，将来应该更易于管理和编辑。
 
-只需复制并粘贴代码块并将其粘贴到 `/etc/pterodactyl` 目录中的 `config.yml` 文件。
+只需复制代码块的内容并将其粘贴到 `/etc/pterodactyl` 目录中的 `config.yml` 文件里。
+::: tip
+当然，你也可以直接点击 [生成自动部署指令] 来生成一件命令覆盖，而不需要您手动覆盖。(请注意，此覆盖只会覆盖默认的 `/etc/pterodactyl` 目录下的配置文件)
+:::
 
 ![](./../../.vuepress/public/wings_configuration_example.png)
 
@@ -37,10 +40,10 @@ chmod u+x /usr/local/bin/wings
 systemctl stop wings
 
 # 删除整个目录。这里没有任何我们在这次迁移中实际需要的东西。
-# 请记住，服务器数据是存储默认在 /srv/daemon-data 中，如果你没做修改。
+# 请记住，服务器数据默认存储在 /srv/daemon-data 中，如果你没做修改。
 rm -rf /srv/daemon
 
-# 如果没有对 node 有其他用途，您可以选择从你的系统中删除 NodeJS。
+# 如果没有对 NodeJS 有其他用途，您可以选择从你的系统中删除它。
 apt -y remove nodejs # 或: yum remove nodejs
 ```
 
