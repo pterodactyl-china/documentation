@@ -29,10 +29,10 @@ sudo dnf install -y nodejs yarn # CentOS 8
 安装所需的 JavaScript 软件包。
 
 ```bash
-npm i -g yarn # Install Yarn
+npm i -g yarn # 安装 Yarn
 
 cd /var/www/pterodactyl
-yarn # Installs panel build dependencies
+yarn # 安装面板构建依赖项
 ```
 
 ## 构建面板资源
@@ -41,7 +41,7 @@ yarn # Installs panel build dependencies
 
 ```bash
 cd /var/www/pterodactyl
-yarn build:production # Build panel
+yarn build:production # 构建面板
 ```
 
 您可以使用 `yarn run watch` 命令，可以几乎实时地查看更改进度，以便于开发。一旦您对此更改感到满意，可以使用前面提到的 `yarn build:production` 命令构建面板。
