@@ -91,6 +91,11 @@ GRUB_CMDLINE_LINUX_DEFAULT="swapaccount=1"
 
 安装 Wings 的第一步是确保我们已经设置了所需的目录结构。为此，请运行以下命令，这将创建基本目录并下载 wings 可执行文件。
 
+::: danger
+Wings 的路径已写死，并且配置文件的路径也写死了，请不要想着更改路径。  
+并且 wings 文件和配置文件占用空间很低，在配置完设置后自行备份配置文件以防不测(如果真没了，那也是整个服务器没了吧...)。
+:::
+
 ```bash
 mkdir -p /etc/pterodactyl
 curl -L -o /usr/local/bin/wings "https://github.com/pterodactyl/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
