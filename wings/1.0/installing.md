@@ -129,7 +129,7 @@ chmod u+x /usr/local/bin/wings
 sudo wings --debug
 ```
 
-您可以选择添加 `--debug` 标志以在调试模式下运行 Wings。
+您可以选择添加 `--debug` 参数以在调试模式下运行 Wings。
 
 ### 守护进程（使用 systemd）
 
