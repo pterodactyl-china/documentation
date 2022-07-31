@@ -16,12 +16,15 @@ module.exports = {
         }],
         ['vuepress-plugin-container', {
             type: 'warning',
+            defaultTitle: '警告',
         }],
         ['vuepress-plugin-container', {
             type: 'tip',
+            defaultTitle: '提示',
         }],
         ['vuepress-plugin-container', {
             type: 'danger',
+            defaultTitle: '危险',
         }],
         ['vuepress-plugin-sitemap', {
             hostname: 'https://pterodactyl.top',
