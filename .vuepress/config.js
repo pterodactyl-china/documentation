@@ -41,6 +41,7 @@ module.exports = {
         ['link', { rel: 'shortcut icon', href: '/favicons/favicon.ico' }],
         ['meta', { name: 'msapplication-config', content: '/favicons/browserconfig.xml' }],
         ['meta', { name: 'theme-color', content: '#0e4688' }],
+        ['meta', { name: 'keywords', content: '翼龙,翼龙汉化,翼龙中国,翼手龙,汉化版,pterodactyl-china,pterodactyl,教程,翼龙最新版' }],
         ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-KWVNS6PXK2' }],
         ['script', {}, `
   window.dataLayer = window.dataLayer || [];
