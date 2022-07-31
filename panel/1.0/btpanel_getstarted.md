@@ -65,6 +65,12 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 ![如果你看到我说明图挂了](./images/bt_1.jpg)
 
 ### 下载并上传程序文件至网站目录
+
+|  **官方版**  |  **稳定版**  |  **开发版**  |
+|--------------|--------------|--------------|
+|  ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/pterodactyl-chinese-stable?style=for-the-badge&logo=appveyor&label=最新发布版本) | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  |
+|  |  | ![GitHub Releases pre-releases](https://img.shields.io/github/v/tag/pterodactyl-china/panel?display_name=tag&include_prereleases&style=for-the-badge&logo=appveyor&label=最新预发布版本) |
+
 二选一即可
 
 ::: tip 使用翼龙中国稳定版程序
