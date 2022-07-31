@@ -23,6 +23,9 @@ module.exports = {
         ['vuepress-plugin-container', {
             type: 'danger',
         }],
+        ['vuepress-plugin-sitemap', {
+            hostname: 'https://pterodactyl.top',
+        }],
         ['tabs'],
     ],
     configureWebpack: {
