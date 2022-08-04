@@ -103,11 +103,14 @@ https://hub.fastgit.xyz/pterodactyl-china/panel/releases/latest/download/panel.t
 
 点击 网站的 `设置` ，再点击 `设置` 里的 `Composer`  
 ![如果你看到我说明图挂了](./images/bt_3.jpg)
-![如果你看到我说明图挂了](./images/bt_4.jpg)
+![如果你看到我说明图挂了](./images/bt_4.png)
 
 
 先点击 `升级Composer` 确保其为最新版本，并按红圈所示选择  
-在 `补充命令` 中输入 `composer install --no-dev --optimize-autoloader` 点击 `执行` ，等待命令执行完成后关闭窗口即可。
+在 `补充命令` 中输入以下命令后点击 `执行` ，等待命令执行完成后关闭窗口即可。
+```
+composer install --no-dev --optimize-autoloader
+```
 
 
 ::: warning
