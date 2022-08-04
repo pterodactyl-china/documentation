@@ -188,7 +188,7 @@ php artisan p:user:make
 
 在 `/etc/systemd/system` 文件夹中创建一个名为 `pteroq.service` 的文件，其内容如下。
 
-``` text
+``` text {6,14}
 # 翼龙工作队列文件
 # ----------------------------------
 
@@ -216,7 +216,9 @@ WantedBy=multi-user.target
 :::
 
 ::: tip
-如果你没有使用 `redis` 做任何事情，你应该删除 `After=` 一行，否则服务启动时会遇到错误。
+如果你没有使用 `redis` 做任何事情，你应该删除 `After=` 一行，否则服务启动时会遇到错误。      
+如果你的面板路径并不是 `/var/www/pterodactyl/`，请替换为你面板的绝对路径，否则邮件服务将无法使用。      
+如果你宝塔默认命令行使用的并不是 `8.1`PHP 可以尝试使用绝对路径，将 `/usr/bin/php` 改为 `/www/server/php/81/bin/php`
 :::
 
 如果您在系统中使用 redis，则需要确保启用它会在引导时启动。您可以通过运行以下命令来执行此操作：
