@@ -62,7 +62,7 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 ### 新建站点
 我觉得你应该会使用宝塔面板来新建一个网站
 
-![如果你看到我说明图挂了](./images/bt_1.jpg)
+![如果你看到我说明图挂了](./images/bt_1.png)
 
 ### 下载并上传程序文件至网站目录
 
@@ -171,7 +171,7 @@ php artisan p:user:make
 
 我们需要进入网站目录并全选设置文件权限为 `755` 所有者为 `www`
 
-![如果你看到我说明图挂了](./images/bt_2.jpg)
+![如果你看到我说明图挂了](./images/bt_2.png)
 
 ## 注册队列监听服务
 
