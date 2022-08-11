@@ -9,7 +9,7 @@ Pterodactyl 是使用 PHP、React 和 Go 构建的开源游戏服务器管理面
 |:--------------:|:--------------:|:--------------:|
 |  ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/pterodactyl-chinese-stable?style=for-the-badge&logo=appveyor&label=最新发布版本) | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  |
 |  |  | [![GitHub Releases pre-releases](https://img.shields.io/github/v/tag/pterodactyl-china/panel?display_name=tag&include_prereleases&style=for-the-badge&logo=appveyor&label=最新预发布版本)](https://github.com/pterodactyl-china/panel/releases) |
-| https://github.com/pterodactyl/panel | https://github.com/pterodactyl-china/pterodactyl-chinese-stable | https://github.com/pterodactyl-china/panel |
+| [GitHub](https://github.com/pterodactyl/panel) | [GitHub](https://github.com/pterodactyl-china/pterodactyl-chinese-stable) | [GitHub](https://github.com/pterodactyl-china/panel) |
 | 翼龙官方仓库 | 翼龙官方 `releases` 汉化 | 翼龙官方 `develop` 分支汉化 |
 
 |  **区别** |  **说明** |  **稳定版**  |  **开发版**  |
