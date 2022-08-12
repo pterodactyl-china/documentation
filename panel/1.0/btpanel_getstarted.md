@@ -211,8 +211,8 @@ After=redis-server.service
 [Service]
 # 在某些系统上用户和组可能不同。
 # 有些系统使用 `apache` 或 `nginx` 作为用户和组。
-User=www-data
-Group=www-data
+User=www
+Group=www
 Restart=always
 ExecStart=/usr/bin/php /var/www/pterodactyl/artisan queue:work --queue=high,standard,low --sleep=3 --tries=3
 StartLimitInterval=180
