@@ -6,7 +6,7 @@
 
 出于安全原因，默认情况下无法在节点上挂载目录。必须在 Wings 配置中明确指定应该可挂载的目录。
 
-在 Wings 配置文件 (`/etc/pterodactyl/config.yml`) 中，`allowed_mounts` 字段用于列出可挂载的目录。列出的一个目录时，这个目录下的所有子目录都可以挂载，而不需要再次设置。
+在 Wings 配置文件 (`/etc/pterodactyl/config.yml`) 中，`allowed_mounts` 字段用于列出可挂载的目录。列出一个目录时(可以列出多个)，在这个目录下的所有子目录都可以挂载，而不需要再次设置。
 
 ```yml
 allowed_mounts:
