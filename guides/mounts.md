@@ -1,61 +1,61 @@
-# Using Mounts
+# 使用挂载
 
-Mounts is a feature that allows administrators to mount other directories from the host file-system into a Server's container.
+挂载是一项允许管理员将主机文件系统中的其他目录安装到服务器容器中的功能。
 
-## Wings Configuration
+## Wings 配置
 
-For security reasons it is not possible to mount directories on a node by default. Directories that should be mountable have to be specified explicitly in the Wings configuration.
+出于安全原因，默认情况下无法在节点上挂载目录。必须在 Wings 配置中明确指定应该可挂载的目录。
 
-In the Wings configuration file (`/etc/pterodactyl/config.yml`) the `allowed_mounts` field is used to list mountable directories. The listed directories and all their subdirectories can be mounted.
+在 Wings 配置文件 (`/etc/pterodactyl/config.yml`) 中，`allowed_mounts` 字段用于列出可挂载的目录。列出的一个目录时，这个目录下的所有子目录都可以挂载，而不需要再次设置。
 
 ```yml
 allowed_mounts:
 - /example
 ```
 
-You have to restart Wings to apply new changes to your Wings config.
+您必须重新启动 Wings 才能将新更改的内容应用到您的 Wings 配置中。
 
-## Panel Configuration
+## 面板配置
 
-You have to configure mounts in admin Panel in order to use them with your servers. They consist of a source pad on the node and a target path where it will be mounted in the container.
+您必须在管理面板中配置挂载才能将它们与您的服务器一起使用。它们由节点上的原始路径和将在容器中安装的目标路径(挂载路径)组成。
 
-:::warning Path in the container
-Mounts cannot be mounted to or inside of `/home/container` or any subdirectory of it, nor can you cross-mount servers such as Server A's directory into Server B.
+:::warning 容器中的路径
+挂载不能挂载到 `/home/container` 里，包括其任何子目录中，也不能将服务器 A 的目录或其他服务器目录交叉挂载到服务器 B 中。
 :::
 
-### Creating a Mount
+### 创建挂载
 
-1. In the admin Panel go to **Mounts**.
-2. Create a new mount.
-3. Fill in the details as required.
-   - **Name**: Name for your mount.
-   - **Description**: Description for your mount.
-   - **Source**: The absolute path to the folder or files on the Node machine.
-   - **Target**: The absolute path where the mount will be placed inside of your server, can **not** include `/home/container` in the path.
-   - **Read Only**: Whether the mount will be read-only for the servers using it.
-   - **User Mountable**: Whether to allow users to self mount this mount.
-4. After creating the mount, you are required to add both **Eggs** and **Nodes** that this mount may be used on.
+1. 在管理面板中找并打开 **挂载**。
+2. 创建一个新的挂载。
+3. 按要求填写详细信息。
+   - **名称**: 您的挂载名称。
+   - **描述**: 您的挂载描述。
+   - **原始路径**: 节点机器上的文件夹或文件的绝对路径。
+   - **挂载路径**: 挂载将放置在服务器实例内部的绝对路径，**不能**在路径中包含 `/home/container`。
+   - **只读**: 在容器文件系统内此挂载是否为只读。
+   - **用户可挂载**: 是否允许用户自行挂载此挂载。
+4. 创建挂载后，您需要添加可以使用此挂载的 **预设** 和 **节点**。
 
-:::warning Mounts used by multiple servers
-All servers using the same mounts will **only** share their contents when they are on the same node. Mounts are not synchronized between nodes.
+:::warning 多台服务器使用的挂载
+所有使用相同挂载的服务器将**仅**在同一节点上共享其内容。挂载在节点之间不同步。
 :::
 
-### Assigning a Mount to a Server
+### 为服务器分配挂载
 
-1. In the admin Panel navigate to the server you would like to use a mount with
-2. Go to the mounts page
-3. Click the **+** button
-4. Restart the server
+1. 在管理面板中导航到您想要使用挂载的服务器
+2. 进入挂载页面
+3. 点击 **+** 按钮
+4. 重启服务器
 
-The files of the mount should become available in the target path in the container. You can temporarily change your server startup command to `ls <mount target>`, which should output the contents of the mount if configured correctly.
+挂载的文件应该在容器的目标路径中可用。您可以暂时将服务器启动命令更改为 `ls <挂载目标>`，如果配置正确，它应该会输出安装的内容。
 
-:::warning Mounts cannot be accessed
-Mounts do not appear in the Panel's file manager, nor are they accessible via SFTP. However, the server itself will be able to see and use the mounts.
+:::warning 无法访问挂载
+挂载不会出现在面板的文件管理器中，也不能通过 SFTP 访问。 但是!服务器本身将能够查看并使用这些挂载内容。
 :::
 
-### Example Mount
+### 挂载实例
 
-The example mount below is stored in the path `/var/lib/pterodactyl/mounts`, which we add to the Wings `config.yml`
+下面的示例挂载存储在路径 `/var/lib/pterodactyl/mounts` 中，我们将其添加到 Wings `config.yml` 中
 
 ```yml
 allowed_mounts:
