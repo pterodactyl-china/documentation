@@ -92,12 +92,12 @@ cd /var/www/pterodactyl
 
 在为面板创建好它的工作目录后，我们将使用 `curl` 命令，从 Github 拉取翼龙中国汉化完成的程序文件压缩包，拉取完成后，我们需要对压缩包进行解压操作，并赋予 `storage/` 与 `bootstrap/cache/` 目录 755 权限。这两个目录作用是缓存动态资源以加速访问。
 
-|  **官方版**  |  **稳定版** <Badge text="版本落后"/>  |  **开发版**  |
+|  **官方版**  |  **稳定版**  |  **开发版**  |
 |--------------|--------------|--------------|
 |  ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/pterodactyl-chinese-stable?style=for-the-badge&logo=appveyor&label=最新发布版本) | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  |
 |  |  | ![GitHub Releases pre-releases](https://img.shields.io/github/v/tag/pterodactyl-china/panel?display_name=tag&include_prereleases&style=for-the-badge&logo=appveyor&label=最新预发布版本) |
 
-::: tip 使用翼龙中国稳定版程序 <Badge text="版本落后"/>
+::: tip 使用翼龙中国稳定版程序
 翼龙中国稳定版 是在 翼龙官方最新的发行版 基础上进行的汉化，若阁下喜欢稳定，则可使用以下命令下载稳定版程序
 
 ``` bash

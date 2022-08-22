@@ -66,14 +66,14 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 
 ### 下载并上传程序文件至网站目录
 
-|  **官方版**  |  **稳定版** <Badge text="版本落后"/>  |  **开发版**  |
+|  **官方版**  |  **稳定版**  |  **开发版**  |
 |--------------|--------------|--------------|
 |  ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/pterodactyl-chinese-stable?style=for-the-badge&logo=appveyor&label=最新发布版本) | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  |
 |  |  | ![GitHub Releases pre-releases](https://img.shields.io/github/v/tag/pterodactyl-china/panel?display_name=tag&include_prereleases&style=for-the-badge&logo=appveyor&label=最新预发布版本) |
 
 二选一即可
 
-::: tip 使用翼龙中国稳定版程序 <Badge text="版本落后"/>
+::: tip 使用翼龙中国稳定版程序
 翼龙中国稳定版 是在 翼龙官方最新的发行版 基础上进行的汉化，若阁下喜欢稳定，则可使用以下命令下载稳定版程序
 
 ``` bash

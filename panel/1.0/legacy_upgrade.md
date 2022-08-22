@@ -32,11 +32,6 @@ php artisan down
 
 我们将会删除 `app/` 目录。由于我们处理安装和升级的方式，删除的文件并不总是能被正确检测到，因此，轻易的在此位置上打包会导致一些迷惑行为。
 
-|  **官方版**  |  **稳定版** <Badge text="版本落后"/>  |  **开发版**  |
-|--------------|--------------|--------------|
-|  ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/pterodactyl-chinese-stable?style=for-the-badge&logo=appveyor&label=最新发布版本) | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  |
-|  |  | ![GitHub Releases pre-releases](https://img.shields.io/github/v/tag/pterodactyl-china/panel?display_name=tag&include_prereleases&style=for-the-badge&logo=appveyor&label=最新预发布版本) |
-
 ::: tip 使用翼龙中国开发版程序
 翼龙中国开发版 是在 翼龙官方上游仓库上实时同步 进行的汉化，包含了翼龙官方最新的功能更新/修复，同时也可能带来了新的问题，但一般不会出现太大问题，更新可能比较勤。若阁下喜欢使用开发版，则可使用以下命令下载开发版程序
 
@@ -53,7 +48,7 @@ tar -xzvf panel.tar.gz && rm -f panel.tar.gz
 ```
 :::
 
-::: tip 使用翼龙中国稳定版程序 <Badge text="版本落后"/>
+::: tip 使用翼龙中国稳定版程序
 翼龙中国稳定版 是在 翼龙官方最新的发行版 基础上进行的汉化，若阁下喜欢稳定，则可使用以下命令下载稳定版程序
 
 ``` bash
