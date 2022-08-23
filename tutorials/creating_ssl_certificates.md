@@ -1,17 +1,17 @@
-# 创建SSL证书
+# 创建 SSL 证书
 
-本页将为您介绍如何创建SSL证书
+本页将为您介绍如何为面板和 Wings 创建新的 SSL 证书
 
 :::: tabs
 ::: tab "方法1: Certbot"
-首先,我们将安装Certbot,这是一个脚本文件,它可以自动更新证书并一键创建证书。下面的命令只适合Ubuntu，但您可以在[Certbot官方网站](https://certbot.eff.org/)查看相关安装说明,我们这里包含了安装Certbot必要的Nginx或Apache插件的指令,这样妈妈再也不用担心我需要迁移环境了!
+首先,我们将安装 Certbot,这是一个脚本文件,它可以自动更新证书并一键创建证书。下面的命令只适合 Ubuntu，但您可以在 [Certbot 官方网站](https://certbot.eff.org/)查看相关安装说明,我们这里包含了安装 Certbot 必要的Nginx或Apache插件的指令,这样妈妈再也不用担心我需要迁移环境了!
 
 ``` bash
 sudo apt update
 sudo apt install -y certbot
-# Nginx插件
+# Nginx 插件
 sudo apt install -y python3-certbot-nginx
-# Apache插件
+# Apache 插件
 sudo apt install -y python3-certbot-apache
 ```
 
@@ -19,11 +19,11 @@ sudo apt install -y python3-certbot-apache
 
 安装Certbot之后我们需要生成一个证书,最简单的方法就是安装Web服务器的Certbot插件,如果没有Web服务器的话就需要DNS验证了
 
-在下面命令中,请您替换 `example.com` 域名为您自己需要生成证书的域名,当您需要申请多个域名的证书时可以带前面添加参数 `-d`
+在下面命令中,请您替换 `example.com` 域名为您自己需要生成证书的域名,当您需要申请多个域名的证书时可以在每个域名前面添加 `-d` 参数 ，列如 `-d anotherdomain.com`，当然您还可以考虑生成通配符证书，但本教程未涉及。
 
-### HTTP验证
+### HTTP 验证
 
-HTTP验证需要您开放服务器80端口来进行验证
+HTTP 验证需要您开放服务器 80 端口来进行验证
 
 ``` bash
 # Nginx
@@ -34,22 +34,21 @@ certbot certonly --apache -d example.com
 certbot certonly --standalone -d example.com
 ```
 
-### DNS验证
+### DNS 验证
 
-DNS验证要求您去您的域名购买商那里解析相应的TXT DNS记录值以验证域名所有权
+DNS 验证要求您去您的域名购买商那里解析相应的TXT DNS记录值以验证域名所有权，而不必公开 80 端口。在运行下面的 certbot 命令时会显示说明。
 
 ```bash
 certbot -d example.com --manual --preferred-challenges dns certonly
 ```
 
-### 自动续订
+### 自动续签
 
-您可以配置证书自动续订以防止证书过期,您可以使用`sudo crontab -e`打开crontab来添加下面代码中自动续订的指令,该代码指的是每天晚上11点都会检查一遍SSL证书是否过期然后进行自动续订
+您可以配置证书自动续签以防止证书过期,您可以使用 `sudo crontab -e` 打开 crontab 来添加下面的代码,该代码将在每天 23点 (晚上11点)都会检查一遍SSL证书是否过期并尝试续签
 
-部署成功后将会自动重启Nginx并应用新的SSL证书,您可以将`systemctl restart nginx`中的`nginx`更改为`apache`或`wings`
+部署成功后将会自动重启 Nginx 并应用新的 SSL 证书,您可以将 `systemctl restart nginx` 中的 `nginx` 更改为 `apache` 或 `wings`
 
-对更高级的用户来说,我们建议使用 [acme.sh](https://acme.sh)
-它提供了更多更强大的功能
+对更高级的用户来说,我们建议使用 [acme.sh](https://acme.sh) ，它提供了更多更强大的功能
 
 ``` text
 0 23 * * * certbot renew --quiet --deploy-hook "systemctl restart nginx"
@@ -57,49 +56,49 @@ certbot -d example.com --manual --preferred-challenges dns certonly
 
 ### 疑难解答
 
-如果您在尝试访问面板或Wings时遇到`不安全连接`或SSL/TLS相关的错误时,有可能是您的SSL证书过期了,您可以通过更新SSL证书来解决,如果您的80端口正在被占用那就无法使用`certbot-renew`来完成自动续订
+如果您在尝试访问面板或 Wings 时遇到 `不安全连接` 或 SSL/TLS 相关的错误时,有可能是您的 SSL 证书过期了,您可以通过更新 SSL 证书来解决,如果您的 80 端口正在被占用那就无法使用 `certbot-renew` 来完成自动续签
 
-如果您运行的是Nginx,在运行Certbot并附带有`-nginx`时出现报错您可以先停止Nginx服务然后续订证书再启动Nginx,如果您在为Wings续订证书可以替换为`wings`
+如果您运行的是 Nginx,在运行 Certbot 并附带有 `-nginx` 时出现报错您可以先停止 Nginx 服务后来续签证书，然后再启动 Nginx,如果您在为 Wings 续签证书，那你可以替换为 `wings`
 
-Stop Nginx:
+停止 Nginx:
 
 ```bash
 systemctl stop nginx
 ```
 
-续订证书:
+续签证书:
 
 ```bash
 certbot renew
 ```
 
-在完成续订后请使用下面的命令来重启Nginx:
+在完成续签后请使用下面的命令来重启 Nginx:
 
 ```bash
 systemctl start nginx
 ```
 
 :::
-::: tab "方法2: acme.sh (DNS服务商为Cloudflare)"
-该方法适合高级用户和无法开放80端口的用户, 下面的命令适用于Ubuntu和Cloudflare API,您可以查看[acme.sh的官方网站](https://github.com/Neilpang/acme.sh) 来获取相关说明
+::: tab "方法2: acme.sh (DNS服务商为 Cloudflare)"
+该方法适合高级用户和无法开放80端口的用户, 下面的命令适用于 Ubuntu 和 Cloudflare API,您可以查看 [acme.sh 的官方网站](https://github.com/Neilpang/acme.sh) 来获取相关说明
 
 ``` bash
 curl https://get.acme.sh | sh
 ```
 
-### 获取Cloudflare API密钥
+### 获取 Cloudflare API 密钥
 
-在安装acme后我们需要获取Cloudflare的API密钥,请确保您的DNS记录指向您的节点(Cloudflare的控制台中云朵应该是灰色的),然后找到API密钥,在全局API密钥的选项中点击查看您的Cloudflare密钥
+在安装 acme 后我们需要获取 Cloudflare 的 API 密钥,请确保您的 DNS 记录指向您的节点(Cloudflare 的控制台中云朵应该是灰色的),然后找到 API 密钥,在全局 API 密钥的选项中点击查看您的 Cloudflare 密钥
 
 ### 申请证书
 
-由于配置文件基于Certbot,所以我们需要手动创建一个文件夹
+由于配置文件基于 Certbot,所以我们需要手动创建一个文件夹
 
 ```bash
 sudo mkdir /etc/letsencrypt/live/example.com
 ```
 
-安装acme之后执行它并获取Cloudflare的API密钥,然后输入Cloudflare的API凭据来生成证书
+安装 acme 之后执行它并获取 Cloudflare 的 API 密钥,然后输入 Cloudflare 的 API 凭据来生成证书
 
 ```bash
 export CF_Key="Your_CloudFlare_API_Key"
@@ -115,9 +114,9 @@ acme.sh --issue --dns dns_cf -d "example.com" \
 --fullchain-file /etc/letsencrypt/live/example.com/fullchain.pem
 ```
 
-### 自动续订
+### 自动续签
 
-第一次运行脚本后,它将自动添加到crontab,您可以使用以下命令来编辑自动续订间隔
+第一次运行脚本后,它将自动添加到 crontab,您可以使用以下命令来编辑自动续订间隔
 
 ```bash
 sudo crontab -e
