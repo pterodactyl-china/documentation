@@ -1,9 +1,9 @@
-# 创建新的节点服务器
+# 创建新的节点
 
 [[toc]]
  
 ## 位置
-前往管理面板并单击左侧边栏上的节点服务器选项卡。然后点击右上角的“新建”，打开添加节点服务器的页面。
+前往管理面板并单击左侧边栏上的节点选项卡。然后点击右上角的“新建”，打开添加节点的页面。
 
 ![](../../../.vuepress/public/community/config/nodes/pterodactyl_add_node_create_button.png)
 
@@ -40,8 +40,8 @@
 获得更多信息,你可以去社区查看不同Linux发行版的安装教程[CentOS](/community/installation-guides/wings/centos7.html),
 [Ubuntu](/community/installation-guides/wings/ubuntu1804.html), 或 [Debian](/community/installation-guides/wings/debian9.html).
 
-## 配置节点服务器
-进入节点服务器配置页面
+## 配置节点
+进入节点配置页面
 
 ![](../../../.vuepress/public/community/config/nodes/pterodactyl_add_node_config.png)
 
