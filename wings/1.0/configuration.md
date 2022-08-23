@@ -6,7 +6,7 @@
 这些是给 Wings 的额外配置,请小心进行配置否则您将有概率损坏Wings
 :::
 
-您需要将 `config.yml` 放入 `/etc/pterodactyl` 文件夹然后重启Wings来应用更改设置,请确认您使用的格式是 [Yaml](http://www.yamllint.com/) 这样在运行出错时,您就可以收到类似的错误
+您需要将 `config.yml` 放入 `/etc/pterodactyl` 文件夹然后重启Wings来应用更改设置,请确认您使用的格式是 Yaml ,您可以使用 [YamlLint](http://www.yamllint.com/) 这样在运行出错时,您就可以收到类似的错误
 
 ## 提供身份验证
 
