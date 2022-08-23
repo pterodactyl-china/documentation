@@ -47,7 +47,7 @@ docker:
     network_mode: host    
 ```
 
-再更改后需要重新启动Wings(可运行以下命令),您需要注意的是所有风险将由您自己承担!
+再更改后需要重新启动 Wings (可运行以下命令),您需要注意的是所有风险将由您自己承担!
 `systemctl stop wings && docker network rm pterodactyl_nw && systemctl start wings`
 
 ## 使用Cloudflare代理
