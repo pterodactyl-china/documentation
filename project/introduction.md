@@ -17,7 +17,7 @@ Pterodactyl 是使用 PHP、React 和 Go 构建的开源游戏服务器管理面
 | 实时性 | **开发版**会实时同步 `develop` 分支 | :x: | :white_check_mark: |
 | BUG修复 | **稳定版**可能会累积一定的量来集中更新。比如构建失误、错误以及危险漏洞等 | :heavy_exclamation_mark: | :white_check_mark: |
 | 更新/发布频繁程度 | **开发版**发现汉化及影响体验的部分会及时更新，在同步上游并没有问题时会发布 `releases` | :x: | :white_check_mark: |
-| **无缝**迁移至中国版 | **开发版****可能**会比翼龙官方发布的 `releases` 提前更新部分依赖，需要执行一遍 `composer` 更新命令（但正常不会） | :white_check_mark: | :heavy_exclamation_mark: |
+| **无缝**迁移至中国版 | **开发版** _**可能**_ 会比翼龙官方发布的 `releases` 提前更新部分依赖，需要执行一遍 `composer` 更新命令（但正常不会） | :white_check_mark: | :heavy_exclamation_mark: |
 | 汉化完善度 | **开发版**会经常根据社区反馈，进行汉化完善，在累计一定值会发布 `releases`（这也是更新频繁的原因） | :heavy_exclamation_mark: | :white_check_mark: |
 | 本土化 | 比如验证、头像、资源加载地址等（**两边基本上会同步更新**） | :white_check_mark: | :white_check_mark: |
 
