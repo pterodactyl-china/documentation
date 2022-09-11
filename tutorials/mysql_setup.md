@@ -41,7 +41,7 @@ GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1' WITH GRANT OPTION;
 ```
 
 ## 为节点创建一个数据库主机
-:::提示
+:::tip
 本节将会教你创建一个具有创建和修改用户权限的MySQL用户，这将允许面板为指定的伺服器创建数据库。
 :::
 
@@ -68,6 +68,6 @@ GRANT ALL PRIVILEGES ON *.* TO 'pterodactyluser'@'127.0.0.1' WITH GRANT OPTION;
 [mysqld]
 bind-address=0.0.0.0
 ```
-重启MySQL/MariaDB以应用这些變更。在默认情况下，防火墻會攔截外部的請求，請於防火墻開放MySQL端口(默认为3306)的連接。
+重启MySQL/MariaDB以应用这些變更。在默认情况下，防火墙会拦截外部的请求，请于防火墙开放MySQL端口(默认为3306)的连接。
 
 如果你的数据库和Wings在同一台机器上并且不需要外部访问，你也可以使用`docker0`接口的IP地址而不是`127.0.0.1`。这个IP地址可以通过运行`ip addr | grep docker0`指令找到，它可能看起来像`172.x.x.x`。
