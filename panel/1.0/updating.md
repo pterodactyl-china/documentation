@@ -85,7 +85,7 @@ curl -L https://hub.fastgit.xyz/pterodactyl-china/pterodactyl-chinese-stable/rel
 :::
 
 ::: tip 使用翼龙中国开发版程序
-翼龙中国开发版 是在 翼龙官方上游仓库 develop 分支上实时同步 进行的汉化，包含了**翼龙官方**和**翼龙中国**最新的功能更新/修复，开发版的发行版都是没有问题的。若阁下想体验最新功能，则可使用以下命令下载开发版程序
+翼龙中国开发版 是在 翼龙官方上游仓库 develop 分支上实时同步 进行的汉化，包含了**翼龙官方和翼龙中国最新的功能更新/修复**，开发版的发行版都是没有问题的。若阁下想体验最新功能，则可使用以下命令下载开发版程序
 ```bash
 curl -L https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz | tar -xzv
 # 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 Fastgit 提供的国内反向代理来拉取

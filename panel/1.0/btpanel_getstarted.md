@@ -84,7 +84,7 @@ https://hub.fastgit.xyz/pterodactyl-china/pterodactyl-china-stable/releases/late
 :::
 
 ::: tip 使用翼龙中国开发版程序
-翼龙中国开发版 是在 翼龙官方上游仓库 develop 分支上实时同步 进行的汉化，包含了**翼龙官方**和**翼龙中国**最新的功能更新/修复，开发版的发行版都是没有问题的。若阁下想体验最新功能，则可使用以下命令下载开发版程序
+翼龙中国开发版 是在 翼龙官方上游仓库 develop 分支上实时同步 进行的汉化，包含了**翼龙官方和翼龙中国最新的功能更新/修复**，开发版的发行版都是没有问题的。若阁下想体验最新功能，则可使用以下命令下载开发版程序
 
 ``` bash
 https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
