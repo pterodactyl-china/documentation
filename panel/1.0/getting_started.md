@@ -98,7 +98,7 @@ cd /var/www/pterodactyl
 |  |  | ![GitHub Releases pre-releases](https://img.shields.io/github/v/tag/pterodactyl-china/panel?display_name=tag&include_prereleases&style=for-the-badge&logo=appveyor&label=最新预发布版本) |
 
 ::: tip 使用翼龙中国稳定版程序
-翼龙中国稳定版 是在 翼龙官方最新的发行版 基础上进行的汉化，若阁下喜欢稳定，则可使用以下命令下载稳定版程序
+翼龙中国稳定版 是在 翼龙官方最新的发行版 基础上进行的汉化，若阁下喜欢稳定版，则可使用以下命令下载稳定版程序
 
 ``` bash
 curl -Lo panel.tar.gz https://github.com/pterodactyl-china/pterodactyl-chinese-stable/releases/latest/download/panel.tar.gz
@@ -111,7 +111,7 @@ chmod -R 755 storage/* bootstrap/cache/
 :::
 
 ::: tip 使用翼龙中国开发版程序
-翼龙中国开发版 是在 翼龙官方上游仓库上实时同步 进行的汉化，包含了翼龙官方最新的功能更新/修复，同时也可能带来了新的问题，但一般不会出现太大问题，更新可能比较勤。若阁下喜欢使用开发版，则可使用以下命令下载开发版程序
+翼龙中国开发版 是在 翼龙官方上游仓库 develop 分支上实时同步 进行的汉化，包含了**翼龙官方**和**翼龙中国**最新的功能更新/修复，开发版的发行版都是没有问题的。若阁下想体验最新功能，则可使用以下命令下载开发版程序
 
 ``` bash
 curl -Lo panel.tar.gz https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
