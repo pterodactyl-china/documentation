@@ -48,6 +48,8 @@ VMware, Inc.
 
 ```bash
 curl -sSL https://get.docker.com/ | CHANNEL=stable bash
+# 如果速度过慢可以尝试阿里云源
+curl -sSL https://get.docker.com/ | CHANNEL=stable bash -s docker --mirror Aliyun
 ```
 
 如果您希望手动安装，请参考官方 Docker 文档了解如何在您的服务器上安装 Docker 社区版。下面列出了一些常用系统支持的快速链接。
