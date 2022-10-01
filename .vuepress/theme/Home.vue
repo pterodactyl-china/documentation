@@ -133,6 +133,7 @@
                     </div>
                     <div class="hidden md:block md:flex-1 md:pr-12">
                         <p><a class="text-grey-lightest" href="https://github.com/pterodactyl-china">GitHub</a></p>
+                        <p><a class="text-grey-lightest" href="https://afdian.net/a/vlssu">捐助</a></p>
                         <p><a class="text-grey-lightest" href="/panel/troubleshooting.html">疑难解答</a></p>
                         <p><a class="text-grey-lightest" href="https://github.com/parkervcp/eggs">额外的游戏配置</a></p>
                     </div>
