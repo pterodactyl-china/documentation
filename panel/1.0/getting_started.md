@@ -92,7 +92,7 @@ cd /var/www/pterodactyl
 
 在为面板创建好它的工作目录后，我们将使用 `curl` 命令，从 Github 拉取翼龙中国汉化完成的程序文件压缩包，拉取完成后，我们需要对压缩包进行解压操作，并赋予 `storage/` 与 `bootstrap/cache/` 目录 755 权限。这两个目录作用是缓存动态资源以加速访问。
 
-|  **官方版**  |  **稳定版**  |  **开发版**  |
+|  **官方版**  |  **稳定版**  |  **RC版**  |
 |--------------|--------------|--------------|
 |  ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/pterodactyl-chinese-stable?style=for-the-badge&logo=appveyor&label=最新发布版本) | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  |
 |  |  | ![GitHub Releases pre-releases](https://img.shields.io/github/v/tag/pterodactyl-china/panel?display_name=tag&include_prereleases&style=for-the-badge&logo=appveyor&label=最新预发布版本) |
@@ -110,8 +110,8 @@ chmod -R 755 storage/* bootstrap/cache/
 ```
 :::
 
-::: tip 使用翼龙中国开发版程序
-翼龙中国开发版 是在 翼龙官方上游仓库 develop 分支上实时同步 进行的汉化，包含了**翼龙官方和翼龙中国最新的功能更新/修复**，开发版的发行版都是没有问题的。若阁下想体验最新功能，则可使用以下命令下载开发版程序
+::: tip 使用翼龙中国RC版程序
+翼龙中国RC版 是在 翼龙官方上游仓库 develop 分支上实时同步 进行的汉化，包含了**翼龙官方和翼龙中国最新的功能更新/修复**，RC版的发行版都是没有问题的。若阁下想体验最新功能，则可使用以下命令下载RC版程序
 
 ``` bash
 curl -Lo panel.tar.gz https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz

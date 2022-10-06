@@ -66,7 +66,7 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 
 ### 下载并上传程序文件至网站目录
 
-|  **官方版**  |  **稳定版**  |  **开发版**  |
+|  **官方版**  |  **稳定版**  |  **RC版**  |
 |--------------|--------------|--------------|
 |  ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/pterodactyl-chinese-stable?style=for-the-badge&logo=appveyor&label=最新发布版本) | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  |
 |  |  | ![GitHub Releases pre-releases](https://img.shields.io/github/v/tag/pterodactyl-china/panel?display_name=tag&include_prereleases&style=for-the-badge&logo=appveyor&label=最新预发布版本) |
@@ -83,8 +83,8 @@ https://hub.fastgit.xyz/pterodactyl-china/pterodactyl-china-stable/releases/late
 ```
 :::
 
-::: tip 使用翼龙中国开发版程序
-翼龙中国开发版 是在 翼龙官方上游仓库 develop 分支上实时同步 进行的汉化，包含了**翼龙官方和翼龙中国最新的功能更新/修复**，开发版的发行版都是没有问题的。若阁下想体验最新功能，则可使用以下命令下载开发版程序
+::: tip 使用翼龙中国RC版程序
+翼龙中国RC版 是在 翼龙官方上游仓库 develop 分支上实时同步 进行的汉化，包含了**翼龙官方和翼龙中国最新的功能更新/修复**，RC版的发行版都是没有问题的。若阁下想体验最新功能，则可使用以下命令下载RC版程序
 
 ``` bash
 https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
