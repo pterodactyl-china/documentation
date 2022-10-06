@@ -41,7 +41,7 @@ Pterodactyl 是使用 PHP、React 和 Go 构建的开源游戏服务器管理面
 社区提供的游戏还有很多。其中一些游戏包括：
 
 * Factorio （异星工厂）
-* San Andreas: MP （
+* San Andreas: MP
 * Pocketmine MP
 * Squad （战术小队）
 * FiveM
