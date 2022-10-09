@@ -127,6 +127,6 @@ php artisan up
 ```
 
 ## 迁移至 Wings
-我们已经弃用了旧的 Node.js 守护进程，转而支持 [Wings](https://github.com/pterodactyl/wings)，这是我们用 Go 编写的新服务器控制系统。这个新系统明显更快、更容易安装并且更小。您需要做的就是在您的系统上安装一个二进制文件并将其配置为开机自启。**您不能使用旧的 Node.js 守护进程来运行带有 翼龙面板 1.0 以上的服务器。**
+我们已经弃用了旧的 Node.js 守护进程，转而支持 [Wings](https://github.com/pterodactyl-china/wings)，这是我们用 Go 编写的新服务器控制系统。这个新系统明显更快、更容易安装并且更小。您需要做的就是在您的系统上安装一个二进制文件并将其配置为开机自启。**您不能使用旧的 Node.js 守护进程来运行带有 翼龙面板 1.0 以上的服务器。**
 
 有关详细说明，请阅读[迁移至 Wings](/wings/1.0/migrating.md)。

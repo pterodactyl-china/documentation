@@ -13,7 +13,7 @@ Building Go programs is very easy, and the same also applies to Wings. Go is cro
 
 ## Build Requirements
 
-An up to date version of Go is required to compile Wings. The minimum version can be found at the top of the [go.mod](https://github.com/pterodactyl/wings/blob/develop/go.mod) file. See the [official instructions](https://golang.org/doc/install) for help with installing Go.
+An up to date version of Go is required to compile Wings. The minimum version can be found at the top of the [go.mod](https://github.com/pterodactyl-china/wings/blob/develop/go.mod) file. See the [official instructions](https://golang.org/doc/install) for help with installing Go.
 
 ## Building
 

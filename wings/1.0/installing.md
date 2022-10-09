@@ -100,8 +100,11 @@ Wings 及配置文件路径已写死，请不要想着更改路径。（当然�
 
 ```bash
 mkdir -p /etc/pterodactyl
-curl -L -o /usr/local/bin/wings "https://github.com/pterodactyl/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
+curl -L -o /usr/local/bin/wings "https://github.com/pterodactyl-china/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
 chmod u+x /usr/local/bin/wings
+
+# 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 Fastgit 提供的国内反向代理来拉取
+curl -L -o /usr/local/bin/wings "https://hub.fastgit.xyz/pterodactyl-china/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
 ```
 
 ::: warning OVH/SYS 服务器

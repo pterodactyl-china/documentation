@@ -104,7 +104,7 @@ installer_limits:
 
 ## 其他内容
 
-还有更多可以配置 Wings 的选项和说明 [您可点我查看](https://github.com/pterodactyl/wings/tree/develop/config)
+还有更多可以配置 Wings 的选项和说明 [您可点我查看](https://github.com/pterodactyl-china/wings/tree/develop/config)
 
 | 设置项                | 默认值 | 备注                                                                                           |
 | -------------------------- | :-----------: | ----------------------------------------------------------------------------------------------- |
