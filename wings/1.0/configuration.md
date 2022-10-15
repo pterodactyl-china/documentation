@@ -88,7 +88,7 @@ docker:
 | write_limit           |       0       | 对磁盘 I/O 的限制,设置0为无限,单位为 MiB/s |
 | download_limit        |       0       | 设置网络 I/O 限制,设置0为无限,单位为 MiB/s    |
 
-### Example of usage
+### 使用示例
 
 ```yml
 throttles:

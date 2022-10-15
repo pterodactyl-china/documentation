@@ -77,7 +77,7 @@ certbot renew
 ```bash
 systemctl start nginx
 ```
-You may also need to restart Wings as not every service is able to automatically apply an updated certificate:
+您可能还需要重新启动 Wings，因为并非每个服务都能够自动应用更新的证书：
 
 ```bash
 systemctl restart wings
