@@ -77,6 +77,11 @@ certbot renew
 ```bash
 systemctl start nginx
 ```
+You may also need to restart Wings as not every service is able to automatically apply an updated certificate:
+
+```bash
+systemctl restart wings
+```
 
 :::
 ::: tab "方法2: acme.sh (DNS服务商为 Cloudflare)"
@@ -109,7 +114,7 @@ export CF_Email="Your_CloudFlare_Account@example.com"
 然后创建证书
 
 ```bash
-acme.sh --issue --dns dns_cf -d "example.com" \
+acme.sh --issue --dns dns_cf -d "example.com" --server letsencrypt \
 --key-file /etc/letsencrypt/live/example.com/privkey.pem \
 --fullchain-file /etc/letsencrypt/live/example.com/fullchain.pem
 ```

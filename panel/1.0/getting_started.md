@@ -54,7 +54,10 @@ apt -y install software-properties-common curl apt-transport-https ca-certificat
 
 # 为 PHP、Redis 和 MariaDB 添加额外的存储库
 LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
-add-apt-repository ppa:redislabs/redis -y
+
+# Add Redis official APT repository
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
 
 # 在 Ubuntu 22.04 上可以跳过 MariaDB 存储库设置脚本
 curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash

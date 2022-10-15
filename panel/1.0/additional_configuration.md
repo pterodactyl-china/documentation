@@ -40,9 +40,21 @@ AWS_SECRET_ACCESS_KEY=
 AWS_BACKUPS_BUCKET=
 AWS_ENDPOINT=
 ```
+
 对于某些配置，你可能需要将你的 S3 URL 从 `bucket.domain.com` 改为 `domain.com/bucket`。为了达到这个目的，在你的 `.env` 文件中添加 `AWS_USE_PATH_STYLE_ENDPOINT=true`。
 
-## 反向代理设置
+S3 备份使用 S3 分段上传功能。在极少数情况下，您可能需要调整单个分段大小或生成的预签名 URL 的生命周期。
+默认分段大小为 5GB，默认预签名 URL 生命周期为 60 分钟。您可以使用 `BACKUP_MAX_PART_SIZE` 环境变量配置最大分段尺寸。
+您必须以字节为单位指定大小。 要定义预签名 URL 的生命周期，请使用 `BACKUP_PRESIGNED_URL_LIFESPAN` 变量。预期单位是分钟。
+
+以下 `.env` 片段配置 1GB 部分并使用 120 分钟作为预签名 URL 生命周期：
+
+```bash
+BACKUP_MAX_PART_SIZE=1073741824
+BACKUP_PRESIGNED_URL_LIFESPAN=120
+```
+
+## Reverse Proxy Setup
 
 在反向代理后面运行 Pterodactyl 时，例如 [Cloudflare 的灵活 SSL](https://support.cloudflare.com/hc/en-us/articles/200170416-What-do-the-SSL-options-mean-) 或 Nginx/Apache/Caddy 等，您将需要对面板进行快速修改，以确保一切按预期继续工作。
 默认情况下，当使用这些反向代理时，您的面板将无法正确处理请求。
@@ -106,7 +118,6 @@ RECAPTCHA_ENABLED=false
 #### 编辑你的数据库
 
 如果您无法访问面板，可以使用以下命令直接修改数据库。
-
 
 ```sql
 mysql -u root -p
