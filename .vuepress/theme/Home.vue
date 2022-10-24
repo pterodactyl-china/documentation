@@ -18,7 +18,7 @@
             <div class="container text-center">
                 <h1 class="text-blue mb-4">翼龙面板</h1>
                 <h3 class="border-0 font-normal leading-normal mx-auto" style="max-width: 50rem">
-                    翼龙&reg; 是一个免费的开源游戏服务器管理面板，使用 PHP、React 和 Go 构建。Pterodactyl 在设计时考虑了安全性，在隔离的 Docker
+                    Pterodactyl&reg; 是一个免费的开源游戏服务器管理面板，使用 PHP、React 和 Go 构建。Pterodactyl 在设计时考虑了安全性，在隔离的 Docker
                     容器中运行所有游戏服务器，同时向最终用户展示了美观直观的 UI。
                 </h3>
                 <h3 class="border-0 leading-normal mx-auto mt-4" style="max-width: 50rem">
@@ -60,7 +60,7 @@
                     <div class="feature">
                         <span><i class="icon icon-expand"></i></span>
                         <h3>可扩展性</h3>
-                        <p>无论你是一家托管公司，还是下一个Hyplex，或者是普通玩家，我们都能为你提供服务。</p>
+                        <p>无论你是一家IDC服务商，还是下一个Hyplex，又或者是一起玩游戏的好朋友，我们都能为你提供服务。</p>
                     </div>
                 </div>
             </div>
@@ -125,15 +125,15 @@
                 <div class="text-left md:flex">
                     <div class="flex-none w-full md:w-1/2 md:pr-12">
                         <p class="my-4">
-                            自2015年以来，翼龙&reg;一直在提供强大、高性能和安全的软件，使个人、网络和托管公司轻松地大规模运行游戏服务器。最重要的是？没有高昂的月费！
+                            自2015年以来，Pterodactyl&reg;一直在提供强大、高性能和安全的软件，使个人、网络和IDC服务商轻松地大规模运行游戏服务器。最重要的是？没有高昂的月费！
                         </p>
                         <p class="my-4">
-                            今天就开始吧，看看为什么成千上万的用户信任翼龙&reg;来管理他们的游戏服务器。
+                            今天就开始吧，看看为什么成千上万的用户信任Pterodactyl&reg;来管理他们的游戏服务器。
                         </p>
                     </div>
                     <div class="hidden md:block md:flex-1 md:pr-12">
                         <p><a class="text-grey-lightest" href="https://github.com/pterodactyl-china">GitHub</a></p>
-                        <p><a class="text-grey-lightest" href="https://afdian.net/a/vlssu">捐助</a></p>
+                        <p><a class="text-grey-lightest" href="https://afdian.net/a/vlssu">赞助我们</a></p>
                         <p><a class="text-grey-lightest" href="/panel/troubleshooting.html">疑难解答</a></p>
                         <p><a class="text-grey-lightest" href="https://github.com/parkervcp/eggs">额外的游戏配置</a></p>
                     </div>
@@ -144,7 +144,7 @@
                     </div>
                 </div>
                 <div class="footer">MIT Licensed | Pterodactyl&reg; Copyright &copy; 2015 - 2022 Dane Everitt &
-                    contributors. | Sinicizated by Pterodactyl-China. | <a href="https://beian.miit.gov.cn">沪ICP备2022002870号-18</a></div>
+                    contributors. | Sinicizated by Pterodactyl-China&reg; | <a href="https://beian.miit.gov.cn">沪ICP备2022002870号-18</a></div>
             </div>
         </div>
     </div>
