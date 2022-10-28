@@ -75,7 +75,7 @@ module.exports = {
             },
             {
                 text: '获取帮助',
-                link: 'https://kook.top/0Grsf5'
+                link: 'https://bbs.pterodactyl.top'
             },
             {
                 text: 'API',
