@@ -113,7 +113,7 @@
                 <p class="m-4">准备好在翼龙号上飞翔了吗？</p>
                 <div class="mt-4">
                     <router-link class="btn inline-block" to="/project/introduction.html">关于本项目</router-link>
-                    <a class="btn inline-block" href="https://kook.top/0Grsf5">KOOK</a>
+                    <a class="btn inline-block" href="https://bbs.pterodactyl.top">翼龙中国社区</a>
                 </div>
             </div>
         </div>
