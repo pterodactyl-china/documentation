@@ -27,9 +27,8 @@
 |                  | 20.04   | :white_check_mark: |                                                             |
 |                  | 22.04   | :white_check_mark: | MariaDB 无需 repo 安装脚本即可安装。     |
 | **CentOS**       | 7       | :white_check_mark: | 需要额外的 repos。                                   |
-|                  | 8       | :white_check_mark: | 请注意，CentOS 8 已停运。使用 Rocky 或 Alma Linux。         |
-| **Debian**       | 9       | :white_check_mark: | 需要额外的 repos。                                   |
-|                  | 10      | :white_check_mark: |                                                             |
+|                  | 8       | :white_check_mark: | 注意，CentOS 8 已停运。使用 Rocky 或 Alma Linux。         |
+| **Debian**       | 10      | :white_check_mark: |                                                             |
 |                  | 11      | :white_check_mark: |                                                             |
 
 ## 依赖项

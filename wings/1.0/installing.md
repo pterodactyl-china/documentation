@@ -14,10 +14,10 @@ Wings 是翼龙的下一代服务器控制平面。它已经使用 Go 从头开�
 |------------------|---------|:------------------:|-------------------------------------------------------------|
 | **Ubuntu**       | 18.04   | :white_check_mark: | 文档基于 Ubuntu 18.04 作为操作系统所编写的。 |
 |                  | 20.04   | :white_check_mark: |                                                             |
+|                  | 22.04   | :white_check_mark: |                                                             |
 | **CentOS**       | 7       | :white_check_mark: |                                                             |
 |                  | 8       | :white_check_mark: | 请注意，CentOS 8 已停运。使用 Rocky 或 Alma Linux.         |
-| **Debian**       | 9       | :white_check_mark: |                                                             |
-|                  | 10      | :white_check_mark: |                                                             |
+| **Debian**       | 10      | :white_check_mark: |                                                             |
 |                  | 11      | :white_check_mark: |                                                             |
 | **Windows**      | All     |        :x:         | 该软件将无法在 Windows 环境中运行。         |
 
