@@ -68,30 +68,12 @@ php artisan down
 ### 下载更新
 
 更新过程的第一步是从 GitHub 下载新的面板文件。下面的命令将下载翼龙中国最新发布的版本，将其保存在当前目录中，并自动解压到您的当前文件夹中。
-<br>稳定版和RC版并不同步，如果想实时体验最新版可以选择RC版。
 
-|  **官方版**  |  **稳定版**  |  **RC版**  |
-|--------------|--------------|--------------|
-|  ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/pterodactyl-chinese-stable?style=for-the-badge&logo=appveyor&label=最新发布版本) | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  |
-|  |  | ![GitHub Releases pre-releases](https://img.shields.io/github/v/tag/pterodactyl-china/panel?display_name=tag&include_prereleases&style=for-the-badge&logo=appveyor&label=最新预发布版本) |
-
-::: tip 使用翼龙中国稳定版程序
-翼龙中国稳定版 是在 翼龙官方最新的发行版 基础上进行的汉化，若阁下喜欢稳定版，则可使用以下命令下载稳定版程序
-```bash
-curl -L https://github.com/pterodactyl-china/pterodactyl-chinese-stable/releases/latest/download/panel.tar.gz | tar -xzv
-# 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 Fastgit 提供的国内反向代理来拉取
-curl -L https://hub.fastgit.xyz/pterodactyl-china/pterodactyl-chinese-stable/releases/latest/download/panel.tar.gz | tar -xzv
-```
-:::
-
-::: tip 使用翼龙中国RC版程序
-翼龙中国RC版 是在 翼龙官方上游仓库 develop 分支上实时同步 进行的汉化，包含了**翼龙官方和翼龙中国最新的功能更新/修复**，RC版的发行版都是没有问题的。若阁下想体验最新功能，则可使用以下命令下载RC版程序
 ```bash
 curl -L https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz | tar -xzv
 # 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 Fastgit 提供的国内反向代理来拉取
 curl -L https://hub.fastgit.xyz/pterodactyl-china/panel/releases/latest/download/panel.tar.gz | tar -xzv
 ```
-:::
 
 下载所有文件后，我们需要将缓存与存储目录上设置正确的权限，以避免与网络服务器出现相关的错误。
 

@@ -32,9 +32,6 @@ php artisan down
 
 我们将会删除 `app/` 目录。由于我们处理安装和升级的方式，删除的文件并不总是能被正确检测到，因此，轻易的在此位置上打包会导致一些迷惑行为。
 
-::: tip 使用翼龙中国RC版程序
-翼龙中国RC版 是在 翼龙官方上游仓库 develop 分支上实时同步 进行的汉化，包含了**翼龙官方和翼龙中国最新的功能更新/修复**，RC版的发行版都是没有问题的。若阁下想体验最新功能，则可使用以下命令下载RC版程序
-
 ``` bash
 # 删除 app 目录是为了确保我们升级后不会导致文件显得杂乱无章。
 # 这不会影响您的任何设置或服务器。
@@ -46,23 +43,6 @@ rm -rf $(find app public resources -depth | head -n -1 | grep -Fv "$(tar -tf pan
 # 下载更新文件并删除存档文件。
 tar -xzvf panel.tar.gz && rm -f panel.tar.gz
 ```
-:::
-
-::: tip 使用翼龙中国稳定版程序
-翼龙中国稳定版 是在 翼龙官方最新的发行版 基础上进行的汉化，若阁下喜欢稳定版，则可使用以下命令下载稳定版程序
-
-``` bash
-# 删除 app 目录是为了确保我们升级后不会导致文件显得杂乱无章。
-# 这不会影响您的任何设置或服务器。
-curl -L -o panel.tar.gz https://github.com/pterodactyl-china/pterodactyl-chinese-stable/releases/latest/download/panel.tar.gz
-# 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 Fastgit 提供的国内反向代理来拉取
-curl -Lo panel.tar.gz https://hub.fastgit.xyz/pterodactyl-china/pterodactyl-china-stable/releases/latest/download/panel.tar.gz
-
-rm -rf $(find app public resources -depth | head -n -1 | grep -Fv "$(tar -tf panel.tar.gz)")
-# 下载更新文件并删除存档文件。
-tar -xzvf panel.tar.gz && rm -f panel.tar.gz
-```
-:::
 
 下载所有文件后，我们需要将缓存与存储目录上设置正确的权限，以避免与网络服务器出现相关的错误。
 
