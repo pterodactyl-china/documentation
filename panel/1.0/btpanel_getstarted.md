@@ -55,7 +55,7 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 `LNMP` 和 `LAMP` 分别代表着 `Linux` `Nginx\Apache` `Mysql` `PHP`   
 阁下选择版本请务必保证 `PHP`版本 >=  `8.1`、 `MySQL`版本 >=  `5.7`    
 这一般会在阁下第一次登录宝塔面板时提示安装，我不在此赘述，若阁下错过提示，可点击 `软件商店` 自行安装    
-在安装完毕后，在 `PHP` 的**禁用函数**里删除`putenv、exec、proc_open、shell_exec`，并且在扩展里安装 `fileinfo` `redis`
+在安装完毕后，在 `PHP` 的**禁用函数**里删除 `putenv`、 `exec`、 `proc_open`、 `shell_exec`，并且在扩展里安装 `fileinfo` `redis`
 
 ## 新建站点并开始构建
 
