@@ -131,6 +131,9 @@
                         <p class="my-4">
                             今天就开始吧，看看为什么成千上万的用户信任Pterodactyl&reg;来管理他们的游戏服务器。
                         </p>
+                        <p class="my-4">
+                            “翼龙中国” 为 Vlssu进行维护的翼龙第三方汉化分支，非官方版本。翼龙官方官网：pterodactyl.io
+                        </p>
                     </div>
                     <div class="hidden md:block md:flex-1 md:pr-12">
                         <p><a class="text-grey-lightest" href="https://github.com/pterodactyl-china">GitHub</a></p>
