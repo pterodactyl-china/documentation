@@ -87,6 +87,15 @@ chmod +x docker-compose.yml
 
 在 `docker-compose.yml` 文件中可以设置，具体变量的详细信息可查看 在 [GitHub 仓库中提供的文档](https://github.com/pterodactyl-china/panel/blob/develop/.github/docker/README.md) 或查看 [Gitee 镜像仓库中提供的文档(可能不是最新的)](https://gitee.com/vlssu/pterodactyl-panel/blob/develop/.github/docker/README.md)
 
+## 部署运行
+
+在设置完环境变量，我们就可以使用 `docker-compose.yml` 来启动面板了
+
+``` bash
+# 在后台执行该服务
+docker-compose up -d
+```
+
 ### 添加首位用户
 
 数据库配置完成后，您需要为面板创建一个管理用户，以便您可以登录面板。 为此，请运行以下命令。 并保证账户密码满足以下要求：8 个字符，大小写混合，至少一个数字。
