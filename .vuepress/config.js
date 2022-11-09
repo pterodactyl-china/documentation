@@ -167,6 +167,7 @@ module.exports = {
                             children: [
                                 '/getting_started',
 								'/btpanel_getstarted',
+								'/docker_getstarted',
                                 '/webserver_configuration',
                                 '/additional_configuration',
                                 '/updating',
