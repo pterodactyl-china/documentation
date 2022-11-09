@@ -74,7 +74,7 @@ mkdir -p /var/www/pterodactyl
 cd /var/www/pterodactyl
 ```
 
-在为面板创建好它的工作目录后，我们将使用 `curl` 命令，从 Github 拉取翼龙中国汉化完成的文件，拉取完成后，我们需要对压缩包进行解压操作，并赋予 ` docker-compose.yml` 文件 755 权限。
+在为面板创建好它的工作目录后，我们将使用 `curl` 命令，从 Github 拉取翼龙中国汉化完成的文件，拉取完成后，并赋予 ` docker-compose.yml` 文件的可执行权限。
 
 ``` bash
 curl -Lo docker-compose.yml https://raw.githubusercontent.com/pterodactyl-china/panel/develop/docker-compose.example.yml
