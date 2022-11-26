@@ -184,7 +184,7 @@ php artisan p:user:make
 
 [Unit]
 Description=Pterodactyl Queue Worker
-After=redis-server.service
+# After=redis-server.service
 
 [Service]
 # 在某些系统上用户和组可能不同。
