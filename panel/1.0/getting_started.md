@@ -33,7 +33,7 @@
 
 ## 依赖项
 
-* PHP `7.4`、`8.0` 或 `8.1`（推荐），带有以下扩展名：`cli`、`openssl`、`gd`、`mysql`、`PDO`、`mbstring` `tokenizer`、`bcmath `、`xml` 或 `dom`、`curl`、`zip` 和 `fpm` 如果你打算使用 NGINX。
+* PHP `8.0` 或 `8.1`（推荐），带有以下扩展名：`cli`、`openssl`、`gd`、`mysql`、`PDO`、`mbstring` `tokenizer`、`bcmath `、`xml` 或 `dom`、`curl`、`zip` 和 `fpm` 如果你打算使用 NGINX。
 * MySQL `5.7.22` 及更高版本（推荐 MySQL `8`）**或** MariaDB `10.2` 及更高版本。
 * Redis (`redis-server`)
 * 一个 Web 服务器（Apache、NGINX、Caddy 等）
@@ -242,5 +242,9 @@ sudo systemctl enable --now redis-server
 ``` bash
 sudo systemctl enable --now pteroq.service
 ```
+
+### 遥测
+
+从 1.11 开始，Pterodactyl 将收集匿名遥测数据，以帮助我们更好地了解软件的使用情况。要了解有关此功能的更多信息并拒绝此功能，请参阅我们的 [遥测](./additional_configuration.md#遥测) 文档。确保继续其余的安装过程。
 
 #### 下一步：[网络服务器配置](./webserver_configuration)

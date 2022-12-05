@@ -8,9 +8,6 @@ module.exports = {
       }
     },
     plugins: [
-        /*['@vuepress/google-analytics', {
-            ga: 'UA-87324178-3'
-        },],*/
         ['@vuepress/search', {
             searchMaxSuggestions: 10
         }],
@@ -161,7 +158,7 @@ module.exports = {
                     currentVersion: '1.0',
                     versions: [
                         {
-                            title: '1.10',
+                            title: '1.11',
                             name: '1.0',
                             status: 'stable',
                             children: [
@@ -184,7 +181,7 @@ module.exports = {
                     currentVersion: '1.0',
                     versions: [
                         {
-                            title: '1.7',
+                            title: '1.11',
                             name: '1.0',
                             status: 'stable',
                             children: [
@@ -209,13 +206,6 @@ module.exports = {
                     collapsable: false,
                     children: [
                         '/guides/mounts.md',
-                    ],
-                },
-                {
-                    title: '开发与运营',
-                    collapsable: true,
-                    children: [
-                        '/ops/publish_release.md',
                     ],
                 },
             ],
