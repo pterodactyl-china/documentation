@@ -157,34 +157,24 @@ UPDATE panel.settings SET value = 0 WHERE `key` = 'settings::pterodactyl:auth:2f
 php artisan p:user:disable2fa
 ```
 
-## Telemetry
+## 遥测
 
-Since 1.11, the Panel collects anonymous metrics about the Panel and all connected nodes.
-This feature is enabled by default, but can be disabled.
+从 1.11 开始，Panel 收集有关 Panel 和所有连接节点的匿名指标。
+此功能默认启用，但可以禁用。
 
-The data collected by this feature is not sold or used for advertising purposes.  Aggregate statistics
-may be made public or shared with third-parties for the purposes of improving the software.
+此功能收集的数据不会出售或用于广告目的。 出于改进软件的目的，可能会公开或与第三方共享汇总统计数据。
+### 它是如何工作的？
 
-### How does it work?
+遥测系统首先为 Panel 安装生成随机 UUIDv4 标识符。
+此标识符存储在数据库中，因此对多个 Panel 实例进行负载平衡的人仍然可以拥有唯一的标识符。 然后将该标识符连同相关遥测数据发送到远程服务器。 遥测数据每 24 小时收集一次，没有持续收集或本地存储遥测数据，我们在将数据发送到远程服务器之前立即收集数据。
 
-The Telemetry system works by first generating a random UUIDv4 identifier for the Panel installation.
-This identifier is stored in the database so people load-balancing multiple Panel instances can still
-have a unique identifier.  This identifier is then sent to a remote server, along the associated
-telemetry data.  The telemetry data is collected every 24 hours, there is no ongoing collection
-or local storage of the telemetry data, we collect the data right before we send it to the remote
-server.
+目前，所有遥测收集逻辑都由面板上的 [TelemetryCollectionService](https://github.com/pterodactyl/panel/blob/1.0-develop/app/Services/Telemetry/TelemetryCollectionService.php#L53) 处理。 该服务负责收集发送到远程服务器的所有数据。
 
-Currently, all telemetry collection logic is handled by the [TelemetryCollectionService](https://github.com/pterodactyl/panel/blob/1.0-develop/app/Services/Telemetry/TelemetryCollectionService.php#L53)
-on the panel.  This service is responsible for collecting all the data that is sent to the remote
-server.
+### 收集什么数据？
 
-### What data is collected?
+如果您希望查看收集到的完整数据，请查看 TelemetryCollectionService（如上链接），或使用 `php artisan p:telemetry` 命令查看将发送到远程服务器的确切数据。
 
-If you wish to see the full data that is collected, please look at the TelemetryCollectionService
-(as linked above), or use the `php artisan p:telemetry` command to view the exact data that will
-be sent to the remote server.
-
-As of 2022-12-01, the data collected consists of:
+截至 2022-12-01，收集的数据包括：
 
 * Unique identifier for the Panel
 * Version of the Panel
@@ -243,49 +233,32 @@ As of 2022-12-01, the data collected consists of:
     * Operating System (Debian, Fedora, RHEL, Ubuntu, etc.)
     * Operating System Type (bsd, linux, windows, etc.)
 
-### How is the data stored?
+### 数据是如何存储的？
 
-Currently, the data is stored with Cloudflare, exact specifics about the format and products used
-is not available at this time as our implementation is still very much an alpha.  Right now, there
-is **NO** way to query or view this information, both for project team members and the public.  We
-expect this to change in the future, but for now we are not making any guarantees about the data
-being publicly available.
+目前，数据存储在 Cloudflare 中，关于所用格式和产品的具体细节目前尚不可用，因为我们的实施仍处于 alpha 阶段。 目前，项目团队成员和公众都**没有**查询或查看此信息的方式。 我们希望这种情况在未来会有所改变，但目前我们不对数据公开可用做出任何保证。
 
-### Why?
+### 为什么？
 
-The primary reason for collecting this data is to help us make better decisions about the future of
-this software.  With the release of 1.11, the minimum PHP version requirement jumped from 7.4 to 8.0,
-however, we wanted to add a feature that required PHP 8.1 which would've made the version requirement
-jump larger and potentially cause issues for some users.  By collecting this data, we can hopefully
-have more insight to how changes like this will affect the community and make better decisions in the
-future.  This is especially important for information like the architecture, kernel version, and
-operating system nodes are using.  For example, we want to utilize a feature that is only present in
-some filesystems, but we have no idea how many people are using those filesystems, so we cannot
-determine if it's worth the effort to implement.
+收集这些数据的主要原因是帮助我们对该软件的未来做出更好的决策。 随着 1.11 的发布，最低 PHP 版本要求从 7.4 跃升至 8.0，但是，我们希望添加一项需要 PHP 8.1 的功能，这会使版本要求跃升并可能给某些用户带来问题。 通过收集这些数据，我们有望更深入地了解此类变化将如何影响社区，并在未来做出更好的决策。 这对于架构、内核版本和正在使用的操作系统节点等信息尤为重要。 例如，我们想利用仅存在于某些文件系统中的功能，但我们不知道有多少人在使用这些文件系统，因此我们无法确定是否值得为此付出努力。
 
-Some of the data is not as useful for making decisions, but is still useful for us to know.
-For example, have you ever wondered how many Panel instances there are?  How many servers are being
-ran across all of those instances?  How many users are using the Panel?  How many of those users are
-admins?  How many servers are using a specific egg?  How many servers are using a specific nest?
-All of these questions can be answered by the data we collect, and can help us and the community
-better understand how the software is being used.
+有些数据对决策没有那么有用，但对我们了解仍然有用。
+例如，您有没有想过有多少个 Panel 实例？ 所有这些实例运行了多少台服务器？ 有多少用户在使用面板？ 这些用户中有多少是管理员？ 有多少台服务器在使用特定的预设？ 有多少服务器正在使用特定的预设组？
+所有这些问题都可以通过我们收集的数据来回答，并且可以帮助我们和社区更好地了解软件的使用方式。
 
-If you have any questions about the data we collect, please feel free to reach out to us on Discord.
-Our goal is to be as transparent as possible, and we want to make sure that the community understands
-what we are doing and why.
+如果您对我们收集的数据有任何疑问，请随时在 Discord 上联系我们。
+我们的目标是尽可能透明，并且我们希望确保社区理解我们在做什么以及为什么这样做。
 
-### Enabling Telemetry
+### 启用遥测
 
-Telemetry is enabled by default, if you want to enable it after disabling it, edit your `.env` file
-and either remove the `PTERODACTYL_TELEMETRY_ENABLED` line, or set it to `true`.
+默认情况下启用遥测，如果您想在禁用它后启用它，请编辑您的 `.env` 文件并删除 `PTERODACTYL_TELEMETRY_ENABLED` 行，或将其设置为 `true`。
 
 ```text
 PTERODACTYL_TELEMETRY_ENABLED=true
 ```
 
-### Disabling Telemetry
+### 禁用遥测
 
-To disable telemetry, edit your `.env` file and set `PTERODACTYL_TELEMETRY_ENABLED` to `false`.
+要禁用遥测，请编辑您的 `.env` 文件并将 `PTERODACTYL_TELEMETRY_ENABLED` 设置为 `false`。
 
 ```text
 PTERODACTYL_TELEMETRY_ENABLED=false
