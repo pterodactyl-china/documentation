@@ -3,23 +3,25 @@ Pterodactyl 是使用 PHP、React 和 Go 构建的开源游戏服务器管理面
 同时不忘进行安全性设计，Pterodactyl 在相互隔离的 Docker 容器中运行所有游戏服务器，
 同时为管理员和用户提供直观的用户界面。你还在等什么？ 让您在您的游戏平台使用游戏服务器上有一等体验吧！
 
-## RC版与稳定版的区别
+## 翼龙中国与翼龙官方的区别
 
-|  **官方版**  |  **稳定版**  |  **RC版**  |
-|:--------------:|:--------------:|:--------------:|
-|  ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/pterodactyl-chinese-stable?style=for-the-badge&logo=appveyor&label=最新发布版本) | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  |
-|  |  | [![GitHub Releases pre-releases](https://img.shields.io/github/v/tag/pterodactyl-china/panel?display_name=tag&include_prereleases&style=for-the-badge&logo=appveyor&label=最新预发布版本)](https://github.com/pterodactyl-china/panel/releases) |
-| [GitHub](https://github.com/pterodactyl/panel) | [GitHub](https://github.com/pterodactyl-china/pterodactyl-chinese-stable) | [GitHub](https://github.com/pterodactyl-china/panel) |
-| 翼龙官方仓库 | 翼龙官方 `releases` 汉化 | 翼龙官方 `develop` 分支汉化 |
+|  **翼龙官方版**  |  **翼龙中国版**  |
+|:--------------:|:--------------:|
+|  ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  | ![GitHub Releases](https://img.shields.io/github/v/release/pterodactyl-china/panel?style=for-the-badge&logo=appveyor&label=最新发布版本)  |
+| [![GitHub Releases pre-releases](https://img.shields.io/github/v/tag/pterodactyl/panel?display_name=tag&include_prereleases&style=for-the-badge&logo=appveyor&label=最新预发布版本)](https://github.com/pterodactyl/panel/releases) | [![GitHub Releases pre-releases](https://img.shields.io/github/v/tag/pterodactyl-china/panel?display_name=tag&include_prereleases&style=for-the-badge&logo=appveyor&label=最新预发布版本)](https://github.com/pterodactyl-china/panel/releases) |
+| [GitHub](https://github.com/pterodactyl/panel) | [GitHub](https://github.com/pterodactyl-china/panel) |
+| 翼龙官方仓库 | 翼龙官方 `develop` 分支汉化 |
 
-|  **区别** |  **说明** |  **稳定版**  |  **RC版**  |
-|--------------|--------------|:--------------:|:--------------:|
-| 实时性 | **RC版**会实时同步 `develop` 分支 | :x: | :white_check_mark: |
-| BUG修复 | **稳定版**可能会累积一定的量来集中更新。比如构建失误、错误以及危险漏洞等 | :heavy_exclamation_mark: | :white_check_mark: |
-| 更新/发布频繁程度 | **RC版**发现汉化及影响体验的部分会及时更新，在同步上游并没有问题时会发布 `releases` | :x: | :white_check_mark: |
-| **无缝**迁移至中国版 | **RC版** _**可能**_ 会比翼龙官方发布的 `releases` 提前更新部分依赖，需要执行一遍 `composer` 更新命令（但正常不会） | :white_check_mark: | :heavy_exclamation_mark: |
-| 汉化完善度 | **RC版**会经常根据社区反馈，进行汉化完善，在累计一定值会发布 `releases`（这也是更新频繁的原因） | :heavy_exclamation_mark: | :white_check_mark: |
-| 本土化 | 比如验证、头像、资源加载地址等（**两边基本上会同步更新**） | :white_check_mark: | :white_check_mark: |
+* 大量汉化（用户前端、管理后台、提示、报错、部署、预设、CLI-UI）
+* Docker 镜像国内化 （预设汉化并使用我构建至国内的 Docker 镜像）
+* Gravatar 切换至 Cravatar (国内进入后台时终于可以正常使用了！不用再卡住了)
+* 增加备案号的填写入口和显示
+* 优化登录页的显示效果
+* 让中国用户可以正常访问使用 reCAPTCHA 验证服务。
+* 文档中文化，部署、更新、自定义都能简而易懂！
+* 面板 Docker 中文汉化，不需要太多额外设置即可部署面板 (见[Packages](https://github.com/pterodactyl-china/panel/pkgs/container/panel)，[如何使用的说明点我](https://github.com/pterodactyl-china/panel/blob/develop/.github/docker/README.md))
+* wings(后端)国内化，DNS、文字、编码(在解压中文压缩包时，不会再出现乱码的现象了！！！)
+* 更多...
 
 ## 支持的游戏
 我们通过使用 Docker 容器隔离每个实例来支持各种游戏，为您提供强大的功能
