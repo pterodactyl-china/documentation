@@ -174,7 +174,9 @@ php artisan p:user:disable2fa
 
 如果您希望查看收集到的完整数据，请查看 TelemetryCollectionService（如上链接），或使用 `php artisan p:telemetry` 命令查看将发送到远程服务器的确切数据。
 
-截至 2022-12-01，收集的数据包括：
+如果您希望查看收集到的完整数据，请查看 TelemetryCollectionService（如上链接），或使用 `php artisan p:telemetry` 命令查看将发送到远程服务器的确切数据。
+
+截至 2022-12-12，收集的数据包括：
 
 * Unique identifier for the Panel
 * Version of the Panel
@@ -191,14 +193,14 @@ php artisan p:user:disable2fa
     * Sum of the total amount of bytes stored by backups
   * Eggs
     * Total number
-    * Map of egg UUIDs to the number of servers using that egg
+    * ~~Map of egg UUIDs to the number of servers using that egg~~ (removed in 1.11.2)
   * Locations
     * Total number
   * Mounts
     * Total number
   * Nests
     * Total number
-    * Map of nest UUIDs to the number of servers using eggs in that nest
+    * ~~Map of nest UUIDs to the number of servers using eggs in that nest~~ (removed in 1.11.2)
   * Nodes
     * Total number
   * Servers
@@ -235,7 +237,7 @@ php artisan p:user:disable2fa
 
 ### 数据是如何存储的？
 
-目前，数据存储在 Cloudflare 中，关于所用格式和产品的具体细节目前尚不可用，因为我们的实施仍处于 alpha 阶段。 目前，项目团队成员和公众都**没有**查询或查看此信息的方式。 我们希望这种情况在未来会有所改变，但目前我们不对数据公开可用做出任何保证。
+目前，数据存储在 Cloudflare 中，我们使用 Worker 提取所有遥测数据，该 Worker 进行基本处理（例如验证），然后将其插入 Cloudflare D1。 目前，收集到的任何数据都没有 API 或可视化，只能手动查询。 目前只有 Matthew 能够查询数据，但我们正在研究替代方案，以使这些数据更易于访问。
 
 ### 为什么？
 
@@ -256,6 +258,8 @@ php artisan p:user:disable2fa
 PTERODACTYL_TELEMETRY_ENABLED=true
 ```
 
+您还可以使用 `php artisan p:environment:setup` 命令启用遥测，可添加 `--telemetry` 参数来进行非交互式设置。
+
 ### 禁用遥测
 
 要禁用遥测，请编辑您的 `.env` 文件并将 `PTERODACTYL_TELEMETRY_ENABLED` 设置为 `false`。
@@ -263,3 +267,6 @@ PTERODACTYL_TELEMETRY_ENABLED=true
 ```text
 PTERODACTYL_TELEMETRY_ENABLED=false
 ```
+
+You may also use the `php artisan p:environment:setup` command to disable telemetry, optionally with
+the `--telemetry=false` flag for a non-interactive setup.
