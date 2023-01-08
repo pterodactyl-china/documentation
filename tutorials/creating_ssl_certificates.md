@@ -84,7 +84,7 @@ systemctl restart wings
 ```
 
 :::
-::: tab "方法2: acme.sh (DNS服务商为 Cloudflare)"
+::: tab "方法2: acme.sh (使用 Cloudflare API)"
 该方法适合高级用户和无法开放80端口的用户, 下面的命令适用于 Ubuntu 和 Cloudflare API,您可以查看 [acme.sh 的官方网站](https://github.com/Neilpang/acme.sh) 来获取相关说明
 
 ``` bash

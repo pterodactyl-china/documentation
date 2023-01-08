@@ -12,7 +12,7 @@ php artisan down
 ## 更新依赖
 在执行此升级之前，您需要确保您的系统依赖项是最新的。请参考以下列表以确保您拥有所有必需的版本。
 
-* PHP `7.4`、`8.0` 或 `8.1`（推荐），带有以下扩展名：`cli`、`openssl`、`gd`、`mysql`、`PDO`、`mbstring` `tokenizer`、`bcmath `、`xml` 或 `dom`、`curl`、`zip` 和 `fpm` 如果你打算使用 NGINX。请参阅我们的 [升级 PHP指南](/guides/php_upgrade.md) 了解详细信息。
+* PHP `8.0` 或 `8.1`（推荐），带有以下扩展名：`cli`、`openssl`、`gd`、`mysql`、`PDO`、`mbstring` `tokenizer`、`bcmath `、`xml` 或 `dom`、`curl`、`zip` 和 `fpm` 如果你打算使用 NGINX。请参阅我们的 [升级 PHP指南](/guides/php_upgrade.md) 了解详细信息。
 * Composer v2 (`composer self-update --2`)
 
 ::: warning Nginx

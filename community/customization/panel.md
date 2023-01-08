@@ -37,10 +37,11 @@ yarn # 安装面板构建依赖项
 
 ## 构建面板资源
 
-以下命令将重建面板前端。
+以下命令将重建面板前端。 对于 NodeJS 版本 17 及更高版本，您必须在构建之前启用 `--openssl-legacy-provider` 选项。
 
 ```bash
 cd /var/www/pterodactyl
+export NODE_OPTIONS=--openssl-legacy-provider # 对于 NodeJS v17+
 yarn build:production # 构建面板
 ```
 
