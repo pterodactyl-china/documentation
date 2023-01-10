@@ -54,7 +54,7 @@ docker:
 
 使用 Cloudflare 代理 Wings 并没有什么用,因为用户依旧会直连主机，而中间的 Cloudflare 并没有起什么作用,所以您的服务器 IP 仍会被公开
 
-如果需要启动 Cloudflare 代理您必须将 Wings 端口更改为启用缓存的 Cloudflare 的 HTTPS 端口 `8443`(更多信息 [访问这里](https://developers.cloudflare.com/fundamentals/get-started/reference/network-ports/)),因为 Cloudflare 只支持 8080 端口的 HTTP 协议,您可以在面板管理页面那里进行更改此端口，然后到在 Cloudflare 仪表盘上，务必将您 FQDN 旁边的橙色云启用。
+如果需要启动 Cloudflare 代理您必须将 Wings 端口更改为启用缓存的 Cloudflare 的 HTTPS 端口 `8443`(更多信息 [访问这里](https://developers.cloudflare.com/fundamentals/get-started/reference/network-ports/)),因为 Cloudflare 只支持 8080 端口的 HTTP 协议,您可以在管理页面那里进行更改此端口，在 Cloudflare 中使用 完全SSL 时，请确保设置为 "未使用CDN"，然后到 Cloudflare DNS记录设置页将您 FQDN 旁边的橙色云启用。
 
 有个问题在于,如果你不购买 Cloudflare 的 `企业` 套餐,那么就不能代理 SFTP 端口
 
