@@ -85,7 +85,7 @@ chmod +x docker-compose.yml
 ### 环境变量
 当您不提供自己的 `.env` 文件时，有多个环境变量可以配置面板，有关每个可用选项的详细信息
 
-在 `docker-compose.yml` 文件中可以设置，具体变量的详细信息可查看 在 [GitHub 仓库中提供的文档](https://github.com/pterodactyl-china/panel/blob/develop/.github/docker/README.md) 或查看 [Gitee 镜像仓库中提供的文档(可能不是最新的)](https://gitee.com/vlssu/pterodactyl-panel/blob/develop/.github/docker/README.md)
+在 `docker-compose.yml` 文件中可以设置，具体变量的详细信息可查看 在 [GitHub 仓库中提供的文档](https://github.com/pterodactyl-china/panel/blob/1.0-develop/.github/docker/README.md) 或查看 [Gitee 镜像仓库中提供的文档(可能不是最新的)](https://gitee.com/vlssu/pterodactyl-panel/blob/1.0-develop/.github/docker/README.md)
 
 如果你想变更数据的存储目录，可以自行查看文件，如果你并不会或不懂，请不要更改
 
