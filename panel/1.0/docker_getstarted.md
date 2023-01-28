@@ -77,7 +77,7 @@ cd /var/www/pterodactyl
 在为面板创建好它的放置目录后，我们将使用 `curl` 命令，从 Github 拉取翼龙中国汉化完成的 ` docker-compose.yml` 文件并赋予该文件的可执行权限。
 
 ``` bash
-curl -Lo docker-compose.yml https://raw.githubusercontent.com/pterodactyl-china/panel/develop/docker-compose.example.yml
+curl -Lo docker-compose.yml https://raw.githubusercontent.com/pterodactyl-china/panel/1.0-develop/docker-compose.example.yml
 # 将可执行权限应用于yml文件
 chmod +x docker-compose.yml
 ```
