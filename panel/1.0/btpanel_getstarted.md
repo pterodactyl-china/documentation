@@ -169,7 +169,7 @@ php artisan p:user:make
 我们需要做的第一件事是创建一个新的 Cronjob，它每分钟运行一次以处理特定的任务，例如会话清理并将计划任务发送到守护进程。 您需要使用 `sudo crontab -e` 打开您的 `crontab`，然后将以下字符串以新一行粘贴进去，并保存更改。
 
 ```bash
-* * * * * php /var/www/pterodactyl/artisan schedule:run >> /dev/null 2>&1
+* * * * * php /www/wwwroot/pterodactyl/artisan schedule:run >> /dev/null 2>&1
 ```
 
 ### 创建队列监听服务
@@ -192,7 +192,7 @@ Description=Pterodactyl Queue Worker
 User=www
 Group=www
 Restart=always
-ExecStart=/usr/bin/php /var/www/pterodactyl/artisan queue:work --queue=high,standard,low --sleep=3 --tries=3
+ExecStart=/usr/bin/php /www/wwwroot/pterodactyl/artisan queue:work --queue=high,standard,low --sleep=3 --tries=3
 StartLimitInterval=180
 StartLimitBurst=30
 RestartSec=5s
@@ -207,7 +207,7 @@ WantedBy=multi-user.target
 
 ::: tip
 如果你没有使用 `redis` 做任何事情，你应该删除 `After=` 一行，否则服务启动时会遇到错误。      
-如果你的面板路径并不是 `/var/www/pterodactyl/`，请替换为你面板的绝对路径，否则邮件服务将无法使用。      
+如果你的面板路径并不是 `/www/wwwroot/pterodactyl/`，请替换为你面板的绝对路径，否则邮件服务将无法使用。      
 如果你宝塔默认命令行使用的并不是 `8.1`PHP 可以尝试使用绝对路径，将 `/usr/bin/php` 改为 `/www/server/php/81/bin/php`
 :::
 
