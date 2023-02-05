@@ -148,7 +148,7 @@
                     </div>
                 </div>
                 <div class="footer">MIT Licensed | Pterodactyl&reg; Copyright &copy; 2015 - 2022 Dane Everitt &
-                    contributors. | Sinicizated by Pterodactyl-China&reg; | <a href="https://beian.miit.gov.cn">沪ICP备2022002870号-18</a></div>
+                    contributors. | Sinicizated by Pterodactyl-China&reg; | <a href="https://beian.miit.gov.cn">赣ICP备2023000574号-7</a></div>
             </div>
         </div>
     </div>
