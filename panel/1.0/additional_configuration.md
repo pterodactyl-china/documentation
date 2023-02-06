@@ -268,5 +268,4 @@ PTERODACTYL_TELEMETRY_ENABLED=true
 PTERODACTYL_TELEMETRY_ENABLED=false
 ```
 
-You may also use the `php artisan p:environment:setup` command to disable telemetry, optionally with
-the `--telemetry=false` flag for a non-interactive setup.
+您还可以使用 `php artisan p:environment:setup` 命令禁用遥测，可添加 `--telemetry=false` 参数来进行非交互式设置。
