@@ -97,7 +97,7 @@ cd /var/www/pterodactyl
 ``` bash
 curl -Lo panel.tar.gz https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
 # 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 gh-proxy 提供的CF反向代理来拉取
-curl -Lo panel.tar.gz https://gh.api.99988866.xyz/https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
+curl -Lo panel.tar.gz https://ghproxy.com/https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
 # 解压并设置目录权限
 tar -xzvf panel.tar.gz
 chmod -R 755 storage/* bootstrap/cache/
