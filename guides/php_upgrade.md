@@ -1,16 +1,16 @@
-# Upgrading PHP
+# 升级 PHP
 
 This documentation includes instructions for upgrading your system to the latest version of PHP. Please reference the
 table below to check what version you need for your version of Pterodactyl.
 
-| Panel Version | PHP Version   |
+| 面板版本 | PHP 版本   |
 |---------------|---------------|
 | 1.0.0 - 1.2.0 | 7.3, 7.4      |
 | 1.3.0+        | 7.4, 8.0      |
 | 1.8.0+        | 7.4, 8.0, 8.1 |
 | 1.11.0+       | 8.0, 8.1      |
 
-## Install PHP
+## 安装 PHP
 
 In order to install PHP 8.1, you will need to run the following command. Please keep in mind different operating systems
 may have slightly different requirements for how this command is formatted.
