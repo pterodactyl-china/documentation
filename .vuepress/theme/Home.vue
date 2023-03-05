@@ -22,7 +22,7 @@
                     容器中运行所有游戏服务器，同时向最终用户展示了美观直观的 UI。
                 </h3>
                 <h3 class="border-0 leading-normal mx-auto mt-4" style="max-width: 50rem">
-                    不要再安于现状了。让游戏服务器成为您平台上的一等公民。
+                    不要再安于现状了。让该面板成为您游戏服务器是上上之选。
                 </h3>
                 <img class="max-w-lg w-full m-4 inline-block"
                     src="https://cdn.pterodactyl.io/site-assets/mockup-macbook-grey-1.0.png">
@@ -35,16 +35,16 @@
                     <div class="feature">
                         <span><i class="icon icon-lock"></i></span>
                         <h3>安全至上</h3>
-                        <p>安全性是该平台上的一等公民，具有 bcrypt 哈希、AES-256-CBC 加密和开箱即用的 HTTPS 支持。</p>
+                        <p>安全性是该项目的首要目标，具有 bcrypt 哈希、AES-256-CBC 加密和开箱即用的 HTTPS 支持。</p>
                     </div>
                     <div class="feature">
                         <span><i class="icon icon-beaker"></i></span>
-                        <h3>现代化的工具</h3>
+                        <h3>现代化工具</h3>
                         <p>建立在现代堆栈上，利用最佳设计实践，使其易于进入和修改。</p>
                     </div>
                     <div class="feature">
                         <span><i class="icon icon-anchor"></i></span>
-                        <h3>Docker的核心</h3>
+                        <h3>以Docker为核心</h3>
                         <p>所有服务器都在隔离的Docker容器中运行，限制了攻击媒介，提供了严格的资源限制，并提供了为每个特定游戏量身定做的环境。</p>
                     </div>
                     <div class="feature">
@@ -54,7 +54,7 @@
                     </div>
                     <div class="feature">
                         <span><i class="icon icon-browser"></i></span>
-                        <h3>用户友好</h3>
+                        <h3>对用户友好</h3>
                         <p>把愤怒的点击和尖叫留给《守望先锋》吧。翼龙的界面设计得非常好，甚至连半藏都能使用它。</p>
                     </div>
                     <div class="feature">
