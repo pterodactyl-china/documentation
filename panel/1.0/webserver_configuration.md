@@ -12,7 +12,7 @@
 rm /etc/nginx/sites-enabled/default
 ```
 
-现在，您应该粘贴下面文件的内容，将 `<domain>` 替换为您在名为 `pterodactyl.conf` 的文件中使用的域名，并将该文件放在 `/etc/nginx/sites-available/` 中， 或 &mdash; 如果在 CentOS 上，则为 `/etc/nginx/conf.d/`。
+现在，您应该复制下面文件的内容，将 `<domain>` 替换为您使用的域名后，粘贴到名为 `pterodactyl.conf` 的文件中，并将该文件放在 `/etc/nginx/sites-available/` 目录下， 或 &mdash; 如果在 CentOS 上，则为 `/etc/nginx/conf.d/`。
 
 <<< @/.snippets/webservers/nginx-php8.1.conf{5,11,26-27}
 
@@ -36,7 +36,7 @@ sudo systemctl restart nginx
 rm /etc/nginx/sites-enabled/default
 ```
 
-现在，您应该粘贴下面文件的内容，将 `<domain>` 替换为您在名为 `pterodactyl.conf` 的文件中使用的域名，并将该文件放在 `/etc/nginx/sites-available/` 中， 或 &mdash; 如果在 CentOS 上，则为 `/etc/nginx/conf.d/`。
+现在，您应该复制下面文件的内容，将 `<domain>` 替换为您使用的域名后，粘贴到名为 `pterodactyl.conf` 的文件中，并将该文件放在 `/etc/nginx/sites-available/` 目录下， 或 &mdash; 如果在 CentOS 上，则为 `/etc/nginx/conf.d/`。
 
 <<< @/.snippets/webservers/nginx-php8.1-nossl.conf{4}
 
@@ -60,7 +60,7 @@ sudo systemctl restart nginx
 a2dissite 000-default.conf
 ```
 
-现在，您应该粘贴下面文件的内容，将 `<domain>` 替换为您在名为 `pterodactyl.conf` 的文件中使用的域名，并将该文件放在 `/etc/apache2/sites-available` 中， 或 &mdash; 如果在 CentOS 上，则为 `/etc/httpd/conf.d/`。
+现在，您应该复制下面文件的内容，将 `<domain>` 替换为您使用的域名后，粘贴到名为 `pterodactyl.conf` 的文件中，并将该文件放在 `/etc/apache2/sites-available` 目录下， 或 &mdash; 如果在 CentOS 上，则为 `/etc/httpd/conf.d/`。
 
 注意：使用 Apache 时，请确保您已安装 `libapache2-mod-php` 包，否则 PHP 将不会显示在您的网络服务器上。
 
@@ -86,7 +86,7 @@ sudo systemctl restart apache2
 a2dissite 000-default.conf
 ```
 
-现在，您应该粘贴下面文件的内容，将 `<domain>` 替换为您在名为 `pterodactyl.conf` 的文件中使用的域名，并将该文件放在 `/etc/apache2/sites-available` 中， 或 &mdash; 如果在 CentOS 上，则为 `/etc/httpd/conf.d/`。
+现在，您应该复制下面文件的内容，将 `<domain>` 替换为您使用的域名后，粘贴到名为 `pterodactyl.conf` 的文件中，并将该文件放在 `/etc/apache2/sites-available` 目录下， 或 &mdash; 如果在 CentOS 上，则为 `/etc/httpd/conf.d/`。
 
 注意：使用 Apache 时，请确保您已安装 `libapache2-mod-php` 包，否则 PHP 将不会显示在您的网络服务器上。
 
