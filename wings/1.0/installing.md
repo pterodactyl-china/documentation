@@ -123,7 +123,7 @@ curl -L -o /usr/local/bin/wings "https://ghproxy.com/https://github.com/pterodac
 ![Wings 配置示例图片](./../../.vuepress/public/wings_configuration_example.png)
 
 ::: warning
-当您的面板使用 SSL 时，Wings 还必须为其 域名(FQDN) 创建一个。在继续之前，请参阅 [创建 SSL 证书](/tutorials/creating_ssl_certificates.html) 文档页面了解如何创建这些证书。
+当您的面板使用 SSL 时，Wings 节点就必须使用域名解析，并为其域名也创建一个 SSL。在继续之前，请参阅 [创建 SSL 证书](/tutorials/creating_ssl_certificates.html) 文档页面了解如何创建这些证书。
 :::
 
 ### 启动 Wings
