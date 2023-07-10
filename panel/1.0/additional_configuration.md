@@ -174,8 +174,6 @@ php artisan p:user:disable2fa
 
 如果您希望查看收集到的完整数据，请查看 TelemetryCollectionService（如上链接），或使用 `php artisan p:telemetry` 命令查看将发送到远程服务器的确切数据。
 
-如果您希望查看收集到的完整数据，请查看 TelemetryCollectionService（如上链接），或使用 `php artisan p:telemetry` 命令查看将发送到远程服务器的确切数据。
-
 截至 2022-12-12，收集的数据包括：
 
 * Unique identifier for the Panel
