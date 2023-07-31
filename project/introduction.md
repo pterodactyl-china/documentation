@@ -19,7 +19,7 @@ Pterodactyl 是使用 PHP、React 和 Go 构建的开源游戏服务器管理面
 * 优化登录页的显示效果
 * 让中国用户可以正常访问使用 reCAPTCHA 验证服务。
 * 文档中文化，部署、更新、自定义都能简而易懂！
-* 面板 Docker 中文汉化，不需要太多额外设置即可部署面板 (见[Packages](https://github.com/pterodactyl-china/panel/pkgs/container/panel)，[如何使用的说明点我](https://github.com/pterodactyl-china/panel/blob/develop/.github/docker/README.md))
+* 面板 Docker 中文汉化，不需要太多额外设置即可部署面板 (见[软件包](https://github.com/pterodactyl-china/panel/pkgs/container/panel)，[如何使用的说明点我](https://github.com/pterodactyl-china/panel/blob/develop/.github/docker/README.md))
 * wings(后端)国内化，DNS、文字、编码(在解压中文压缩包时，不会再出现乱码的现象了！！！)
 * 更多...
 
@@ -55,4 +55,4 @@ Pterodactyl 是使用 PHP、React 和 Go 构建的开源游戏服务器管理面
 Pterodactyl 是完全开源的，因此给独立用户和服务器管理员完全开放我们的
 代码库来寻找安全漏洞。如果您发现任何可能导致安全漏洞的问题，请不要
 犹豫直接联系`support@pterodactyl.io`。我们要求您在反馈安全问题时，详细且负责
-并且_不要_在我们面向公众的错误跟踪器上报告它们，以防止漏洞滥用！
+并且**不要**在我们面向公众的错误跟踪器上报告它们，以防止漏洞滥用！
