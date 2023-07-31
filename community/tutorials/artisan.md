@@ -1,33 +1,33 @@
 # Artisan CLI
 
-The Artisan CLI, command line interface, is part of the Laravel framework, which Pterodactyl is built on. The Artisan file is located in `/var/www/pterodactyl` if you followed the official guide. This guide goes over some more Pterodactyl specific/related Artisan commands, which are all prefixed with the letter `p` (e.g. `p:user:make`). If you'd like to view all commands, you can do so by running:
+Artisan CLI（命令行界面）是 Laravel 框架的一部分，翼龙正是基于该框架构建的。如果您遵循官方指南，Artisan 文件位于 `/var/www/pterodactyl` 中（具体位置为你安装的地方）。本指南介绍了更多翼龙特定/相关的 Artisan 命令，这些命令均以字母 `p` 为前缀（例如 `p:user:make`）。如果您想查看所有命令，可以通过运行：
 
 ```bash
 php artisan list
 ```
 
-To get information regarding a specific command you can do so by running:
+要获取有关特定命令的信息，您可以运行以下命令：
 
 ```bash
 php artisan help <command>
 ```
 
 ::: tip
-To simplify this documentation, in command usage you'll see things like the following:
+为了简化本文档，在命令使用中您将看到类似以下内容：
 
-`<hello-world>` - Required argument
+`<hello-world>` - 必填参数
 
-`[hello-world]` - Optional argument
+`[hello-world]` - 可选参数
 
-`{--hello-world}` - Option
+`{--hello-world}` - 选项
 
 :::
 
-## User Management
+## 用户管理
 
-When running any of the following commands, you can either use the options or don't pass through anything and use the interactive prompt. You can also do both passing through options and using interactive prompts as well.
+运行以下任何命令时，您可以使用选项不提供任何内容将会有交互式提示。也可以提供部分的选项剩余部分也会通过交互式来提示。
 
-### Create User
+### 创建用户
 
 ```bash
 php artisan p:user:make {--email=user@example.com}
@@ -39,38 +39,38 @@ php artisan p:user:make {--email=user@example.com}
                         {--no-password}
 ```
 
-### Delete User
+### 删除用户
 
 ```bash
 php artisan p:user:delete {--user=username/email/UUID}
 ```
 
-### Disable 2FA
+### 禁用动态口令认证
 
 ::: warning
-Disabling 2-factor authentication should only be used as a last restort for user recovery. **Please use this with caution.**
+禁用动态口令认证只能作为用户恢复的最后手段。 **请谨慎使用。**
 :::
 
 ```bash
 php artisan p:user:disable2fa {--email=user@example.com}
 ```
 
-## Server & Node Management
+## 服务器和节点管理
 
-### Create Location
+### 创建地狱
 
 ```bash
 php artisan p:location:make {--short=us1}
                             {--long="A description of this location."}
 ```
 
-### Delete Location
+### 删除地狱
 
 ```bash
 php artisan p:location:delete {--short=us1}
 ```
 
-### Server Bulk Power
+### 服务器电源管理
 
 ```bash
 php artisan p:server:bulk-power <start, stop, kill, restart>
@@ -78,17 +78,17 @@ php artisan p:server:bulk-power <start, stop, kill, restart>
                                 {--nodes=1,2,3}
 ```
 
-## Panel Management
+## 面板管理
 
-### View Panel Info
+### 查看面板信息
 
 ```bash
 php artisan p:info
 ```
 
-Displays a variety of panel information that can be used to check the configuration of things such as database and email.
+显示各种面板信息，可用于检查数据库和电子邮箱等配置。
 
-### Update Panel
+### 更新面板
 
 ```bash
 php artisan p:upgrade   {--user=www-data}
@@ -98,4 +98,4 @@ php artisan p:upgrade   {--user=www-data}
                         {--skip-download}
 ```
 
-Downloads a new archive for Pterodactyl and executes the normal upgrade commands.
+下载翼龙的新版本并执行正常的升级命令。
