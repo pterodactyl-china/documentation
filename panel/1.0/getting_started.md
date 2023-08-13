@@ -172,10 +172,10 @@ php artisan p:user:make
 安装过程的最后一步是对 面板程序文件设置正确的权限，以便 WEB 服务器程序（例如Nginx 或者 Apache）可以正确执行文件。
 
 ``` bash
-# 如果使用 NGINX 或 Apache (不在 CentOS 上):
+# 如果使用 NGINX 或 Apache (不在 CentOS 上)
 chown -R www-data:www-data /var/www/pterodactyl/*
 
-# 如果在 CentOS 上使用 NGINX：
+# 如果在 CentOS 上使用 NGINX
 chown -R nginx:nginx /var/www/pterodactyl/*
 
 # 如果在 CentOS 上使用 Apache

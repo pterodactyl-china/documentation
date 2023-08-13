@@ -30,10 +30,10 @@ CREATE DATABASE panel;
 ```
 
 ### 分配权限
-最后，我们需要让 MySQL 知道，翼龙用户有权限访问去访问此数据库。要做到这一点，我们只需要运行下面的命令。如果你还想把这个 MySQL 用于面板上的数据库主机。你只需要在命令中加入 `WITH GRANT OPTION` (下面的命令已增加此选项)。如果你不打算把这个用户用作面板上的数据库主机，则可以将其删除。
+最后，我们需要让 MySQL 知道，翼龙用户有权限访问去访问此数据库。要做到这一点，我们只需要运行下面的命令。
 
 ``` sql
-GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1';
 ```
 
 ## 为节点创建数据库主机

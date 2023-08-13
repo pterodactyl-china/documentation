@@ -93,7 +93,7 @@ curl https://get.acme.sh | sh
 
 ### 获取 Cloudflare API 密钥
 
-在安装 acme 后我们需要获取 Cloudflare 的 API 密钥,请确保您的 DNS 记录指向您的节点(Cloudflare 的控制台中云朵应该是灰色的),然后找到 API 密钥,在全局 API 密钥的选项中点击查看您的 Cloudflare 密钥
+安装 acme.sh 后，我们需要获取 CloudFlare API 密钥。 在 Cloudfare 的网站上，选择您的域名，然后在右侧复制您的 “区域 ID” 和 “帐户 ID”，然后单击 “获取您的 API 令牌”，单击 “创建令牌” > 选择模板 “编辑区域 DNS” > 选择 “区域资源” 的范围，然后单击 “继续以显示摘要”，复制您的令牌。
 
 ### 申请证书
 
@@ -106,8 +106,9 @@ sudo mkdir /etc/letsencrypt/live/example.com
 安装 acme 之后执行它并获取 Cloudflare 的 API 密钥,然后输入 Cloudflare 的 API 凭据来生成证书
 
 ```bash
-export CF_Key="Your_CloudFlare_API_Key"
-export CF_Email="Your_CloudFlare_Account@example.com"
+export CF_Token="Your_CloudFlare_API_Key"
+export CF_Account_ID="Your_CloudFlare_Account_ID"
+export CF_Zone_ID="Your_CloudFlare_Zone_ID"
 
 ```
 
