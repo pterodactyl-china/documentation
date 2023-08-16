@@ -57,14 +57,14 @@ php artisan p:user:disable2fa {--email=user@example.com}
 
 ## 服务器和节点管理
 
-### 创建地狱
+### 创建地域
 
 ```bash
 php artisan p:location:make {--short=us1}
-                            {--long="A description of this location."}
+                            {--long="该地域的描述."}
 ```
 
-### 删除地狱
+### 删除地域
 
 ```bash
 php artisan p:location:delete {--short=us1}
