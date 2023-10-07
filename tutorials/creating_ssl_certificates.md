@@ -100,7 +100,7 @@ curl https://get.acme.sh | sh
 由于配置文件基于 Certbot,所以我们需要手动创建一个文件夹
 
 ```bash
-sudo mkdir /etc/letsencrypt/live/example.com
+sudo mkdir -p /etc/letsencrypt/live/example.com
 ```
 
 安装 acme 之后执行它并获取 Cloudflare 的 API 密钥,然后输入 Cloudflare 的 API 凭据来生成证书

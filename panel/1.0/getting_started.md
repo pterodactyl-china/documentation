@@ -23,9 +23,8 @@
 
 | 操作系统 | 版本 |     支持状况      | 注意事项                                                       |
 |------------------|---------|:------------------:|-------------------------------------------------------------|
-| **Ubuntu**       | 18.04   | :white_check_mark: | 文档基于 Ubuntu 18.04 作为操作系统所编写的。 |
-|                  | 20.04   | :white_check_mark: |                                                             |
-|                  | 22.04   | :white_check_mark: | MariaDB 无需 repo 安装脚本即可安装。     |
+| **Ubuntu**       | 20.04   | :white_check_mark: | 文档以 Ubuntu 20.04 操作系统为基本所编写的。 |
+|                  | 22.04   | :white_check_mark: |     MariaDB 无需 repo 安装脚本即可安装。 |
 | **CentOS**       | 7       | :white_check_mark: | 需要额外的 repos。                                   |
 |                  | 8       | :white_check_mark: | 注意，CentOS 8 已停运。使用 Rocky 或 Alma Linux。         |
 | **Debian**       | 10      | :white_check_mark: |                                                             |
@@ -63,9 +62,6 @@ curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
 
 # 更新存储库列表
 apt update
-
-# 如果您使用的是 Ubuntu 18.04，请添加 Universe 存储库
-apt-add-repository universe
 
 # 安装依赖项
 apt -y install php8.1 php8.1-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
