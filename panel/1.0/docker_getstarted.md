@@ -89,6 +89,11 @@ chmod +x docker-compose.yml
 
 如果你想变更数据的存储目录，可以自行查看文件，如果你并不会或不懂，请不要更改
 
+:::tip
+请注意！`docker-compose.yml` 文件中 `APP_URL` 变量一定要修改成你实际访问到面板的外网地址。否则你在配置后端时会出错！  
+如果想使用非 `80` 端口，比如你服务器IP为 `192.168.1.255` 端口为 `10000`,请在 `docker-compose.yml` 文件中 `services.panel.ports` 将 `80:80` 修改成 `10000:80`，并且 `APP_URL` 填写成 `http://192.168.1.255:10000`。
+:::
+
 ## 部署运行
 
 在设置完环境变量，我们就可以通过 Docker Compose 使用 `docker-compose.yml` 文件来启动面板了
