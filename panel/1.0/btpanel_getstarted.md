@@ -21,15 +21,14 @@
 不过翼龙面板前端就没那么需求了，只要阁下前端服务器能装 `BT-Panel`，和 `LNMP` 或者 `LAMP`，就可以用来搭建翼龙面板前端了。一般服务器均能满足前端的搭建要求。
 :::
 
-| 操作系统   | 版本  |      支持状况      | 注意事项                           |
-|:-----------|:------|:------------------:|:-----------------------------------|
-| **Ubuntu** | 18.04 | :white_check_mark: | 文档基于 Ubuntu 18.04 作为操作系统所编写的。 |
-|            | 20.04 | :white_check_mark: |                                    |
-|            | 22.04 | :white_check_mark: | MariaDB 无需 repo 安装脚本即可安装。 |
-| **CentOS** | 7     | :white_check_mark: | 需要额外的 repos。                 |
-|            | 8     | :white_check_mark: | 请注意，CentOS 8 已停运。使用 Rocky 或 Alma Linux。 |
-| **Debian** | 10    | :white_check_mark: |                                    |
-|            | 11    | :white_check_mark: |                                    |
+| 操作系统 | 版本 |     支持状况      | 注意事项                                                       |
+|------------------|---------|:------------------:|-------------------------------------------------------------|
+| **Ubuntu**       | 20.04   | :white_check_mark: | 文档以 Ubuntu 20.04 操作系统为基本所编写的。 |
+|                  | 22.04   | :white_check_mark: |     MariaDB 无需 repo 安装脚本即可安装。 |
+| **CentOS**       | 7       | :white_check_mark: | 需要额外的 repos。                                   |
+|                  | 8       | :white_check_mark: | 注意，CentOS 8 已停运。使用 Rocky 或 Alma Linux。         |
+| **Debian**       | 10      | :white_check_mark: |                                                             |
+|                  | 11      | :white_check_mark: |  
 
 ## 安装宝塔面板
 此界面提供的安装脚本具有时间局限性，可能落后于官方最新版本，有条件的话请去宝塔官网查看
