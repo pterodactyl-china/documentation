@@ -17,8 +17,8 @@ Wings 是翼龙的下一代服务器控制平面。它已经使用 Go 从头开�
 |                  | 22.04   | :white_check_mark: |                                                             |
 | **CentOS**       | 7       | :white_check_mark: |                                                             |
 |                  | 8       | :white_check_mark: | 请注意，CentOS 8 已停运。使用 Rocky 或 Alma Linux.         |
-| **Debian**       | 10      | :white_check_mark: |                                                             |
-|                  | 11      | :white_check_mark: |                                                             |
+| **Debian**       | 11      | :white_check_mark: |                                                             |
+|                  | 12      | :white_check_mark: |                                                             |
 | **Windows**      | All     |        :x:         | 该软件将无法在 Windows 环境中运行。         |
 
 ## 系统要求
@@ -67,7 +67,7 @@ curl -sSL https://get.docker.com/ | CHANNEL=stable bash -s docker --mirror Aliyu
 如果您使用的是带有 systemd 的操作系统（Ubuntu 16+、Debian 8+、CentOS 7+），请运行以下命令以在您启动机器时启动 Docker。
 
 ```bash
-systemctl enable --now docker
+sudo systemctl enable --now docker
 ```
 
 #### 启用虚拟内存
@@ -99,9 +99,9 @@ Wings 及配置文件路径，如果你不懂请不要尝试更改路径。（�
 :::
 
 ```bash
-mkdir -p /etc/pterodactyl
-curl -L -o /usr/local/bin/wings "https://github.com/pterodactyl-china/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
-chmod u+x /usr/local/bin/wings
+sudo mkdir -p /etc/pterodactyl
+curl -L -o /usr/local/bin/wings "https://github.com/pterodactyl/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
+sudo chmod u+x /usr/local/bin/wings
 
 # 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 gh-proxy 提供的CF反向代理来拉取
 curl -L -o /usr/local/bin/wings "https://ghproxy.com/https://github.com/pterodactyl-china/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
