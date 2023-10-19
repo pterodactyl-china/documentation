@@ -4,31 +4,31 @@
 [[toc]]
 
 ::: tip
-This guide is based off the [official installation documentation](/panel/1.0/getting_started.md) but is tailored specifically for Ubuntu 18.04.
+本指南基于 [官方安装文档](/panel/1.0/getting_started.md)，但专为 Ubuntu 18.04 量身定制。
 :::
 
-## Install Requirements
-We will first begin by installing all of Pterodactyl's [required](/panel/1.0/getting_started.md#dependencies) dependencies.
+## 安装要求
+首先，我们要安装翼龙 [所需依赖项](/panel/1.0/getting_started.md#dependencies)。
 
 ### MariaDB
 ```bash
-## Get apt updates
+## 获取 apt 更新
 apt update -y
 
-## Install MariaDB
+## 安装 MariaDB
 apt install -y mariadb-common mariadb-server mariadb-client
 
-## Start MariaDB
+## 启动 MariaDB
 systemctl start mariadb
 systemctl enable mariadb
 ```
 
 ### PHP 7.4
 ```bash
-## Get apt updates
+## 获取 apt 更新
 apt update -y
 
-## Install PHP 7.4
+## 安装 PHP 7.4
 apt install -y php7.4 php7.4-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip}
 ```
 
@@ -45,7 +45,7 @@ systemctl start redis-server
 systemctl enable redis-server
 ```
 
-### Additional Utilities
+### 其他实用工具
 
 #### Certbot
 ```bash
@@ -57,11 +57,11 @@ apt install -y certbot
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 ```
 
-## Server Configuration
-This following section covers the configuration of parts of the server to run the panel.
+## 服务器配置
+本节将介绍运行面板所需的部分服务器配置。
 
-### Configuring MariaDB
-The fastest way to set up MariaDB is to use the `mysql_secure_installation` command and follow prompts
+### 配置 MariaDB
+设置 MariaDB 的最快方法是使用 `mysql_secure_installation` 命令并按提示操作
 
 ```bash
 mysql_secure_installation
