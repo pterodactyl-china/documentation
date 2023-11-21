@@ -80,7 +80,7 @@ php artisan down
 ```bash
 curl -L https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz | tar -xzv
 # 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 gh-proxy 提供的CF反向代理来拉取
-curl -L https://ghproxy.com/https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz | tar -xzv
+curl -L https://mirror.ghproxy.com/https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz | tar -xzv
 ```
 
 下载所有文件后，我们需要将缓存与存储目录上设置正确的权限，以避免与网络服务器出现相关的错误。

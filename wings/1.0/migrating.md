@@ -16,7 +16,7 @@ curl -L -o /usr/local/bin/wings https://github.com/pterodactyl-china/wings/relea
 chmod u+x /usr/local/bin/wings
 
 # 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 gh-proxy 提供的CF反向代理来拉取
-curl -L -o /usr/local/bin/wings "https://ghproxy.com/https://github.com/pterodactyl-china/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
+curl -L -o /usr/local/bin/wings "https://mirror.ghproxy.com/https://github.com/pterodactyl-china/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
 ```
 
 ## 复制新的配置文件

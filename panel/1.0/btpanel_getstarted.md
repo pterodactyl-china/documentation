@@ -67,7 +67,7 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 ``` bash
 https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
 # 如果阁下下不动这个文件，可以使用 gh-proxy 提供的CF反向代理来下载 链接如下
-https://ghproxy.com/https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
+https://mirror.ghproxy.com/https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
 ```
 
 ### 进入网站目录解压程序文件并设置环境文件
