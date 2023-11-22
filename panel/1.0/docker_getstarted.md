@@ -78,6 +78,8 @@ cd /var/www/pterodactyl
 
 ``` bash
 curl -Lo docker-compose.yml https://raw.githubusercontent.com/pterodactyl-china/panel/1.0-develop/docker-compose.example.yml
+# 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 gh-proxy 提供的CF反向代理来拉取
+curl -Lo docker-compose.yml https://mirror.ghproxy.com/https://raw.githubusercontent.com/pterodactyl-china/panel/1.0-develop/docker-compose.example.yml
 # 将可执行权限应用于yml文件
 chmod +x docker-compose.yml
 ```
