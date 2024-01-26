@@ -4,11 +4,6 @@
 使用 SSL 配置时，您必须创建 SSL 证书，否则您的网络服务器将无法启动。请参阅 [创建 SSL 证书](/tutorials/creating_ssl_certificates.html) 文档页面以了解如何在继续之前创建这些证书。
 :::
 
-<<<<<<< HEAD
-::::: tabs
-:::: tab "使用 SSL 的 Nginx"
-首先，删除默认的 NGINX 配置。
-=======
 ::: tip
 如果您使用[自动续签 SSL 的 Caddy](#caddy-with-automatic-ssl)，则无需手动创建 SSL 证书，Caddy 会自动处理。
 :::
@@ -16,7 +11,6 @@
 ::::: tabs
 :::: tab "使用 SSL 的 Nginx"
 首先，删除默认的 NGINX 配置。
->>>>>>> fad96abc2780565e2c6e356ff050f9378970e2b9
 
 ``` bash
 rm /etc/nginx/sites-enabled/default
@@ -115,53 +109,54 @@ sudo systemctl restart apache2
 
 ::::
 :::: tab "自动续签 SSL 的 Caddy"
-Before adding our custom configuration, let's remove the default one. You can do it either by deleting the contents of config file or by deleting the config file completely and than creating a new one from scratch. The config file path is `/etc/caddy/Caddyfile`.
+在添加我们自定义配置之前，让我们先移除默认配置。您可以通过删除配置文件的内容或直接删除配置文件，然后从头开始创建一个新的来实现。配置文件的路径是 `/etc/caddy/Caddyfile`。
 
-To delete the config file completely, run the following command:
+要完全删除配置文件，请运行以下命令：
 
 ```shell
 rm /etc/caddy/Caddyfile
 ```
 
-Then continue with an editor of your choice to write the config.
+然后继续使用您选择的编辑器来编写配置。
 
-You should paste the contents of the file below, replacing `<domain>` with your domain name.
+您应该粘贴以下文件的内容，将 `<domain>` 替换为您的域名。
 
 <<< @/.snippets/webservers/Caddyfile{9}
 
 ::: tip
-If you are using Cloudflare DNS in proxy mode, refer to [this tutorial](/tutorials/creating_ssl_certificates.html#method-3:-caddy-(using-cloudflare-api)), to see how to configure Caddy to use DNS challenge for obtaining SSL certificates.
+
+如果您正在使用 Cloudflare DNS 且配置为代理模式，请参考[此教程](/tutorials/creating_ssl_certificates.html#method-3:-caddy-(using-cloudflare-api))，了解如何配置 Caddy 以使用 DNS 验证方式获取 SSL 证书。
 :::
 
-### Enabling Configuration
+### 启用配置
 
-The final step is to restart Caddy.
+最后一步是重新启动 Caddy。
 
 ```bash
 systemctl restart caddy
 ```
 
 ::::
-:::: tab "Caddy Without SSL"
-Before adding our custom configuration, let's remove the default one. You can do it either by deleting the contents of config file or by deleting the config file completely and than creating a new one from scratch. The config file path is `/etc/caddy/Caddyfile`.
+:::: tab "没有使用 SSL 的 Caddy"
+在添加我们自定义配置之前，让我们先移除默认配置。您可以通过删除配置文件的内容或直接删除配置文件，然后从头开始创建一个新的来实现。配置文件的路径是 `/etc/caddy/Caddyfile`。
 
-To delete the config file completely, run the following command:
+要完全删除配置文件，请运行以下命令：
 
 ```shell
 rm /etc/caddy/Caddyfile
 ```
 
-Then continue with an editor of your choice to write the config.
+然后继续使用您选择的编辑器来编写配置。
 
-You should paste the contents of the file below, replacing `<domain>` with your domain name.
+您应该粘贴以下文件的内容，将 `<domain>` 替换为您的域名。
 
-The only two differences are that we have suffixed the `<domain>` with `:80` and in the global config at `servers` directive, we have changed the port from `:443` to `:80`.
+唯一的两个变化是在 `<domain>` 后缀添加了 `:80`，并且在全局配置的 `servers` 指令中，将端口从 `:443` 更改为 `:80`。
 
 <<< @/.snippets/webservers/Caddyfile-nossl{9}
 
-### Enabling Configuration
+### 启用配置
 
-The final step is to restart Caddy.
+最后一步是重新启动 Caddy。
 
 ```bash
 systemctl restart caddy
