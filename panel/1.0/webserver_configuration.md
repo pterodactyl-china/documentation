@@ -4,9 +4,19 @@
 使用 SSL 配置时，您必须创建 SSL 证书，否则您的网络服务器将无法启动。请参阅 [创建 SSL 证书](/tutorials/creating_ssl_certificates.html) 文档页面以了解如何在继续之前创建这些证书。
 :::
 
-:::: tabs
-::: tab "使用 SSL 的 Nginx"
+<<<<<<< HEAD
+::::: tabs
+:::: tab "使用 SSL 的 Nginx"
 首先，删除默认的 NGINX 配置。
+=======
+::: tip
+如果您使用[自动续签 SSL 的 Caddy](#caddy-with-automatic-ssl)，则无需手动创建 SSL 证书，Caddy 会自动处理。
+:::
+
+::::: tabs
+:::: tab "使用 SSL 的 Nginx"
+首先，删除默认的 NGINX 配置。
+>>>>>>> fad96abc2780565e2c6e356ff050f9378970e2b9
 
 ``` bash
 rm /etc/nginx/sites-enabled/default
@@ -28,8 +38,8 @@ sudo ln -s /etc/nginx/sites-available/pterodactyl.conf /etc/nginx/sites-enabled/
 sudo systemctl restart nginx
 ```
 
-:::
-::: tab "没有使用 SSL 的 Nginx"
+::::
+:::: tab "没有使用 SSL 的 Nginx"
 首先，删除默认的 NGINX 配置。
 
 ``` bash
@@ -52,8 +62,8 @@ sudo ln -s /etc/nginx/sites-available/pterodactyl.conf /etc/nginx/sites-enabled/
 sudo systemctl restart nginx
 ```
 
-:::
-::: tab "使用 SSL 的 Apache"
+::::
+:::: tab "使用 SSL 的 Apache"
 首先，删除默认的 Apache 配置。
 
 ``` bash
@@ -78,8 +88,8 @@ sudo a2enmod ssl
 sudo systemctl restart apache2
 ```
 
-:::
-::: tab "没有使用 SSL 的 Apache"
+::::
+:::: tab "没有使用 SSL 的 Apache"
 首先，删除默认的 Apache 配置。
 
 ``` bash
@@ -103,7 +113,61 @@ sudo a2enmod rewrite
 sudo systemctl restart apache2
 ```
 
-:::
 ::::
+:::: tab "自动续签 SSL 的 Caddy"
+Before adding our custom configuration, let's remove the default one. You can do it either by deleting the contents of config file or by deleting the config file completely and than creating a new one from scratch. The config file path is `/etc/caddy/Caddyfile`.
+
+To delete the config file completely, run the following command:
+
+```shell
+rm /etc/caddy/Caddyfile
+```
+
+Then continue with an editor of your choice to write the config.
+
+You should paste the contents of the file below, replacing `<domain>` with your domain name.
+
+<<< @/.snippets/webservers/Caddyfile{9}
+
+::: tip
+If you are using Cloudflare DNS in proxy mode, refer to [this tutorial](/tutorials/creating_ssl_certificates.html#method-3:-caddy-(using-cloudflare-api)), to see how to configure Caddy to use DNS challenge for obtaining SSL certificates.
+:::
+
+### Enabling Configuration
+
+The final step is to restart Caddy.
+
+```bash
+systemctl restart caddy
+```
+
+::::
+:::: tab "Caddy Without SSL"
+Before adding our custom configuration, let's remove the default one. You can do it either by deleting the contents of config file or by deleting the config file completely and than creating a new one from scratch. The config file path is `/etc/caddy/Caddyfile`.
+
+To delete the config file completely, run the following command:
+
+```shell
+rm /etc/caddy/Caddyfile
+```
+
+Then continue with an editor of your choice to write the config.
+
+You should paste the contents of the file below, replacing `<domain>` with your domain name.
+
+The only two differences are that we have suffixed the `<domain>` with `:80` and in the global config at `servers` directive, we have changed the port from `:443` to `:80`.
+
+<<< @/.snippets/webservers/Caddyfile-nossl{9}
+
+### Enabling Configuration
+
+The final step is to restart Caddy.
+
+```bash
+systemctl restart caddy
+```
+
+::::
+:::::
 
 #### 下一步：[Wings (后端) 安装](../../wings/installing.md)

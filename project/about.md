@@ -31,12 +31,11 @@
 ### 项目核心团队
 | 名字 | Discord 名称 | 负责内容 |
 | ---- | ------------ | ---- |
-| [Dane Everitt](https://daneeveritt.com/)      | `Tactical Fish#8008` | 创始人&前项目维护者 |
-| [Matthew Penner](https://matthewp.io/)        | `matthewp#0001`      | 项目维护者                  |
-| Stepan Fedotov                                | `Trixter#0001`       | WISP 和 WHMCS 模块维护人员      |
-| Michael Parker                                | `parkervcp#6789`     | Egg 开发人员，Docker 整合   |
-| [Jakob Schrettenbrunner](https://schrej.net/) | `schrej#1337`        | 开发人员                           |
-| [Lance Pioch](https://lancepioch.com/)        | `ShadowLancer#5209`  | 开发人员                           |
+| [Dane Everitt](https://daneeveritt.com/)      | `.tacticalfish` | 创始人&前项目维护者 |
+| [Matthew Penner](https://matthewp.io/)        | `matthewp`      | 项目维护者                  |
+| Stepan Fedotov                                | `trixter`       | WHMCS 模块维护人员             |
+| Michael Parker                                | `parkervcp`     | Egg 开发人员，Docker 整合   |
+| [Lance Pioch](https://lancepioch.com/)        | `shadowlancer`  | 开发人员                           |
 
 翼龙项目团队的成员用红色用户名在翼龙官方的 Discord 服务器中显示。
 
@@ -48,17 +47,11 @@
 以下公司帮助资助翼龙的发展。 [有兴趣成为赞助商吗？](https://github.com/sponsors/DaneEveritt)
 
 | 公司                                                   | 关于                                                                                                                                                                                                                           |
-|-----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**WISP**](https://wisp.gg)                               | Extra features.                                                                                                                                                                                                                 |
-| [**Fragnet**](https://fragnet.net)                        | Providing low latency, high-end game hosting solutions to gamers, game studios and eSports platforms.                                                                                                                           |
-| [**RocketNode**](https://rocketnode.com/)                 | Innovative game server hosting combined with a straightforward control panel, affordable prices, and Rocket-Fast support.                                                                                                       |
-| [**Aussie Server Hosts**](https://aussieserverhosts.com/) | No frills Australian Owned and operated High Performance Server hosting for some of the most demanding games serving Australia and New Zealand.                                                                                 |
-| [**BisectHosting**](https://www.bisecthosting.com/)       | BisectHosting provides Minecraft, Valheim and other server hosting services with the highest reliability and lightning fast support since 2012.                                                                                 |
-| [**MineStrator**](https://minestrator.com/)               | Looking for the most highend French hosting company for your minecraft server? More than 24,000 members on our discord trust us. Give us a try!                                                                                 |
-| [**Skynode**](https://www.skynode.pro/)                   | Skynode provides blazing fast game servers along with a top-notch user experience. Whatever our clients are looking for, we're able to provide it!                                                                              |
-| [**VibeGAMES**](https://vibegames.net/)                   | VibeGAMES is a game server provider that specializes in DDOS protection for the games we offer. We have multiple locations in the US, Brazil, France, Germany, Singapore, Australia and South Africa.                           |
-| [**Pterodactyl Market**](https://pterodactylmarket.com/)  | Pterodactyl Market is a one-and-stop shop for Pterodactyl. In our market, you can find Add-ons, Themes, Eggs, and more for Pterodactyl.                                                                                         |
-| [**UltraServers**](https://ultraservers.com/)             | Deploy premium games hosting with the click of a button. Manage and swap games with ease and let us take care of the rest. We currently support Minecraft, Rust, ARK, 7 Days to Die, Garys MOD, CS:GO, Satisfactory and others. |
+|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [**Aussie Server Hosts**](https://aussieserverhosts.com/) | No frills Australian Owned and operated High Performance Server hosting for some of the most demanding games serving Australia and New Zealand.                                                       |
+| [**BisectHosting**](https://www.bisecthosting.com/)       | BisectHosting provides Minecraft, Valheim and other server hosting services with the highest reliability and lightning fast support since 2012.                                                       |
+| [**MineStrator**](https://minestrator.com/)               | Looking for the most highend French hosting company for your minecraft server? More than 24,000 members on our discord trust us. Give us a try!                                                       |
+| [**VibeGAMES**](https://vibegames.net/)                   | VibeGAMES is a game server provider that specializes in DDOS protection for the games we offer. We have multiple locations in the US, Brazil, France, Germany, Singapore, Australia and South Africa. |
 
 ## License
 
