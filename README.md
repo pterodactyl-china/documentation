@@ -5,7 +5,7 @@ actionText: 开始 →
 actionLink: /project/introduction
 features:
 - title: 安全至上
-  details: 安全性是该平台上的一等公民，具有 bcrypt 哈希、AES-256-CBC 加密和开箱即用的 HTTPS 支持。
+  details: 安全性是该平台上的首要任务，具有 bcrypt 哈希、AES-256-CBC 加密和开箱即用的 HTTPS 支持。
 - title: 现代化的工具
   details: 建立在现代堆栈上，利用最佳设计实践，使其易于进入和修改。
 - title: Docker的核心
