@@ -36,13 +36,13 @@
 
 ``` bash
 # Centos安装脚本
-yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh ed8484bec
+yum install -y wget && wget -O install.sh https://download.bt.cn/install/install_6.0.sh && sh install.sh ed8484bec
 
 # Ubuntu/Deepin安装脚本
-wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && sudo bash install.sh ed8484bec
+wget -O install.sh https://download.bt.cn/install/install-ubuntu_6.0.sh && sudo bash install.sh ed8484bec
 
 # Debian安装脚本
-wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && bash install.sh ed8484bec
+wget -O install.sh https://download.bt.cn/install/install-ubuntu_6.0.sh && bash install.sh ed8484bec
 
 # 万能安装脚本
 if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_panel.sh;else wget -O install_panel.sh https://download.bt.cn/install/install_panel.sh;fi;bash install_panel.sh ed8484bec
@@ -200,21 +200,11 @@ RestartSec=5s
 WantedBy=multi-user.target
 ```
 
-::: tip CentOS 上的 Redis
-如果您使用的是 CentOS，则需要在 `After=` 一行将 `redis-server.service` 替换为 `redis.service`，以确保 `redis` 在工作队列之前启动。
-:::
-
 ::: tip
-如果你没有使用 `redis` 做任何事情，你应该删除 `After=` 一行，否则服务启动时会遇到错误。      
+你在 `PHP` 安装 `redis` 拓展时应该自动安装了 `redis` 并启动了，但如果发现 应用商店中没有或未启动 `redis` ，你应该启动它。      
 如果你的面板路径并不是 `/www/wwwroot/pterodactyl/`，请替换为你面板的绝对路径，否则邮件服务将无法使用。      
 如果你宝塔默认命令行使用的并不是 `8.1`PHP 可以尝试使用绝对路径，将 `/usr/bin/php` 改为 `/www/server/php/81/bin/php`
 :::
-
-如果您在系统中使用 redis，则需要确保启用它会在引导时启动。您可以通过运行以下命令来执行此操作：
-
-```bash
-sudo systemctl enable --now redis-server
-```
 
 最后，启动队列监听服务并设置开启自动启动
 
@@ -222,4 +212,4 @@ sudo systemctl enable --now redis-server
 sudo systemctl enable --now pteroq.service
 ```
 
-#### 下一步：[网络服务器配置](./webserver_configuration)
+#### 下一步：[Wings (后端) 安装](../../wings/installing.md)
