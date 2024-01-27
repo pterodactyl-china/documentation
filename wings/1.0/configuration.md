@@ -127,6 +127,6 @@ installer_limits:
 | tmpfs_size                 |      100      | 挂载实例到 `/tmp` 目录的大小限制                              |
 | websocket_log_count        |      150      | 在控制台中显示的行数                                                   |
 | detect_clean_exit_as_crash |     true      | 如果服务器没有在交互的情况下意外停止将会标记为已崩溃 |
-| (crash detection) timeout  |      60       | 服务器崩溃自动重启持续时间     |
+| (crash detection) timeout  |      60       | 服务器崩溃自动重启间隔时间     |
 | app_name                   | "Pterodactyl" | 更改Wings的名称,该项将会显示在面板的控制台中                               |
 | check_permissions_on_boot  |     true      | 每次启动时将会检查所有文件的权限,如果您的服务器文件过多请禁用!|
