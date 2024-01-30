@@ -10,21 +10,18 @@
 预设的默认启动命令也是必需的，但是可以根据变量进行动态更改。
 
 ## Create New Option
-After creating the service, in the bottom right of the page you should see a button titled `New Egg`, press it.
+创建完预设组后, 点击页面右下角的 `新预设` 按钮.
 
 ![](../../../.vuepress/public/community/config/eggs/Pterodactyl_Create_New_Egg_Select.png)
 
-You will be taken to a new service option page which is where most of the configuration happens. The first thing
-you need to do is select your service that you created previously from the `Associated Nest` dropdown.
+大多数配置都将在随后打开的这个预设设置页面中进行. 你要做的第一件事情就是从 `所属预设组` 下拉框中选择你的预设属于哪个预设租.
 
 ![](../../../.vuepress/public/community/config/eggs/Pterodactyl_Create_New_Egg_Process_Management.png)
 
-After that, enter an Option Name to describe it, in this case I am using `Widget`. You will also need to provide a
-_valid_ docker image, as well as a start command to be assigned to servers under this service option (remember, this
-can be tweaked per-server if needed).
+随后为你的预设起一个名字并填写在 `预设名` 中, 在这个样例中我使用了 `Widget` 这个名字. 你还需要提供一个有效的docker镜像和启动命令 (启动命令在具体的服务器创建后可以单独针对此服进行再次编辑).
 
-_Docker images must be specifically designed to work with Pterodactyl Panel._ You should read more about that in
-our [Creating a Docker Image](/community/config/eggs/creating_a_custom_image.md) guide.
+_Docker images 必须是专门设计用于翼龙面板的那些._ 你可以在我们的
+ [创建docker镜像](/community/config/eggs/creating_a_custom_image.md) 指南中阅读更多相关信息.
 
 ## Configure Process Management
 This is perhaps the most important step in this service option configuration, as this tells the Daemon how to run everything.
