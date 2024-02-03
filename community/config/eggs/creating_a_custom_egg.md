@@ -9,7 +9,7 @@
 
 预设的默认启动命令也是必需的，但是可以根据变量进行动态更改。
 
-## Create New Option
+## 创建新的预设
 创建完预设组后, 点击页面右下角的 `新预设` 按钮.
 
 ![](../../../.vuepress/public/community/config/eggs/Pterodactyl_Create_New_Egg_Select.png)
@@ -23,30 +23,26 @@
 _Docker images 必须是专门设计用于翼龙面板的那些._ 你可以在我们的
  [创建docker镜像](/community/config/eggs/creating_a_custom_image.md) 指南中阅读更多相关信息.
 
-## 配置流程管理
-This is perhaps the most important step in this service option configuration, as this tells the Daemon how to run everything.
+## 进程管理识别
+这是配置界面中最重要的一步, 这些信息能让进程知道如何启动并管理这个游戏预设.
 
 ![](../../../.vuepress/public/community/config/eggs/Pterodactyl_Create_New_Egg_Process_Management.png)
 
-The first field you'll encounter is `Copy Settings From`. The default selection is `None`. That is expected, and okay.
-This dropdown is discussed at the end of this article.
+第一个空是 `复制设置自`. 默认为 `无`. 如果你已经配置好了一个类似的预设，想要快速配置这些信息就可以点击下拉框并选中.
 
-### Stop Command
-Next, you'll encounter `Stop Command` and, as the name implies, this should be the command used to safely stop the
-option. For some games, this is `stop` or `end`. Certain programs and games don't have a specified stop command, so
-you can enter `^C` to have the daemon execute a `SIGINT` to end the process.
+### 关机指令
+下一个空是 `关机指令` , 这个命令将用于安全的停止服务器. 例如在我的世界里, 通常使用 `stop` 命令来关闭服务器. 当然也有一些游戏没有相关的管理员命令,例如幻兽帕鲁(也许未来会更新加入).这种情况直接填入 `^C` 让守护进程执行一个 `SIGINT`来结束进程。
 
-### Log Storage
-Logs are competely handeled by the daemon now and use the docker logs to output the complete output from the server.
-This can be set like below.
+### 日志存储
+现在日志完全由守护进程处理，并利用docker从服务器输出完整的日志。
+设置案例如下.
 
 ```json
 {}
 ``` 
 
-### Configuration Files
-The next block is one of the most complex blocks, the `Configuration Files` descriptor. The Daemon will process this
-block prior to booting the server to ensure all of the required settings are defined and set correctly.
+### 配置文件
+接下来的 `配置文件` 是最重要的一个空. 在服务器启动之前,守护进程将会落实这些配置以确保服务器能够正确的应用。
 
 ```json
 {
@@ -62,15 +58,14 @@ block prior to booting the server to ensure all of the required settings are def
 }
 ```
 
-In this example, we are telling the Daemon to read `server.properties` in `/home/container`. Within this block, we
-define a `parser`, in this case `properties` but the following are [valid parsers](https://github.com/pterodactyl-china/wings/blob/develop/parser/parser.go#L25-L30):
+在这个例子中, 我们让守护进程从 `/home/container` 路径读取 `server.properties` 这个文件. 在这个代码块里, 我们定义了一个 `parser`, in this case `properties` but the following are [valid parsers](https://github.com/pterodactyl-china/wings/blob/develop/parser/parser.go#L25-L30):
 
-* `file` — This parser goes based on matching the beginning of lines, and not a specific property like the other five.
-Avoid using this parser if possible.
-* `yaml` (supports `*` notation)
+* `file` — 这个文件类型的匹配基于行首, 不像另外的五个文件类型有着明确的分类.
+尽可能避免填写这个类型.
+* `yaml` (支持 `*` 符号)
 * `properties`
 * `ini`
-* `json` (supports `*` notation)
+* `json` (支持 `*` 符号)
 * `xml`
 
 Once you have defined a parser, we then define a `find` block which tells the Daemon what specific elements to find
