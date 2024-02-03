@@ -23,7 +23,7 @@
 _Docker images 必须是专门设计用于翼龙面板的那些._ 你可以在我们的
  [创建docker镜像](/community/config/eggs/creating_a_custom_image.md) 指南中阅读更多相关信息.
 
-## Configure Process Management
+## 配置流程管理
 This is perhaps the most important step in this service option configuration, as this tells the Daemon how to run everything.
 
 ![](../../../.vuepress/public/community/config/eggs/Pterodactyl_Create_New_Egg_Process_Management.png)
