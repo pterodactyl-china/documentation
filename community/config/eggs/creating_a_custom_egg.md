@@ -10,7 +10,7 @@
 预设的默认启动命令也是必需的，但是可以根据变量进行动态更改。
 
 ## Create New Option
-After creating the service, in the bottom right of the page you should see a button titled `New Egg`, press it.
+创建完预设组后, 点击页面右下角的 `新预设` 按钮.
 
 ![](../../../.vuepress/public/community/config/eggs/Pterodactyl_Create_New_Egg_Select.png)
 
