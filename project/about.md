@@ -35,7 +35,7 @@
 | [Matthew Penner](https://matthewp.io/)        | `matthewp`      | 项目维护者                  |
 | Stepan Fedotov                                | `trixter`       | WHMCS 模块维护人员             |
 | Michael Parker                                | `parkervcp`     | Egg 开发人员，Docker 整合   |
-| [Lance Pioch](https://lancepioch.com/)        | `shadowlancer`  | 开发人员                           |
+| [Lance Pioch](https://lancepioch.com/)        | `shadowlancer`  | 面板维护人员                           |
 
 翼龙项目团队的成员用红色用户名在翼龙官方的 Discord 服务器中显示。
 

@@ -92,6 +92,38 @@ audit2allow -a -M http_port_t
 semodule -i http_port_t.pp
 ```
 
+## 容器无法上网？可能是 DNS 问题！
+现在，Wings 已经成功运行，并且您在“节点”页面上看到了绿色的心形标志，位于 `/etc/pterodactyl/config.yml` 的 Wings 配置文件将有新的值。其中一个值是 DNS，它默认为 `1.1.1.1` 和 `1.0.0.1` (但我们构建的 wings 默认为 `1.0.0.1`、`223.5.5.5`、`8.8.8.8`、`114.114.114.114`)。如果您使用的是阻止 Cloudflare DNS 的主机，您将需要使用不同的 DNS 服务器；通常是与您的主机系统相同的 DNS 服务器。您可以通过多种方式查看主机使用的 DNS 服务器，具体取决于您的操作系统如何处理网络。如果其中一种方法不起作用，请尝试另一种方法。
+```bash
+# Network Manager（这将显示您的 IPV4 DNS 和 IPV6 DNS 服务器，以防您想要将主机的 IPV6 DNS 服务器添加到您的 Wings 配置中。
+nmcli -g ip4.dns,ip6.dns dev show
+# Systemd-Resolve（适用于 Ubuntu 18.04 和 20.04）
+systemd-resolve --status
+# Resolve-CTL（适用于较新版本的 Ubuntu）
+resolvectl status
+# 可能包含主机系统 DNS 服务器的原始文件位置，适用于各种发行版
+/etc/resolv.conf
+/etc/network/interfaces
+```
+如果返回的 DNS 服务器与 `1.1.1.1` 和 `1.0.0.1` 不同，您需要编辑 wings 的 `config.yml` 文件，以使用从命令返回的 DNS 服务器。如果您看到的输出除了 IPV4 DNS 服务器外还包含类似 IPV6 地址的内容，请确保将其放在 IPV6 部分而不是 IPV4 部分。明确地说，如果您必须使用不同于默认的 DNS 服务器，请确保从 wings 配置中删除 `1.1.1.1` 和 `1.0.0.1`；不要只是添加新的服务器，而是替换旧的服务器。
+
+## 调度排错
+- 检查队列管理器的日志 ``journalctl -xeu pteroq``
+- 重启 pteroq ``systemctl restart pteroq``
+- 清除调度缓存 ``php /var/www/pterodactyl/artisan schedule:clear-cache``
+- 检查您的 PHP 版本 - 支持最高到 8.1 ``php -v``
+- 使用 <https://crontab.guru/> 检查您的 crontab 语法 - 确保它能够达到您预期的行为
+- 验证问题是否与调度有关，而不是您设置的任务（将调度中的第一个任务设置为您知道在控制台中打印消息的内容，例如，在 Minecraft 服务器的控制台中运行 ``say test``，如果控制台成功显示文本"test"，则将第一个任务- 设置为 ``say test``，以便您知道它是否运行）
+- 您的任务是否有偏差？确保您使用的是面板的最新版本。在版本 1.11.5 （中国版的 1.11.4.0）中，修复了调度在错误时间运行的问题。或者，您可能设置了错误的时区。确保您的时区都匹配。
+ - 系统时区 ``timedatectl``
+ - 面板时区 ``nano /var/www/pterodactyl/.env``
+ - Wings 时区（作为 TZ 环境变量传递给容器，与调度无关，但在检查时区时，您也可以设置这个） ``nano /etc/pterodactyl/config.yml``
+- 检查存储调度的数据库 - 默认为 MariaDB
+ - ``systemctl status mariadb`` - 如果未激活，``journalctl -xeu mariadb``
+- 检查队列处理程序 - 默认为 Redis
+ - ``systemctl status redis`` - 如果未激活，``journalctl -xeu redis``（在某些发行版中，服务的名称将是 ``redis-server``）
+* 检查面板错误 ``tail -n 150 /var/www/pterodactyl/storage/logs/laravel-$(date +%F).log | nc pteropaste.com 99``
+
 ## 防火墙的问题
 如果您在 RHEL/CentOS 服务器上安装了 `firewalld`，这可能已经破坏了原有的 DNS 规则。
 
