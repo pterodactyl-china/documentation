@@ -176,62 +176,62 @@ php artisan p:user:disable2fa
 
 截至 2022-12-12，收集的数据包括：
 
-* Unique identifier for the Panel
-* Version of the Panel
-* PHP version
-* Backup storage driver (S3, Local, etc.)
-* Cache driver (Redis, Memcached, etc.)
-* Database driver and version (MySQL, MariaDB, PostgreSQL, etc.)
-* Resources
-  * Allocations
-    * Total number
-    * Total number of used allocations (assigned to a server)
-  * Backups
-    * Total number
-    * Sum of the total amount of bytes stored by backups
-  * Eggs
-    * Total number
-    * ~~Map of egg UUIDs to the number of servers using that egg~~ (removed in 1.11.2)
-  * Locations
-    * Total number
-  * Mounts
-    * Total number
-  * Nests
-    * Total number
-    * ~~Map of nest UUIDs to the number of servers using eggs in that nest~~ (removed in 1.11.2)
-  * Nodes
-    * Total number
-  * Servers
-    * Total number
-    * Number of servers that are suspended
-  * Users
-    * Total number
-    * Number of users that are admins
-* Nodes
-  * Node UUID
-  * Version of Wings on the node
+* 面板的唯一标识符
+* 面板的版本
+* PHP 版本
+* 备份存储驱动程序（S3、本地等）
+* 缓存驱动程序（Redis、Memcached 等）
+* 数据库驱动程序和版本（MySQL、MariaDB、PostgreSQL 等）
+* 资源
+  * 分配
+    * 总数
+    * 已使用的分配总数（分配给服务器）
+  * 备份
+    * 总数
+    * 备份存储的总字节数
+  * 预设
+    * 总数
+    * ~~使用该预设的服务器数量的映射~~（在 1.11.2 中已删除）
+  * 位置
+    * 总数
+  * 挂载点
+    * 总数
+  * 预设组
+    * 总数
+    * ~~使用该预设组中预设的服务器数量的映射~~（在 1.11.2 中已删除）
+  * 节点
+    * 总数
+  * 服务器
+    * 总数
+    * 已暂停的服务器数量
+  * 用户
+    * 总数
+    * 管理员用户数量
+* 节点
+  * 节点 UUID
+  * 节点上 Wings 的版本
   * Docker
-    * Version
+    * 版本
     * Cgroups
-      * Driver
-      * Version
-    * Containers
-      * Total
-      * Running
-      * Paused
-      * Stopped
-    * Storage
-      * Driver
-      * Filesystem
+      * 驱动程序
+      * 版本
+    * 容器
+      * 总数
+      * 运行中
+      * 暂停中
+      * 已停止
+    * 存储
+      * 驱动程序
+      * 文件系统
     * runc
-      * Version
-  * System
-    * Architecture (`amd64`, `arm64`, etc.)
-    * CPU Threads
-    * Memory Bytes
-    * Kernel Version
-    * Operating System (Debian, Fedora, RHEL, Ubuntu, etc.)
-    * Operating System Type (bsd, linux, windows, etc.)
+      * 版本
+  * 系统
+    * 架构（`amd64`、`arm64` 等）
+    * CPU 线程数
+    * 内存字节数
+    * 内核版本
+    * 操作系统（Debian、Fedora、RHEL、Ubuntu 等）
+    * 操作系统类型（bsd、linux、windows 等）
 
 ### 数据是如何存储的？
 
