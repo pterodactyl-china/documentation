@@ -108,20 +108,20 @@ resolvectl status
 如果返回的 DNS 服务器与 `1.1.1.1` 和 `1.0.0.1` 不同，您需要编辑 wings 的 `config.yml` 文件，以使用从命令返回的 DNS 服务器。如果您看到的输出除了 IPV4 DNS 服务器外还包含类似 IPV6 地址的内容，请确保将其放在 IPV6 部分而不是 IPV4 部分。明确地说，如果您必须使用不同于默认的 DNS 服务器，请确保从 wings 配置中删除 `1.1.1.1` 和 `1.0.0.1`；不要只是添加新的服务器，而是替换旧的服务器。
 
 ## 调度排错
-- 检查队列管理器的日志 ``journalctl -xeu pteroq``
-- 重启 pteroq ``systemctl restart pteroq``
-- 清除调度缓存 ``php /var/www/pterodactyl/artisan schedule:clear-cache``
-- 检查您的 PHP 版本 - 支持最高到 8.1 ``php -v``
-- 使用 <https://crontab.guru/> 检查您的 crontab 语法 - 确保它能够达到您预期的行为
-- 验证问题是否与调度有关，而不是您设置的任务（将调度中的第一个任务设置为您知道在控制台中打印消息的内容，例如，在 Minecraft 服务器的控制台中运行 ``say test``，如果控制台成功显示文本"test"，则将第一个任务- 设置为 ``say test``，以便您知道它是否运行）
-- 您的任务是否有偏差？确保您使用的是面板的最新版本。在版本 1.11.5 （中国版的 1.11.4.0）中，修复了调度在错误时间运行的问题。或者，您可能设置了错误的时区。确保您的时区都匹配。
- - 系统时区 ``timedatectl``
- - 面板时区 ``nano /var/www/pterodactyl/.env``
- - Wings 时区（作为 TZ 环境变量传递给容器，与调度无关，但在检查时区时，您也可以设置这个） ``nano /etc/pterodactyl/config.yml``
-- 检查存储调度的数据库 - 默认为 MariaDB
- - ``systemctl status mariadb`` - 如果未激活，``journalctl -xeu mariadb``
-- 检查队列处理程序 - 默认为 Redis
- - ``systemctl status redis`` - 如果未激活，``journalctl -xeu redis``（在某些发行版中，服务的名称将是 ``redis-server``）
+* 检查队列管理器的日志 ``journalctl -xeu pteroq``
+* 重启 pteroq ``systemctl restart pteroq``
+* 清除调度缓存 ``php /var/www/pterodactyl/artisan schedule:clear-cache``
+* 检查您的 PHP 版本 - 支持最高到 8.1 ``php -v``
+* 使用 <https://crontab.guru/> 检查您的 crontab 语法 - 确保它能够达到您预期的行为
+* 验证问题是否与调度有关，而不是您设置的任务（将调度中的第一个任务设置为您知道在控制台中打印消息的内容，例如，在 Minecraft 服务器的控制台中运行 ``say test``，如果控制台成功显示文本"test"，则将第一个任务- 设置为 ``say test``，以便您知道它是否运行）
+* 您的任务是否有偏差？确保您使用的是面板的最新版本。在版本 1.11.5 （中国版的 1.11.4.0）中，修复了调度在错误时间运行的问题。或者，您可能设置了错误的时区。确保您的时区都匹配。
+  * 系统时区 ``timedatectl``
+  * 面板时区 ``nano /var/www/pterodactyl/.env``
+  * Wings 时区（作为 TZ 环境变量传递给容器，与调度无关，但在检查时区时，您也可以设置这个） ``nano /etc/pterodactyl/config.yml``
+* 检查存储调度的数据库 - 默认为 MariaDB
+  * ``systemctl status mariadb`` - 如果未激活，``journalctl -xeu mariadb``
+* 检查队列处理程序 - 默认为 Redis
+  * ``systemctl status redis`` - 如果未激活，``journalctl -xeu redis``（在某些发行版中，服务的名称将是 ``redis-server``）
 * 检查面板错误 ``tail -n 150 /var/www/pterodactyl/storage/logs/laravel-$(date +%F).log | nc pteropaste.com 99``
 
 ## 防火墙的问题
