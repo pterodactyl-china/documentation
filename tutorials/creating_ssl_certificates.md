@@ -3,7 +3,7 @@
 本页将为您介绍如何为面板和 Wings 创建新的 SSL 证书
 
 :::: tabs
-::: tab "方法1: Certbot"
+::: tab "方法 1: Certbot"
 首先,我们将安装 Certbot,这是一个脚本文件,它可以自动更新证书并一键创建证书。下面的命令只适合 Ubuntu，但您可以在 [Certbot 官方网站](https://certbot.eff.org/)查看相关安装说明,我们这里包含了安装 Certbot 必要的Nginx或Apache插件的指令,这样妈妈再也不用担心我需要迁移环境了!
 
 ``` bash
@@ -84,7 +84,7 @@ systemctl restart wings
 ```
 
 :::
-::: tab "方法2: acme.sh (使用 Cloudflare API)"
+::: tab "方法 2: acme.sh (使用 Cloudflare API)"
 该方法适合高级用户和无法开放80端口的用户, 下面的命令适用于 Ubuntu 和 Cloudflare API,您可以查看 [acme.sh 的官方网站](https://github.com/Neilpang/acme.sh) 来获取相关说明
 
 ``` bash
@@ -129,52 +129,52 @@ sudo crontab -e
 ```
 
 :::
-::: tab "Method 3: Caddy (using Cloudflare API)"
-This is for advanced users, who are running Cloudflare in proxy mode or do not have access to port `80`.
+::: tab "方法 3: Caddy（使用 Cloudflare API）"
+这适用于高级用户，他们正在使用 Cloudflare 代理模式或无法访问端口 `80`.
 
-### Installing Caddy with Cloudflare DNS plugin
+### 使用 Cloudflare DNS 插件安装 Caddy
 
-Caddy does not come by default with Cloudflare DNS plugin, you need to install it yourself.
+Caddy 默认不带有 Cloudflare DNS 插件，您需要自行安装。
 
-There are two main methods:
+有两种主要方法:
 
-1. Using `xcaddy` - CLI tool to build your own Caddy build
-2. Downloading prebuilt binary from [Caddy's download page](https://caddyserver.com/download).
-3. Using Ansible to download and install Caddy with plugins. See [caddy-ansible](https://github.com/caddy-ansible/caddy-ansible)
+1. 使用 `xcaddy` - 用于构建自己的 Caddy 版本的 CLI 工具
+2. 从 [Caddy 的下载页面](https://caddyserver.com/download)下载预构建的二进制文件。
+3. 使用 Ansible 下载并安装带有插件的 Caddy。请参阅 [caddy-ansible](https://github.com/caddy-ansible/caddy-ansible)
 
-#### Build Caddy using `xcaddy` on your server
+#### 在您的服务器上使用 `xcaddy` 构建 Caddy
 
-Please refer to [Caddy docs on building Caddy](https://caddyserver.com/docs/build#xcaddy).
+请参阅 [Caddy 构建文档](https://caddyserver.com/docs/build#xcaddy)。
 
-### Obtaining CloudFlare API Token
+### 获取 CloudFlare API 令牌
 
-After installing acme.sh, we need to fetch a CloudFlare API key. Please make sure that a DNS record (A or CNAME record) is pointing to your target node, and set the cloud to grey (bypassing CloudFlare proxy). Then go to My Profile > API keys and on Global API Key subtab, click on "view", enter your CloudFlare password, and copy the API key to clipboard.
+在安装 acme.sh 后，我们需要获取 CloudFlare API 密钥。请确保 DNS 记录（A 记录或 CNAME 记录）指向您的目标节点，并将云设置为灰色（绕过 CloudFlare 代理）。然后转到“我的配置文件”>“API 密钥”，在全局 API 密钥子选项卡上，单击“查看”，输入您的 CloudFlare 密码，并将 API 密钥复制到剪贴板。
 
-After install Caddy with Cloudflare DNS plugin, we need to fetch a Cloudflare API token. Please make sure that a DNS record (A or CNAME record) is pointing at your target node. Then go to My Profile > API Tokens and on API Tokens click "Create Token". Create API Token > API token templates, at the end of line with "Edit zone DNS", click "Use template". Under **Zone Resources**, select your DNS zone for which you wish to create the API token, click "Continue to summary". Review the API token summary and click "Create Token". And finally copy the API token to clipboard.
+在安装带有 Cloudflare DNS 插件的 Caddy 后，我们需要获取 Cloudflare API 令牌。请确保 DNS 记录（A 记录或 CNAME 记录）指向您的目标节点。然后转到“我的配置文件”>“API 令牌”，在 API 令牌上单击“创建令牌”。创建 API 令牌 > API 令牌模板，在带有“编辑区域 DNS”的行末尾，单击“使用模板”。在**区域资源**下，选择您希望创建 API 令牌的 DNS 区域，单击“继续到摘要”。查看 API 令牌摘要，然后单击“创建令牌”。最后将 API 令牌复制到剪贴板。
 
-### Reconfiguring Caddy to use Cloudflare DNS for obtaining certificates
+### 重新配置 Caddy 以使用 Cloudflare DNS 获取证书
 
-Create an environment variable file (like `.env`), keep in mind that this file contains secrets and should not be accessed by public.
+首先，您需要创建一个环境变量文件（例如 `.env`），请注意，此文件包含机密信息，不应该被公开访问。
 
-We recommend that you create the secret file in the following location: `/etc/caddy/.secrets.env`.
+我们建议您将此机密文件放在以下位置: `/etc/caddy/.secrets.env`。
 
 ```bash
-CLOUDFLARE_API_TOKEN=<your cloudflare api token>
+CLOUDFLARE_API_TOKEN=<您的 Cloudflare API 令牌>
 ```
 
-For security reasons, we recommend setting permissions to `0600` (only owner can read or write to the file).
+出于安全原因，我们建议将权限设置为 `0600` （只有所有者可以读取或写入文件）。
 
 ```bash
-# Set ownership of the `.secrets.env` file to `caddy` system user
+# 将 `.secrets.env` 文件的所有权设置为 `caddy` 系统用户
 chown caddy:caddy /etc/caddy/.secrets.env
 
-# Set read-write permissions only to owner - the `caddy` system user
+# 仅允许所有者读写权限 - 即 `caddy` 系统用户
 chmod 0600 /etc/caddy/.secrets.env
 ```
 
-Modify the systemd unit file, to load environment variables from file (add `--envfile /etc/caddy/.secrets.env` flag to `ExecStart`), the default systemd unit file location is `/etc/systemd/system/caddy.service`:
+接下来，修改 systemd 单元文件，以从文件加载环境变量（在 `ExecStart` 中添加 `--envfile /etc/caddy/.secrets.env` 标志）。默认的 systemd 单元文件位置是 `/etc/systemd/system/caddy.service`:
 
-```unit{12}
+```unit{11}
 [Unit]
 Description=Caddy
 Documentation=https://caddyserver.com/docs/
@@ -198,9 +198,9 @@ AmbientCapabilities=CAP_NET_BIND_SERVICE
 WantedBy=multi-user.target
 ```
 
-You can add a `tls` block to your `Caddyfile`, under the `<domain>` block of your panel configuration, the Caddy config file location is `/etc/caddy/Caddyfile`:
+最后，在您的面板配置的 `<domain>` 块下，您可以在 `Caddyfile` 中添加一个 `tls` 块。Caddy 配置文件的位置是 `/etc/caddy/Caddyfile`:
 
-```caddyfile{5-7}
+```caddyfile{4-6}
 <domain> {
   # ...
 
