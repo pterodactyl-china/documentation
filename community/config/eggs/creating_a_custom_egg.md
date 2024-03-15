@@ -108,11 +108,10 @@ _Docker images 必须是专门设计用于翼龙面板的那些._ 你可以在�
 }
 ```
 
-在上面这个例子, we define `done` as the entire line, or part of a line that indicates a server is done
-starting, and is ready for players to join. When the Daemon sees this output, it will mark the server as `ON` rather
-than `STARTING`.
+在上面这个例子, 我们定义了 `done` 作为一整行, 或者是代表服务器已完成启动并且已经准备好让玩家进入的其他输出(其中一部分即可). 当守护进程检测到这些输出时, 它会标记服务器已经成功启动了`ON` 而不是
+启动中 `STARTING`.
 
-That concludes basic service option configuration.
+基本预设配置到此结束,快去实践看看吧。
 
 ## Copy Settings From
 As mentioned above, there is a unique `Copy Settings From` dropdown when adding a new option. This gives you the
