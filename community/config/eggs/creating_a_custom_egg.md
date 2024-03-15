@@ -99,7 +99,7 @@ _Docker images 必须是专门设计用于翼龙面板的那些._ 你可以在�
 文件配置中有一个高级用法可以只用一行代码就能做到匹配并替换多个元素. 在本例中, 我们正在寻找 `127.0.0.1` 或 `localhost` 并且替换他们为docker中接口配置 `{{config.docker.interface}}`. 
 :::
 
-### Start Configuration
+### 启动配置
 最后一个模块是 `Start Configuration` 。这将用用于判定服务器是否处于运行（running）状态.
 
 ```json
@@ -113,29 +113,26 @@ _Docker images 必须是专门设计用于翼龙面板的那些._ 你可以在�
 
 基本预设配置到此结束,快去实践看看吧。
 
-## Copy Settings From
-As mentioned above, there is a unique `Copy Settings From` dropdown when adding a new option. This gives you the
-ability to, as the name suggests, copy settings defined above from a different option.
+## 复制设置
+如上所示, 添加新选项时，有一个独特的 `Copy Settings From` 下拉列表。 顾名思义，这让你能够从不同的选项复制上面定义的设置。
 
 ![](../../../.vuepress/public/community/config/eggs/Pterodactyl_Create_New_Egg_Copy_Settings_From.png)
 
-In the panel, we use this to copy settings that remain the same between similar service options, such as many of the
-Minecraft options.
+在面板中，我们使用它来复制相似服务选项之间保持不变的设置，例如许多
+《我的世界》服务器当中的配置。
 
-For example, lets look at the `Sponge (SpongeVanilla)` service option.
+例如 `Sponge (SpongeVanilla)` 预设配置.
 
-As you can see, it as been told to copy settings from `Vanilla Minecraft`. This means that any of the fields that are
-left blank will inherit from the assigned parent. We then define a specific `userInteraction` line that is different in
-Sponge compared to Vanilla, but tell it that everything else should remain the same.
+正如你所看到的，它被告知从 `Vanilla Minecraft`. 复制设置。这意味着任何
+留空将从指定的父级继承。然后我们定义一个特定的 `userInteraction` 元素，它与
+Sponge与Vanilla预设相比会有这个特定元素的区别，但别的一样。
 
-*Please note that `Copy Settings From` does not support nested copies, you can only copy from a single parent,
-and that parent **must not be copying from another option.***
+*请注意， `Copy Settings From` 不支持嵌套复制，您只能从单个父项复制。
+并且被用于复制的预设 **其本身不能是复制其他预设的。.***
 
-## Egg Variables
-One of the great parts of the Egg Variables is the ability to define specific variables that users and/or admins can
-control to tweak different settings without letting users modify the startup command. To create new variables, or edit
-existing ones, visit the new service option you created, and click the `Variables` tab at the top of the page. Lets take
-a look at an example variable that we can create.
+## 预设的变量
+变量的一大优点是能够定义用户/管理员可以定义的特定变量，在不用让用户修改启动命令的情况下调整不同的设置。创建新变量或编辑
+现有的变量，请访问您创建的服务器预设界面，然后单击页面顶部的 `Variables` 按钮。我们可以在一些例子里看看可以创建的变量示例。
 
 ![](../../../.vuepress/public/community/config/eggs/Pterodactyl_Create_New_Egg_Variables.png)
 
@@ -171,15 +168,15 @@ They will then be visible when managing the startup for a server in both the Adm
 
 ## List of default variables
 
-The default variables are always accessible to all eggs and don't have to be created separately. They can be used in the egg startup, install script, or the configuration file parser.
+默认变量对所有预设都是可访问的，不必单独创建。它们可以在egg启动、安装脚本或配置文件解析器中使用。
 
-| Variable | Description | Example |
-|----------|-------------|---------|
-| TZ       | Time Zone |  `Etc/UTC` |
-| STARTUP  | Startup command of the egg | `java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}` |
-| SERVER_MEMORY | Memory available for the server in MB | `512` |
-| SERVER_IP | Default ip of the server | `127.0.0.1` |
-| SERVER_PORT | Primary Server Port | `27015` |
-| P_SERVER_LOCATION | Location of the server | `Example City` |
-| P_SERVER_UUID | UUID of the server | `539fdca8-4a08-4551-a8d2-8ee5475b50d9` |
-| P_SERVER_ALLOCATION_LIMIT | Limit of allocations allowed for the server | `0` |
+| 变量名                       | 描述           | 例子                                                             |
+|---------------------------|--------------|----------------------------------------------------------------|
+| TZ                        | 时区           | `Etc/UTC`                                                      |
+| STARTUP                   | 预设的启动命令      | `java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}` |
+| SERVER_MEMORY             | 服务器的可用内存(MB) | `512`                                                          |
+| SERVER_IP                 | 服务器的默认ip     | `127.0.0.1`                                                    |
+| SERVER_PORT               | 服务器的首选端口     | `27015`                                                        |
+| P_SERVER_LOCATION         | 服务器的位置       | `Example City`                                                 |
+| P_SERVER_UUID             | 服务器的UUID     | `539fdca8-4a08-4551-a8d2-8ee5475b50d9`                         |
+| P_SERVER_ALLOCATION_LIMIT | 服务器分配的端口数    | `0`                                                            |
