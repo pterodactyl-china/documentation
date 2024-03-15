@@ -68,14 +68,12 @@ _Docker images 必须是专门设计用于翼龙面板的那些._ 你可以在�
 * `json` (支持 `*` 符号)
 * `xml`
 
-Once you have defined a parser, we then define a `find` block which tells the Daemon what specific elements to find
-and replace. In this example, we have provided four separate items within the `server.properties` file that we want to
-find and replace to the assigned values. You can use either an exact value, or define a specific server setting from
-the `server.json` file. In this case, we're assigning the default server port to be used as the `server-port` and
-`query.port`. **These placeholders are case sensitive, and should have no spaces in them.**
+定义了文件类型之后, 接下来开始编辑 `find` 代码块, 这将会让守护进程知道哪些特殊的元素需要被查找并替换. 
+在这个例子里, 可以看到代码块里填了4个 `server.properties` 文件中元素,这将会查找并自动替换这些元素为我们想要的值. 你可以使用精确的值，也可以从 `server.json` 文件中定义特殊的设置. 在本例中，我们将默认服务器端口指定为 `server-port` 和
+`query.port`. **这些占位符区分大小写, 并且不能含有空格.**
 
-You can have multiple files listed here, the Daemon will process them in parallel before starting the server. When
-using `yaml` or `json` you can use more advanced searching for elements.
+你可以在这里同时监听多个文件, 守护进程将在启动服务器之前并行处理它们. 当文件是
+ `yaml` 或 `json` 类型时，你可以使用更高级的元素搜索方式.
 
 ```json
 {
