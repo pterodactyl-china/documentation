@@ -96,13 +96,11 @@ _Docker images 必须是专门设计用于翼龙面板的那些._ 你可以在�
  `servers` 中的任意项目, 并找到当中的每一个 `address` 元素.
 
 ::: v-pre
-An advanced feature of this file configuration is the ability to define multiple find and replace statements for a
-single matching line. In this case, we are looking for either `127.0.0.1` or `localhost` and replacing them with the
-docker interface defined in the configuration file using `{{config.docker.interface}}`. 
+文件配置中有一个高级用法可以只用一行代码就能做到匹配并替换多个元素. 在本例中, 我们正在寻找 `127.0.0.1` 或 `localhost` 并且替换他们为docker中接口配置 `{{config.docker.interface}}`. 
 :::
 
 ### Start Configuration
-The last block to configure is the `Start Configuration` for servers running using this service option.
+最后一个模块是 `Start Configuration` 。这将用用于判定服务器是否处于运行（running）状态.
 
 ```json
 {
@@ -110,7 +108,7 @@ The last block to configure is the `Start Configuration` for servers running usi
 }
 ```
 
-In the example block above, we define `done` as the entire line, or part of a line that indicates a server is done
+在上面这个例子, we define `done` as the entire line, or part of a line that indicates a server is done
 starting, and is ready for players to join. When the Daemon sees this output, it will mark the server as `ON` rather
 than `STARTING`.
 
