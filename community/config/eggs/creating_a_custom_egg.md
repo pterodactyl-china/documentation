@@ -92,9 +92,8 @@ _Docker images 必须是专门设计用于翼龙面板的那些._ 你可以在�
 }
 ```
 
-In this example, we are parsing `config.yml` using the `yaml` parser. The first three find items are simply assigning
-ports and IPs for the first listener block. The last one, `servers.*.address` uses wildcard matching to match any items
-within the `servers` block, and then finding each `address` block for those items.
+在这个例子里, 我们定义了 `config.yml` 文件，它的类型时 `yaml` . 前三个元素只是简单的设定了端口和ip. 最后一个 `servers.*.address` 使用了 * 来匹配
+ `servers` 中的任意项目, 并找到当中的每一个 `address` 元素.
 
 ::: v-pre
 An advanced feature of this file configuration is the ability to define multiple find and replace statements for a
