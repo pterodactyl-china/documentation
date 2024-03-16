@@ -124,40 +124,27 @@ _Docker images 必须是专门设计用于翼龙面板的那些。_ 你可以在
 ![](../../../.vuepress/public/community/config/eggs/Pterodactyl_Create_New_Egg_Variables.png)
 
 ::: v-pre
-The name and description are rather self-explanitory, so I'll skip down to the `Environment Variable` box. This should
-be an Alpha-Numeric name with underscores, and should be uppercase. This will be the name of the environment variable
-which can be accessed in the startup command as `{{WOOZLE_WOO}}`, within file modifications as `{{env.WOOZLE_WOO}}`, or
-just `${WOOZLE_WOO}` in any shell scripts (it is passed through in the environment). We also define a default value for
-this environment variable in this example, but it is not required to do so.
+名称和描述相当直观，所以我将跳过这部分，直接讲解`环境变量`框。这应该是一个只带有下划线、字母、数字的名称，并且应该是大写。这将是环境变量的名称，可以在启动命令中通过 `{{WOOZLE_WOO}}` 访问，在文件修改中通过 `{{env.WOOZLE_WOO}}` 访问，或者在任何shell脚本中通过 `${WOOZLE_WOO}` 访问（它会在环境中传递）。在这个示例中，我们还为这个环境变量定义了一个默认值，但并不是必须这样做。
 :::
 
-The next section is `Permissions`, which is a dropdown with two options: `Users Can View` and `Users Can Edit`.
+下一部分是`权限`，这是一个下拉菜单，有两个选项：`用户可以查看`和`用户可以编辑`。
 
-* `Users Can View` — allows a user to view the field on the front-end, as well as the assigned value of that variable.
-They will be able to see it replaced in their startup command.
-* `Users Can Edit` — allows a user to edit the value of the variable, for example the name of their `server.jar` file
-if running Minecraft.
+* `用户可以查看` — 允许用户在前端查看字段以及该变量的赋值。他们将能够在他们的启动命令中看到它被替换。
+* `用户可以编辑` — 允许用户编辑变量的值，例如运行Minecraft预设，他们将可以修改 `server.jar` 文件的名称。
 
-You should use caution here, even if you assign neither of the permissions it does not mean that the value will be
-hidden. Crafty users will still be able to get the environment on their server. In most cases this is simply hiding
-it from the user, and then used within the Dockerfile to perform actions, thus it is not important for the user to see.
+在这里你应该小心，即使你没有分配任何权限，也并不意味着该值将被隐藏。狡猾的用户仍然能够在他们的服务器上获取环境。在大多数情况下，这只是对用户隐藏它，然后在Dockerfile中使用它来执行操作，因此用户无需看到它。
 
-Finally, you will need to define some input rules to validate the value against. In this example, we use
-`required|string|between:1,10`, which means the field is `required`, must be a `string`, and must be between `1` and
-`10` characters in length. You can find [all of the available validation rules](https://laravel.com/docs/5.6/validation#available-validation-rules)
-on the Laravel website. You can also use ReGEX based validation by using the `regex:` rule flag. For example,
-[`required|regex:/^([\w\d._-]+)(\.jar)$/`](https://regex101.com/r/k4oEOn/1) will require the field, and will match the
-regex as any letters or numbers (`\w\d`) including underscore (`_`), periods (`.`), and dashes (`-`) ending in `.jar`.
+最后，你需要定义一些输入规则来验证该值。在这个例子中，我们使用 `required|string|between:1,10`，这意味着字段是 `必需`，必须是 `字符串`，并且长度必须在`1`到`10`个字符之间。你可以在Laravel网站上找到所有可用的验证规则。你也可以使用 `regex:` 规则标志进行基于 ReGEX 的验证。例如，[`required|regex:/^([\w\d._-]+)(\.jar)$/`](https://regex101.com/r/k4oEOn/1)将要求字段，并将匹配正则表达式为任何字母或数字(`\w\d`)，包括下划线(`_`)，句点(`.`)和破折号(`-`)，以`.jar`结尾。
 
-They will then be visible when managing the startup for a server in both the Admin CP and on the Front-End.
+然后，当在Admin CP和前端管理服务器的启动时，它们将可见。
 
 ![](../../../.vuepress/public/community/config/eggs/Pterodactyl_Create_New_Egg_Startup.png)
 
-## List of default variables
+## 翼龙面板默认变量列表
 
 默认变量对所有预设都是可访问的，不必单独创建。它们可以在egg启动、安装脚本或配置文件解析器中使用。
 
-| 变量名                       | 描述           | 例子                                                             |
+| 变量名                       | 描述           | 示例                                                             |
 |---------------------------|--------------|----------------------------------------------------------------|
 | TZ                        | 时区           | `Etc/UTC`                                                      |
 | STARTUP                   | 预设的启动命令      | `java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}` |
