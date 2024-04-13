@@ -133,7 +133,7 @@ To add your first user to the database, see our tutorial on [setting up MySQL](/
 ### Setup PHP
 Place the contents below in a file inside the `/etc/php-fpm.d` folder. The file can be named anything, but a good standard is `www-pterodactyl.conf`. This config will match the nginx config later in the guide.
 
-<<< @/.snippets/php-fpm/pterodactyl-centos.conf
+@[code](../../../.snippets/php-fpm/pterodactyl-centos.conf)
 
 Start and enable php-fpm on the system.
 ```bash
@@ -145,7 +145,7 @@ systemctl start php-fpm
 Please check our [tutorial](/tutorials/creating_ssl_certificates.md) on generating SSL certificates for more information.
 
 #### SSL Configuration
-<<< @/.snippets/webservers/nginx-centos.conf{5,11,26-27}
+@[code {5,11,26-27}](../../../.snippets/webservers/nginx-centos.conf)
 
 ### Redis Setup
 The default Redis install is perfectly fine for the panel. If you have Redis already in use you may want to look into

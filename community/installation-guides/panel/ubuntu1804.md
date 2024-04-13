@@ -102,7 +102,7 @@ systemctl start php7.4-fpm
 Please check our [tutorial](/tutorials/creating_ssl_certificates.md) on generating SSL certificates for more information.
 
 #### SSL Configuration
-<<< @/.snippets/webservers/nginx-php7.4.conf{5,11,26-27}
+@[code {5,11,26-27}](../../../.snippets/webservers/nginx-php7.4.conf)
 
 ### Redis Setup
 The default Redis install is perfectly fine for the panel. If you have Redis already in use you may want to look into

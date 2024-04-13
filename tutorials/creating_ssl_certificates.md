@@ -3,7 +3,7 @@
 本页将为您介绍如何为面板和 Wings 创建新的 SSL 证书
 
 :::: tabs
-::: tab "方法 1: Certbot"
+@tab 方法 1: Certbot
 首先,我们将安装 Certbot,这是一个脚本文件,它可以自动更新证书并一键创建证书。下面的命令只适合 Ubuntu，但您可以在 [Certbot 官方网站](https://certbot.eff.org/)查看相关安装说明,我们这里包含了安装 Certbot 必要的Nginx或Apache插件的指令,这样妈妈再也不用担心我需要迁移环境了!
 
 ``` bash
@@ -83,8 +83,7 @@ systemctl start nginx
 systemctl restart wings
 ```
 
-:::
-::: tab "方法 2: acme.sh (使用 Cloudflare API)"
+@tab 方法 2: acme.sh (使用 Cloudflare API)
 该方法适合高级用户和无法开放80端口的用户, 下面的命令适用于 Ubuntu 和 Cloudflare API,您可以查看 [acme.sh 的官方网站](https://github.com/Neilpang/acme.sh) 来获取相关说明
 
 ``` bash
@@ -128,8 +127,7 @@ acme.sh --issue --dns dns_cf -d "example.com" --server letsencrypt \
 sudo crontab -e
 ```
 
-:::
-::: tab "方法 3: Caddy（使用 Cloudflare API）"
+@tab 方法 3: Caddy（使用 Cloudflare API）
 这适用于高级用户，他们正在使用 Cloudflare 代理模式或无法访问端口 `80`.
 
 ### 使用 Cloudflare DNS 插件安装 Caddy
@@ -210,5 +208,4 @@ WantedBy=multi-user.target
 }
 ```
 
-:::
 ::::

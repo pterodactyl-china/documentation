@@ -36,7 +36,7 @@ curl -sSL https://get.docker.com/ | CHANNEL=stable bash -s docker --mirror Aliyu
 - [Debian](https://docs.docker.com/install/linux/docker-ce/debian/#install-docker-ce)
 
 ::: warning 检查你的内核
-请注意，某些主机安装了不支持 docker 重要功能的修改内核。 请通过运行 `uname -r` 检查您的内核。 如果您的内核以 `-xxxx-grs-ipv6-64` 或 `-xxxx-mod-std-ipv6-64` 结尾，您可能使用的是不受支持的内核。 查看我们的 [内核修改](../../../daemon/0.6/kernel_modifications.md) 指南了解详细信息。
+请注意，某些主机安装了不支持 docker 重要功能的修改内核。 请通过运行 `uname -r` 检查您的内核。 如果您的内核以 `-xxxx-grs-ipv6-64` 或 `-xxxx-mod-std-ipv6-64` 结尾，您可能使用的是不受支持的内核。 查看我们的 [内核修改](../../daemon/0.6/kernel_modifications.md) 指南了解详细信息。
 :::
 
 ### 在启动时启动 Docker
@@ -116,4 +116,4 @@ docker-compose exec panel php artisan p:user:make
 
 现在，你已经全部设置完毕，直接输入你的网站地址，即可访问翼龙面板
 
-#### 下一步：[Wings (后端) 安装](../../wings/installing.md)
+#### 下一步：[Wings (后端) 安装](../../wings/1.0/installing.md)

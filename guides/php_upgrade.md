@@ -34,7 +34,8 @@ composer self-update --2
 ## Webserver Configuration
 
 :::: tabs
-::: tab "NGINX"
+@tab NGINX
+
 After upgrading to PHP 8.1, you will most likely need to update your NGINX configuration. Your configuration file
 is most likely called `pterodactyl.conf` and located in the `/etc/nginx/sites-available/` directory, or if on CentOS,
 `/etc/nginx/conf.d/`.
@@ -51,8 +52,8 @@ Once you have edited the file run the command below to reload nginx and apply yo
 systemctl reload nginx
 ```
 
-:::
-::: tab "Apache"
+@tab Apache
+
 Run the commands below to disable all previous PHP versions and enable PHP 8.1 when serving requests.
 
 ``` bash
@@ -64,7 +65,6 @@ a2enmod php8.1
 
 ```
 
-:::
 ::::
 
-### [Return to the 1.X.X Upgrade Guide](/panel/1.0/upgrade/1.0.md#fetch-updated-files)
+### [Return to the 1.X.X Upgrade Guide](../panel/1.0/updating#fetch-updated-files)

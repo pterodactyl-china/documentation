@@ -15,19 +15,25 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-
-      - uses: actions/setup-node@v3
+        uses: actions/checkout@v4
         with:
-          node-version: 16
-    
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
+          fetch-depth: 0
 
-      - name: Build
-        run: yarn run build
+      - name: 设置 Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
 
-      - name: Deploy
+      - name: 安装依赖
+        run: |
+          corepack enable
+          yarn set version stable
+          yarn install --frozen-lockfile
+
+      - name: 构建文档
+        run: yarn run docs:build
+
+      - name: 部署文档
         if: github.ref == 'refs/heads/master'
         uses: peaceiris/actions-gh-pages@v3
         with:

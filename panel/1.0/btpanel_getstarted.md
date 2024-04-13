@@ -106,7 +106,7 @@ composer install --no-dev --optimize-autoloader
 点击 `保存` 即可设置成功。
 
 #### 二级目录设置
-点击 `设置` 里的 `网站目录` 
+点击 `设置` 里的 `网站目录`  
 ![如果你看到我说明图挂了](./images/bt_6.png)
 
 点击 `运行目录` 一栏，并选择 `/public`
@@ -212,4 +212,4 @@ WantedBy=multi-user.target
 sudo systemctl enable --now pteroq.service
 ```
 
-#### 下一步：[Wings (后端) 安装](../../wings/installing.md)
+#### 下一步：[Wings (后端) 安装](../../wings/1.0/installing.md)
