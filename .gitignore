@@ -1,5 +1,5 @@
-.idea/
-.vuepress/dist
-node_modules/
 
-yarn-error.log
+node_modules/
+src/.vuepress/.cache/
+src/.vuepress/.temp/
+src/.vuepress/dist/
