@@ -14,10 +14,14 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  // logo: "",
+  logo: "/logos/pterry.svg",
+  navTitle: "Pterodactyl-China",
 
-  repo: "pterodactyl-china/documentation",
+  repo: "pterodactyl-china/panel",
+  docsRepo: "pterodactyl-china/documentation",
   docsBranch: "master",
+
+  pageInfo: ["Date", "ReadingTime"],
 
   // docsDir: "src",
 
@@ -72,12 +76,13 @@ export default hopeTheme({
       align: true,
       attrs: true,
       codetabs: true,
-      // components: false,
+      component: true,
       figure: true,
       imgLazyload: true,
       imgSize: true,
       include: true,
       mark: true,
+      demo: true,
       stylize: [
         {
           matcher: "Recommended",

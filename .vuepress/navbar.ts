@@ -11,6 +11,16 @@ export default navbar([
   },
   {
     text: '获取帮助',
+    children: [
+      {
+        text: '翼龙中国社区(推荐)',
+        link: 'https://bbs.pterodactyl.top',
+      },
+      {
+        text: 'KOOK',
+        link: 'https://kook.top/0Grsf5',
+      }
+    ],
     link: 'https://bbs.pterodactyl.top'
   },
   {
