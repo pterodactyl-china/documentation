@@ -5,7 +5,7 @@ title: 主页
 bgImage: assets/image/cool-background-1.png
 heroImage: /doc_pterry.png
 actions:
-  - text: 介绍
+  - text: 项目简介
     link: /project/introduction
     type: primary
   - text: 开始入门
