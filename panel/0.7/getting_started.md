@@ -1,10 +1,9 @@
 # Getting Started
 
-::: danger This Version is End-of-Life
-This documentation is for **end-of-life software** which does not recieve any security updates or support
-from the community. This documentation has been left accessible for historial reasons.
+::: danger 此版本已停止维护
+本文档是针对已经停止维护的软件，它不再接收任何安全更新或社区支持。出于历史原因，我们仍然保留了这份文档。
 
-You should be installing and using [Pterodactyl Panel 1.0](/panel/1.0/getting_started.md) in production environments.
+你应该在生产环境中安装和使用 [Pterodactyl Panel 1.0](/panel/1.0/getting_started.md)。
 :::
 
 Pterodactyl Panel is designed to run on your own web server. You will need to have root access to your server in order
