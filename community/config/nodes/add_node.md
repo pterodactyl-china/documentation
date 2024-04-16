@@ -37,8 +37,8 @@
 
 ## 安装后端
 您需要把 Wings,即守护进程程序安装到服务器节点,[文档](/wings/1.0/installing.html)
-获得更多信息,你可以去社区查看不同Linux发行版的安装教程[CentOS](/community/installation-guides/wings/1.0/centos7.html),
-[Ubuntu](/community/installation-guides/wings/1.0/ubuntu1804.html), 或 [Debian](/community/installation-guides/wings/1.0/debian9.html).
+获得更多信息,你可以去社区查看不同Linux发行版的安装教程[CentOS](/community/installation-guides/wings/centos7.html),
+[Ubuntu](/community/installation-guides/wings/ubuntu1804.html), 或 [Debian](/community/installation-guides/wings/debian9.html).
 
 ## 配置节点
 进入节点配置页面
