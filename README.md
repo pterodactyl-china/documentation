@@ -10,6 +10,7 @@ head:
 bgImage: assets/image/cool-background-1.png
 bgImageStyle:
   background-attachment: fixed
+heroFullScreen: true
 heroText: false
 tagline: false
 heroImage: logos/banner_china_logo.png
