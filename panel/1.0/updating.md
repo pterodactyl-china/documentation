@@ -77,11 +77,21 @@ php artisan down
 
 更新过程的第一步是从 GitHub 下载新的面板文件。下面的命令将下载翼龙中国最新发布的版本，将其保存在当前目录中，并自动解压到您的当前文件夹中。
 
+::: tabs#fruit
+
+@tab 国际源
+
 ```bash
 curl -L https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz | tar -xzv
-# 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 gh-proxy 提供的CF反向代理来拉取
+```
+
+@tab:active 国内源
+
+```bash
 curl -L https://mirror.ghproxy.com/https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz | tar -xzv
 ```
+
+:::
 
 下载所有文件后，我们需要将缓存与存储目录上设置正确的权限，以避免与网络服务器出现相关的错误。
 

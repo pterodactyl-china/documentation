@@ -14,8 +14,6 @@ requiring multiple dependencies and administrators willing to spend some time le
 to be able to install this with no understanding of basic Linux system administration you should stop and turn
 around now.
 
-[[toc]]
-
 ## Picking a Server OS
 Pterodactyl runs on a wide range of operating systems, so pick whichever you are most comfortable using.
 

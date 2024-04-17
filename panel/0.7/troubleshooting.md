@@ -1,7 +1,5 @@
 # Troubleshooting
 
-[[toc]]
-
 ## Reading Error Logs
 If you ever encounter an unexpected error with the Panel the first thing you will likely be asked for is the logs.
 To retrieve these, simply execute the command below which will output the last 100 lines of the Panel's log file.

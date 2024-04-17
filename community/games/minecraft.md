@@ -1,7 +1,5 @@
 # Minecraft
 
-[[toc]]
-
 ## 配置服务器网络 (BungeeCord, Waterfall, HexaCord, 等等)
 
 如果你想安全地操作像BungeeCord，Waterfall，HexaCord等Minecraft代理服务器，只要你停留在同一个节点上，你就可以单独使用翼龙来实现。它与传统设置有几个不同之处，可能需要额外的防火墙规则，这就是本指南的目的。

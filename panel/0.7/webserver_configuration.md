@@ -7,8 +7,6 @@ from the community. This documentation has been left accessible for historial re
 You should be installing and using [Pterodactyl Panel 1.0](/panel/1.0/getting_started.md) in production environments.
 :::
 
-[[toc]]
-
 ::: danger
 You should remove the default Apache or NGINX configuration as it will expose application secrets to malicious
 users by default.

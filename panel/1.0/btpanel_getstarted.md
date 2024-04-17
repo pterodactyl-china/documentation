@@ -1,7 +1,5 @@
 # 使用宝塔（BT-Panel）面板搭建
 
-[[toc]]
-
 <BiliBili bvid="BV1CW4y1b7fc" />
 
 翼龙面板运行在您自己的 Web 服务器上。为了运行和使用这个面板，您需要对您的服务器具有 root 访问权限。
@@ -17,7 +15,7 @@
 翼龙可在多种操作系统上运行，因此请选择最适合您使用的操作系统。
 
 ::: warning
-由于与 Docker 不兼容，翼龙不支持大多数 OpenVZ 系统。如果您计划在基于 OpenVZ 的系统上运行此软件，您将很大概率不会成功。  
+Pterodactyl 不支持大多数 OpenVZ 系统，因为它与 Docker 不兼容。如果你计划在基于 OpenVZ 的系统上运行这个软件，你很可能不会成功。  
 不过翼龙面板前端就没那么需求了，只要阁下前端服务器能装 `BT-Panel`，和 `LNMP` 或者 `LAMP`，就可以用来搭建翼龙面板前端了。一般服务器均能满足前端的搭建要求。
 :::
 
@@ -64,11 +62,21 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 
 ### 下载并上传程序文件至网站目录
 
-``` bash
+::: tabs#fruit
+
+@tab 国际源
+
+```bash
 https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
-# 如果阁下下不动这个文件，可以使用 gh-proxy 提供的CF反向代理来下载 链接如下
+```
+
+@tab:active 国内源
+
+```bash
 https://mirror.ghproxy.com/https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
 ```
+
+:::
 
 ### 进入网站目录解压程序文件并设置环境文件
 

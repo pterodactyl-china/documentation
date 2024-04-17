@@ -1,8 +1,6 @@
 # Ubuntu 18.04
 在本指南中，我们将安装 Pterodactyl v1.X（包括它的所有依赖项）并配置我们的网络服务器以使用 SSL 为其提供服务。
 
-[[toc]]
-
 ::: tip
 本指南基于 [官方安装文档](/panel/1.0/getting_started.md)，但专为 Ubuntu 18.04 量身定制。
 :::

@@ -1,7 +1,5 @@
 # Docker on Debian 8
 
-[[toc]]
-
 ::: warning
 There is a potential for broken software after this upgrade as we are moving to a non-stable kernel (in regards
 to mainline Debian). Please take backups and only proceed if you are comfortable with this process.

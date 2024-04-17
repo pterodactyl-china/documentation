@@ -1,7 +1,5 @@
 # 使用 Docker 搭建
 
-[[toc]]
-
 翼龙面板运行在您自己的 Web 服务器上。为了运行和使用这个面板，您需要对您的服务器具有 root 访问权限。
 
 您需要了解如何阅读文档以使用此面板。我们花了很多时间详细介绍如何安装或升级我们的软件；
@@ -14,7 +12,7 @@
 翼龙可在多种操作系统上运行，因此请选择最适合您使用的操作系统。
 
 ::: warning
-由于与 Docker 不兼容，翼龙不支持大多数 OpenVZ 系统。如果您计划在基于 OpenVZ 的系统上运行此软件，您将很大概率不会成功。  
+Pterodactyl 不支持大多数 OpenVZ 系统，因为它与 Docker 不兼容。如果你计划在基于 OpenVZ 的系统上运行这个软件，你很可能不会成功。  
 不过本页的教程并不会有太多的限制，只要阁下前端服务器能装 `Docker` 和 `Docker Compose`，就可以采用本页教程来搭建翼龙面板前端了。一般服务器均能满足前端的搭建要求。   
 只要能装 **Docker Compose** 并运行，就没有系统的限制。
 :::
@@ -23,11 +21,21 @@
 
 如需快速安装 Docker 社区版，您可以执行以下命令：
 
+::: tabs#fruit
+
+@tab 国际源
+
 ```bash
 curl -sSL https://get.docker.com/ | CHANNEL=stable bash
-# 如果速度过慢可以尝试阿里云源
+```
+
+@tab:active 国内源
+
+```bash
 curl -sSL https://get.docker.com/ | CHANNEL=stable bash -s docker --mirror Aliyun
 ```
+
+:::
 
 如果您希望手动安装，请参考官方 Docker 文档了解如何在您的服务器上安装 Docker 社区版。下面列出了一些常用系统支持的快速链接。
 
@@ -53,14 +61,27 @@ systemctl enable --now docker
 
 运行以下命令来下载 Docker Compose 的当前稳定版本：
 
+::: tabs#fruit
+
+@tab 国际源
+
 ``` bash
 curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-# 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 gh-proxy 提供的CF反向代理来拉取
+# 将可执行权限应用于二进制文件并创建软链
+chmod +x /usr/local/bin/docker-compose
+ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+```
+
+@tab:active 国内源
+
+``` bash
 curl -L "https://mirror.ghproxy.com/https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 # 将可执行权限应用于二进制文件并创建软链
 chmod +x /usr/local/bin/docker-compose
 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ```
+
+:::
 
 ## 下载文件
 在进行此步骤之前，我们要为 `docker-compose.yml` 创建一个放置目录。  
@@ -76,13 +97,25 @@ cd /var/www/pterodactyl
 
 在为面板创建好它的放置目录后，我们将使用 `curl` 命令，从 Github 拉取翼龙中国汉化完成的 ` docker-compose.yml` 文件并赋予该文件的可执行权限。
 
+::: tabs#fruit
+
+@tab 国际源
+
 ``` bash
 curl -Lo docker-compose.yml https://raw.githubusercontent.com/pterodactyl-china/panel/1.0-develop/docker-compose.example.yml
-# 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 gh-proxy 提供的CF反向代理来拉取
+# 将可执行权限应用于yml文件
+chmod +x docker-compose.yml
+```
+
+@tab:active 国内源
+
+``` bash
 curl -Lo docker-compose.yml https://mirror.ghproxy.com/https://raw.githubusercontent.com/pterodactyl-china/panel/1.0-develop/docker-compose.example.yml
 # 将可执行权限应用于yml文件
 chmod +x docker-compose.yml
 ```
+
+:::
 
 ### 环境变量
 当您不提供自己的 `.env` 文件时，有多个环境变量可以配置面板，有关每个可用选项的详细信息

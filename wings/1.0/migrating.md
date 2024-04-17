@@ -10,14 +10,25 @@
 ## 安装 Wings
 安装守护程序的第一步是确保我们具有所需的目录结构设置。为此，请运行以下命令，该命令将创建基本目录并下载 Wings 可执行文件。
 
-``` bash
-mkdir -p /etc/pterodactyl
-curl -L -o /usr/local/bin/wings https://github.com/pterodactyl-china/wings/releases/latest/download/wings_linux_amd64
-chmod u+x /usr/local/bin/wings
+::: tabs#fruit
 
-# 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 gh-proxy 提供的CF反向代理来拉取
-curl -L -o /usr/local/bin/wings "https://mirror.ghproxy.com/https://github.com/pterodactyl-china/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
+@tab 国际源
+
+```bash
+mkdir -p /etc/pterodactyl
+curl -L -o /usr/local/bin/wings "https://github.com/pterodactyl-china/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
+chmod u+x /usr/local/bin/wings
 ```
+
+@tab:active 国内源
+
+```bash
+mkdir -p /etc/pterodactyl
+curl -L -o /usr/local/bin/wings "https://mirror.ghproxy.com/https://github.com/pterodactyl-china/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
+chmod u+x /usr/local/bin/wings
+```
+
+:::
 
 ## 复制新的配置文件
 安装 Wings 后，您需要从面板中复制一个新的配置文件。此文件采用新格式，将来应该更易于管理和编辑。

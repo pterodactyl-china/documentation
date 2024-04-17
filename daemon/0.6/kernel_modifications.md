@@ -1,7 +1,5 @@
 # Kernel Modifications
 
-[[toc]]
-
 ::: tip
 In most cases, only users with a server provided by OVH will need to make any modifications to their kernel.
 :::

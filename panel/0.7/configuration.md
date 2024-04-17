@@ -1,7 +1,5 @@
 # Environment Configuration
 
-[[toc]]
-
 Pterodactyl's environment settings are configured and stored in an environment file — `.env` — located in the
 installation root directory — generally `/var/www/pterodactyl`. Some of these settings are also stored in the database
 and will override settings found in the environment file.

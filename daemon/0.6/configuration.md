@@ -8,8 +8,6 @@ You should be installing and using [Wings](/wings/1.0/installing.md) in producti
 [Pterodactyl Panel 1.0](/panel/1.0/getting_started.md).
 :::
 
-[[toc]]
-
 ::: warning
 These are advanced configurations for the daemon. You risk breaking your daemon and making containers un-usable if
 you modify something incorrectly. Proceed at your own risk, and only if you know what each configuration value does.

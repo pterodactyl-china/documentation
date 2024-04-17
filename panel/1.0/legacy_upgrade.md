@@ -32,17 +32,33 @@ php artisan down
 
 我们将会删除 `app/` 目录。由于我们处理安装和升级的方式，删除的文件并不总是能被正确检测到，因此，轻易的在此位置上打包会导致一些迷惑行为。
 
+::: tabs#fruit
+
+@tab 国际源
+
 ``` bash
 # 删除 app 目录是为了确保我们升级后不会导致文件显得杂乱无章。
 # 这不会影响您的任何设置或服务器。
 curl -L -o panel.tar.gz https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
-# 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 gh-proxy 提供的CF反向代理来拉取
+
+rm -rf $(find app public resources -depth | head -n -1 | grep -Fv "$(tar -tf panel.tar.gz)")
+# 下载更新文件并删除存档文件。
+tar -xzvf panel.tar.gz && rm -f panel.tar.gz
+```
+
+@tab:active 国内源
+
+``` bash
+# 删除 app 目录是为了确保我们升级后不会导致文件显得杂乱无章。
+# 这不会影响您的任何设置或服务器。
 curl -Lo panel.tar.gz https://mirror.ghproxy.com/https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
 
 rm -rf $(find app public resources -depth | head -n -1 | grep -Fv "$(tar -tf panel.tar.gz)")
 # 下载更新文件并删除存档文件。
 tar -xzvf panel.tar.gz && rm -f panel.tar.gz
 ```
+
+:::
 
 下载所有文件后，我们需要将缓存与存储目录上设置正确的权限，以避免与网络服务器出现相关的错误。
 

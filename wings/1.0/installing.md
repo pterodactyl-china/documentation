@@ -46,11 +46,21 @@ VMware, Inc.
 
 如需快速安装 Docker 社区版，您可以执行以下命令：
 
+::: tabs#fruit
+
+@tab 国际源
+
 ```bash
 curl -sSL https://get.docker.com/ | CHANNEL=stable bash
-# 如果速度过慢可以尝试阿里云源
+```
+
+@tab:active 国内源
+
+```bash
 curl -sSL https://get.docker.com/ | CHANNEL=stable bash -s docker --mirror Aliyun
 ```
+
+:::
 
 如果您希望手动安装，请参考官方 Docker 文档了解如何在您的服务器上安装 Docker 社区版。下面列出了一些常用系统支持的快速链接。
 
@@ -98,14 +108,25 @@ Wings 及配置文件路径，如果你不懂请不要尝试更改路径。（�
 并且 wings 文件和配置文件占用空间很低，在配置完设置后可以自行备份配置文件以防不测(如果真没了，那也是整个服务器没了吧...)。
 :::
 
+::: tabs#fruit
+
+@tab 国际源
+
 ```bash
 sudo mkdir -p /etc/pterodactyl
 curl -L -o /usr/local/bin/wings "https://github.com/pterodactyl-china/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
 sudo chmod u+x /usr/local/bin/wings
-
-# 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 gh-proxy 提供的CF反向代理来拉取
-curl -L -o /usr/local/bin/wings "https://mirror.ghproxy.com/https://github.com/pterodactyl-china/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
 ```
+
+@tab:active 国内源
+
+```bash
+sudo mkdir -p /etc/pterodactyl
+curl -L -o /usr/local/bin/wings "https://mirror.ghproxy.com/https://github.com/pterodactyl-china/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
+sudo chmod u+x /usr/local/bin/wings
+```
+
+:::
 
 ::: warning OVH/SYS 服务器
 如果您使用的是 OVH 或 SoYouStart 提供的服务器，请注意您的主驱动器空间可能分配给 `/home`，而不是默认分配给 `/`。

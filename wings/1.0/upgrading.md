@@ -26,14 +26,25 @@
 
 首先，下载最新的 wings 二进制文件到 `/usr/local/bin`。您将需要短暂停止 Wings。 _您正在运行的服务器**不会**受到影响。_
 
-``` bash
+::: tabs#fruit
+
+@tab 国际源
+
+```bash
 systemctl stop wings
 curl -L -o /usr/local/bin/wings "https://github.com/pterodactyl-china/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
 chmod u+x /usr/local/bin/wings
-
-# 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 gh-proxy 提供的CF反向代理来拉取
-curl -L -o /usr/local/bin/wings "https://mirror.ghproxy.com/https://github.com/pterodactyl-china/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
 ```
+
+@tab:active 国内源
+
+```bash
+systemctl stop wings
+curl -L -o /usr/local/bin/wings "https://mirror.ghproxy.com/https://github.com/pterodactyl-china/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
+chmod u+x /usr/local/bin/wings
+```
+
+:::
 
 ## 重启进程
 

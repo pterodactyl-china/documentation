@@ -1,7 +1,5 @@
 # 开始入门
 
-[[toc]]
-
 翼龙面板运行在您自己的 Web 服务器上。为了运行和使用这个面板，您需要对您的服务器具有 root 访问权限。
 
 您需要了解如何阅读文档以使用此面板。我们花了很多时间详细介绍如何安装或升级我们的软件；
@@ -18,7 +16,7 @@
 翼龙可在多种操作系统上运行，因此请选择最适合您使用的操作系统。
 
 ::: warning
-由于与 Docker 不兼容，翼龙不支持大多数 OpenVZ 系统。如果您计划在基于 OpenVZ 的系统上运行此软件，您将很大概率不会成功。
+Pterodactyl 不支持大多数 OpenVZ 系统，因为它与 Docker 不兼容。如果你计划在基于 OpenVZ 的系统上运行这个软件，你很可能不会成功。
 :::
 
 | 操作系统 | 版本 |     支持状况      | 注意事项                                                       |
@@ -90,14 +88,27 @@ cd /var/www/pterodactyl
 
 在为面板创建好它的工作目录后，我们将使用 `curl` 命令，从 Github 拉取翼龙中国汉化完成的程序文件压缩包，拉取完成后，我们需要对压缩包进行解压操作，并赋予 `storage/` 与 `bootstrap/cache/` 目录 755 权限。这两个目录作用是缓存动态资源以加速访问。
 
+::: tabs#fruit
+
+@tab 国际源
+
 ``` bash
 curl -Lo panel.tar.gz https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
-# 若阁下在上条指令上无法正常拉取压缩包或者拉取缓慢 可使用 gh-proxy 提供的CF反向代理来拉取
+# 解压并设置目录权限
+tar -xzvf panel.tar.gz
+chmod -R 755 storage/* bootstrap/cache/
+```
+
+@tab:active 国内源
+
+``` bash
 curl -Lo panel.tar.gz https://mirror.ghproxy.com/https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
 # 解压并设置目录权限
 tar -xzvf panel.tar.gz
 chmod -R 755 storage/* bootstrap/cache/
 ```
+
+:::
 
 ## 安装
 
