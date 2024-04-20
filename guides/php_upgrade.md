@@ -1,7 +1,6 @@
 # 升级 PHP
 
-This documentation includes instructions for upgrading your system to the latest version of PHP. Please reference the
-table below to check what version you need for your version of Pterodactyl.
+此文档包含将您的系统升级到最新版本的 PHP 的说明。请参考下表以检查您的 Pterodactyl 版本需要哪个版本的 PHP。
 
 | 面板版本 | PHP 版本   |
 |---------------|---------------|
@@ -12,41 +11,37 @@ table below to check what version you need for your version of Pterodactyl.
 
 ## 安装 PHP
 
-In order to install PHP 8.1, you will need to run the following command. Please keep in mind different operating systems
-may have slightly different requirements for how this command is formatted.
+为了安装 PHP 8.1，您需要运行以下命令。请记住，不同的操作系统可能对此命令的格式有略微不同的要求。
 
 ```bash
-# Add additional repository for PHP
+# 添加 PHP 的额外仓库
 add-apt-repository -y ppa:ondrej/php
 apt -y update
 apt -y install php8.1 php8.1-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip}
 ```
 
-## Update Composer
+## 更新 Composer
 
-As of `Panel@1.3.0` we require `composer` v2. To update composer you will need to run the following command which will
-perform the composer self-update process and move you over to version 2.
+从 `Panel@1.3.0` 开始，我们需要 `composer` v2。要更新 composer，您需要运行以下命令，该命令将执行 composer 自我更新过程，并将您切换到版本 2。
 
 ```bash
 composer self-update --2
 ```
 
-## Webserver Configuration
+## Web服务器配置
 
 :::: tabs
 @tab NGINX
 
-After upgrading to PHP 8.1, you will most likely need to update your NGINX configuration. Your configuration file
-is most likely called `pterodactyl.conf` and located in the `/etc/nginx/sites-available/` directory, or if on CentOS,
-`/etc/nginx/conf.d/`.
+升级到 PHP 8.1 后，您可能需要更新您的 NGINX 配置。您的配置文件名称可能为 `pterodactyl.conf`，位于 `/etc/nginx/sites-available/` 目录中，如果在 CentOS 上，则可能位于 `/etc/nginx/conf.d/`。
 
-Make sure to update the path in the command below to reflect the actual location of your configuration file.
+确保更新下面命令中的路径，以反映您的配置文件的实际位置。
 
 ``` bash
 sed -i -e 's/php[7|8].[0-9]-fpm.sock/php8.1-fpm.sock/' /etc/nginx/sites-available/pterodactyl.conf
 ```
 
-Once you have edited the file run the command below to reload nginx and apply your changes.
+编辑完文件后，运行下面的命令重新加载 nginx 并应用您的更改。
 
 ```bash
 systemctl reload nginx
@@ -54,7 +49,7 @@ systemctl reload nginx
 
 @tab Apache
 
-Run the commands below to disable all previous PHP versions and enable PHP 8.1 when serving requests.
+运行下面的命令，禁用所有以前的 PHP 版本，并在服务请求时启用 PHP 8.1。
 
 ``` bash
 # Hint: a2dismod = a2_disable_module 🤯
@@ -67,4 +62,4 @@ a2enmod php8.1
 
 ::::
 
-### [Return to the 1.X.X Upgrade Guide](../panel/1.0/updating#fetch-updated-files)
+### [返回到 1.X.X 升级指南](../panel/1.0/updating#更新依赖项)
