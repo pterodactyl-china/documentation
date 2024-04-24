@@ -68,7 +68,7 @@ tail -n 1000 /var/www/pterodactyl/storage/logs/laravel-$(date +%F).log | grep "\
 ::: warning
 如果您正确遵循我们的安装和升级指南，则永远不会发生此错误。我们唯一一次看到此错误发生是当您盲目地从备份中恢复面板数据库并尝试使用全新安装的面板的时候。
 
-恢复备份时，您应该_一起_恢复 `.env` 文件！里面包含了非常重要的加密密钥！！
+恢复备份时，您应该 _一起_ 恢复 `.env` 文件！里面包含了非常重要的加密密钥！！
 :::
 
 有时在使用面板时，您会意外地遇到一个损坏的页面，并且在检查日志时，您会看到一个异常，也就是在解密时会提到了一个无效的 MAC。此错误是由 `.env` 文件中的 `APP_KEY` 不匹配引起的。
@@ -131,3 +131,23 @@ firewall-cmd --reload
 ```
 
 上述命令运行后重新启动 `docker` 和 `wings` 以确保这些规则被系统应用。
+
+## 时间的问题
+你需要通过 `data` 命令检查你的服务器时间和[官方原子钟时间](https://time.is/Beijing)是否一致。
+
+```bash {3}
+timedatectl set-timezone Asia/Shanghai
+apt install ntpdate -y
+ntpdate -u ntp.aliyun.com
+```
+
+::: warning
+如果你同步时发现返回 `no server suitable for synchronization found` ,那可能是上游机房设置的防火墙里面禁止了NTP协议流量的流入，所以你需要询问机房可以同步的NTP服务器是什么，并替换上面的 `ntp.aliyun.com`。  
+当然，如果你有使用ikuai等软路由，可以去ikuai的系统设置中将NTP服务、自动对时等打开，然后将其替换成网关IP（如：`192.168.1.1`）。
+:::
+
+最后再设置定时任务，确保你的服务器时间误差不要超过10秒。
+
+```bash
+echo "*/20 * * * * /usr/sbin/ntpdate -u ntp.aliyun.com >/dev/null &" >> /var/spool/cron/root
+```
