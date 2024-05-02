@@ -52,6 +52,7 @@ export default sidebar({
       text: '社区指南',
       children: [
         '/community/about.md',
+        '/community/faq.md',
       ]
     },
     {
@@ -88,6 +89,7 @@ export default sidebar({
       children: [
         '/community/config/nodes/add_node.md',
         '/community/tutorials/artisan.md',
+        '/community/tutorials/migrating',
       ],
     },
     {
