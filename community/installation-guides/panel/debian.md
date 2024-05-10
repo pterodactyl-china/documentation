@@ -1,7 +1,7 @@
 # Debian 11 & 12
 
 ::: tip
-This guide is based off the [official installation documentation](/panel/1.0/getting_started.md) but is tailored specifically for Debian 11 and 12.
+本指南基于[官方安装文档](/panel/1.0/getting_started.md)，但专为 Debian 11、12 量身定制。
 :::
 
 ## Dependency Installation

@@ -1,4 +1,4 @@
-# Creating a Custom Docker Image
+# 创建自定义 Docker 镜像
 
 ::: warning
 This tutorial uses examples from our [`core:java`](https://github.com/pterodactyl/images/tree/java) docker image,

@@ -1,31 +1,31 @@
 # CentOS 8, Rocky Linux 8, AlmaLinux 8
-In this guide we will install Pterodactyl's Wings v1.X — including all of it's dependencies — and configure it to use a SSL connection.
+在本指南中，我们将安装 Wings v1.X（包括它的所有依赖项）并配置使用 SSL 为其提供服务。
 
 ::: tip
-This guide is based off the [official installation documentation](/wings/1.0/installing.md) but is tailored specifically for Enterprise Linux 8.
+本指南基于[官方安装文档](/wings/1.0/installing.md)，但专为 Enterprise Linux 8 量身定制。
 :::
 
-## Install Requirements
-We will first begin by installing all of the Wings' [required](/wings/1.0/installing.md#dependencies) dependencies.
+## 安装要求
+我们要安装 Wings [所需依赖项](/wings/1.0/installing.md#依赖项)。
 
 ### Docker
 
 ```bash
-## Install yum tools
+## 安装 yum 工具
 dnf install -y dnf-utils device-mapper-persistent-data lvm2
 
-## Add the docker repo
+## 添加 docker 仓库
 dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 
-## Install docker
+## 安装 docker
 dnf install -y docker-ce --nobest
 
-## Enable docker service
+## 启用 docker 服务
 systemctl enable docker
 systemctl start docker
 ```
 
-### FirewallD Changes
+### FirewallD 更改
 ```bash
 firewall-cmd --add-port 8080/tcp --permanent
 firewall-cmd --add-port 2022/tcp --permanent
@@ -34,9 +34,9 @@ firewall-cmd --zone=trusted --add-masquerade --permanent
 firewall-cmd --reload
 ```
 
-## Installing Wings
-Great, now all of the dependencies and firewall rules have been dealt with. From here follow the [official Wings installation documentation](/wings/1.0/installing.html#enabling-swap).
+## 安装 Wings
+很好，现在所有的依赖项和防火墙规则都已经处理完毕。接下来，请按照[官方Wings安装文档进行操作](/wings/1.0/installing.html#启用虚拟内存)。
 
 ::: tip
-If you have SELinux enforcement enabled and you are getting AVC denials from your containers, try relocating your Wings data directory from `/var/lib/pterodactyl` to `/var/srv/containers/pterodactyl`. That is where the targeted policy expects Docker to read and write data from.
+如果你启用了 SELinux 强制执行，并且你的容器收到 AVC 拒绝，尝试将你的 Wings 数据目录从 `/var/lib/pterodactyl` 移动到 `/var/srv/containers/pterodactyl`。这是目标策略期望 Docker 从中读取和写入数据的地方。
 :::

@@ -1,23 +1,23 @@
 # Ubuntu 20.04
-In this guide we will install Pterodactyl's Wings v1.X — including all of it's dependencies — and configure it to use a SSL connection.
+在本指南中，我们将安装 Wings v1.X（包括它的所有依赖项）并配置使用 SSL 为其提供服务。
 
 ::: tip
-This guide is based off the [official installation documentation](/wings/1.0/installing.md) but is tailored specifically for Ubuntu 20.04.
+本指南基于[官方安装文档](/wings/1.0/installing.md)，但专为 Ubuntu 20.04 量身定制。
 :::
 
-## Install Requirements
-We will first begin by installing all of Wings' [required](/wings/1.0/installing.md#dependencies) dependencies.
+## 安装要求
+我们要安装 Wings [所需依赖项](/wings/1.0/installing.md#依赖项)。
 
 ### Docker
 
 ```bash
-## Install docker
+## 安装 docker
 apt install -y docker.io
 
-## Enable docker service
+## 启用 docker 服务
 systemctl enable docker
 systemctl start docker
 ```
 
-## Installing Wings
-Great, now all of the dependencies and firewall rules have been dealt with. From here follow the [official Wings installation documentation](/wings/1.0/installing.html#enabling-swap).
+## 安装 Wings
+很好，现在所有的依赖项和防火墙规则都已经处理完毕。接下来，请按照[官方Wings安装文档进行操作](/wings/1.0/installing.html#启用虚拟内存)。

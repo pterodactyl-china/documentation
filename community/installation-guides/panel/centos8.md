@@ -2,11 +2,11 @@
 在本指南中，我们将安装 Pterodactyl v1.X（包括它的所有依赖项）并配置我们的网络服务器以使用 SSL 为其提供服务。
 
 ::: tip
-This guide is based off the [official installation documentation](/panel/1.0/getting_started.md) but is tailored specifically for Enterprise Linux 8.
+本指南基于[官方安装文档](/panel/1.0/getting_started.md)，但专为 Enterprise CentOS 8 量身定制。
 :::
 
-## Install Requirements and Additional Utilities
-We will install all of Pterodactyl's [required](/panel/1.0/getting_started.md#dependencies) dependencies and a few aditional utilities.
+## 安装要求和附加工具
+我们要安装翼龙面板 [所需依赖项](/panel/1.0/getting_started.md#依赖项)以及一些额外的工具。
 
 ::: tip
 If you run `sestatus` and it shows `SELinux status: enabled` you should install the following packages for later

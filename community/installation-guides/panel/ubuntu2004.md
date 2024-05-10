@@ -2,11 +2,11 @@
 在本指南中，我们将安装 Pterodactyl v1.X（包括它的所有依赖项）并配置我们的网络服务器以使用 SSL 为其提供服务。
 
 ::: tip
-This guide is based off the [official installation documentation](/panel/1.0/getting_started.md) but is tailored specifically for Ubuntu 20.04.
+本指南基于[官方安装文档](/panel/1.0/getting_started.md)，但专为 Ubuntu 20.04 量身定制。
 :::
 
-## Install Requirements
-We will first begin by installing all of Pterodactyl's [required](/panel/1.0/getting_started.md#dependencies) dependencies.
+## 安装要求
+首先，我们要安装翼龙 [所需依赖项](/panel/1.0/getting_started.md#依赖项)。
 
 ### MariaDB
 ```bash
