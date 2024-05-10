@@ -15,19 +15,27 @@
 
 构建工具需要 NodeJS，使用 yarn 作为包管理器。
 
+::: tabs
+
+@tab Ubuntu/Debian
+
 ```bash
-# Ubuntu/Debian
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_16.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 
 sudo apt update
 sudo apt install -y nodejs
+```
 
-# CentOS
+@tab CentOS
+
+```bash
 sudo yum install https://rpm.nodesource.com/pub_16.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y
 sudo yum install nodejs -y
 ```
+
+:::
 
 安装所需的 JavaScript 软件包。
 
