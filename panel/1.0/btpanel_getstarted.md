@@ -58,7 +58,7 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 ### 新建站点
 我觉得你应该会使用宝塔面板来新建一个网站
 
-![如果你看到我说明图挂了](./images/bt_1.png)
+![](./images/bt_1.png)
 
 ### 下载并上传程序文件至网站目录
 
@@ -87,8 +87,8 @@ https://mirror.ghproxy.com/https://github.com/pterodactyl-china/panel/releases/l
 ### 使用 Composer 安装相关依赖
 
 点击 网站的 `设置` ，再点击 `设置` 里的 `Composer`  
-![如果你看到我说明图挂了](./images/bt_3.jpg)
-![如果你看到我说明图挂了](./images/bt_4.png)
+![](./images/bt_3.jpg)
+![](./images/bt_4.png)
 
 
 先点击 `升级Composer` 确保其为最新版本，并按红圈所示选择  
@@ -104,18 +104,18 @@ composer install --no-dev --optimize-autoloader
 
 ### 伪静态及二级目录设置
 点击 网站的 `设置` ，进入设置界面
-![如果你看到我说明图挂了](./images/bt_3.jpg)
+![](./images/bt_3.jpg)
 
 #### 伪静态设置
 点击 `设置` 里的 `伪静态`  
-![如果你看到我说明图挂了](./images/bt_5.png)
+![](./images/bt_5.png)
 
 先点击左上角的伪静态模板，并使用 `laravel5` 伪静态模板
 点击 `保存` 即可设置成功。
 
 #### 二级目录设置
 点击 `设置` 里的 `网站目录`  
-![如果你看到我说明图挂了](./images/bt_6.png)
+![](./images/bt_6.png)
 
 点击 `运行目录` 一栏，并选择 `/public`
 点击 `保存` 即可设置成功。
@@ -165,7 +165,7 @@ php artisan p:user:make
 
 我们需要进入网站目录并全选设置文件权限为 `755` 所有者为 `www`
 
-![如果你看到我说明图挂了](./images/bt_2.png)
+![](./images/bt_2.png)
 
 ## 注册队列监听服务
 
