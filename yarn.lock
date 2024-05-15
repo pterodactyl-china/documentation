@@ -3111,17 +3111,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-external-link-icon@npm:2.0.0-rc.28":
-  version: 2.0.0-rc.28
-  resolution: "@vuepress/plugin-external-link-icon@npm:2.0.0-rc.28"
-  dependencies:
-    vue: "npm:^3.4.27"
-  peerDependencies:
-    vuepress: 2.0.0-rc.9
-  checksum: 10c0/48e4feca5142d046f5d508c4059c86e5c46839ce3774ee29d2d0e992aaf853e77f3815f08d0cc4b963e3b33fd983a3d3c91169020eacfbf4dec5e79b537c93ad
-  languageName: node
-  linkType: hard
-
 "@vuepress/plugin-git@npm:2.0.0-rc.22":
   version: 2.0.0-rc.22
   resolution: "@vuepress/plugin-git@npm:2.0.0-rc.22"
@@ -6276,7 +6265,7 @@ __metadata:
     sass: "npm:^1.75.0"
     vue: "npm:^3.4.21"
     vuepress: "npm:2.0.0-rc.9"
-    vuepress-theme-hope: "npm:2.0.0-rc.41"
+    vuepress-theme-hope: "npm:2.0.0-rc.43"
   languageName: unknown
   linkType: soft
 
@@ -7403,9 +7392,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vuepress-plugin-components@npm:2.0.0-rc.41":
-  version: 2.0.0-rc.41
-  resolution: "vuepress-plugin-components@npm:2.0.0-rc.41"
+"vuepress-plugin-components@npm:2.0.0-rc.43":
+  version: 2.0.0-rc.43
+  resolution: "vuepress-plugin-components@npm:2.0.0-rc.43"
   dependencies:
     "@stackblitz/sdk": "npm:^1.10.0"
     "@vuepress/helper": "npm:2.0.0-rc.28"
@@ -7415,7 +7404,7 @@ __metadata:
     create-codepen: "npm:1.0.1"
     qrcode: "npm:^1.5.3"
     vue: "npm:^3.4.27"
-    vuepress-shared: "npm:2.0.0-rc.41"
+    vuepress-shared: "npm:2.0.0-rc.43"
   peerDependencies:
     artplayer: ^5.0.0
     dashjs: 4.7.4
@@ -7437,13 +7426,13 @@ __metadata:
       optional: true
     vidstack:
       optional: true
-  checksum: 10c0/23676ec49f49c694e5230f10dfac67dee0c3352206559e4e2fb2adfc8d99b1e5a1bf7f29810251c135c098025165af5d2afe6085a47e8886144ac34ce76eeaaa
+  checksum: 10c0/415e43dacc34d2f959d4623cfd35ecf9f30bdeb69955e3b1b7f9b1dc6341e6cecd189a44e76f0dc2688f007d3c323536d349bdfe8cfeecfbbe0c3db21fc25ff0
   languageName: node
   linkType: hard
 
-"vuepress-plugin-md-enhance@npm:2.0.0-rc.41":
-  version: 2.0.0-rc.41
-  resolution: "vuepress-plugin-md-enhance@npm:2.0.0-rc.41"
+"vuepress-plugin-md-enhance@npm:2.0.0-rc.43":
+  version: 2.0.0-rc.43
+  resolution: "vuepress-plugin-md-enhance@npm:2.0.0-rc.43"
   dependencies:
     "@mdit/plugin-alert": "npm:^0.10.1"
     "@mdit/plugin-align": "npm:^0.10.1"
@@ -7475,7 +7464,7 @@ __metadata:
     balloon-css: "npm:^1.2.0"
     js-yaml: "npm:^4.1.0"
     vue: "npm:^3.4.27"
-    vuepress-shared: "npm:2.0.0-rc.41"
+    vuepress-shared: "npm:2.0.0-rc.43"
   peerDependencies:
     "@types/reveal.js": ^5.0.0
     "@vue/repl": ^4.1.1
@@ -7524,13 +7513,13 @@ __metadata:
       optional: true
     sass-loader:
       optional: true
-  checksum: 10c0/22d1275bb0d27e2a1c0f09266f2ee2e67fe3b93e6c5484decdc453598238d0bbe652c61a01fc228fbfa83f61dbda8a048087bf91c6484d5d10664021cb2c759b
+  checksum: 10c0/817986e6b8983f7a6ef41f064ae91dfdf9049e6f9d35a76919164c813c44d3eb99ce797b5304908ef9023f38750a026654be69577115b478059509dfb111e899
   languageName: node
   linkType: hard
 
-"vuepress-shared@npm:2.0.0-rc.41":
-  version: 2.0.0-rc.41
-  resolution: "vuepress-shared@npm:2.0.0-rc.41"
+"vuepress-shared@npm:2.0.0-rc.43":
+  version: 2.0.0-rc.43
+  resolution: "vuepress-shared@npm:2.0.0-rc.43"
   dependencies:
     "@vuepress/helper": "npm:2.0.0-rc.28"
     "@vueuse/core": "npm:^10.9.0"
@@ -7543,13 +7532,13 @@ __metadata:
     vue: "npm:^3.4.27"
   peerDependencies:
     vuepress: 2.0.0-rc.9
-  checksum: 10c0/9b5d22a9cad02698617e343e45c185377f1476dc8c2321265c12a890205f9409ef42f237b6a3e56e39aeca34e409525ed623369d5f88ce06013702c4bc9e5ef9
+  checksum: 10c0/03d9943a1847e072f4a587cd5c3b6e912248d8b620debc7191ce7780f922393e76e3514e7a07d3dfe3f746f1be9b4e0723ee64b6b891f75be9e3da2cf3b3a3fa
   languageName: node
   linkType: hard
 
-"vuepress-theme-hope@npm:2.0.0-rc.41":
-  version: 2.0.0-rc.41
-  resolution: "vuepress-theme-hope@npm:2.0.0-rc.41"
+"vuepress-theme-hope@npm:2.0.0-rc.43":
+  version: 2.0.0-rc.43
+  resolution: "vuepress-theme-hope@npm:2.0.0-rc.43"
   dependencies:
     "@vuepress/helper": "npm:2.0.0-rc.28"
     "@vuepress/plugin-active-header-links": "npm:2.0.0-rc.28"
@@ -7559,7 +7548,6 @@ __metadata:
     "@vuepress/plugin-comment": "npm:2.0.0-rc.28"
     "@vuepress/plugin-copy-code": "npm:2.0.0-rc.28"
     "@vuepress/plugin-copyright": "npm:2.0.0-rc.28"
-    "@vuepress/plugin-external-link-icon": "npm:2.0.0-rc.28"
     "@vuepress/plugin-git": "npm:2.0.0-rc.22"
     "@vuepress/plugin-links-check": "npm:2.0.0-rc.28"
     "@vuepress/plugin-notice": "npm:2.0.0-rc.29"
@@ -7580,9 +7568,9 @@ __metadata:
     chokidar: "npm:^3.6.0"
     gray-matter: "npm:^4.0.3"
     vue: "npm:^3.4.27"
-    vuepress-plugin-components: "npm:2.0.0-rc.41"
-    vuepress-plugin-md-enhance: "npm:2.0.0-rc.41"
-    vuepress-shared: "npm:2.0.0-rc.41"
+    vuepress-plugin-components: "npm:2.0.0-rc.43"
+    vuepress-plugin-md-enhance: "npm:2.0.0-rc.43"
+    vuepress-shared: "npm:2.0.0-rc.43"
   peerDependencies:
     "@vuepress/plugin-docsearch": 2.0.0-rc.28
     "@vuepress/plugin-feed": 2.0.0-rc.28
@@ -7592,7 +7580,7 @@ __metadata:
     nodejs-jieba: ^0.1.2
     sass-loader: ^14.0.0
     vuepress: 2.0.0-rc.9
-    vuepress-plugin-search-pro: 2.0.0-rc.41
+    vuepress-plugin-search-pro: 2.0.0-rc.43
   peerDependenciesMeta:
     "@vuepress/plugin-docsearch":
       optional: true
@@ -7610,7 +7598,7 @@ __metadata:
       optional: true
     vuepress-plugin-search-pro:
       optional: true
-  checksum: 10c0/0786da15c1f5422d1caedeb7540faa165eb4e1b7d66be33b4e27bfec4f6dfa8b46d03684759cfa315c318685857172f21ed8073e69a10bbf7bc1cf27f98471c8
+  checksum: 10c0/98381399bc8e1f137857fb50f97acb148fab777d0c31c73f21a5096a5759bcdb8b7031d65bd2a0f185e01789ccf73cb6bbc6e9bda2b48cce97f1bd3db1f27367
   languageName: node
   linkType: hard
 
