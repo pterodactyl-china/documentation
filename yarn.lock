@@ -2968,6 +2968,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vuepress/helper@npm:~2.0.0-rc.30":
+  version: 2.0.0-rc.30
+  resolution: "@vuepress/helper@npm:2.0.0-rc.30"
+  dependencies:
+    "@vue/shared": "npm:^3.4.27"
+    cheerio: "npm:1.0.0-rc.12"
+    fflate: "npm:^0.8.2"
+    gray-matter: "npm:^4.0.3"
+    vue: "npm:^3.4.27"
+  peerDependencies:
+    vuepress: 2.0.0-rc.11
+  checksum: 10c0/cdfd7fefb7039ac103c16a341df085ba1e3e89540a005cb93d01cfc15c179d25b583a0af61432f96f9d93a4fd061b30ad5b561de3525d663aec1e36c6405810f
+  languageName: node
+  linkType: hard
+
 "@vuepress/markdown@npm:2.0.0-rc.9":
   version: 2.0.0-rc.9
   resolution: "@vuepress/markdown@npm:2.0.0-rc.9"
@@ -3095,19 +3110,19 @@ __metadata:
   linkType: hard
 
 "@vuepress/plugin-docsearch@npm:^2.0.0-rc.26":
-  version: 2.0.0-rc.28
-  resolution: "@vuepress/plugin-docsearch@npm:2.0.0-rc.28"
+  version: 2.0.0-rc.30
+  resolution: "@vuepress/plugin-docsearch@npm:2.0.0-rc.30"
   dependencies:
     "@docsearch/css": "npm:^3.6.0"
     "@docsearch/js": "npm:^3.6.0"
     "@docsearch/react": "npm:^3.6.0"
-    "@vuepress/helper": "npm:~2.0.0-rc.28"
+    "@vuepress/helper": "npm:~2.0.0-rc.30"
     "@vueuse/core": "npm:^10.9.0"
     ts-debounce: "npm:^4.0.0"
     vue: "npm:^3.4.27"
   peerDependencies:
-    vuepress: 2.0.0-rc.9
-  checksum: 10c0/98836cb0c8b39d67c037b1620462042ffc5f3d78e7a2abec8e383373a180b58d54489920989c773408f1fb5ee4432df557fbe25af1d76fbba7e7c8090520c895
+    vuepress: 2.0.0-rc.11
+  checksum: 10c0/31ff1ce86017d89013680c4e835416f2ee8972fbcd5e649a611d2ea2741cdbc4d6bd1ee8587daa6a3647b3a64c2a329af84e0e3f9e54e4d9c4518a3575fdfe35
   languageName: node
   linkType: hard
 
