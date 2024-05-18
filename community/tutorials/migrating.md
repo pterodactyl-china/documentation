@@ -34,7 +34,7 @@
 apt install rsync -y
 
 # 你需要将 root@192.168.0.10 替换为你的目标服务器 `用户@ip`，/data/pterodactyl/ 替换为对应的目录
-rsync -avP /data/pterodactyl/ root@192.168.0.10:/data/pterodactyl/
+rsync -r --info=progress2 --partial /data/pterodactyl/ root@192.168.0.10:/data/pterodactyl/
 ```
 
 :::
