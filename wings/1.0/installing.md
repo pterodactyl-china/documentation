@@ -1,6 +1,6 @@
 # 安装 Wings
 
-Wings 是翼龙的下一代服务器控制平面。它已经使用 Go 从头开始重建，并从我们的第一个 Nodejs 守护进程中吸取了教训。
+Wings 是翼龙的下一代服务器管理平台。它使用 Go 从零重建，并从我们的第一个 Nodejs 守护进程中吸取了教训。
 
 ::: warning
 只有在运行 **翼龙 1.x** 时才应安装 Wings。不要为以前版本的翼龙安装此软件。
@@ -8,7 +8,7 @@ Wings 是翼龙的下一代服务器控制平面。它已经使用 Go 从头开�
 
 ## 支持的系统
 
-以下是支持的操作系统列表。请注意，这不是一个详尽的列表，您很有可能可以毫不费力地在其他 Linux 发行版上运行该软件。您有责任确定这些系统上可能需要哪些软件包。以下受支持操作系统的新版本也很有可能正常工作，您在安装是不仅限于以下列出的版本。
+以下是支持的操作系统列表。请注意，这不是一个完整的列表，您可能可以轻松地在其他 Linux 发行版上运行该软件。您需要确定这些系统上可能需要哪些软件包。以下受支持操作系统的新版本也很有可能正常工作，您在安装是包括但不限于以下列出的版本。
 
 | 操作系统 | 版本 |     支持状况       | 注意事项                                                       |
 |------------------|---------|:------------------:|-------------------------------------------------------------|
@@ -72,9 +72,9 @@ curl -sSL https://get.docker.com/ | CHANNEL=stable bash -s docker --mirror Aliyu
 请注意，某些主机安装了不支持 docker 重要功能的修改内核。 请通过运行 `uname -r` 检查您的内核。 如果您的内核以 `-xxxx-grs-ipv6-64` 或 `-xxxx-mod-std-ipv6-64` 结尾，您可能使用的是不受支持的内核。 查看我们的 [内核修改](../../daemon/0.6/kernel_modifications.md) 指南了解详细信息。
 :::
 
-#### 在启动时启动 Docker
+#### 使 Docker 开机自启动
 
-如果您使用的是带有 systemd 的操作系统（Ubuntu 16+、Debian 8+、CentOS 7+），请运行以下命令以在您启动机器时启动 Docker。
+如果您使用的是带有 systemd 的操作系统（Ubuntu 16+、Debian 8+、CentOS 7+），请运行以下命令以开机自启动 Docker。
 
 ```bash
 sudo systemctl enable --now docker
@@ -82,13 +82,13 @@ sudo systemctl enable --now docker
 
 #### 启用虚拟内存
 
-在大多数系统上，默认情况下 Docker 将无法设置交换空间。您可以通过运行 `docker info` 并在底部附近查找 `WARNING: No swap limit support` 的输出来确认这一点。
+在大多数系统上，默认情况下 Docker 无法设置交换空间。您可以通过运行 `docker info` 并在底部附近查找 `WARNING: No swap limit support` 的输出来确认这一点。
 
-启用虚拟内存是完全可选的，但如果您要为他人托管并防止出现 OOM 错误，我们建议您这样做。
+启用虚拟内存是完全可选的，但如果您要为他人托管并防止出现 OOM 错误，我们建议您开启。
 
 要启用虚拟内存，请以 root 用户身份打开 `/etc/default/grub` 并找到以 `GRUB_CMDLINE_LINUX_DEFAULT` 为开头的一行。确保该行在双引号内的某处包含 `swapaccount=1`。
 
-之后，运行 `sudo update-grub` 然后运行 `sudo reboot` 重启服务器并启用虚拟内存。
+之后，运行 `sudo update-grub` 然后运行 `sudo reboot` 重启服务器以启用虚拟内存。
 下面是该行内容示例，_请勿逐字复制此行。 它通常具有其他特定于操作系统的参数。_
 
 ```text
@@ -130,7 +130,7 @@ sudo chmod u+x /usr/local/bin/wings
 
 ::: warning OVH/SYS 服务器
 如果您使用的是 OVH 或 SoYouStart 提供的服务器，请注意您的主驱动器空间可能分配给 `/home`，而不是默认分配给 `/`。
-请考虑使用 `/home/daemon-data` 来存储服务器数据。在创建节点时可以很容易地设置。
+请考虑使用 `/home/daemon-data` 来存储服务器数据。在创建节点时可以轻松设置。
 :::
 
 ## 配置
