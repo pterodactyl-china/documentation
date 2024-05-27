@@ -46,7 +46,7 @@ VMware, Inc.
 
 如需快速安装 Docker 社区版，您可以执行以下命令：
 
-::: tabs#fruit
+::: code-tabs#shell
 
 @tab 国际源
 
@@ -108,7 +108,7 @@ Wings 及配置文件路径，如果你不懂请不要尝试更改路径。（�
 并且 wings 文件和配置文件占用空间很低，在配置完设置后可以自行备份配置文件以防不测(如果真没了，那也是整个服务器没了吧...)。
 :::
 
-::: tabs#fruit
+::: code-tabs#shell
 
 @tab 国际源
 

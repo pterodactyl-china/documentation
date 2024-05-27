@@ -19,7 +19,7 @@ Pterodactyl 不支持大多数 OpenVZ 系统，因为它与 Docker 不兼容。�
 
 如需快速安装 Docker 社区版，您可以执行以下命令：
 
-::: tabs#fruit
+::: code-tabs#shell
 
 @tab 国际源
 
@@ -59,7 +59,7 @@ systemctl enable --now docker
 
 运行以下命令来下载 Docker Compose 的当前稳定版本：
 
-::: tabs#fruit
+::: code-tabs#shell
 
 @tab 国际源
 
@@ -95,7 +95,7 @@ cd /var/www/pterodactyl
 
 在为面板创建好它的放置目录后，我们将使用 `curl` 命令，从 Github 拉取翼龙中国汉化完成的 ` docker-compose.yml` 文件并赋予该文件的可执行权限。
 
-::: tabs#fruit
+::: code-tabs#shell
 
 @tab 国际源
 

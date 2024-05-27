@@ -32,7 +32,7 @@ php artisan down
 
 我们将会删除 `app/` 目录。由于我们处理安装和升级的方式，删除的文件并不总是能被正确检测到，因此，轻易的在此位置上打包会导致一些迷惑行为。
 
-::: tabs#fruit
+::: code-tabs#shell
 
 @tab 国际源
 

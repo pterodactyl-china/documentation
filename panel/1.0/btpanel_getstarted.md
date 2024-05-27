@@ -62,7 +62,7 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 
 ### 下载并上传程序文件至网站目录
 
-::: tabs#fruit
+::: code-tabs#shell
 
 @tab 国际源
 

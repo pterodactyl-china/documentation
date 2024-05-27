@@ -77,7 +77,7 @@ php artisan down
 
 更新过程的第一步是从 GitHub 下载新的面板文件。下面的命令将下载翼龙中国最新发布的版本，将其保存在当前目录中，并自动解压到您的当前文件夹中。
 
-::: tabs#fruit
+::: code-tabs#shell
 
 @tab 国际源
 

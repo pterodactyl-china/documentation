@@ -26,7 +26,7 @@
 
 首先，下载最新的 wings 二进制文件到 `/usr/local/bin`。您将需要短暂停止 Wings。 _您正在运行的服务器**不会**受到影响。_
 
-::: tabs#fruit
+::: code-tabs#shell
 
 @tab 国际源
 

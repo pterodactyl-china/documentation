@@ -88,7 +88,7 @@ cd /var/www/pterodactyl
 
 在为面板创建好它的工作目录后，我们将使用 `curl` 命令，从 Github 拉取翼龙中国汉化完成的程序文件压缩包，拉取完成后，我们需要对压缩包进行解压操作，并赋予 `storage/` 与 `bootstrap/cache/` 目录 755 权限。这两个目录作用是缓存动态资源以加速访问。
 
-::: tabs#fruit
+::: code-tabs#shell
 
 @tab 国际源
 
