@@ -6286,7 +6286,7 @@ __metadata:
     "@vuepress/plugin-register-components": "npm:2.0.0-rc.31"
     markdown-it: "npm:14.1.0"
     reveal.js: "npm:5.1.0"
-    sass: "npm:1.77.2"
+    sass: "npm:1.77.4"
     vue: "npm:3.4.27"
     vuepress: "npm:2.0.0-rc.12"
     vuepress-theme-hope: "npm:2.0.0-rc.44"
@@ -6683,7 +6683,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.77.2, sass@npm:^1.77.2":
+"sass@npm:1.77.4":
+  version: 1.77.4
+  resolution: "sass@npm:1.77.4"
+  dependencies:
+    chokidar: "npm:>=3.0.0 <4.0.0"
+    immutable: "npm:^4.0.0"
+    source-map-js: "npm:>=0.6.2 <2.0.0"
+  bin:
+    sass: sass.js
+  checksum: 10c0/b9cb4882bded282aabe38d011adfce375e1f282184fcf93dc3da5d5be834c6aa53c474c15634c351ef7bd85146cfd1cc81343654cc3bcf000d78e856da4225ef
+  languageName: node
+  linkType: hard
+
+"sass@npm:^1.77.2":
   version: 1.77.2
   resolution: "sass@npm:1.77.2"
   dependencies:
