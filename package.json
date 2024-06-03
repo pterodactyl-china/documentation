@@ -11,17 +11,17 @@
     "docs:update-package": "yarn dlx vp-update"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.12",
-    "@vuepress/plugin-docsearch": "2.0.0-rc.31",
-    "@vuepress/plugin-google-analytics": "2.0.0-rc.31",
-    "@vuepress/plugin-pwa": "2.0.0-rc.31",
-    "@vuepress/plugin-register-components": "2.0.0-rc.31",
+    "@vuepress/bundler-vite": "2.0.0-rc.13",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.33",
+    "@vuepress/plugin-google-analytics": "2.0.0-rc.33",
+    "@vuepress/plugin-pwa": "2.0.0-rc.33",
+    "@vuepress/plugin-register-components": "2.0.0-rc.33",
     "markdown-it": "14.1.0",
     "reveal.js": "5.1.0",
-    "sass": "1.77.2",
+    "sass": "1.77.4",
     "vue": "3.4.27",
-    "vuepress": "2.0.0-rc.12",
-    "vuepress-theme-hope": "2.0.0-rc.44"
+    "vuepress": "2.0.0-rc.13",
+    "vuepress-theme-hope": "2.0.0-rc.47"
   },
   "packageManager": "yarn@4.2.2"
 }
