@@ -23,5 +23,5 @@
     "vuepress": "2.0.0-rc.13",
     "vuepress-theme-hope": "2.0.0-rc.47"
   },
-  "packageManager": "yarn@4.2.2"
+  "packageManager": "yarn@4.3.1"
 }
