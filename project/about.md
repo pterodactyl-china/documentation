@@ -33,7 +33,6 @@
 | [Matthew Penner](https://matthewp.io/)        | `matthewp`      | 项目维护者                  |
 | Stepan Fedotov                                | `trixter`       | WHMCS 模块维护人员             |
 | Michael Parker                                | `parkervcp`     | Egg 开发人员，Docker 整合   |
-| [Lance Pioch](https://lancepioch.com/)        | `shadowlancer`  | 面板维护人员                           |
 
 翼龙项目团队的成员用红色用户名在翼龙官方的 Discord 服务器中显示。
 
@@ -53,6 +52,16 @@
 
 ## License
 
-Pterodactyl® Copyright © 2015 - 2022 Dane Everitt and contributors.
+Pterodactyl® Copyright © 2015 Dane Everitt and contributors.
 
-Code released under the [MIT License](https://github.com/pterodactyl/panel/blob/develop/LICENSE.md).
+Code released under the [MIT License](https://github.com/pterodactyl/panel/blob/1.0-develop/LICENSE.md).
+
+## 发行签名
+
+之前，发行版本是由 GPG 密钥签名的。现在，所有最近的发行版本都使用 SSH 签名密钥进行签名。
+
+此密钥用于签署由 Matthew Penner 创建的发行标签和提交。这个密钥首次用于为 Panel 的 `v1.10.2` 和 Wings 的 `v1.7.1` 进行签名，此后一直在使用。
+
+```text
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKL873MsP1OFfffNC8n9WcVuOXOSW65/q26MIzib0K9k
+```
