@@ -1,3 +1,8 @@
+---
+meta:
+    - name: robots
+      content: noindex
+---
 # Getting Started
 
 ::: danger 此版本已停止维护

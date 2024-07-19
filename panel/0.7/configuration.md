@@ -1,3 +1,8 @@
+---
+meta:
+    - name: robots
+      content: noindex
+---
 # Environment Configuration
 
 Pterodactyl's environment settings are configured and stored in an environment file — `.env` — located in the
