@@ -102,7 +102,7 @@ chmod -R 755 storage/* bootstrap/cache/
 @tab:active 国内源
 
 ``` bash
-curl -Lo panel.tar.gz https://mirror.ghproxy.com/https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
+curl -Lo panel.tar.gz https://ghp.ci/https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
 # 解压并设置目录权限
 tar -xzvf panel.tar.gz
 chmod -R 755 storage/* bootstrap/cache/
