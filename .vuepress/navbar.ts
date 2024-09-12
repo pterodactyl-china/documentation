@@ -17,8 +17,8 @@ export default navbar([
         link: 'https://bbs.pterodactyl.top',
       },
       {
-        text: 'KOOK',
-        link: 'https://kook.top/0Grsf5',
+        text: 'QQ 频道',
+        link: 'https://pd.qq.com/s/6zt1zz145',
       }
     ],
     link: 'https://bbs.pterodactyl.top'
