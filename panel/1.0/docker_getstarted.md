@@ -35,11 +35,7 @@ curl -sSL https://get.docker.com/ | CHANNEL=stable bash -s docker --mirror Aliyu
 
 :::
 
-如果您希望手动安装，请参考官方 Docker 文档了解如何在您的服务器上安装 Docker 社区版。下面列出了一些常用系统支持的快速链接。
-
-- [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce)
-- [CentOS](https://docs.docker.com/install/linux/docker-ce/centos/#install-docker-ce)
-- [Debian](https://docs.docker.com/install/linux/docker-ce/debian/#install-docker-ce)
+如果您希望手动安装，请参考[官方 Docker 文档](https://docs.docker.com/engine/install/)了解如何在您的服务器上安装 Docker 社区版。
 
 ::: warning 检查你的内核
 请注意，某些主机安装了不支持 docker 重要功能的修改内核。 请通过运行 `uname -r` 检查您的内核。 如果您的内核以 `-xxxx-grs-ipv6-64` 或 `-xxxx-mod-std-ipv6-64` 结尾，您可能使用的是不受支持的内核。 查看我们的 [内核修改](../../daemon/0.6/kernel_modifications.md) 指南了解详细信息。
