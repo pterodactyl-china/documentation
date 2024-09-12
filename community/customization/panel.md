@@ -20,19 +20,22 @@
 @tab Ubuntu/Debian
 
 ```bash
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_16.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-
-sudo apt update
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt install -y nodejs
 ```
 
 @tab CentOS
 
 ```bash
-sudo yum install https://rpm.nodesource.com/pub_16.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y
-sudo yum install nodejs -y
+curl -sL https://rpm.nodesource.com/setup_16.x | sudo -E bash -
+sudo yum install -y nodejs yarn
+```
+
+@tab CentOS 8, Rocky Linux 8, AlmaLinux 8
+
+```bash
+curl -sL https://rpm.nodesource.com/setup_16.x | sudo -E bash -
+sudo dnf install -y nodejs yarn
 ```
 
 :::

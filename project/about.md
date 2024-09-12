@@ -5,12 +5,21 @@
 
 “翼龙中国” 不隶属于 Pterodactyl Software
 
+<<<<<<< HEAD
 ### 项目核心团队
 | 名字 | Discord 名称 | 联系方式 | 负责内容 |
 | ---- | ------------ | ------ | ---- |
 | [飒爽师叔](https://vlssu.com/) | `vlssu#9657` | [vlssu@vlssu.com](mailto:vlssu@vlssu.com) | 汉化主要负责人，项目维护人员 |
 | [冰凌](https://icewk.org/) | `a1an#5788` | [iceling@icewk.org](mailto:iceling@icewk.org) | 汉化主要负责人 |
 | [Wapriaily](https://www.wapriaily.com/) | `Wapriaily#3923` | [kano@wapriaily.com](mailto:kano@wapriaily.com) | Egg 、Docker 开发维护协助人员 |
+=======
+| Name                                     | Discord Name    | Primary Role                        |
+| ---------------------------------------- | --------------- | ----------------------------------- |
+| [Dane Everitt](https://daneeveritt.com/) | `.tacticalfish` | Founder & Former Project Maintainer |
+| [Matthew Penner](https://matthewp.io/)   | `matthewp`      | Project Maintainer                  |
+| Stepan Fedotov                           | `trixter`       | WHMCS Module Maintainer             |
+| Michael Parker                           | `parkervcp`     | Egg Developer, Docker Integration   |
+>>>>>>> 369fa557cb7504d365eee64ea39f1526a38c14c8
 
 翼龙(中国)项目团队的成员用青绿色用户名在翼龙(中国)官方的 KOOK 服务器中显示。
 
@@ -45,10 +54,13 @@
 
 | 公司                                                   | 关于                                                                                                                                                                                                                           |
 |-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Aussie Server Hosts**](https://aussieserverhosts.com/) | No frills Australian Owned and operated High Performance Server hosting for some of the most demanding games serving Australia and New Zealand.                                                       |
-| [**BisectHosting**](https://www.bisecthosting.com/)       | BisectHosting provides Minecraft, Valheim and other server hosting services with the highest reliability and lightning fast support since 2012.                                                       |
-| [**MineStrator**](https://minestrator.com/)               | Looking for the most highend French hosting company for your minecraft server? More than 24,000 members on our discord trust us. Give us a try!                                                       |
-| [**VibeGAMES**](https://vibegames.net/)                   | VibeGAMES is a game server provider that specializes in DDOS protection for the games we offer. We have multiple locations in the US, Brazil, France, Germany, Singapore, Australia and South Africa. |
+| [**Aussie Server Hosts**](https://aussieserverhosts.com/)    | No frills Australian Owned and operated High Performance Server hosting for some of the most demanding games serving Australia and New Zealand.                                                                                                                       |
+| [**CodeNode LLC**](https://codenode.gg/)                     | Looking for simplicity? Well, look no further! CodeNode has got you covered with everything you need at the rock-bottom price of $1.75 per GB, including dedicated IPs in Dallas, Texas, and Amsterdam, Netherlands. We're not just good, we're the best in the game! |
+| [**BisectHosting**](https://www.bisecthosting.com/)          | BisectHosting provides Minecraft, Valheim and other server hosting services with the highest reliability and lightning fast support since 2012.                                                                                                                       |
+| [**MineStrator**](https://minestrator.com/)                  | Looking for the most highend French hosting company for your minecraft server? More than 24,000 members on our discord trust us. Give us a try!                                                                                                                       |
+| [**HostEZ**](https://hostez.io)                              | US & EU Rust & Minecraft Hosting. DDoS Protected bare metal, VPS and colocation with low latency, high uptime and maximum availability. EZ!                                                                                                                           |
+| [**Blueprint**](https://blueprint.zip/?pterodactyl=true)     | Create and install Pterodactyl addons and themes with the growing Blueprint framework - the package-manager for Pterodactyl. Use multiple modifications at once without worrying about conflicts and make use of the large extension ecosystem.                       |
+| [**indifferent broccoli**](https://indifferentbroccoli.com/) | indifferent broccoli is a game server hosting and rental company. With us, you get top-notch computer power for your gaming sessions. We destroy lag, latency, and complexity--letting you focus on the fun stuff.                                                    |
 
 ## License
 

@@ -20,17 +20,18 @@ Pterodactyl 不支持大多数 OpenVZ 系统，因为它与 Docker 不兼容。�
 :::
 
 | 操作系统 | 版本 |     支持状况      | 注意事项                                                       |
-|------------------|---------|:------------------:|-------------------------------------------------------------|
-| **Ubuntu**       | 20.04   | :white_check_mark: | 文档以 Ubuntu 20.04 操作系统为基本所编写的。 |
-|                  | 22.04   | :white_check_mark: |     MariaDB 无需 repo 安装脚本即可安装。 |
-| **CentOS**       | 7       | :white_check_mark: | 需要额外的 repos。                                   |
-|                  | 8       | :white_check_mark: | 注意，CentOS 8 已停运。使用 Rocky 或 Alma Linux。         |
-| **Debian**       | 11      | :white_check_mark: |                                                             |
-|                  | 12      | :white_check_mark: |                                                             |
+| ---------------------------------- | ------- | :----------------: | ----------------------------------------------------------- |
+| **Ubuntu**                         | 20.04   | :white_check_mark: | 文档以 Ubuntu 20.04 操作系统为基本所编写的。 |
+|                                    | 22.04   | :white_check_mark: | MariaDB 无需 repo 安装脚本即可安装。     |
+|                                    | 24.04   | :white_check_mark: | MariaDB 无需 repo 安装脚本即可安装。     |
+| **RHEL / Rocky Linux / AlmaLinux** | 8       | :white_check_mark: | 需要额外的存储库。                                   |
+|                                    | 9       | :white_check_mark: |                                                             |
+| **Debian**                         | 11      | :white_check_mark: |                                                             |
+|                                    | 12      | :white_check_mark: |                                                             |
 
 ## 依赖项
 
-* PHP `8.0` 或 `8.1`（推荐），带有以下扩展名：`cli`、`openssl`、`gd`、`mysql`、`PDO`、`mbstring` `tokenizer`、`bcmath `、`xml` 或 `dom`、`curl`、`zip` 和 `fpm` 如果你打算使用 NGINX。
+* PHP `8.1` 、 `8.2` 或 `8.3`（推荐），带有以下扩展名：`cli`、`openssl`、`gd`、`mysql`、`PDO`、`mbstring` `tokenizer`、`bcmath `、`xml` 或 `dom`、`curl`、`zip` 和 `fpm` 如果你打算使用 NGINX。
 * MySQL `5.7.22` 及更高版本（推荐 MySQL `8`）**或** MariaDB `10.2` 及更高版本。
 * Redis (`redis-server`)
 * 一个 Web 服务器（Apache、NGINX、Caddy 等）
@@ -48,21 +49,21 @@ Pterodactyl 不支持大多数 OpenVZ 系统，因为它与 Docker 不兼容。�
 # 添加 "add-apt-repository" 命令
 apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
 
-# 为 PHP、Redis 和 MariaDB 添加额外的存储库
+# 为 PHP、Redis 和 MariaDB 添加额外的存储库 （Ubuntu 20.04 和 Ubuntu 22.04）
 LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
 
 # 添加 Redis 官方 APT 仓库
 curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
 
-# 在 Ubuntu 22.04 上可以跳过 MariaDB 存储库设置脚本
+# MariaDB 存储库安装脚本（Ubuntu 20.04）
 curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
 
 # 更新存储库列表
 apt update
 
 # 安装依赖项
-apt -y install php8.1 php8.1-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
+apt -y install php8.3 php8.3-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
 ```
 
 ### 安装 Composer
@@ -133,7 +134,7 @@ exit
 
 ``` bash
 cp .env.example .env
-composer install --no-dev --optimize-autoloader
+COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --optimize-autoloader
 
 # 注意，以下指令仅针对于第一次安装部署翼龙面板前端
 # 且对应数据库内无数据时执行，若阁下并非第一次安装且数据库内有数据，请忽略以下指令
@@ -179,13 +180,13 @@ php artisan p:user:make
 安装过程的最后一步是对 面板程序文件设置正确的权限，以便 WEB 服务器程序（例如Nginx 或者 Apache）可以正确执行文件。
 
 ``` bash
-# 如果使用 NGINX 或 Apache (不在 CentOS 上)
+# 如果使用 NGINX 或 Apache (不在 RHEL / Rocky Linux / AlmaLinux)
 chown -R www-data:www-data /var/www/pterodactyl/*
 
-# 如果在 CentOS 上使用 NGINX
+# 如果在 RHEL / Rocky Linux / AlmaLinux 上使用 NGINX
 chown -R nginx:nginx /var/www/pterodactyl/*
 
-# 如果在 CentOS 上使用 Apache
+# 如果在 RHEL / Rocky Linux / AlmaLinux 上使用 Apache
 chown -R apache:apache /var/www/pterodactyl/*
 ```
 
@@ -230,8 +231,8 @@ RestartSec=5s
 WantedBy=multi-user.target
 ```
 
-::: tip CentOS 上的 Redis
-如果您使用的是 CentOS，则需要在 `After=` 一行将 `redis-server.service` 替换为 `redis.service`，以确保 `redis` 在工作队列之前启动。
+::: tip RHEL / Rocky Linux / AlmaLinux 上的 Redis
+如果您使用的是 RHEL / Rocky Linux / AlmaLinux，则需要在 `After=` 一行将 `redis-server.service` 替换为 `redis.service`，以确保 `redis` 在工作队列之前启动
 :::
 
 ::: tip
