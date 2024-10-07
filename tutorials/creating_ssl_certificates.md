@@ -84,13 +84,13 @@ systemctl restart wings
 ```
 
 @tab 方法 2: acme.sh (使用 Cloudflare API)
-该方法适合高级用户和无法开放80端口的用户, 下面的命令适用于 Ubuntu 和 Cloudflare API,您可以查看 [acme.sh 的官方网站](https://github.com/Neilpang/acme.sh) 来获取相关说明
+该方法适合高级用户和无法开放80端口的用户, 下面的命令适用于 Ubuntu 和 Cloudflare API,您可以查看 [acme.sh 的官方网站](https://github.com/acmesh-official/acme.sh) 来获取相关说明。请务必阅读这两个说明，因为有些人可能已经迁移到 CloudFlare 的[新授权系统](https://blog.cloudflare.com/permissions-best-practices)（新版），但其他人[尚未迁移](https://cloudflare.tv/event/ea8JJLgR)（旧版）。
 
 ``` bash
 curl https://get.acme.sh | sh
 ```
 
-### 获取 Cloudflare API 密钥
+### 获取 Cloudflare API 密钥（旧版）
 
 安装 acme.sh 后，我们需要获取 CloudFlare API 密钥。 在 Cloudfare 的网站上，选择您的域名，然后在右侧复制您的 “区域 ID” 和 “帐户 ID”，然后单击 “获取您的 API 令牌”，单击 “创建令牌” > 选择模板 “编辑区域 DNS” > 选择 “区域资源” 的范围，然后单击 “继续以显示摘要”，复制您的令牌。
 
@@ -108,10 +108,28 @@ sudo mkdir -p /etc/letsencrypt/live/example.com
 export CF_Token="Your_CloudFlare_API_Key"
 export CF_Account_ID="Your_CloudFlare_Account_ID"
 export CF_Zone_ID="Your_CloudFlare_Zone_ID"
-
 ```
 
-然后创建证书
+### 获取 CloudFlare API 密钥（新版）
+
+安装 acme.sh 后，我们需要获取 CloudFlare API 密钥。在 Cloudflare 的网站上，点击右上角的个人资料。然后进入“我的资料”，在左侧找到“API 令牌”。点击它会带你到 [API 令牌页面](https://dash.cloudflare.com/profile/api-tokens)。选择“创建令牌”并使用“编辑区域 DNS”模板。然后在下一页，进入“区域资源”并选择“包含” - “特定区域” - （选择你要使用的域）。然后继续到摘要。确认你想创建令牌。
+
+### 创建证书
+
+由于配置文件基于 Certbot，我们需要手动创建文件夹。
+
+```bash
+sudo mkdir -p /etc/letsencrypt/live/example.com
+```
+
+安装 acme.sh 并获取 CloudFlare API 密钥后，我们需要生成证书。首先，输入 CloudFlare API 凭证。
+
+```bash
+export CF_Key="Your_CloudFlare_API_Key"
+export CF_Email="Your_CloudFlare_Email"
+```
+
+然后创建证书。由于 API 密钥绑定到域名，Cloudflare 应该只允许你生成一个。
 
 ```bash
 acme.sh --issue --dns dns_cf -d "example.com" --server letsencrypt \

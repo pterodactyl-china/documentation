@@ -6,7 +6,11 @@ MySQL 是翼龙面板的核心组件，但如果你以前没有配置过 MySQL�
 ### 登录
 首先我们需要登录到 MySQL 的命令行，我们需要在此命令行执行一些语句来配置数据库。登录到 MySQL 命令行十分简单，只需要输入下面的命令，然后提供安装 MySQL 时设置的 root 账户密码。若没有设置密码，您很可能只需按 Enter (回车) 键，因为没有设置密码
 
-``` bash
+```sql
+# If using MariaDB (v11.0.0+)
+mariadb -u root -p
+
+# If using MySQL
 mysql -u root -p
 ```
 

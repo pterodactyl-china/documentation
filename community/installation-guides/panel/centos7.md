@@ -1,100 +1,100 @@
 # CentOS 7
-在本指南中，我们将安装 Pterodactyl v1.X（包括它的所有依赖项）并配置我们的网络服务器以使用 SSL 为其提供服务。
 
-::: tip
-本指南基于[官方安装文档](/panel/1.0/getting_started.md)，但专为 CentOS 7 量身定制。
-:::
+这份指南提供了在 CentOS 7 上安装 Pterodactyl v1.X 的全面说明，包括所有依赖项和 SSL 配置。
 
-## 安装要求和附加工具
-我们要安装翼龙面板 [所需依赖项](/panel/1.0/getting_started.md#依赖项)以及一些额外的工具。
+## 安装依赖项
 
+### SELinux 配置
 
-::: tip
-If you run `sestatus` and it shows `SELinux status: enabled` you should install the following packages for later
-:::
+If SELinux is enabled (check with `sestatus`), install the following packages:
 
-### SELinux tools
 ```bash
 yum install -y policycoreutils policycoreutils-python selinux-policy selinux-policy-targeted libselinux-utils setroubleshoot-server setools setools-console mcstrans
 ```
 
-### MariaDB
+### Installing Dependencies
+
+Run the following commands to install all necessary dependencies:
+
 ```bash
-## Install Repos
-cat <<EOF > /etc/yum.repos.d/mariadb.repo
-# MariaDB 10.5 CentOS repository list - created 2017-07-14 12:40 UTC
-# http://downloads.mariadb.org/mariadb/repositories/
+# Add MariaDB repository
+sudo tee /etc/yum.repos.d/mariadb.repo <<EOF
 [mariadb]
 name = MariaDB
 baseurl = http://yum.mariadb.org/10.5/centos7-amd64
-gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-gpgcheck=1
+gpgkey = https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+gpgcheck = 1
 EOF
 
-## Get yum updates
-yum update -y
+# Install EPEL and Remi repositories
+sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo yum install -y https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 
-## Install MariaDB 10.5
-yum install -y MariaDB-common MariaDB-server
+# Enable PHP 8.3 from Remi
+sudo yum install -y yum-utils
+sudo yum-config-manager --disable 'remi-php*'
+sudo yum-config-manager --enable remi-php83
 
-## Start maraidb
-systemctl start mariadb
-systemctl enable mariadb
+sudo yum update -y
+
+# Install dependencies
+sudo yum install -y MariaDB-common MariaDB-server php php-{common,fpm,cli,json,mysqlnd,mcrypt,gd,mbstring,pdo,zip,bcmath,dom,opcache} nginx zip unzip
+
+# Install Redis
+sudo yum install -y --enablerepo=remi redis
+
+# Start and enable services
+sudo systemctl enable --now mariadb nginx redis
+
+# Configure firewall
+sudo firewall-cmd --add-service=http --permanent
+sudo firewall-cmd --add-service=https --permanent 
+sudo firewall-cmd --reload
+
+# Install Composer
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 ```
 
-### PHP 8.0
-We recommend the remi repo to get the latest php packages.
+## Server Configuration
+
+### PHP Configuration
+
+Create a new PHP-FPM configuration file in /etc/php-fpm.d/www-pterodactyl.conf:
+
+```conf
+[pterodactyl]
+
+user = nginx
+group = nginx
+
+listen = /var/run/php-fpm/pterodactyl.sock
+listen.owner = nginx
+listen.group = nginx
+listen.mode = 0750
+
+pm = ondemand
+pm.max_children = 9
+pm.process_idle_timeout = 10s
+pm.max_requests = 200
+```
+
+Start and enable PHP-FPM:
 
 ```bash
-## Install Repos
-yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
-yum install -y yum-utils
-yum-config-manager --disable 'remi-php*'
-yum-config-manager --enable remi-php80
-
-## Get yum updates
-yum update -y
-
-## Install PHP 8.0
-yum install -y php php-{common,fpm,cli,json,mysqlnd,mcrypt,gd,mbstring,pdo,zip,bcmath,dom,opcache}
+sudo systemctl enable --now php-fpm
 ```
 
-### Composer
-```bash
-yum install -y zip unzip # Required for Composer
-curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-```
+### SELinux configuration
 
-## Install Utility Packages
+The following command will allow nginx to work with redis.
 
-
-### Nginx
-```bash
-yum install -y nginx
-
-firewall-cmd --add-service=http --permanent
-firewall-cmd --add-service=https --permanent 
-firewall-cmd --reload
-```
-
-### Redis
-```bash
-yum install -y --enablerepo=remi redis
-
-systemctl start redis
-systemctl enable redis
-```
-
-#### SELinux commands
-
-The following command will allow nginx to work with redis and 
 ```bash
 setsebool -P httpd_can_network_connect 1
 setsebool -P httpd_execmem 1
 setsebool -P httpd_unified 1
 ```
 
+<<<<<<< HEAD
 ## Server Configuration
 This following section covers the configuration of parts of the server to run the panel.
 
@@ -149,5 +149,11 @@ Please check our [tutorial](/tutorials/creating_ssl_certificates.md) on generati
 The default Redis install is perfectly fine for the panel. If you have Redis already in use you may want to look into
 [running another Redis instance](https://community.pivotal.io/s/article/How-to-setup-and-run-multiple-Redis-server-instances-on-a-Linux-host).
 
+=======
+>>>>>>> 60af4593615af6ddb292dfb24cbc693939b8994d
 ## Installing the Panel
 Excellent, we now have all of the required dependencies installed and configured. From here, follow the [official Panel installation documentation](/panel/1.0/getting_started.md#download-files).
+
+::: tip
+You will need to change the fastcgi_pass path in the Nginx configuration to `/var/run/php-fpm/pterodactyl.sock`
+:::

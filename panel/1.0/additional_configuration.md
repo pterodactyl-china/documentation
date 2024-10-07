@@ -132,7 +132,13 @@ RECAPTCHA_ENABLED=false
 如果您无法访问面板，可以使用以下命令直接修改数据库。
 
 ```sql
+# If using MariaDB (v11.0.0+)
+mariadb -u root -p
+
+# If using MySQL
 mysql -u root -p
+```
+```sql
 UPDATE panel.settings SET value = 'false' WHERE `key` = 'settings::recaptcha:enabled';
 ```
 
@@ -143,7 +149,13 @@ UPDATE panel.settings SET value = 'false' WHERE `key` = 'settings::recaptcha:ena
 ### 禁用动态口令认证
 
 ```sql
+# If using MariaDB (v11.0.0+)
+mariadb -u root -p
+
+# If using MySQL
 mysql -u root -p
+```
+```sql
 UPDATE panel.settings SET value = 0 WHERE `key` = 'settings::pterodactyl:auth:2fa_required';
 ```
 

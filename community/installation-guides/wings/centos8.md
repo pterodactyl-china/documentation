@@ -1,32 +1,24 @@
-# CentOS 8, Rocky Linux 8, AlmaLinux 8
-在本指南中，我们将安装 Wings v1.X（包括它的所有依赖项）并配置使用 SSL 为其提供服务。
+# Enterprise Linux 8 和 Fedora Server 40
+这份指南提供了在 CentOS 8、Rocky Linux 8、AlmaLinux 8 和 Fedora Server 40 上安装 Pterodactyl Wings v1.X 的全面说明。
 
-::: tip
-本指南基于[官方安装文档](/wings/1.0/installing.md)，但专为 Enterprise Linux 8 量身定制。
-:::
-
-## 安装要求
-我们要安装 Wings [所需依赖项](/wings/1.0/installing.md#依赖项)。
-
-### Docker
+## 安装依赖项
 
 ```bash
-## 安装 yum 工具
-dnf install -y dnf-utils device-mapper-persistent-data lvm2
+# 安装所需的软件包
+sudo dnf install -y dnf-utils device-mapper-persistent-data lvm2
 
-## 添加 docker 仓库
-dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+# 添加 docker 仓库 (Enterprise Linux 8)
+sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+# 添加 docker 仓库 (Fedora Server 40)
+sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
 
 ## 安装 docker
-dnf install -y docker-ce --nobest
+sudo dnf install -y docker-ce docker-ce-cli containerd.io
 
 ## 启用 docker 服务
-systemctl enable docker
-systemctl start docker
-```
+systemctl enable --now docker
 
-### FirewallD 更改
-```bash
+# 配置防火墙
 firewall-cmd --add-port 8080/tcp --permanent
 firewall-cmd --add-port 2022/tcp --permanent
 firewall-cmd --permanent --zone=trusted --change-interface=pterodactyl0
