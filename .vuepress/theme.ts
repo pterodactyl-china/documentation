@@ -67,6 +67,13 @@ export default hopeTheme({
     //   categoryId: "DIC_kwDOG_Pt2M4COD69",
     // },
 
+    revealjs: true,
+    // revealJs: {
+    //   plugins: ["highlight", "math", "search", "notes", "zoom"],
+    // },
+
+    markdownTab: true,
+
     components: {
       components: ["PDF", "BiliBili", "Badge", "VPCard", "SiteInfo"],
     },
@@ -75,11 +82,7 @@ export default hopeTheme({
     mdEnhance: {
       align: true,
       attrs: true,
-      codetabs: true,
       component: true,
-      figure: true,
-      imgLazyload: true,
-      imgSize: true,
       include: true,
       mark: true,
       demo: true,
@@ -98,7 +101,6 @@ export default hopeTheme({
       ],
       sub: true,
       sup: true,
-      tabs: true,
       tasklist: true,
       vPre: true,
       
@@ -127,12 +129,6 @@ export default hopeTheme({
 
       // playground: {
       //   presets: ["ts", "vue"],
-      // },
-
-      // 在启用之前安装 reveal.js
-      revealJs: true,
-      // revealJs: {
-      //   plugins: ["highlight", "math", "search", "notes", "zoom"],
       // },
 
       // 在启用之前安装 @vue/repl

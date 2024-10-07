@@ -19,7 +19,7 @@ rm /etc/nginx/sites-enabled/default
 
 现在，您应该复制下面文件的内容，将 `<domain>` 替换为您使用的域名后，粘贴到名为 `pterodactyl.conf` 的文件中，并将该文件放在 `/etc/nginx/sites-available/` 目录下， 或 &mdash; 如果在 RHEL 、 Rocky Linux 或 AlmaLinux 上，则为 `/etc/nginx/conf.d/`。
 
-@[code {4,11,26-27}](../../.snippets/webservers/nginx-php8.3.conf)
+@[code{4,11,26-27}](../../.snippets/webservers/nginx-php8.3.conf)
 
 ### 启用配置
 
@@ -43,7 +43,7 @@ rm /etc/nginx/sites-enabled/default
 
 现在，您应该复制下面文件的内容，将 `<domain>` 替换为您使用的域名后，粘贴到名为 `pterodactyl.conf` 的文件中，并将该文件放在 `/etc/nginx/sites-available/` 目录下， 或 &mdash; 如果在 RHEL 、 Rocky Linux 或 AlmaLinux 上，则为 `/etc/nginx/conf.d/`。
 
-@[code {4}](../../.snippets/webservers/nginx-php8.3-nossl.conf)
+@[code{4}](../../.snippets/webservers/nginx-php8.3-nossl.conf)
 
 ### 启用配置
 
@@ -69,7 +69,7 @@ a2dissite 000-default.conf
 
 注意：使用 Apache 时，请确保您已安装 `libapache2-mod-php8.3` 包，否则 PHP 将不会显示在您的网络服务器上。
 
-@[code {3,12,26-27}](../../.snippets/webservers/apache.conf)
+@[code{3,12,26-27}](../../.snippets/webservers/apache.conf)
 
 ### 启用配置
 
@@ -95,7 +95,7 @@ a2dissite 000-default.conf
 
 注意：使用 Apache 时，请确保您已安装 `libapache2-mod-php8.3` 包，否则 PHP 将不会显示在您的网络服务器上。
 
-@[code {3}](../../.snippets/webservers/apache-nossl.conf)
+@[code{3}](../../.snippets/webservers/apache-nossl.conf)
 
 ### 启用配置
 
@@ -122,7 +122,7 @@ rm /etc/caddy/Caddyfile
 
 您应该粘贴以下文件的内容，将 `<domain>` 替换为您的域名。
 
-@[code {10}](../../.snippets/webservers/Caddyfile)
+@[code{10}](../../.snippets/webservers/Caddyfile)
 
 ::: tip
 
@@ -153,7 +153,7 @@ rm /etc/caddy/Caddyfile
 
 唯一的两个变化是在 `<domain>` 后缀添加了 `:80`，并且在全局配置的 `servers` 指令中，将端口从 `:443` 更改为 `:80`。
 
-@[code {10}](../../.snippets/webservers/Caddyfile-nossl)
+@[code{10}](../../.snippets/webservers/Caddyfile-nossl)
 
 ### 启用配置
 
