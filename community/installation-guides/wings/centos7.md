@@ -1,8 +1,6 @@
 # CentOS 7
 这份指南提供了在 CentOS 7 上安装 Pterodactyl Wings v1.X 的全面说明。
 
-[[toc]]
-
 ## 安装依赖项
 
 ```bash

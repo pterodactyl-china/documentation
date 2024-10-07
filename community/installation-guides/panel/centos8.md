@@ -1,8 +1,6 @@
-# Enterprise Linux 8 and Fedora Server 40
+# Enterprise Linux 8 和 Fedora Server 40
 
 This guide provides comprehensive instructions for installing Pterodactyl v1.X on CentOS 8, Rocky Linux 8, AlmaLinux 8, and Fedora Server 40, including all dependencies.
-
-[[toc]]
 
 ## Install Dependencies
 
