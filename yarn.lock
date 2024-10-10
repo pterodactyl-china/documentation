@@ -3064,39 +3064,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/bundler-vite@npm:2.0.0-rc.17":
-  version: 2.0.0-rc.17
-  resolution: "@vuepress/bundler-vite@npm:2.0.0-rc.17"
+"@vuepress/bundler-vite@npm:2.0.0-rc.18":
+  version: 2.0.0-rc.18
+  resolution: "@vuepress/bundler-vite@npm:2.0.0-rc.18"
   dependencies:
     "@vitejs/plugin-vue": "npm:^5.1.4"
-    "@vuepress/bundlerutils": "npm:2.0.0-rc.17"
-    "@vuepress/client": "npm:2.0.0-rc.17"
-    "@vuepress/core": "npm:2.0.0-rc.17"
-    "@vuepress/shared": "npm:2.0.0-rc.17"
-    "@vuepress/utils": "npm:2.0.0-rc.17"
+    "@vuepress/bundlerutils": "npm:2.0.0-rc.18"
+    "@vuepress/client": "npm:2.0.0-rc.18"
+    "@vuepress/core": "npm:2.0.0-rc.18"
+    "@vuepress/shared": "npm:2.0.0-rc.18"
+    "@vuepress/utils": "npm:2.0.0-rc.18"
     autoprefixer: "npm:^10.4.20"
     connect-history-api-fallback: "npm:^2.0.0"
     postcss: "npm:^8.4.47"
     postcss-load-config: "npm:^6.0.1"
-    rollup: "npm:^4.22.5"
+    rollup: "npm:^4.24.0"
     vite: "npm:~5.4.8"
-    vue: "npm:^3.5.10"
+    vue: "npm:^3.5.11"
     vue-router: "npm:^4.4.5"
-  checksum: 10c0/d1280645e397c30db88d204a95de762d8fb7d31afe06661cc42ee8216cda8ce5ceab0e88c65062a8386bfb8134d5dc60c901d4dfaf05342d84aa66872dd16bee
+  checksum: 10c0/17dd80e7aba9ca6cbc575e682fe8c38e7979ea6c20c4211425a1c5bcbdfa8a7b0742592b318c4053e92660faad6feebaac2932a0c587ca9787a18a0c8d481361
   languageName: node
   linkType: hard
 
-"@vuepress/bundlerutils@npm:2.0.0-rc.17":
-  version: 2.0.0-rc.17
-  resolution: "@vuepress/bundlerutils@npm:2.0.0-rc.17"
+"@vuepress/bundlerutils@npm:2.0.0-rc.18":
+  version: 2.0.0-rc.18
+  resolution: "@vuepress/bundlerutils@npm:2.0.0-rc.18"
   dependencies:
-    "@vuepress/client": "npm:2.0.0-rc.17"
-    "@vuepress/core": "npm:2.0.0-rc.17"
-    "@vuepress/shared": "npm:2.0.0-rc.17"
-    "@vuepress/utils": "npm:2.0.0-rc.17"
-    vue: "npm:^3.5.10"
+    "@vuepress/client": "npm:2.0.0-rc.18"
+    "@vuepress/core": "npm:2.0.0-rc.18"
+    "@vuepress/shared": "npm:2.0.0-rc.18"
+    "@vuepress/utils": "npm:2.0.0-rc.18"
+    vue: "npm:^3.5.11"
     vue-router: "npm:^4.4.5"
-  checksum: 10c0/bffd885d9dd269731e69f13f5bcd92c5f31fb7b66d0451c14a7ec173feb4ca7e14343ef2914a473d6bdac537716e02d879182bfc995e8d19d8ccc5c5eb2558ca
+  checksum: 10c0/3d7352a33b1ab929da15ebadb5b3e59602ddb00f4c9a18eb8984a5c9a25017c7d5d861511f77a691957116b7be97b6848427de3cc680748d7566de1134dfff57
   languageName: node
   linkType: hard
 
@@ -3129,6 +3129,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vuepress/client@npm:2.0.0-rc.18":
+  version: 2.0.0-rc.18
+  resolution: "@vuepress/client@npm:2.0.0-rc.18"
+  dependencies:
+    "@vue/devtools-api": "npm:^7.4.6"
+    "@vuepress/shared": "npm:2.0.0-rc.18"
+    vue: "npm:^3.5.11"
+    vue-router: "npm:^4.4.5"
+  checksum: 10c0/d4472a6fa9eaffad8f07397d174ba04b7c6851ecb28cc2369588a143ce65f9465d40793e2163bf7f6a6564b8234ebf6047d91a10b5d4180148c2169414db9612
+  languageName: node
+  linkType: hard
+
 "@vuepress/core@npm:2.0.0-rc.17":
   version: 2.0.0-rc.17
   resolution: "@vuepress/core@npm:2.0.0-rc.17"
@@ -3139,6 +3151,19 @@ __metadata:
     "@vuepress/utils": "npm:2.0.0-rc.17"
     vue: "npm:^3.5.10"
   checksum: 10c0/c217eba78bb50cdf2493b03f76a7594410535d0c6cb30d423c6dfc5f801353f05bfc0eb786fe19cab1534588c8e364230d6d78d20656def9f303d4307b59fb8d
+  languageName: node
+  linkType: hard
+
+"@vuepress/core@npm:2.0.0-rc.18":
+  version: 2.0.0-rc.18
+  resolution: "@vuepress/core@npm:2.0.0-rc.18"
+  dependencies:
+    "@vuepress/client": "npm:2.0.0-rc.18"
+    "@vuepress/markdown": "npm:2.0.0-rc.18"
+    "@vuepress/shared": "npm:2.0.0-rc.18"
+    "@vuepress/utils": "npm:2.0.0-rc.18"
+    vue: "npm:^3.5.11"
+  checksum: 10c0/25ef877e43e2f82a39e71c9bee8f2e3eda21ab47277b311524f1a068c7c32d5a854266f89dcefb227575e884f71c11c02a3ec0e98de12cda3a65ba68fe1b8811
   languageName: node
   linkType: hard
 
@@ -3192,6 +3217,30 @@ __metadata:
     markdown-it-emoji: "npm:^3.0.0"
     mdurl: "npm:^2.0.0"
   checksum: 10c0/b202db6ef0ea71d611d7d93722efb78fa8df5ec2d522545045e606f40da36cc95d857480d459f2878927c5c7368ec0dd29b7536881a7bc899ab3c59dae5fe663
+  languageName: node
+  linkType: hard
+
+"@vuepress/markdown@npm:2.0.0-rc.18":
+  version: 2.0.0-rc.18
+  resolution: "@vuepress/markdown@npm:2.0.0-rc.18"
+  dependencies:
+    "@mdit-vue/plugin-component": "npm:^2.1.3"
+    "@mdit-vue/plugin-frontmatter": "npm:^2.1.3"
+    "@mdit-vue/plugin-headers": "npm:^2.1.3"
+    "@mdit-vue/plugin-sfc": "npm:^2.1.3"
+    "@mdit-vue/plugin-title": "npm:^2.1.3"
+    "@mdit-vue/plugin-toc": "npm:^2.1.3"
+    "@mdit-vue/shared": "npm:^2.1.3"
+    "@mdit-vue/types": "npm:^2.1.0"
+    "@types/markdown-it": "npm:^14.1.2"
+    "@types/markdown-it-emoji": "npm:^3.0.1"
+    "@vuepress/shared": "npm:2.0.0-rc.18"
+    "@vuepress/utils": "npm:2.0.0-rc.18"
+    markdown-it: "npm:^14.1.0"
+    markdown-it-anchor: "npm:^9.2.0"
+    markdown-it-emoji: "npm:^3.0.0"
+    mdurl: "npm:^2.0.0"
+  checksum: 10c0/a53e3ee1a548b524117e4925ca3ff90608642810ee36793f88fac718307aaae14e970c588718aa501439380873068e9d950d2a69f71b9a02917fd297671e5c30
   languageName: node
   linkType: hard
 
@@ -3640,6 +3689,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vuepress/shared@npm:2.0.0-rc.18":
+  version: 2.0.0-rc.18
+  resolution: "@vuepress/shared@npm:2.0.0-rc.18"
+  dependencies:
+    "@mdit-vue/types": "npm:^2.1.0"
+  checksum: 10c0/8e0cb4078f5e8dd0c7bc4f3b49f3cfd23c899809598d4d2d2b47eeba3fbb0a45fb8719dd5338184c177328558f0469d384d3c12f13737bfeada67fed4ed1ad56
+  languageName: node
+  linkType: hard
+
 "@vuepress/utils@npm:2.0.0-rc.17":
   version: 2.0.0-rc.17
   resolution: "@vuepress/utils@npm:2.0.0-rc.17"
@@ -3656,6 +3714,25 @@ __metadata:
     picocolors: "npm:^1.1.0"
     upath: "npm:^2.0.1"
   checksum: 10c0/90b4c49af93c3e961a869e7244fe0f6eb373bda3bc6f7f2dbe34cde204dc1820314f19ad1740e9f662dac3095a7ee921b142ac711aa7f6212ab20a74183dc6da
+  languageName: node
+  linkType: hard
+
+"@vuepress/utils@npm:2.0.0-rc.18":
+  version: 2.0.0-rc.18
+  resolution: "@vuepress/utils@npm:2.0.0-rc.18"
+  dependencies:
+    "@types/debug": "npm:^4.1.12"
+    "@types/fs-extra": "npm:^11.0.4"
+    "@types/hash-sum": "npm:^1.0.2"
+    "@vuepress/shared": "npm:2.0.0-rc.18"
+    debug: "npm:^4.3.7"
+    fs-extra: "npm:^11.2.0"
+    globby: "npm:^14.0.2"
+    hash-sum: "npm:^2.0.0"
+    ora: "npm:^8.1.0"
+    picocolors: "npm:^1.1.0"
+    upath: "npm:^2.0.1"
+  checksum: 10c0/7800a39333c3c1be5a3fb7b629e2aec3ca92895360f1e5c92b2ae1182a1f572448199d3f24f4cc026d0cffff8c62a2d2699fcf769a5f9f6ba804789a682b6e89
   languageName: node
   linkType: hard
 
@@ -6818,7 +6895,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pterodactyl-china@workspace:."
   dependencies:
-    "@vuepress/bundler-vite": "npm:2.0.0-rc.17"
+    "@vuepress/bundler-vite": "npm:2.0.0-rc.18"
     "@vuepress/plugin-docsearch": "npm:2.0.0-rc.52"
     "@vuepress/plugin-google-analytics": "npm:2.0.0-rc.52"
     "@vuepress/plugin-prismjs": "npm:^2.0.0-rc.52"
@@ -7074,7 +7151,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^4.20.0, rollup@npm:^4.22.5":
+"rollup@npm:^4.20.0, rollup@npm:^4.24.0":
   version: 4.24.0
   resolution: "rollup@npm:4.24.0"
   dependencies:
@@ -8098,7 +8175,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue@npm:3.5.11, vue@npm:^3.5.10":
+"vue@npm:3.5.11, vue@npm:^3.5.10, vue@npm:^3.5.11":
   version: 3.5.11
   resolution: "vue@npm:3.5.11"
   dependencies:
