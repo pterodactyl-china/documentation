@@ -3057,7 +3057,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/shared@npm:3.5.11, @vue/shared@npm:^3.5.10":
+"@vue/shared@npm:3.5.11, @vue/shared@npm:^3.5.10, @vue/shared@npm:^3.5.11":
   version: 3.5.11
   resolution: "@vue/shared@npm:3.5.11"
   checksum: 10c0/9f39e183ff350729a463f3748465b3f4f86577ff6e60e65f74bd857376e326c0a41541a97fbf28d128381b2083636b56d8aded0b55791fd7b0e741fcb611a5e6
@@ -3158,6 +3158,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vuepress/helper@npm:2.0.0-rc.54":
+  version: 2.0.0-rc.54
+  resolution: "@vuepress/helper@npm:2.0.0-rc.54"
+  dependencies:
+    "@vue/shared": "npm:^3.5.11"
+    "@vueuse/core": "npm:^11.1.0"
+    cheerio: "npm:1.0.0"
+    fflate: "npm:^0.8.2"
+    gray-matter: "npm:^4.0.3"
+    vue: "npm:^3.5.11"
+  peerDependencies:
+    vuepress: 2.0.0-rc.18
+  checksum: 10c0/490d3c88b196433ef00ae1bd8070fb8a27508ce57383fd67acb9f8f0fccb23a09b91b4a024a49af75f870175aec831564e21af3dab40a6614cb6bdc90d760df0
+  languageName: node
+  linkType: hard
+
 "@vuepress/highlighter-helper@npm:2.0.0-rc.52":
   version: 2.0.0-rc.52
   resolution: "@vuepress/highlighter-helper@npm:2.0.0-rc.52"
@@ -3168,6 +3184,19 @@ __metadata:
     "@vueuse/core":
       optional: true
   checksum: 10c0/b95fb4b69660785ca67eb755ea790471f09ccacc506e776e9af1e3fa2a97d1842c3511d8d38f0ced95eca6764a0be3a368b481a73388f554d5e95673605348cf
+  languageName: node
+  linkType: hard
+
+"@vuepress/highlighter-helper@npm:2.0.0-rc.54":
+  version: 2.0.0-rc.54
+  resolution: "@vuepress/highlighter-helper@npm:2.0.0-rc.54"
+  peerDependencies:
+    "@vueuse/core": ^11.1.0
+    vuepress: 2.0.0-rc.18
+  peerDependenciesMeta:
+    "@vueuse/core":
+      optional: true
+  checksum: 10c0/9b83aec6bbc78a5ade41abe65992f7a783786d4d0671b2bc38487d974597ff897ca924c7aac6bffb2262dd6c41074c2c8959893c59b5efbb95273a9d4fe19519
   languageName: node
   linkType: hard
 
@@ -3450,15 +3479,15 @@ __metadata:
   linkType: hard
 
 "@vuepress/plugin-prismjs@npm:^2.0.0-rc.52":
-  version: 2.0.0-rc.52
-  resolution: "@vuepress/plugin-prismjs@npm:2.0.0-rc.52"
+  version: 2.0.0-rc.54
+  resolution: "@vuepress/plugin-prismjs@npm:2.0.0-rc.54"
   dependencies:
-    "@vuepress/helper": "npm:2.0.0-rc.52"
-    "@vuepress/highlighter-helper": "npm:2.0.0-rc.52"
+    "@vuepress/helper": "npm:2.0.0-rc.54"
+    "@vuepress/highlighter-helper": "npm:2.0.0-rc.54"
     prismjs: "npm:^1.29.0"
   peerDependencies:
-    vuepress: 2.0.0-rc.17
-  checksum: 10c0/4e5b1556677f1917ae81c27f1a4c4546aa32095bed5f240ee29561603706fa4f1555cbff770dc01896bb11c7dbaa9afdf925b2583aa4af8da07af3d31e6238cf
+    vuepress: 2.0.0-rc.18
+  checksum: 10c0/09a1b0069fa8d9426266ffdce8b3f64f7c8ca69ef5499773e3d052bc5ad21e36e0082e8bf75de861445ffd731c55c3e25a44fbd8b94845f7470dd05568bda764
   languageName: node
   linkType: hard
 
@@ -8098,7 +8127,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue@npm:3.5.11, vue@npm:^3.5.10":
+"vue@npm:3.5.11, vue@npm:^3.5.10, vue@npm:^3.5.11":
   version: 3.5.11
   resolution: "vue@npm:3.5.11"
   dependencies:
