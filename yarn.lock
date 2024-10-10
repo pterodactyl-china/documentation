@@ -3057,7 +3057,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/shared@npm:3.5.11, @vue/shared@npm:^3.5.10":
+"@vue/shared@npm:3.5.11, @vue/shared@npm:^3.5.10, @vue/shared@npm:^3.5.11":
   version: 3.5.11
   resolution: "@vue/shared@npm:3.5.11"
   checksum: 10c0/9f39e183ff350729a463f3748465b3f4f86577ff6e60e65f74bd857376e326c0a41541a97fbf28d128381b2083636b56d8aded0b55791fd7b0e741fcb611a5e6
@@ -3155,6 +3155,22 @@ __metadata:
   peerDependencies:
     vuepress: 2.0.0-rc.17
   checksum: 10c0/373e08a3201137f3bc90b481a8058c34a5e92704af686637ac35ab1e07beaf0811d0fbf2bc76506b2c7bddaf0a3cc41c8b19ee3fadbaaafeef5e80ddda2cd52b
+  languageName: node
+  linkType: hard
+
+"@vuepress/helper@npm:2.0.0-rc.54":
+  version: 2.0.0-rc.54
+  resolution: "@vuepress/helper@npm:2.0.0-rc.54"
+  dependencies:
+    "@vue/shared": "npm:^3.5.11"
+    "@vueuse/core": "npm:^11.1.0"
+    cheerio: "npm:1.0.0"
+    fflate: "npm:^0.8.2"
+    gray-matter: "npm:^4.0.3"
+    vue: "npm:^3.5.11"
+  peerDependencies:
+    vuepress: 2.0.0-rc.18
+  checksum: 10c0/490d3c88b196433ef00ae1bd8070fb8a27508ce57383fd67acb9f8f0fccb23a09b91b4a024a49af75f870175aec831564e21af3dab40a6614cb6bdc90d760df0
   languageName: node
   linkType: hard
 
@@ -3294,20 +3310,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-docsearch@npm:2.0.0-rc.52":
-  version: 2.0.0-rc.52
-  resolution: "@vuepress/plugin-docsearch@npm:2.0.0-rc.52"
+"@vuepress/plugin-docsearch@npm:2.0.0-rc.54":
+  version: 2.0.0-rc.54
+  resolution: "@vuepress/plugin-docsearch@npm:2.0.0-rc.54"
   dependencies:
     "@docsearch/css": "npm:^3.6.2"
     "@docsearch/js": "npm:^3.6.2"
     "@docsearch/react": "npm:^3.6.2"
-    "@vuepress/helper": "npm:2.0.0-rc.52"
+    "@vuepress/helper": "npm:2.0.0-rc.54"
     "@vueuse/core": "npm:^11.1.0"
     ts-debounce: "npm:^4.0.0"
-    vue: "npm:^3.5.10"
+    vue: "npm:^3.5.11"
   peerDependencies:
-    vuepress: 2.0.0-rc.17
-  checksum: 10c0/ae2caff2e1196bd664cba64db3c364036177a2cde1a972046396f753a64b9d506293da0e9fcf0e328885d2ed77c8888e77f5a159684c6eb5c53de5296f3145d1
+    vuepress: 2.0.0-rc.18
+  checksum: 10c0/8860e0d92196ac25f9dc9a4af19fa44242a190d572f582340a59197d5466158c256e498262bb6fae52f806943780691f6489234d556985e5c7434fd671de4533
   languageName: node
   linkType: hard
 
@@ -6819,7 +6835,7 @@ __metadata:
   resolution: "pterodactyl-china@workspace:."
   dependencies:
     "@vuepress/bundler-vite": "npm:2.0.0-rc.17"
-    "@vuepress/plugin-docsearch": "npm:2.0.0-rc.52"
+    "@vuepress/plugin-docsearch": "npm:2.0.0-rc.54"
     "@vuepress/plugin-google-analytics": "npm:2.0.0-rc.52"
     "@vuepress/plugin-prismjs": "npm:^2.0.0-rc.52"
     "@vuepress/plugin-pwa": "npm:2.0.0-rc.52"
@@ -8098,7 +8114,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue@npm:3.5.11, vue@npm:^3.5.10":
+"vue@npm:3.5.11, vue@npm:^3.5.10, vue@npm:^3.5.11":
   version: 3.5.11
   resolution: "vue@npm:3.5.11"
   dependencies:
