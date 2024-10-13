@@ -13,15 +13,15 @@
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.17",
     "@vuepress/plugin-docsearch": "2.0.0-rc.52",
-    "@vuepress/plugin-google-analytics": "2.0.0-rc.52",
+    "@vuepress/plugin-google-analytics": "2.0.0-rc.54",
     "@vuepress/plugin-prismjs": "^2.0.0-rc.52",
-    "@vuepress/plugin-pwa": "2.0.0-rc.52",
-    "@vuepress/plugin-register-components": "2.0.0-rc.52",
+    "@vuepress/plugin-pwa": "2.0.0-rc.55",
+    "@vuepress/plugin-register-components": "2.0.0-rc.54",
     "@vuepress/plugin-revealjs": "^2.0.0-rc.52",
     "markdown-it": "14.1.0",
     "sass": "1.79.4",
     "vue": "3.5.11",
-    "vuepress": "2.0.0-rc.17",
+    "vuepress": "2.0.0-rc.18",
     "vuepress-theme-hope": "2.0.0-rc.58"
   },
   "packageManager": "yarn@4.5.0"
