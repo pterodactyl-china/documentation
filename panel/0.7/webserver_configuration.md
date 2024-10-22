@@ -31,13 +31,13 @@ Let's Encrypt.
 When using the SSL configuration you MUST create SSL certificates, otherwise your NGINX will fail to start.  See [Creating SSL Certificates](/tutorials/creating_ssl_certificates.html) documentation page for how to create these certificates before continuing.
 :::
 
-<<< @/.snippets/webservers/nginx.conf{5,11,26-27}
+@[code{5,11,26-27}](../../.snippets/webservers/nginx.conf)
 
 Continue reading to the bottom of this section for the final steps with NGINX!
 
 ### NGINX Without SSL
 
-<<< @/.snippets/webservers/nginx-nossl.conf{3}
+@[code{3}](../../.snippets/webservers/nginx-nossl.conf)
 
 ### Enabling Configuration
 The final step is to enable your NGINX configuration and restart it.
@@ -62,11 +62,11 @@ Like the nginx configuration, this assumes you will be using SSL on both the Pan
 When using the SSL configuration you MUST create SSL certificates, otherwise your Apache will fail to start.  See [Creating SSL Certificates](/tutorials/creating_ssl_certificates.html) documentation page for how to create these certificates before continuing.
 :::
 
-<<< @/.snippets/webservers/apache.conf{2,8,17-18}
+@[code{2,8,17-18}](../../.snippets/webservers/apache.conf)
 
 ### Apache Without SSL
 
-<<< @/.snippets/webservers/apache-nossl.conf{2}
+@[code{2}](../../.snippets/webservers/apache-nossl.conf)
 
 ### Enabling Configuration
 Once you've created the file above, simply run the commands below. If you are on CentOS _you do not need to run the commands
