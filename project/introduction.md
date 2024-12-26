@@ -50,7 +50,8 @@ Pterodactyl 是使用 PHP、React 和 Go 构建的开源游戏服务器管理面
 * FiveM
 * Xonotic
 * Discord ATLBot
-* [更多...](https://github.com/parkervcp/eggs)
+* [更多...](https://pterodactyleggs.com)
+
 
 ## 我们的安全职责
 Pterodactyl 是完全开源的，因此给独立用户和服务器管理员完全开放我们的代码库来寻找安全漏洞。如果您发现任何可能导致安全漏洞的问题，请不要犹豫直接联系`support@pterodactyl.io`。我们要求您在反馈安全问题时，详细且负责并且**不要**在我们面向公众的错误跟踪器上报告它们，以防止漏洞滥用！

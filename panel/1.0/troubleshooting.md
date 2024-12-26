@@ -54,6 +54,7 @@ tail -n 1000 /var/www/pterodactyl/storage/logs/laravel-$(date +%F).log | grep "\
 * 确保您已为面板和 Wings 使用的域名禁用了黑名单或加入了白名单。
 * 检查面板是否可以使用面板上配置的域名访问到 Wings。在面板所在的服务器上运行 `curl https://domain.com:8080` 来确保它可以成功连接到 Wings 。
 * 确保您为面板和 Wings 使用正确的 HTTP 模式。如果面板在 HTTPS 上运行，Wings 也需要在 HTTPS 上运行。
+* 如果给 Wings 使用 HTTPS，请确保证书还未过期。
 
 ### 更多的高级调试步骤
 * 停止 Wings 并运行 `wings --debug` 来查看是否输出一些错误信息。如果有是需要人工去解决它们的，或通过 [Discord](https://discord.gg/pterodactyl) 联系翼龙官方以获得更多帮助(需要用英文去交流)。
@@ -109,7 +110,7 @@ resolvectl status
 * 检查队列管理器的日志 ``journalctl -xeu pteroq``
 * 重启 pteroq ``systemctl restart pteroq``
 * 清除调度缓存 ``php /var/www/pterodactyl/artisan schedule:clear-cache``
-* 检查您的 PHP 版本 - 支持最高到 8.1 ``php -v``
+* 检查您的 PHP 版本 - 支持最高到 8.3 ``php -v``
 * 使用 <https://crontab.guru/> 检查您的 crontab 语法 - 确保它能够达到您预期的行为
 * 验证问题是否与调度有关，而不是您设置的任务（将调度中的第一个任务设置为您知道在控制台中打印消息的内容，例如，在 Minecraft 服务器的控制台中运行 ``say test``，如果控制台成功显示文本"test"，则将第一个任务- 设置为 ``say test``，以便您知道它是否运行）
 * 您的任务是否有偏差？确保您使用的是面板的最新版本。在版本 1.11.5 （中国版的 1.11.4.0）中，修复了调度在错误时间运行的问题。或者，您可能设置了错误的时区。确保您的时区都匹配。

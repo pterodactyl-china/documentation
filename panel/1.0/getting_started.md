@@ -31,7 +31,7 @@ Pterodactyl 不支持大多数 OpenVZ 系统，因为它与 Docker 不兼容。�
 
 ## 依赖项
 
-* PHP `8.1` 、 `8.2` 或 `8.3`（推荐），带有以下扩展名：`cli`、`openssl`、`gd`、`mysql`、`PDO`、`mbstring` `tokenizer`、`bcmath `、`xml` 或 `dom`、`curl`、`zip` 和 `fpm` 如果你打算使用 NGINX。
+* PHP `8.2` 或 `8.3`（推荐），带有以下扩展名：`cli`、`openssl`、`gd`、`mysql`、`PDO`、`mbstring` `tokenizer`、`bcmath `、`xml` 或 `dom`、`curl`、`zip` 和 `fpm` 如果你打算使用 NGINX。
 * MySQL `5.7.22` 及更高版本（推荐 MySQL `8`）**或** MariaDB `10.2` 及更高版本。
 * Redis (`redis-server`)
 * 一个 Web 服务器（Apache、NGINX、Caddy 等）
@@ -186,7 +186,7 @@ php artisan p:user:make
 安装过程的最后一步是对 面板程序文件设置正确的权限，以便 WEB 服务器程序（例如Nginx 或者 Apache）可以正确执行文件。
 
 ``` bash
-# 如果使用 NGINX 或 Apache (不在 RHEL / Rocky Linux / AlmaLinux)
+# 如果使用 NGINX, Apache 或 Caddy (不在 RHEL / Rocky Linux / AlmaLinux)
 chown -R www-data:www-data /var/www/pterodactyl/*
 
 # 如果在 RHEL / Rocky Linux / AlmaLinux 上使用 NGINX
