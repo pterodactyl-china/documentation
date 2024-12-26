@@ -69,7 +69,7 @@ ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 @tab:active 国内源
 
 ``` bash
-curl -L "https://ghp.ci/https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+curl -L "https://ghgo.xyz/https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 # 将可执行权限应用于二进制文件并创建软链
 chmod +x /usr/local/bin/docker-compose
 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
@@ -104,7 +104,7 @@ chmod +x docker-compose.yml
 @tab:active 国内源
 
 ``` bash
-curl -Lo docker-compose.yml https://ghp.ci/https://raw.githubusercontent.com/pterodactyl-china/panel/1.0-develop/docker-compose.example.yml
+curl -Lo docker-compose.yml https://ghgo.xyz/https://raw.githubusercontent.com/pterodactyl-china/panel/1.0-develop/docker-compose.example.yml
 # 将可执行权限应用于yml文件
 chmod +x docker-compose.yml
 ```
