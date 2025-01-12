@@ -51,7 +51,7 @@ tar -xzvf panel.tar.gz && rm -f panel.tar.gz
 ``` bash
 # 删除 app 目录是为了确保我们升级后不会导致文件显得杂乱无章。
 # 这不会影响您的任何设置或服务器。
-curl -Lo panel.tar.gz https://ghgo.xyz/https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
+curl -Lo panel.tar.gz https://ghfast.top/https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
 
 rm -rf $(find app public resources -depth | head -n -1 | grep -Fv "$(tar -tf panel.tar.gz)")
 # 下载更新文件并删除存档文件。

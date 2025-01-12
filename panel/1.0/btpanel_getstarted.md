@@ -74,7 +74,7 @@ https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
 @tab:active 国内源
 
 ```bash
-https://ghgo.xyz/https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
+https://ghfast.top/https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
 ```
 
 :::
