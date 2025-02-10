@@ -3240,10 +3240,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/reveal.js@npm:^5.0.4":
-  version: 5.0.4
-  resolution: "@types/reveal.js@npm:5.0.4"
-  checksum: 10c0/39b30a962ad8c25d49d1194640074a0ab029538963ab2cb6d021370ad7c9b52b6fa4b8eac959e6e05080611786897abf25e725e7a978e1376d10767a73d342ea
+"@types/reveal.js@npm:^5.0.5":
+  version: 5.0.5
+  resolution: "@types/reveal.js@npm:5.0.5"
+  checksum: 10c0/f54751b28ee286d1b4996872d1081dfdc9e009ee84edfb4a4d32945e1a10fa7f0fe3c5f538f4f943e52ae6d60c310bff38e52cae894c4619626b3c2c854fbb57
   languageName: node
   linkType: hard
 
@@ -3532,6 +3532,22 @@ __metadata:
   peerDependencies:
     vuepress: 2.0.0-rc.19
   checksum: 10c0/5eb46e6d525a0fbc10e9e214bf5aa48b339fd928fddd5ec761d1aade5e1fc8f9e29afb35016273562ff2deb982577f34c9889d5bdfd4b131ce0a02689f9ca52d
+  languageName: node
+  linkType: hard
+
+"@vuepress/helper@npm:2.0.0-rc.74":
+  version: 2.0.0-rc.74
+  resolution: "@vuepress/helper@npm:2.0.0-rc.74"
+  dependencies:
+    "@vue/shared": "npm:^3.5.13"
+    "@vueuse/core": "npm:^12.5.0"
+    cheerio: "npm:1.0.0"
+    fflate: "npm:^0.8.2"
+    gray-matter: "npm:^4.0.3"
+    vue: "npm:^3.5.13"
+  peerDependencies:
+    vuepress: 2.0.0-rc.19
+  checksum: 10c0/8e0087017d0250e12d4c0a6f18007c11d0a5331afc92bca6573e7930d28bc5b60a634bda02429eb8ca8d13f119c7b764cb2a5e4f9760d05734ed37cbe8f841d6
   languageName: node
   linkType: hard
 
@@ -3958,19 +3974,19 @@ __metadata:
   linkType: hard
 
 "@vuepress/plugin-revealjs@npm:^2.0.0-rc.71":
-  version: 2.0.0-rc.71
-  resolution: "@vuepress/plugin-revealjs@npm:2.0.0-rc.71"
+  version: 2.0.0-rc.76
+  resolution: "@vuepress/plugin-revealjs@npm:2.0.0-rc.76"
   dependencies:
     "@mdit/plugin-uml": "npm:^0.16.0"
     "@types/markdown-it": "npm:^14.1.2"
-    "@types/reveal.js": "npm:^5.0.4"
-    "@vuepress/helper": "npm:2.0.0-rc.71"
-    "@vueuse/core": "npm:^12.4.0"
+    "@types/reveal.js": "npm:^5.0.5"
+    "@vuepress/helper": "npm:2.0.0-rc.74"
+    "@vueuse/core": "npm:^12.5.0"
     reveal.js: "npm:^5.1.0"
     vue: "npm:^3.5.13"
   peerDependencies:
     vuepress: 2.0.0-rc.19
-  checksum: 10c0/01d330df5b9afe5256038ff3e2cdd192cd8cd776b3d6e7e86b7681621e31cbea4f0e6e19a80db8204ce79579286be317135ffc105126b43251859818cc706718
+  checksum: 10c0/d3ce6663402111b292668b9d796615e2149a422d029359665a112a7d91dc967cb6b9c6cd47e507a65b11331c37590b40de45cc0794c691abd73ba19c0df57e48
   languageName: node
   linkType: hard
 
@@ -4099,10 +4115,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vueuse/core@npm:^12.5.0":
+  version: 12.5.0
+  resolution: "@vueuse/core@npm:12.5.0"
+  dependencies:
+    "@types/web-bluetooth": "npm:^0.0.20"
+    "@vueuse/metadata": "npm:12.5.0"
+    "@vueuse/shared": "npm:12.5.0"
+    vue: "npm:^3.5.13"
+  checksum: 10c0/4608b24b752856ef6c1873868fb15d23bf63b0325eeab01fa74037b648fb946b8a517930cab042a1ddda7fa681eecb28a549b85606d2aa5497f3e5df7d0d6263
+  languageName: node
+  linkType: hard
+
 "@vueuse/metadata@npm:12.4.0":
   version: 12.4.0
   resolution: "@vueuse/metadata@npm:12.4.0"
   checksum: 10c0/3254243391c9cf467ab65f75bb74d84e592c517a85e3215bf810aeb3fa242bf7b3866db9a92d80218354243109c40c6e7155dc510cc8b4282d1df37816f1a8e3
+  languageName: node
+  linkType: hard
+
+"@vueuse/metadata@npm:12.5.0":
+  version: 12.5.0
+  resolution: "@vueuse/metadata@npm:12.5.0"
+  checksum: 10c0/86062751930d110e50d0dd72653518f6ec07f828c4f94d78b0ab3c5a66abc3baaa8451551bd16a0d7beb9988ce5704a301421c545a590ab38865419fb9a2031b
   languageName: node
   linkType: hard
 
@@ -4112,6 +4147,15 @@ __metadata:
   dependencies:
     vue: "npm:^3.5.13"
   checksum: 10c0/0e34bd94c9aee2240b45f33d952878dedb30f82348d05987e9dd99929a8d8984a753c5f9f2ed2e757bd29189b04119340c7c8ebfa812ceb86347809683ba6071
+  languageName: node
+  linkType: hard
+
+"@vueuse/shared@npm:12.5.0":
+  version: 12.5.0
+  resolution: "@vueuse/shared@npm:12.5.0"
+  dependencies:
+    vue: "npm:^3.5.13"
+  checksum: 10c0/c64e148b05c404c5e930d7e768a1bc23741e9f6219b2d4e898e76e4cddb6e68f5595723286e0a7aa6696055fe5ee9066558e7db80f5fa10c59714cbc76f99439
   languageName: node
   linkType: hard
 
