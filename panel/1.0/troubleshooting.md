@@ -110,7 +110,7 @@ resolvectl status
 * 检查队列管理器的日志 ``journalctl -xeu pteroq``
 * 重启 pteroq ``systemctl restart pteroq``
 * 清除调度缓存 ``php /var/www/pterodactyl/artisan schedule:clear-cache``
-* 检查您的 PHP 版本 - 支持最高到 8.3 ``php -v``
+* 检查您的 PHP 版本 ``php -v`` - [此页面](https://pterodactyl.io/panel/1.0/updating.html#panel-version-requirements) 将告诉您哪些版本的PHP与面板的哪些版本兼容。
 * 使用 <https://crontab.guru/> 检查您的 crontab 语法 - 确保它能够达到您预期的行为
 * 验证问题是否与调度有关，而不是您设置的任务（将调度中的第一个任务设置为您知道在控制台中打印消息的内容，例如，在 Minecraft 服务器的控制台中运行 ``say test``，如果控制台成功显示文本"test"，则将第一个任务- 设置为 ``say test``，以便您知道它是否运行）
 * 您的任务是否有偏差？确保您使用的是面板的最新版本。在版本 1.11.5 （中国版的 1.11.4.0）中，修复了调度在错误时间运行的问题。或者，您可能设置了错误的时区。确保您的时区都匹配。
