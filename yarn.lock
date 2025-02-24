@@ -1626,14 +1626,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docsearch/css@npm:3.9.0, @docsearch/css@npm:^3.8.3":
+"@docsearch/css@npm:3.9.0, @docsearch/css@npm:^3.9.0":
   version: 3.9.0
   resolution: "@docsearch/css@npm:3.9.0"
   checksum: 10c0/6300551e1cab7a5487063ec3581ae78ddaee3d93ec799556b451054448559b3ba849751b825fbd8b678367ef944bd82b3f11bc1d9e74e08e3cc48db40487b396
   languageName: node
   linkType: hard
 
-"@docsearch/js@npm:^3.8.3":
+"@docsearch/js@npm:^3.9.0":
   version: 3.9.0
   resolution: "@docsearch/js@npm:3.9.0"
   dependencies:
@@ -1643,7 +1643,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docsearch/react@npm:3.9.0, @docsearch/react@npm:^3.8.3":
+"@docsearch/react@npm:3.9.0, @docsearch/react@npm:^3.9.0":
   version: 3.9.0
   resolution: "@docsearch/react@npm:3.9.0"
   dependencies:
@@ -3592,6 +3592,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vuepress/helper@npm:2.0.0-rc.80":
+  version: 2.0.0-rc.80
+  resolution: "@vuepress/helper@npm:2.0.0-rc.80"
+  dependencies:
+    "@vue/shared": "npm:^3.5.13"
+    "@vueuse/core": "npm:^12.7.0"
+    cheerio: "npm:1.0.0"
+    fflate: "npm:^0.8.2"
+    gray-matter: "npm:^4.0.3"
+    vue: "npm:^3.5.13"
+  peerDependencies:
+    vuepress: 2.0.0-rc.20
+  checksum: 10c0/3c4b847577acf6a72771482c021aa210614a951fcc047ebf19115b9847acc2255632cf772bc33fd9cfa61fda7afac55d552cb1b8dbf7c4b4d797c271f2dda7e8
+  languageName: node
+  linkType: hard
+
 "@vuepress/highlighter-helper@npm:2.0.0-rc.71":
   version: 2.0.0-rc.71
   resolution: "@vuepress/highlighter-helper@npm:2.0.0-rc.71"
@@ -3729,20 +3745,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-docsearch@npm:2.0.0-rc.78":
-  version: 2.0.0-rc.78
-  resolution: "@vuepress/plugin-docsearch@npm:2.0.0-rc.78"
+"@vuepress/plugin-docsearch@npm:2.0.0-rc.80":
+  version: 2.0.0-rc.80
+  resolution: "@vuepress/plugin-docsearch@npm:2.0.0-rc.80"
   dependencies:
-    "@docsearch/css": "npm:^3.8.3"
-    "@docsearch/js": "npm:^3.8.3"
-    "@docsearch/react": "npm:^3.8.3"
-    "@vuepress/helper": "npm:2.0.0-rc.78"
+    "@docsearch/css": "npm:^3.9.0"
+    "@docsearch/js": "npm:^3.9.0"
+    "@docsearch/react": "npm:^3.9.0"
+    "@vuepress/helper": "npm:2.0.0-rc.80"
     "@vueuse/core": "npm:^12.7.0"
     ts-debounce: "npm:^4.0.0"
     vue: "npm:^3.5.13"
   peerDependencies:
-    vuepress: 2.0.0-rc.19
-  checksum: 10c0/7d50cac7206d28a354743db144e45d4938d44624cd9f4df21adb4611efff79df9d11658877c3e14d875f990d1bc145ef00ddf73ab1b213e6b80744b34733ec58
+    vuepress: 2.0.0-rc.20
+  checksum: 10c0/dc1fe5b20aff9bbaed96d8a211b9f56952031147a55c72b2f41605dcefda59abb1c0c3b7ac3ef7e2d4a3620482ee9034256b549c67b43560176fb3b2dc23646f
   languageName: node
   linkType: hard
 
@@ -7467,7 +7483,7 @@ __metadata:
   resolution: "pterodactyl-china@workspace:."
   dependencies:
     "@vuepress/bundler-vite": "npm:2.0.0-rc.19"
-    "@vuepress/plugin-docsearch": "npm:2.0.0-rc.78"
+    "@vuepress/plugin-docsearch": "npm:2.0.0-rc.80"
     "@vuepress/plugin-google-analytics": "npm:^2.0.0-rc.66"
     "@vuepress/plugin-prismjs": "npm:^2.0.0-rc.78"
     "@vuepress/plugin-pwa": "npm:2.0.0-rc.78"
