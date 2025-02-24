@@ -3592,6 +3592,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vuepress/helper@npm:2.0.0-rc.80":
+  version: 2.0.0-rc.80
+  resolution: "@vuepress/helper@npm:2.0.0-rc.80"
+  dependencies:
+    "@vue/shared": "npm:^3.5.13"
+    "@vueuse/core": "npm:^12.7.0"
+    cheerio: "npm:1.0.0"
+    fflate: "npm:^0.8.2"
+    gray-matter: "npm:^4.0.3"
+    vue: "npm:^3.5.13"
+  peerDependencies:
+    vuepress: 2.0.0-rc.20
+  checksum: 10c0/3c4b847577acf6a72771482c021aa210614a951fcc047ebf19115b9847acc2255632cf772bc33fd9cfa61fda7afac55d552cb1b8dbf7c4b4d797c271f2dda7e8
+  languageName: node
+  linkType: hard
+
 "@vuepress/highlighter-helper@npm:2.0.0-rc.71":
   version: 2.0.0-rc.71
   resolution: "@vuepress/highlighter-helper@npm:2.0.0-rc.71"
@@ -3602,6 +3618,19 @@ __metadata:
     "@vueuse/core":
       optional: true
   checksum: 10c0/6caba085d144bf1e5943c599d51011c66ac77f75ca333b52cd59a7fb831be9e00a1abdc56ef10b32d928d21f93f4777633d2ec806ef36b1904abe6c765afc9c2
+  languageName: node
+  linkType: hard
+
+"@vuepress/highlighter-helper@npm:2.0.0-rc.79":
+  version: 2.0.0-rc.79
+  resolution: "@vuepress/highlighter-helper@npm:2.0.0-rc.79"
+  peerDependencies:
+    "@vueuse/core": ^12.7.0
+    vuepress: 2.0.0-rc.20
+  peerDependenciesMeta:
+    "@vueuse/core":
+      optional: true
+  checksum: 10c0/6659cd308245e0777e746eae082e3159e415b259761cd108f7a4a3cfd79540fd0fb7f3a236fa8b498a40d50140bb5a64fab83a08e6ee34e59be1810f22f55a26
   languageName: node
   linkType: hard
 
@@ -3947,15 +3976,15 @@ __metadata:
   linkType: hard
 
 "@vuepress/plugin-prismjs@npm:^2.0.0-rc.78":
-  version: 2.0.0-rc.78
-  resolution: "@vuepress/plugin-prismjs@npm:2.0.0-rc.78"
+  version: 2.0.0-rc.80
+  resolution: "@vuepress/plugin-prismjs@npm:2.0.0-rc.80"
   dependencies:
-    "@vuepress/helper": "npm:2.0.0-rc.78"
-    "@vuepress/highlighter-helper": "npm:2.0.0-rc.71"
+    "@vuepress/helper": "npm:2.0.0-rc.80"
+    "@vuepress/highlighter-helper": "npm:2.0.0-rc.79"
     prismjs: "npm:^1.29.0"
   peerDependencies:
-    vuepress: 2.0.0-rc.19
-  checksum: 10c0/03388c1edc86392918738a85b632f6578225ecdd66627e634e3eff054181b4c2be479823e9a03d29a35f256e0ed068c73d0714ba7420f42ff803756f071c6f12
+    vuepress: 2.0.0-rc.20
+  checksum: 10c0/af6e90fe3422041b0601ba174f827df716e00effaf96b5b342d47a2579c7854ed725a9653e8ba6c89c2b35761394e0f2ee81771ef3c97dc11554aa7eb16bf5e2
   languageName: node
   linkType: hard
 
