@@ -22,7 +22,7 @@
     "sass": "1.83.4",
     "vue": "3.5.13",
     "vuepress": "2.0.0-rc.19",
-    "vuepress-theme-hope": "2.0.0-rc.71"
+    "vuepress-theme-hope": "2.0.0-rc.73"
   },
   "packageManager": "yarn@4.6.0"
 }
