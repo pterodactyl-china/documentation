@@ -12,7 +12,9 @@ export default hopeTheme({
 
   license: "MIT",
 
-  iconAssets: "fontawesome-with-brands",
+  icon: { 
+    assets: "fontawesome-with-brands",
+  },
 
   logo: "/logos/pterry.svg",
   navTitle: "Pterodactyl-China",
@@ -51,6 +53,75 @@ export default hopeTheme({
   // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大负面影响
   // hotReload: true,
 
+  markdown: {
+
+    revealjs: true,
+    // revealJs: {
+    //   plugins: ["highlight", "math", "search", "notes", "zoom"],
+    // },
+
+    tabs: true,
+    codeTabs: true,
+
+    // 此处开启了很多功能用于演示，你应仅保留用到的功能。
+    align: true,
+    attrs: true,
+    component: true,
+    include: true,
+    mark: true,
+    demo: true,
+    stylize: [
+      {
+        matcher: "Recommended",
+        replacer: ({ tag }) => {
+          if (tag === "em")
+            return {
+              tag: "Badge",
+              attrs: { type: "tip" },
+              content: "Recommended",
+            };
+        },
+      },
+    ],
+    sub: true,
+    sup: true,
+    tasklist: true,
+    vPre: true,
+
+    // 在启用之前安装 chart.js
+    // chart: true,
+
+    // insert component easily
+
+    // 在启用之前安装 echarts
+    // echarts: true,
+
+    // 在启用之前安装 flowchart.ts
+    // flowchart: true,
+
+    // gfm requires mathjax-full to provide tex support
+    // gfm: true,
+
+    // 在启用之前安装 katex
+    // katex: true,
+
+    // 在启用之前安装 mathjax-full
+    // mathjax: true,
+
+    // 在启用之前安装 mermaid
+    // mermaid: true,
+
+    // playground: {
+    //   presets: ["ts", "vue"],
+    // },
+
+    // 在启用之前安装 @vue/repl
+    // vuePlayground: true,
+
+    // install sandpack-vue3 before enabling it
+    // sandpack: true,
+  },
+
   // 在这里配置主题提供的插件
   plugins: {
     docsearch: {
@@ -67,75 +138,8 @@ export default hopeTheme({
     //   categoryId: "DIC_kwDOG_Pt2M4COD69",
     // },
 
-    revealjs: true,
-    // revealJs: {
-    //   plugins: ["highlight", "math", "search", "notes", "zoom"],
-    // },
-
-    markdownTab: true,
-
     components: {
       components: ["PDF", "BiliBili", "Badge", "VPCard", "SiteInfo"],
-    },
-
-    // 此处开启了很多功能用于演示，你应仅保留用到的功能。
-    mdEnhance: {
-      align: true,
-      attrs: true,
-      component: true,
-      include: true,
-      mark: true,
-      demo: true,
-      stylize: [
-        {
-          matcher: "Recommended",
-          replacer: ({ tag }) => {
-            if (tag === "em")
-              return {
-                tag: "Badge",
-                attrs: { type: "tip" },
-                content: "Recommended",
-              };
-          },
-        },
-      ],
-      sub: true,
-      sup: true,
-      tasklist: true,
-      vPre: true,
-      
-      // 在启用之前安装 chart.js
-      // chart: true,
-
-      // insert component easily
-
-      // 在启用之前安装 echarts
-      // echarts: true,
-
-      // 在启用之前安装 flowchart.ts
-      // flowchart: true,
-
-      // gfm requires mathjax-full to provide tex support
-      // gfm: true,
-
-      // 在启用之前安装 katex
-      // katex: true,
-
-      // 在启用之前安装 mathjax-full
-      // mathjax: true,
-
-      // 在启用之前安装 mermaid
-      // mermaid: true,
-
-      // playground: {
-      //   presets: ["ts", "vue"],
-      // },
-
-      // 在启用之前安装 @vue/repl
-      // vuePlayground: true,
-
-      // install sandpack-vue3 before enabling it
-      // sandpack: true,
     },
 
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
