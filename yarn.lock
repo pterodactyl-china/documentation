@@ -3562,7 +3562,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-google-analytics@npm:^2.0.0-rc.80":
+"@vuepress/plugin-google-analytics@npm:2.0.0-rc.80":
   version: 2.0.0-rc.80
   resolution: "@vuepress/plugin-google-analytics@npm:2.0.0-rc.80"
   peerDependencies:
@@ -3751,7 +3751,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-prismjs@npm:^2.0.0-rc.80":
+"@vuepress/plugin-prismjs@npm:2.0.0-rc.80":
   version: 2.0.0-rc.80
   resolution: "@vuepress/plugin-prismjs@npm:2.0.0-rc.80"
   dependencies:
@@ -3819,7 +3819,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-revealjs@npm:^2.0.0-rc.80":
+"@vuepress/plugin-revealjs@npm:2.0.0-rc.80":
   version: 2.0.0-rc.80
   resolution: "@vuepress/plugin-revealjs@npm:2.0.0-rc.80"
   dependencies:
@@ -7220,11 +7220,11 @@ __metadata:
   dependencies:
     "@vuepress/bundler-vite": "npm:2.0.0-rc.20"
     "@vuepress/plugin-docsearch": "npm:2.0.0-rc.80"
-    "@vuepress/plugin-google-analytics": "npm:^2.0.0-rc.80"
-    "@vuepress/plugin-prismjs": "npm:^2.0.0-rc.80"
+    "@vuepress/plugin-google-analytics": "npm:2.0.0-rc.80"
+    "@vuepress/plugin-prismjs": "npm:2.0.0-rc.80"
     "@vuepress/plugin-pwa": "npm:2.0.0-rc.80"
     "@vuepress/plugin-register-components": "npm:2.0.0-rc.79"
-    "@vuepress/plugin-revealjs": "npm:^2.0.0-rc.80"
+    "@vuepress/plugin-revealjs": "npm:2.0.0-rc.80"
     markdown-it: "npm:14.1.0"
     sass: "npm:1.85.1"
     vue: "npm:3.5.13"

@@ -54,7 +54,6 @@ export default hopeTheme({
   // hotReload: true,
 
   markdown: {
-
     revealjs: true,
     // revealJs: {
     //   plugins: ["highlight", "math", "search", "notes", "zoom"],
@@ -124,6 +123,7 @@ export default hopeTheme({
 
   // 在这里配置主题提供的插件
   plugins: {
+
     docsearch: {
       appId: "REVULCP1HB",
       apiKey: "379480043ba29072ada041c0fa8ef70a",
