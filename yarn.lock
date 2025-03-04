@@ -3397,6 +3397,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vuepress/helper@npm:2.0.0-rc.81":
+  version: 2.0.0-rc.81
+  resolution: "@vuepress/helper@npm:2.0.0-rc.81"
+  dependencies:
+    "@vue/shared": "npm:^3.5.13"
+    "@vueuse/core": "npm:^12.7.0"
+    cheerio: "npm:1.0.0"
+    fflate: "npm:^0.8.2"
+    gray-matter: "npm:^4.0.3"
+    vue: "npm:^3.5.13"
+  peerDependencies:
+    vuepress: 2.0.0-rc.20
+  checksum: 10c0/987e7092807dfa95d872520977bc8220dce4802ec4edef6221cc46d7c858f387c3ba8167358a53875fec8ee74682017d87ac2e58455643c61f6e2fc8629a880f
+  languageName: node
+  linkType: hard
+
 "@vuepress/highlighter-helper@npm:2.0.0-rc.79":
   version: 2.0.0-rc.79
   resolution: "@vuepress/highlighter-helper@npm:2.0.0-rc.79"
@@ -3819,20 +3835,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-revealjs@npm:2.0.0-rc.80":
-  version: 2.0.0-rc.80
-  resolution: "@vuepress/plugin-revealjs@npm:2.0.0-rc.80"
+"@vuepress/plugin-revealjs@npm:2.0.0-rc.81":
+  version: 2.0.0-rc.81
+  resolution: "@vuepress/plugin-revealjs@npm:2.0.0-rc.81"
   dependencies:
     "@mdit/plugin-uml": "npm:^0.16.0"
     "@types/markdown-it": "npm:^14.1.2"
     "@types/reveal.js": "npm:^5.0.5"
-    "@vuepress/helper": "npm:2.0.0-rc.80"
+    "@vuepress/helper": "npm:2.0.0-rc.81"
     "@vueuse/core": "npm:^12.7.0"
     reveal.js: "npm:^5.1.0"
     vue: "npm:^3.5.13"
   peerDependencies:
     vuepress: 2.0.0-rc.20
-  checksum: 10c0/2118130aca0a717c6aaaac5e0938dc6a2a92fac365b45db7708b5ad8b6da1520ef591acbba6d81a05d5456b100b3a61d5f8f60fd8a6cc7073d3400365f739bb4
+  checksum: 10c0/17d1108a3ee865b91e7f60fc24015903d233802cda6c47b110c3665df77484af4dc39dd13305ca031d3f391ab39e5edf188b09d3b75c2c25a01157ec5616e0c0
   languageName: node
   linkType: hard
 
@@ -7224,7 +7240,7 @@ __metadata:
     "@vuepress/plugin-prismjs": "npm:2.0.0-rc.80"
     "@vuepress/plugin-pwa": "npm:2.0.0-rc.80"
     "@vuepress/plugin-register-components": "npm:2.0.0-rc.79"
-    "@vuepress/plugin-revealjs": "npm:2.0.0-rc.80"
+    "@vuepress/plugin-revealjs": "npm:2.0.0-rc.81"
     markdown-it: "npm:14.1.0"
     sass: "npm:1.85.1"
     vue: "npm:3.5.13"
