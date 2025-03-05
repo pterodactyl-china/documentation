@@ -35,7 +35,7 @@ export default hopeTheme({
 
   // 页脚
   // footer: "Copyright © 2015 - 2018 Dane Everitt & Contributors | which Sinicizated by Pterodactyl-China",
-  copyright: "MIT Licensed | Copyright © 2022 - 2024 Pterodactyl-China",
+  copyright: "MIT Licensed | Copyright © 2022 - 2025 Pterodactyl-China",
   displayFooter: true,
 
   // 加密配置
