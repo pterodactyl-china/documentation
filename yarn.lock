@@ -3129,6 +3129,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/web-bluetooth@npm:^0.0.21":
+  version: 0.0.21
+  resolution: "@types/web-bluetooth@npm:0.0.21"
+  checksum: 10c0/5f47c5ec452ca31e6a9b44c8aaa54b66c4f57d4aca00166c45902a3883139580e14b254b774172ff982ba4458cc444b5aa59bb4573c2fd34562cfa599721f8e4
+  languageName: node
+  linkType: hard
+
 "@ungap/structured-clone@npm:^1.0.0":
   version: 1.2.0
   resolution: "@ungap/structured-clone@npm:1.2.0"
@@ -3397,6 +3404,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vuepress/helper@npm:2.0.0-rc.85":
+  version: 2.0.0-rc.85
+  resolution: "@vuepress/helper@npm:2.0.0-rc.85"
+  dependencies:
+    "@vue/shared": "npm:^3.5.13"
+    "@vueuse/core": "npm:^13.0.0"
+    cheerio: "npm:1.0.0"
+    fflate: "npm:^0.8.2"
+    gray-matter: "npm:^4.0.3"
+    vue: "npm:^3.5.13"
+  peerDependencies:
+    vuepress: 2.0.0-rc.20
+  checksum: 10c0/537f2d0474d593a604abb0733830ea284e1f0c3400d03479c0c05963591b16e0c660dfb453d65a59a8ee65c069ba0d76608428127f8c2a8a559d4691018aa857
+  languageName: node
+  linkType: hard
+
 "@vuepress/highlighter-helper@npm:2.0.0-rc.79":
   version: 2.0.0-rc.79
   resolution: "@vuepress/highlighter-helper@npm:2.0.0-rc.79"
@@ -3407,6 +3430,19 @@ __metadata:
     "@vueuse/core":
       optional: true
   checksum: 10c0/6659cd308245e0777e746eae082e3159e415b259761cd108f7a4a3cfd79540fd0fb7f3a236fa8b498a40d50140bb5a64fab83a08e6ee34e59be1810f22f55a26
+  languageName: node
+  linkType: hard
+
+"@vuepress/highlighter-helper@npm:2.0.0-rc.85":
+  version: 2.0.0-rc.85
+  resolution: "@vuepress/highlighter-helper@npm:2.0.0-rc.85"
+  peerDependencies:
+    "@vueuse/core": ^13.0.0
+    vuepress: 2.0.0-rc.20
+  peerDependenciesMeta:
+    "@vueuse/core":
+      optional: true
+  checksum: 10c0/e51c339362dd52fc3e595d405ba61236d707acbd1519888c2b6be718c1a10d78fa8b9e0ba754475caf6fa7b5968d0992f77d558a6be2a2366d174cc0828cd061
   languageName: node
   linkType: hard
 
@@ -3751,16 +3787,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-prismjs@npm:2.0.0-rc.80":
-  version: 2.0.0-rc.80
-  resolution: "@vuepress/plugin-prismjs@npm:2.0.0-rc.80"
+"@vuepress/plugin-prismjs@npm:2.0.0-rc.85":
+  version: 2.0.0-rc.85
+  resolution: "@vuepress/plugin-prismjs@npm:2.0.0-rc.85"
   dependencies:
-    "@vuepress/helper": "npm:2.0.0-rc.80"
-    "@vuepress/highlighter-helper": "npm:2.0.0-rc.79"
-    prismjs: "npm:^1.29.0"
+    "@vuepress/helper": "npm:2.0.0-rc.85"
+    "@vuepress/highlighter-helper": "npm:2.0.0-rc.85"
+    prismjs: "npm:^1.30.0"
   peerDependencies:
     vuepress: 2.0.0-rc.20
-  checksum: 10c0/af6e90fe3422041b0601ba174f827df716e00effaf96b5b342d47a2579c7854ed725a9653e8ba6c89c2b35761394e0f2ee81771ef3c97dc11554aa7eb16bf5e2
+  checksum: 10c0/cbcf8d4cce0ff026cb38ef5af88903b9e5bc3a81cbb26923e3195e4091dc18f65fd91e3ef0592f2c191a7d8a2e7f5ba51e9fe814bdee784cf12aff13b0eb5412
   languageName: node
   linkType: hard
 
@@ -3988,10 +4024,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vueuse/core@npm:^13.0.0":
+  version: 13.0.0
+  resolution: "@vueuse/core@npm:13.0.0"
+  dependencies:
+    "@types/web-bluetooth": "npm:^0.0.21"
+    "@vueuse/metadata": "npm:13.0.0"
+    "@vueuse/shared": "npm:13.0.0"
+  peerDependencies:
+    vue: ^3.5.0
+  checksum: 10c0/1ec663fb17870b43d176180f114b46a235564276ca38e87b487685c6e44f6d1a5cec5569ca73f0641b8e5aa2acb874e36f5ad0e8c241a1505e9b5d79d83629ec
+  languageName: node
+  linkType: hard
+
 "@vueuse/metadata@npm:12.7.0":
   version: 12.7.0
   resolution: "@vueuse/metadata@npm:12.7.0"
   checksum: 10c0/e85fd0cf4fc432ba8eb21381d31f08dccb5bb42ed8bc3d21aa755f5e4ec4400c8d3168048b9cfc229544ee417bbd66123d053f248cc64ac0b7889de54e1ac571
+  languageName: node
+  linkType: hard
+
+"@vueuse/metadata@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@vueuse/metadata@npm:13.0.0"
+  checksum: 10c0/335d09b15088b47c52487a74316f4298dc5323c261d9d17aba30cf5e21a3cb8b623134cf10fa538cf29952bb77dcdc4a25b6ed92db1633218125eb6c7b64a053
   languageName: node
   linkType: hard
 
@@ -4001,6 +4057,15 @@ __metadata:
   dependencies:
     vue: "npm:^3.5.13"
   checksum: 10c0/b9508af450146feb5f1e9c53f0854e9a7b4e819ebd56a8cdeaf717287c4ade72bbfa4d4c90d656c27141288986dd712156b4d0463582616be8bd42f9368e7243
+  languageName: node
+  linkType: hard
+
+"@vueuse/shared@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@vueuse/shared@npm:13.0.0"
+  peerDependencies:
+    vue: ^3.5.0
+  checksum: 10c0/d7730ed05f90a421763f9b5e6e5ac64f0e085fade6090724f09990018106bca8dd63ed6070f2f471a472b84eaf98e0fc8307c282ec0ecb798eaf4035cb195cee
   languageName: node
   linkType: hard
 
@@ -7183,10 +7248,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prismjs@npm:^1.29.0":
-  version: 1.29.0
-  resolution: "prismjs@npm:1.29.0"
-  checksum: 10c0/d906c4c4d01b446db549b4f57f72d5d7e6ccaca04ecc670fb85cea4d4b1acc1283e945a9cbc3d81819084a699b382f970e02f9d1378e14af9808d366d9ed7ec6
+"prismjs@npm:^1.30.0":
+  version: 1.30.0
+  resolution: "prismjs@npm:1.30.0"
+  checksum: 10c0/f56205bfd58ef71ccfcbcb691fd0eb84adc96c6ff21b0b69fc6fdcf02be42d6ef972ba4aed60466310de3d67733f6a746f89f2fb79c00bf217406d465b3e8f23
   languageName: node
   linkType: hard
 
@@ -7221,7 +7286,7 @@ __metadata:
     "@vuepress/bundler-vite": "npm:2.0.0-rc.20"
     "@vuepress/plugin-docsearch": "npm:2.0.0-rc.80"
     "@vuepress/plugin-google-analytics": "npm:2.0.0-rc.80"
-    "@vuepress/plugin-prismjs": "npm:2.0.0-rc.80"
+    "@vuepress/plugin-prismjs": "npm:2.0.0-rc.85"
     "@vuepress/plugin-pwa": "npm:2.0.0-rc.80"
     "@vuepress/plugin-register-components": "npm:2.0.0-rc.79"
     "@vuepress/plugin-revealjs": "npm:2.0.0-rc.80"
