@@ -80,7 +80,7 @@ highlights:
   #       link: https://bbs.pterodactyl.top
 
   - header: 赞助商
-    description: 感谢你们为我们填一份力。
+    description: 感谢你们为我们添一份力、鼓励我们，我们会继续努力！如果有需要赞助可以通过 <a href="https://afdian.tv/a/vlssu" target="_blank">爱发电</a> 或 <a href="https://pd.qq.com/s/gpat0uaox" target="_blank">加入腾讯频道</a>。
     bgImage: https://theme-hope-assets.vuejs.press/bg/9-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/9-dark.svg
     features:
