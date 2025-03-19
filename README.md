@@ -21,15 +21,15 @@ heroImageStyle:
 actions:
   - text: 项目简介
     link: /project/introduction
-    icon: circle-info
+    # icon: circle-info
     type: primary
   - text: 开始入门
     link: /panel/1.0/getting_started
-    icon: signs-post
+    # icon: signs-post
     type: primary
   - text: 一键部署
     link: /panel/1.0/docker_getstarted
-    icon: lightbulb
+    # icon: lightbulb
     type: primary
 
 highlights: 
@@ -78,6 +78,24 @@ highlights:
   #       link: https://kook.top/0Grsf5
   #     - title: 翼龙中国社区
   #       link: https://bbs.pterodactyl.top
+
+  - header: 赞助商
+    description: 感谢你们为我们填一份力。
+    bgImage: https://theme-hope-assets.vuejs.press/bg/9-light.svg
+    bgImageDark: https://theme-hope-assets.vuejs.press/bg/9-dark.svg
+    features:
+      - title: VLssu公益服
+        details: 一个热衷于美好社区的我的世界服务器。
+        link: https://vlssu.cn
+    
+      - title: 速特互联
+        details: 我的世界服务器出租，支持一键安装MOD插件
+        link: https://www.suteidc.com
+    
+      - title: 裕米云计算
+        details: COMCORN公共服务平台，提供优质项目云资源支持
+        link: https://comcorn.cn
+
   - image: /logos/banner_logo.png
     bgImage: https://theme-hope-assets.vuejs.press/bg/1-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/1-dark.svg
