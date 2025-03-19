@@ -124,6 +124,11 @@ export default hopeTheme({
   // 在这里配置主题提供的插件
   plugins: {
 
+    icon: {
+      // 关键词: "iconify", "fontawesome", "fontawesome-with-brands"
+      assets: "fontawesome",
+    },
+
     docsearch: {
       appId: "REVULCP1HB",
       apiKey: "379480043ba29072ada041c0fa8ef70a",

@@ -21,15 +21,15 @@ heroImageStyle:
 actions:
   - text: 项目简介
     link: /project/introduction
-    # icon: circle-info
+    icon: circle-info
     type: primary
   - text: 开始入门
     link: /panel/1.0/getting_started
-    # icon: signs-post
+    icon: signs-post
     type: primary
   - text: 一键部署
     link: /panel/1.0/docker_getstarted
-    # icon: lightbulb
+    icon: lightbulb
     type: primary
 
 highlights: 
