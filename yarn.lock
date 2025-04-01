@@ -3129,6 +3129,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/web-bluetooth@npm:^0.0.21":
+  version: 0.0.21
+  resolution: "@types/web-bluetooth@npm:0.0.21"
+  checksum: 10c0/5f47c5ec452ca31e6a9b44c8aaa54b66c4f57d4aca00166c45902a3883139580e14b254b774172ff982ba4458cc444b5aa59bb4573c2fd34562cfa599721f8e4
+  languageName: node
+  linkType: hard
+
 "@ungap/structured-clone@npm:^1.0.0":
   version: 1.2.0
   resolution: "@ungap/structured-clone@npm:1.2.0"
@@ -3394,6 +3401,22 @@ __metadata:
   peerDependencies:
     vuepress: 2.0.0-rc.20
   checksum: 10c0/3c4b847577acf6a72771482c021aa210614a951fcc047ebf19115b9847acc2255632cf772bc33fd9cfa61fda7afac55d552cb1b8dbf7c4b4d797c271f2dda7e8
+  languageName: node
+  linkType: hard
+
+"@vuepress/helper@npm:2.0.0-rc.91":
+  version: 2.0.0-rc.91
+  resolution: "@vuepress/helper@npm:2.0.0-rc.91"
+  dependencies:
+    "@vue/shared": "npm:^3.5.13"
+    "@vueuse/core": "npm:^13.0.0"
+    cheerio: "npm:1.0.0"
+    fflate: "npm:^0.8.2"
+    gray-matter: "npm:^4.0.3"
+    vue: "npm:^3.5.13"
+  peerDependencies:
+    vuepress: 2.0.0-rc.20
+  checksum: 10c0/89fb21b10b15289f042bcda8acb6ddbc793d5bb906572aae9eca1a7d861bf4316d2dbcc4b0e2056d8fbf8aa9eee26724ea173cb4d8c497fadb981cd1995d1453
   languageName: node
   linkType: hard
 
@@ -3819,20 +3842,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-revealjs@npm:2.0.0-rc.80":
-  version: 2.0.0-rc.80
-  resolution: "@vuepress/plugin-revealjs@npm:2.0.0-rc.80"
+"@vuepress/plugin-revealjs@npm:2.0.0-rc.91":
+  version: 2.0.0-rc.91
+  resolution: "@vuepress/plugin-revealjs@npm:2.0.0-rc.91"
   dependencies:
     "@mdit/plugin-uml": "npm:^0.16.0"
     "@types/markdown-it": "npm:^14.1.2"
     "@types/reveal.js": "npm:^5.0.5"
-    "@vuepress/helper": "npm:2.0.0-rc.80"
-    "@vueuse/core": "npm:^12.7.0"
-    reveal.js: "npm:^5.1.0"
+    "@vuepress/helper": "npm:2.0.0-rc.91"
+    "@vueuse/core": "npm:^13.0.0"
+    reveal.js: "npm:^5.2.1"
     vue: "npm:^3.5.13"
   peerDependencies:
     vuepress: 2.0.0-rc.20
-  checksum: 10c0/2118130aca0a717c6aaaac5e0938dc6a2a92fac365b45db7708b5ad8b6da1520ef591acbba6d81a05d5456b100b3a61d5f8f60fd8a6cc7073d3400365f739bb4
+  checksum: 10c0/028a1baf5208298f63807608c49ea82e2bf956c0abfffc455277ff3fd26a7bd3d1f8c7c0e5e41b8ed3bf056a53e0c16f827b6163dc7c6231bb7178378bd78334
   languageName: node
   linkType: hard
 
@@ -3988,10 +4011,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vueuse/core@npm:^13.0.0":
+  version: 13.0.0
+  resolution: "@vueuse/core@npm:13.0.0"
+  dependencies:
+    "@types/web-bluetooth": "npm:^0.0.21"
+    "@vueuse/metadata": "npm:13.0.0"
+    "@vueuse/shared": "npm:13.0.0"
+  peerDependencies:
+    vue: ^3.5.0
+  checksum: 10c0/1ec663fb17870b43d176180f114b46a235564276ca38e87b487685c6e44f6d1a5cec5569ca73f0641b8e5aa2acb874e36f5ad0e8c241a1505e9b5d79d83629ec
+  languageName: node
+  linkType: hard
+
 "@vueuse/metadata@npm:12.7.0":
   version: 12.7.0
   resolution: "@vueuse/metadata@npm:12.7.0"
   checksum: 10c0/e85fd0cf4fc432ba8eb21381d31f08dccb5bb42ed8bc3d21aa755f5e4ec4400c8d3168048b9cfc229544ee417bbd66123d053f248cc64ac0b7889de54e1ac571
+  languageName: node
+  linkType: hard
+
+"@vueuse/metadata@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@vueuse/metadata@npm:13.0.0"
+  checksum: 10c0/335d09b15088b47c52487a74316f4298dc5323c261d9d17aba30cf5e21a3cb8b623134cf10fa538cf29952bb77dcdc4a25b6ed92db1633218125eb6c7b64a053
   languageName: node
   linkType: hard
 
@@ -4001,6 +4044,15 @@ __metadata:
   dependencies:
     vue: "npm:^3.5.13"
   checksum: 10c0/b9508af450146feb5f1e9c53f0854e9a7b4e819ebd56a8cdeaf717287c4ade72bbfa4d4c90d656c27141288986dd712156b4d0463582616be8bd42f9368e7243
+  languageName: node
+  linkType: hard
+
+"@vueuse/shared@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@vueuse/shared@npm:13.0.0"
+  peerDependencies:
+    vue: ^3.5.0
+  checksum: 10c0/d7730ed05f90a421763f9b5e6e5ac64f0e085fade6090724f09990018106bca8dd63ed6070f2f471a472b84eaf98e0fc8307c282ec0ecb798eaf4035cb195cee
   languageName: node
   linkType: hard
 
@@ -7224,7 +7276,7 @@ __metadata:
     "@vuepress/plugin-prismjs": "npm:2.0.0-rc.80"
     "@vuepress/plugin-pwa": "npm:2.0.0-rc.80"
     "@vuepress/plugin-register-components": "npm:2.0.0-rc.79"
-    "@vuepress/plugin-revealjs": "npm:2.0.0-rc.80"
+    "@vuepress/plugin-revealjs": "npm:2.0.0-rc.91"
     markdown-it: "npm:14.1.0"
     sass: "npm:1.85.1"
     vue: "npm:3.5.13"
@@ -7464,10 +7516,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"reveal.js@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "reveal.js@npm:5.1.0"
-  checksum: 10c0/951843da5abe03d7f8e4d5c1ae1140b56786c7e82526500c46f943fdef5b2273c185be1bec5dc19a0a87d2b23129303d944e0529257f9d16daba4f446318fc82
+"reveal.js@npm:^5.2.1":
+  version: 5.2.1
+  resolution: "reveal.js@npm:5.2.1"
+  checksum: 10c0/aee2b307b0c5a13550346cc8913479a5aa27721ff23f8fa42660e5def7c96f509981eb643f6c53b086fd195a60a0bb4a47a4a0aae6edeba68753bec3deff187a
   languageName: node
   linkType: hard
 
