@@ -95,6 +95,10 @@ highlights:
       - title: 裕米云计算
         details: COMCORN公共服务平台，提供优质项目云资源支持
         link: https://comcorn.cn
+    
+      - title: 不二云服务器
+        details: 我们卖的是服务，不做价格的奴隶
+        link: https://www.cb2.cn
 
   - image: /logos/banner_logo.png
     bgImage: https://theme-hope-assets.vuejs.press/bg/1-light.svg
