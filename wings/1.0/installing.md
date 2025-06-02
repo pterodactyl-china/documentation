@@ -78,6 +78,10 @@ sudo systemctl enable --now docker
 
 #### 启用虚拟内存
 
+::: tip 最新的 Linux 内核
+自 Linux 内核 6.1 版本起，交换分区默认启用。如果您运行的是 6.1 或更新版本的内核，则可以跳过此步骤。要检查您的内核版本，请运行 `uname -r`。
+:::
+
 在大多数系统上，默认情况下 Docker 无法设置交换空间。您可以通过运行 `docker info` 并在底部附近查找 `WARNING: No swap limit support` 的输出来确认这一点。
 
 启用虚拟内存是完全可选的，但如果您要为他人托管并防止出现 OOM 错误，我们建议您开启。
