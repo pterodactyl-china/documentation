@@ -2069,6 +2069,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mdit/helper@npm:0.21.0":
+  version: 0.21.0
+  resolution: "@mdit/helper@npm:0.21.0"
+  dependencies:
+    "@types/markdown-it": "npm:^14.1.2"
+  peerDependencies:
+    markdown-it: ^14.1.0
+  peerDependenciesMeta:
+    markdown-it:
+      optional: true
+  checksum: 10c0/936bba8338d0cd8ff5507db47fee2a019770154ea0aa260c0f298d18606eab4e3e96f868462d372e296f89636e91af4b9c8686c68928e573fdaad59d38a28d92
+  languageName: node
+  linkType: hard
+
 "@mdit/plugin-alert@npm:^0.18.0":
   version: 0.18.0
   resolution: "@mdit/plugin-alert@npm:0.18.0"
@@ -2419,6 +2433,21 @@ __metadata:
     markdown-it:
       optional: true
   checksum: 10c0/941975d822864a1932bdf699c92d08fdb6920e6779adc177938b9e4883c9c723c083dcc7c0c0b0515e58f40efcbfeb2c8e7b0ba9bcd4c808c804b1c3adc16629
+  languageName: node
+  linkType: hard
+
+"@mdit/plugin-uml@npm:^0.21.0":
+  version: 0.21.0
+  resolution: "@mdit/plugin-uml@npm:0.21.0"
+  dependencies:
+    "@mdit/helper": "npm:0.21.0"
+    "@types/markdown-it": "npm:^14.1.2"
+  peerDependencies:
+    markdown-it: ^14.1.0
+  peerDependenciesMeta:
+    markdown-it:
+      optional: true
+  checksum: 10c0/d3d640364fcf4fab6b4c6d85b48636f455e6a283bca3e5e35e5c668ec2466ea6d600d5ad5ffb3dfb253e1a8f01cc57bea0f795ea8abca263483b975583774dd4
   languageName: node
   linkType: hard
 
@@ -3407,7 +3436,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/shared@npm:3.5.16, @vue/shared@npm:^3.5.14":
+"@vue/shared@npm:3.5.16, @vue/shared@npm:^3.5.14, @vue/shared@npm:^3.5.16":
   version: 3.5.16
   resolution: "@vue/shared@npm:3.5.16"
   checksum: 10c0/242ecc41f4c4e8f7f5d8714d715f4a78e31ead988da47cb369b88bd2f53aacc0f1db8c15dfac726e2a3ebe1104689bddd65c5c349ca5097e6657b2af2098c2f7
@@ -3506,6 +3535,22 @@ __metadata:
   peerDependencies:
     vuepress: 2.0.0-rc.23
   checksum: 10c0/ca5de3f489084b9922720cd8e4bbb9dc3e23e340af2f9bad258fd1f24762928d5f5f637ecab4621c4c608c69db8df10abb47f76aea6d97007cc8019ba2d37f58
+  languageName: node
+  linkType: hard
+
+"@vuepress/helper@npm:2.0.0-rc.108":
+  version: 2.0.0-rc.108
+  resolution: "@vuepress/helper@npm:2.0.0-rc.108"
+  dependencies:
+    "@vue/shared": "npm:^3.5.16"
+    "@vueuse/core": "npm:^13.3.0"
+    cheerio: "npm:1.0.0"
+    fflate: "npm:^0.8.2"
+    gray-matter: "npm:^4.0.3"
+    vue: "npm:^3.5.16"
+  peerDependencies:
+    vuepress: 2.0.0-rc.23
+  checksum: 10c0/1ebaa99c7a323f1776b7ca6cbba8746c101c479f41df1da69e73692ddf1307fd0d486e53833f0ab38fe949b097e301e86701ef404ada51c89e0bd98ac92f9efe
   languageName: node
   linkType: hard
 
@@ -3954,20 +3999,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-revealjs@npm:2.0.0-rc.104":
-  version: 2.0.0-rc.104
-  resolution: "@vuepress/plugin-revealjs@npm:2.0.0-rc.104"
+"@vuepress/plugin-revealjs@npm:2.0.0-rc.108":
+  version: 2.0.0-rc.108
+  resolution: "@vuepress/plugin-revealjs@npm:2.0.0-rc.108"
   dependencies:
-    "@mdit/plugin-uml": "npm:^0.18.0"
+    "@mdit/plugin-uml": "npm:^0.21.0"
     "@types/markdown-it": "npm:^14.1.2"
     "@types/reveal.js": "npm:^5.0.5"
-    "@vuepress/helper": "npm:2.0.0-rc.104"
-    "@vueuse/core": "npm:^13.1.0"
+    "@vuepress/helper": "npm:2.0.0-rc.108"
+    "@vueuse/core": "npm:^13.3.0"
     reveal.js: "npm:^5.2.1"
-    vue: "npm:^3.5.13"
+    vue: "npm:^3.5.16"
   peerDependencies:
     vuepress: 2.0.0-rc.23
-  checksum: 10c0/fa7627f6ba18fd12a620a5aa61a3878d0949a244c20d2705e05a2ebb6bb78b7c50e3b3125188ba1f297d76794359938a954e2130f8e5cbf8ce09ce6ff0bfbdbd
+  checksum: 10c0/a38209dd8d830bcdc40d606dd2b2dd403f55aa0bf31d26b5f6f2551798f9cccbecaa30d4ba07c0229cf18c4512672341e72bd99abdb2cd869e26cb57b1d8c8a6
   languageName: node
   linkType: hard
 
@@ -4089,7 +4134,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/core@npm:^13.1.0, @vueuse/core@npm:^13.2.0":
+"@vueuse/core@npm:^13.1.0, @vueuse/core@npm:^13.2.0, @vueuse/core@npm:^13.3.0":
   version: 13.3.0
   resolution: "@vueuse/core@npm:13.3.0"
   dependencies:
@@ -7343,7 +7388,7 @@ __metadata:
     "@vuepress/plugin-prismjs": "npm:2.0.0-rc.104"
     "@vuepress/plugin-pwa": "npm:2.0.0-rc.104"
     "@vuepress/plugin-register-components": "npm:^2.0.0-rc.103"
-    "@vuepress/plugin-revealjs": "npm:2.0.0-rc.104"
+    "@vuepress/plugin-revealjs": "npm:2.0.0-rc.108"
     markdown-it: "npm:14.1.0"
     sass: "npm:1.88.0"
     vue: "npm:3.5.13"
@@ -8736,7 +8781,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue@npm:^3.5.14":
+"vue@npm:^3.5.14, vue@npm:^3.5.16":
   version: 3.5.16
   resolution: "vue@npm:3.5.16"
   dependencies:
