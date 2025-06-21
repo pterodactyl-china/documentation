@@ -21,7 +21,7 @@
 
 
 ## 简单设置示意图
-![](./../.vuepress/public/simple_setup_diagram.png)
+![](./../.vuepress/public/simple_setup_diagram.svg)
 
 
 ## 高级设置示意图
