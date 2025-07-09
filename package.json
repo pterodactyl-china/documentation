@@ -14,7 +14,7 @@
     "@vuepress/bundler-vite": "2.0.0-rc.23",
     "@vuepress/plugin-docsearch": "2.0.0-rc.104",
     "@vuepress/plugin-google-analytics": "2.0.0-rc.103",
-    "@vuepress/plugin-prismjs": "2.0.0-rc.104",
+    "@vuepress/plugin-prismjs": "2.0.0-rc.112",
     "@vuepress/plugin-pwa": "2.0.0-rc.104",
     "@vuepress/plugin-register-components": "^2.0.0-rc.103",
     "@vuepress/plugin-revealjs": "2.0.0-rc.104",
