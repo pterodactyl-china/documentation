@@ -9,7 +9,7 @@
 | 名字 | Discord 名称 | 联系方式 | 负责内容 |
 | ---- | ------------ | ------ | ---- |
 | [飒爽师叔](https://vlssu.com/) | `vlssu#9657` | [vlssu@vlssu.com](mailto:vlssu@vlssu.com) | 汉化主要负责人，项目维护人员 |
-| [冰凌](https://icewk.org/) | `a1an#5788` | [iceling@icewk.org](mailto:iceling@icewk.org) | 汉化主要负责人 |
+| [冰凌](https://sunnyquan.com/) | `a1an#5788` | [sun@sunnyquan.com](mailto:sun@sunnyquan.com) | 汉化主要负责人 |
 | [Wapriaily](https://www.wapriaily.com/) | `Wapriaily#3923` | [kano@wapriaily.com](mailto:kano@wapriaily.com) | Egg 、Docker 开发维护协助人员 |
 
 翼龙(中国)项目团队的成员用青绿色用户名在翼龙(中国)官方的 KOOK 服务器中显示。
