@@ -96,9 +96,7 @@ semodule -i http_port_t.pp
 ```bash
 # Network Manager（这将显示您的 IPV4 DNS 和 IPV6 DNS 服务器，以防您想要将主机的 IPV6 DNS 服务器添加到您的 Wings 配置中。
 nmcli -g ip4.dns,ip6.dns dev show
-# Systemd-Resolve（适用于 Ubuntu 18.04 和 20.04）
-systemd-resolve --status
-# Resolve-CTL（适用于较新版本的 Ubuntu）
+# Resolve-CTL (适用于较新版本的 Ubuntu)
 resolvectl status
 # 可能包含主机系统 DNS 服务器的原始文件位置，适用于各种发行版
 /etc/resolv.conf

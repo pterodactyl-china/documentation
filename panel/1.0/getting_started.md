@@ -21,8 +21,7 @@ Pterodactyl 不支持大多数 OpenVZ 系统，因为它与 Docker 不兼容。�
 
 | 操作系统 | 版本 |     支持状况      | 注意事项                                                       |
 | ---------------------------------- | ------- | :----------------: | ----------------------------------------------------------- |
-| **Ubuntu**                         | 20.04   | :white_check_mark: | 文档以 Ubuntu 20.04 操作系统为基本所编写的。 |
-|                                    | 22.04   | :white_check_mark: | MariaDB 无需 repo 安装脚本即可安装。     |
+| **Ubuntu**                         | 22.04   | :white_check_mark: | 需要额外的 PHP 仓库                     |
 |                                    | 24.04   | :white_check_mark: | MariaDB 无需 repo 安装脚本即可安装。     |
 | **RHEL / Rocky Linux / AlmaLinux** | 8       | :white_check_mark: | 需要额外的存储库。                                   |
 |                                    | 9       | :white_check_mark: |                                                             |
@@ -49,15 +48,12 @@ Pterodactyl 不支持大多数 OpenVZ 系统，因为它与 Docker 不兼容。�
 # 添加 "add-apt-repository" 命令
 apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
 
-# 为 PHP、Redis 和 MariaDB 添加额外的存储库 （Ubuntu 20.04 和 Ubuntu 22.04）
+# 添加额外的 PHP 仓库 (Ubuntu 22.04)
 LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
 
 # 添加 Redis 官方 APT 仓库
 curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
-
-# MariaDB 存储库安装脚本（Ubuntu 20.04）
-curl -LsS https://r.mariadb.com/downloads/mariadb_repo_setup | sudo bash
 
 # 更新存储库列表
 apt update
@@ -148,7 +144,28 @@ php artisan key:generate --force
 ```
 
 ::: danger
-请备份您的加密密钥（`.env` 文件中的 `APP_KEY`）！ 它用作所有需要安全存储的数据的加密密钥（例如 api 密钥）。 请将其存储在安全的地方！ 如果您丢失它，所有加密数据都将无法恢复！即使您有数据库备份也无济于事！！！
+请备份您的加密密钥（`.env` 文件中的 `APP_KEY`）！ 它用作所有需要安全存储的数据的加密密钥（例如 api 密钥）。
+请将其存储在安全的地方！ 如果您弄丢了，所有加密数据都将无法恢复！即使您有数据库备份也没用！！！
+
+要获取你的 `APP_KEY`，请打开终端并在你的面板目录中运行以下命令：
+
+```bash
+grep APP_KEY /var/www/pterodactyl/.env
+```
+
+您应该看到类似于以下内容:
+
+```text
+APP_KEY=base64:YOUR_LONG_RANDOM_STRING
+```
+
+将整行复制并保存到安全的地方:
+- 密码管理器
+- 本地机器上的加密文件
+- 安全的 USB 驱动器
+- 可信的云存储
+
+如果您丢失了这个密钥，您的加密数据将永远无法恢复。
 :::
 
 ### 环境配置

@@ -19,7 +19,7 @@
 # 添加 PHP 的额外仓库
 add-apt-repository -y ppa:ondrej/php
 apt -y update
-apt -y install php8.3 php8.3-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip}
+apt -y install php8.3 php8.3-{cli,gd,mysql,common,mbstring,tokenizer,bcmath,xml,fpm,curl,zip}
 ```
 
 ## 更新 Composer
