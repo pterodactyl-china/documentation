@@ -11,18 +11,18 @@
     "docs:update-package": "yarn dlx vp-update"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.23",
-    "@vuepress/plugin-docsearch": "2.0.0-rc.104",
-    "@vuepress/plugin-google-analytics": "2.0.0-rc.103",
-    "@vuepress/plugin-prismjs": "2.0.0-rc.104",
-    "@vuepress/plugin-pwa": "2.0.0-rc.104",
-    "@vuepress/plugin-register-components": "^2.0.0-rc.103",
-    "@vuepress/plugin-revealjs": "2.0.0-rc.104",
+    "@vuepress/bundler-vite": "2.0.0-rc.24",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.112",
+    "@vuepress/plugin-google-analytics": "2.0.0-rc.112",
+    "@vuepress/plugin-prismjs": "2.0.0-rc.112",
+    "@vuepress/plugin-pwa": "2.0.0-rc.112",
+    "@vuepress/plugin-register-components": "^2.0.0-rc.112",
+    "@vuepress/plugin-revealjs": "2.0.0-rc.112",
     "markdown-it": "14.1.0",
-    "sass": "1.88.0",
-    "vue": "3.5.13",
-    "vuepress": "2.0.0-rc.23",
-    "vuepress-theme-hope": "2.0.0-rc.88"
+    "sass": "1.92.1",
+    "vue": "3.5.21",
+    "vuepress": "2.0.0-rc.24",
+    "vuepress-theme-hope": "2.0.0-rc.94"
   },
-  "packageManager": "yarn@4.9.1"
+  "packageManager": "yarn@4.9.4"
 }
