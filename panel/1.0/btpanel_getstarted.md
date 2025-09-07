@@ -21,8 +21,7 @@ Pterodactyl 不支持大多数 OpenVZ 系统，因为它与 Docker 不兼容。�
 
 | 操作系统 | 版本 |     支持状况      | 注意事项                                                       |
 | ---------------------------------- | ------- | :----------------: | ----------------------------------------------------------- |
-| **Ubuntu**                         | 20.04   | :white_check_mark: | 文档以 Ubuntu 20.04 操作系统为基本所编写的。 |
-|                                    | 22.04   | :white_check_mark: | MariaDB 无需 repo 安装脚本即可安装。     |
+| **Ubuntu**                         | 22.04   | :white_check_mark: | 需要额外的 PHP 仓库                     |
 |                                    | 24.04   | :white_check_mark: | MariaDB 无需 repo 安装脚本即可安装。     |
 | **RHEL / Rocky Linux / AlmaLinux** | 8       | :white_check_mark: | 需要额外的存储库。                                   |
 |                                    | 9       | :white_check_mark: |                                                             |
@@ -50,7 +49,7 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 ## 安装LNMP或LAMP基础环境
 
 `LNMP` 和 `LAMP` 分别代表着 `Linux` `Nginx\Apache` `Mysql` `PHP`   
-阁下选择版本请务必保证 `PHP`版本 >=  `8.1`、 `MySQL`版本 >=  `5.7`    
+阁下选择版本请务必保证 `PHP`版本 >=  `8.3`、 `MySQL`版本 >=  `5.7`    
 这一般会在阁下第一次登录宝塔面板时提示安装，我不在此赘述，若阁下错过提示，可点击 `软件商店` 自行安装    
 在安装完毕后，在 `PHP` 的**禁用函数**里删除 `putenv`、 `exec`、 `proc_open`、 `shell_exec`，并且在扩展里安装 `fileinfo` `redis`
 
@@ -212,7 +211,7 @@ WantedBy=multi-user.target
 ::: tip
 你在 `PHP` 安装 `redis` 拓展时应该自动安装了 `redis` 并启动了，但如果发现 应用商店中没有或未启动 `redis` ，你应该启动它。      
 如果你的面板路径并不是 `/www/wwwroot/pterodactyl/`，请替换为你面板的绝对路径，否则邮件服务将无法使用。      
-如果你宝塔默认命令行使用的并不是 `8.1`PHP 可以尝试使用绝对路径，将 `/usr/bin/php` 改为 `/www/server/php/81/bin/php`
+如果你宝塔默认命令行使用的并不是 `8.3`PHP 可以尝试使用绝对路径，将 `/usr/bin/php` 改为 `/www/server/php/83/bin/php`
 :::
 
 最后，启动队列监听服务并设置开启自动启动
