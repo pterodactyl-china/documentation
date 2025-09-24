@@ -15,7 +15,7 @@
 
 构建工具需要 NodeJS，使用 yarn 作为包管理器。
 
-::: tabs
+::: code-tabs
 
 @tab Ubuntu/Debian
 
