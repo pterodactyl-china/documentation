@@ -34,7 +34,7 @@ sudo yum install -y nodejs yarn
 @tab CentOS 8, Rocky Linux 8, AlmaLinux 8
 
 ```bash
-curl -sL https://rpm.nodesource.com/setup_16.x | sudo -E bash -
+curl -sL https://rpm.nodesource.com/setup_22.x | sudo -E bash -
 sudo dnf install -y nodejs yarn
 ```
 
