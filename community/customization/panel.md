@@ -20,15 +20,15 @@
 @tab Ubuntu/Debian
 
 ```bash
-# Ubuntu/Debian
 curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash - 
 sudo apt install -y nodejs
 ```
 
-# CentOS
+@tab CentOS 7
+
+```bash
 curl -sL https://rpm.nodesource.com/setup_22.x | sudo -E bash -
-sudo yum install -y nodejs yarn # CentOS 7
-sudo dnf install -y nodejs yarn # CentOS 8, Rocky Linux 8, AlmaLinux 8
+sudo yum install -y nodejs yarn
 ```
 
 @tab CentOS 8, Rocky Linux 8, AlmaLinux 8
