@@ -12,13 +12,13 @@
 | [冰凌](https://sunnyquan.com/) | `a1an#5788` | [sun@sunnyquan.com](mailto:sun@sunnyquan.com) | 汉化主要负责人 |
 | [Wapriaily](https://www.wapriaily.com/) | `Wapriaily#3923` | [kano@wapriaily.com](mailto:kano@wapriaily.com) | Egg 、Docker 开发维护协助人员 |
 
-翼龙(中国)项目团队的成员用青绿色用户名在翼龙(中国)官方的 KOOK 服务器中显示。
+翼龙(中国)项目团队的成员用青绿色标签在翼龙(中国)官方的 翼龙中国社区 中显示。
 
 ### 社区团队
-如果没有我们出色的社区团队帮助，翼龙面板汉化/拓展将不会如此迅速。这些成员可以在翼龙(中国)官方的 KOOK 服务器中找到，并以黄色用户名显示。
+如果没有我们出色的社区团队帮助，翼龙面板汉化/拓展将不会如此迅速。这些成员可以在翼龙(中国)官方的 翼龙中国社区 中找到，并以黄色标签显示。
 
 ### 赞助商
-以下公司/个人帮助资助翼龙(中国)的发展。 [有兴趣成为赞助商吗？](https://afdian.net/@vlssu)
+以下公司/个人帮助资助翼龙(中国)的发展。 [有兴趣成为赞助商吗？](https://afdian.tv/a/vlssu)
 
 | 公司/个人 | 关于 |
 | ------- | ----- |
@@ -26,7 +26,8 @@
 | [**速特互联**](https://www.suteidc.com) | 我的世界服务器出租，支持一键安装MOD插件 |
 | [**裕米云计算**](https://comcorn.cn) | COMCORN公共服务平台，提供优质项目云资源支持 |
 
-## 翼龙
+::: details 翼龙（官方）
+
 ### 项目核心团队
 | 名字 | Discord 名称 | 负责内容 |
 | ---- | ------------ | ---- |
@@ -38,29 +39,15 @@
 翼龙项目团队的成员用红色用户名在翼龙官方的 Discord 服务器中显示。
 
 ### 社区团队
-如果没有我们出色的社区团队帮助，翼龙就不会像今天这样成功。 这些成员可以在翼龙官方的 Discord 服务器中找到，并以黄色用户名显示。
+如果没有我们出色的社区团队帮助，翼龙就不会像今天这样成功。这些成员可以在翼龙官方的 Discord 服务器中找到，并以黄色用户名显示。
 
-## 赞助商
-
-以下公司帮助资助翼龙的发展。 [有兴趣成为赞助商吗？](https://github.com/sponsors/DaneEveritt)
-
-| 公司                                                   | 关于                                                                                                                                                                                                                           |
-|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Aussie Server Hosts**](https://aussieserverhosts.com/)    | No frills Australian Owned and operated High Performance Server hosting for some of the most demanding games serving Australia and New Zealand.                                                                                                                       |
-| [**CodeNode LLC**](https://codenode.gg/)                     | Looking for simplicity? Well, look no further! CodeNode has got you covered with everything you need at the rock-bottom price of $1.75 per GB, including dedicated IPs in Dallas, Texas, and Amsterdam, Netherlands. We're not just good, we're the best in the game! |
-| [**BisectHosting**](https://www.bisecthosting.com/)          | BisectHosting provides Minecraft, Valheim and other server hosting services with the highest reliability and lightning fast support since 2012.                                                                                                                       |
-| [**MineStrator**](https://minestrator.com/)                  | Looking for the most highend French hosting company for your minecraft server? More than 24,000 members on our discord trust us. Give us a try!                                                                                                                       |
-| [**HostEZ**](https://hostez.io)                              | US & EU Rust & Minecraft Hosting. DDoS Protected bare metal, VPS and colocation with low latency, high uptime and maximum availability. EZ!                                                                                                                           |
-| [**Blueprint**](https://blueprint.zip/?pterodactyl=true)     | Create and install Pterodactyl addons and themes with the growing Blueprint framework - the package-manager for Pterodactyl. Use multiple modifications at once without worrying about conflicts and make use of the large extension ecosystem.                       |
-| [**indifferent broccoli**](https://indifferentbroccoli.com/) | indifferent broccoli is a game server hosting and rental company. With us, you get top-notch computer power for your gaming sessions. We destroy lag, latency, and complexity--letting you focus on the fun stuff.                                                    |
-
-## License
+### License
 
 Pterodactyl® Copyright © 2015 Dane Everitt and contributors.
 
 Code released under the [MIT License](https://github.com/pterodactyl/panel/blob/1.0-develop/LICENSE.md).
 
-## 发行签名
+### 发行签名
 
 之前，发行版本是由 GPG 密钥签名的。现在，所有最近的发行版本都使用 SSH 签名密钥进行签名。
 
@@ -69,3 +56,5 @@ Code released under the [MIT License](https://github.com/pterodactyl/panel/blob/
 ```text
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKL873MsP1OFfffNC8n9WcVuOXOSW65/q26MIzib0K9k
 ```
+
+:::
