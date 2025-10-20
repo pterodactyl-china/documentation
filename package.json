@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.24",
-    "@vuepress/plugin-docsearch": "2.0.0-rc.112",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.115",
     "@vuepress/plugin-google-analytics": "2.0.0-rc.112",
     "@vuepress/plugin-prismjs": "2.0.0-rc.112",
     "@vuepress/plugin-pwa": "2.0.0-rc.112",
