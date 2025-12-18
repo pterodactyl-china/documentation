@@ -52,3 +52,33 @@ systemctl restart wings
 ::: warning
 解决报错后，请再次编辑 `.env` 文件，将 `APP_DEBUG` 这一项的值改为 `false`，否则可能泄露重要机密信息。
 :::
+
+## 安装wings时提示初始化sftp服务器失败 `error＝ssh:no key found`
+
+这个错误通常是因为 Wings 在初始化 SFTP 服务时没有找到或生成有效的 SSH 密钥文件。你需要手动生成一个 ED25519 密钥并放到指定目录 `/var/lib/pterodactyl/volumes/.sftp/id_ed25519` 来解决问题
+
+1. 检查目录是否存在并可写
+
+```bash
+sudo mkdir -p /var/lib/pterodactyl/volumes/.sftp
+sudo chown -R pterodactyl:pterodactyl /var/lib/pterodactyl/volumes/.sftp
+```
+
+2. 手动生成 ED25519 密钥
+
+```bash
+ssh-keygen -t ed25519 -f /var/lib/pterodactyl/volumes/.sftp/id_ed25519 -N ""
+```
+
+::: tip 确认文件生成成功
+```
+私钥：/var/lib/pterodactyl/volumes/.sftp/id_ed25519
+公钥：/var/lib/pterodactyl/volumes/.sftp/id_ed25519.pub
+```
+:::
+
+4. 重启 Wings 服务
+
+```bash
+systemctl restart wings
+```
