@@ -60,7 +60,6 @@ export default sidebar({
       children: [
         '/community/installation-guides/panel/centos7.md',
         '/community/installation-guides/panel/centos8.md',
-        '/community/installation-guides/panel/debian.md',
       ]
     },
     {

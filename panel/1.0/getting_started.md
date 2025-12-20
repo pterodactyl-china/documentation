@@ -25,9 +25,9 @@ Pterodactyl 不支持大多数 OpenVZ 系统，因为它与 Docker 不兼容。�
 |                                    | 24.04   | :white_check_mark: | MariaDB 无需 repo 安装脚本即可安装。     |
 | **RHEL / Rocky Linux / AlmaLinux** | 8       | :white_check_mark: | 需要额外的存储库。                                   |
 |                                    | 9       | :white_check_mark: |                                                             |
-| **Debian**                         | 11      | :white_check_mark: | [Debian Dependencies](/community/installation-guides/panel/debian.md)                                                            |
-|                                    | 12      | :white_check_mark: | [Debian Dependencies](/community/installation-guides/panel/debian.md)
-|                                    | 13      | :white_check_mark: | [Debian Dependencies](/community/installation-guides/panel/debian.md)
+| **Debian**                         | 11      | :white_check_mark: | [Debian 依赖项](/community/installation-guides/panel/debian.md)                                                            |
+|                                    | 12      | :white_check_mark: | [Debian 依赖项](/community/installation-guides/panel/debian.md)
+|                                    | 13      | :white_check_mark: | [Debian 依赖项](/community/installation-guides/panel/debian.md)
 
 ## 依赖项
 
