@@ -19,6 +19,7 @@ Wings 是翼龙的下一代服务器管理平台。使用 Go 重构，并从我�
 |                                    | 9       | :white_check_mark: |                                                             |
 | **Debian**                         | 11      | :white_check_mark: |                                                             |
 |                                    | 12      | :white_check_mark: |                                                             |
+|                                    | 13      | :white_check_mark: |                                                             |
 | **Windows**                        | All     |        :x:         | 该软件将无法在 Windows 环境中运行。         |
 
 ## 系统要求
