@@ -3374,6 +3374,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vuepress/helper@npm:2.0.0-rc.121":
+  version: 2.0.0-rc.121
+  resolution: "@vuepress/helper@npm:2.0.0-rc.121"
+  dependencies:
+    "@vue/shared": "npm:^3.5.25"
+    "@vueuse/core": "npm:^14.1.0"
+    cheerio: "npm:^1.1.2"
+    fflate: "npm:^0.8.2"
+    gray-matter: "npm:^4.0.3"
+    vue: "npm:^3.5.25"
+  peerDependencies:
+    vuepress: 2.0.0-rc.26
+  checksum: 10c0/a08c383a2ffda6481af651913134195374f7264e63a7f80201b787ce62e34722177fa1e549346a42c5034b72d3c12b85e4a066068aa4381986b355183956a0fb
+  languageName: node
+  linkType: hard
+
 "@vuepress/highlighter-helper@npm:2.0.0-rc.118":
   version: 2.0.0-rc.118
   resolution: "@vuepress/highlighter-helper@npm:2.0.0-rc.118"
@@ -3788,16 +3804,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-prismjs@npm:2.0.0-rc.120":
-  version: 2.0.0-rc.120
-  resolution: "@vuepress/plugin-prismjs@npm:2.0.0-rc.120"
+"@vuepress/plugin-prismjs@npm:2.0.0-rc.121":
+  version: 2.0.0-rc.121
+  resolution: "@vuepress/plugin-prismjs@npm:2.0.0-rc.121"
   dependencies:
-    "@vuepress/helper": "npm:2.0.0-rc.120"
+    "@vuepress/helper": "npm:2.0.0-rc.121"
     "@vuepress/highlighter-helper": "npm:2.0.0-rc.118"
     prismjs: "npm:^1.30.0"
   peerDependencies:
     vuepress: 2.0.0-rc.26
-  checksum: 10c0/054f59e44b31965f744dec5fbfa4e81505dd44941adbb76d8e888a8cbbcf2b7ae64a807c3a57753bb30a8efb69bc548ddf18d2d5864aa497d869bef2229c503b
+  checksum: 10c0/5f2d5fa02dc83bae1872ce68495fadd973caf3b1fbf5d7dda95a2a01df7ad70b2165b80ececbd95d09cccfd461a67866455ce92932967edfe22fd831451cb0a9
   languageName: node
   linkType: hard
 
@@ -7136,7 +7152,7 @@ __metadata:
     "@vuepress/bundler-vite": "npm:2.0.0-rc.26"
     "@vuepress/plugin-docsearch": "npm:2.0.0-rc.120"
     "@vuepress/plugin-google-analytics": "npm:2.0.0-rc.118"
-    "@vuepress/plugin-prismjs": "npm:2.0.0-rc.120"
+    "@vuepress/plugin-prismjs": "npm:2.0.0-rc.121"
     "@vuepress/plugin-pwa": "npm:2.0.0-rc.120"
     "@vuepress/plugin-register-components": "npm:^2.0.0-rc.118"
     "@vuepress/plugin-revealjs": "npm:2.0.0-rc.120"
