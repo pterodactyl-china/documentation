@@ -3374,6 +3374,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vuepress/helper@npm:2.0.0-rc.121":
+  version: 2.0.0-rc.121
+  resolution: "@vuepress/helper@npm:2.0.0-rc.121"
+  dependencies:
+    "@vue/shared": "npm:^3.5.25"
+    "@vueuse/core": "npm:^14.1.0"
+    cheerio: "npm:^1.1.2"
+    fflate: "npm:^0.8.2"
+    gray-matter: "npm:^4.0.3"
+    vue: "npm:^3.5.25"
+  peerDependencies:
+    vuepress: 2.0.0-rc.26
+  checksum: 10c0/a08c383a2ffda6481af651913134195374f7264e63a7f80201b787ce62e34722177fa1e549346a42c5034b72d3c12b85e4a066068aa4381986b355183956a0fb
+  languageName: node
+  linkType: hard
+
 "@vuepress/highlighter-helper@npm:2.0.0-rc.118":
   version: 2.0.0-rc.118
   resolution: "@vuepress/highlighter-helper@npm:2.0.0-rc.118"
@@ -3801,11 +3817,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-pwa@npm:2.0.0-rc.120":
-  version: 2.0.0-rc.120
-  resolution: "@vuepress/plugin-pwa@npm:2.0.0-rc.120"
+"@vuepress/plugin-pwa@npm:2.0.0-rc.121":
+  version: 2.0.0-rc.121
+  resolution: "@vuepress/plugin-pwa@npm:2.0.0-rc.121"
   dependencies:
-    "@vuepress/helper": "npm:2.0.0-rc.120"
+    "@vuepress/helper": "npm:2.0.0-rc.121"
     "@vueuse/core": "npm:^14.1.0"
     mitt: "npm:^3.0.1"
     register-service-worker: "npm:^1.7.2"
@@ -3813,7 +3829,7 @@ __metadata:
     workbox-build: "npm:^7.4.0"
   peerDependencies:
     vuepress: 2.0.0-rc.26
-  checksum: 10c0/b2a015d0c1783effa633ee11b829e1ff24ea430fc526d436c9886a440bf6ed44568f2a2d14dabbc138d418224e6b46e86be29b473bea74d9473d4efce8142e23
+  checksum: 10c0/dd257e7d0ec7964f4931142690281bb04a0500cbebc6c6171014f12d548845a111eb356110b8112d315ef805d8fe9b3595ece2ae1e8d5897c5c6510f37b48018
   languageName: node
   linkType: hard
 
@@ -7137,7 +7153,7 @@ __metadata:
     "@vuepress/plugin-docsearch": "npm:2.0.0-rc.120"
     "@vuepress/plugin-google-analytics": "npm:2.0.0-rc.118"
     "@vuepress/plugin-prismjs": "npm:2.0.0-rc.120"
-    "@vuepress/plugin-pwa": "npm:2.0.0-rc.120"
+    "@vuepress/plugin-pwa": "npm:2.0.0-rc.121"
     "@vuepress/plugin-register-components": "npm:^2.0.0-rc.118"
     "@vuepress/plugin-revealjs": "npm:2.0.0-rc.120"
     markdown-it: "npm:14.1.0"
