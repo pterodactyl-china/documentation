@@ -45,11 +45,13 @@
 #### server.properties
 
 设置online-mode为`false`
+
 ![](../../.vuepress/public/community/games/minecraft/proxy/paper-server.properties.png)
 
 #### spigot.yml
 
 设置bungeecord为`true`
+
 ![](../../.vuepress/public/community/games/minecraft/proxy/paper-spigot.yml.png)
 
 ### 防火墙
