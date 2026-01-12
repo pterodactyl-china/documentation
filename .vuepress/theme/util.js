@@ -17,10 +17,11 @@ export function getHash(path) {
 }
 
 export function isExternal(path) {
-  if (/https?:\/\/([^\/]*\.)?pterodactyl\.io/.test(path)) {
-    return false
-  }
   return outboundRE.test(path)
+}
+
+export function isPterodactylIo(path) {
+  return /https?:\/\/([^\/]*\.)?pterodactyl\.io/.test(path)
 }
 
 export function isMailto(path) {
