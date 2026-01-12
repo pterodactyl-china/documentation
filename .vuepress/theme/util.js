@@ -17,6 +17,9 @@ export function getHash(path) {
 }
 
 export function isExternal(path) {
+  if (/https?:\/\/([^\/]*\.)?pterodactyl\.io/.test(path)) {
+    return false
+  }
   return outboundRE.test(path)
 }
 

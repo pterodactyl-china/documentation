@@ -43,6 +43,10 @@ module.exports = {
         logo: '/logos/pterry.svg',
         nav: [
             {
+                text: 'Eggs',
+                link: 'https://eggs.pterodactyl.io/',
+            },
+            {
                 text: 'Documentation',
                 link: '/project/introduction.md',
             },
