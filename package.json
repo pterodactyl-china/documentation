@@ -17,7 +17,7 @@
     "@vuepress/plugin-prismjs": "2.0.0-rc.120",
     "@vuepress/plugin-pwa": "2.0.0-rc.120",
     "@vuepress/plugin-register-components": "^2.0.0-rc.118",
-    "@vuepress/plugin-revealjs": "2.0.0-rc.120",
+    "@vuepress/plugin-revealjs": "2.0.0-rc.123",
     "markdown-it": "14.1.0",
     "sass": "1.94.2",
     "vue": "3.5.26",
