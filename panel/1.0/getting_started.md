@@ -116,10 +116,10 @@ chmod -R 755 storage/* bootstrap/cache/
 翼龙面板前端内的数据，例如：用户/用户账户下的服务器等。均需要 MYSQL 数据库进行存储。您将需要一个数据库设置和一个具有为该数据库创建正确权限的用户，然后才能继续进行。请参阅下文以快速为您的翼龙面板创建用户和数据库。要查找更多详细信息，请查看 [设置 MySQL](/tutorials/mysql_setup.html)。
 
 ```sql
-# If using MariaDB (v11.0.0+) (This is the default when installing Pterodactyl by following the documentation.)
+# 如果使用 MariaDB（版本 11.0.0 或更高版本）（这是按照文档安装 Pterodactyl 时的默认设置。）
 mariadb -u root -p
 
-# If using MySQL
+# 如果使用 MySQL
 mysql -u root -p
 ```
 ```sql
