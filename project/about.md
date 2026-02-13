@@ -49,9 +49,13 @@ Code released under the [MIT License](https://github.com/pterodactyl/panel/blob/
 
 ### 发行签名
 
-之前，发行版本是由 GPG 密钥签名的。现在，所有最近的发行版本都使用 SSH 签名密钥进行签名。
+面板和 Wings 的所有版本（包括 v1.12.0 及之后的版本）均使用以下新的 SSH 签名密钥进行签名：
 
-此密钥用于签署由 Matthew Penner 创建的发行标签和提交。这个密钥首次用于为 Panel 的 `v1.10.2` 和 Wings 的 `v1.7.1` 进行签名，此后一直在使用。
+```text
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID4jRyjZHLujJfeQPrEx3YY+0QUmdmfK9GF8rHe7rWSn
+```
+
+之前，版本发布是使用以下 SSH 签名密钥进行签名的：
 
 ```text
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKL873MsP1OFfffNC8n9WcVuOXOSW65/q26MIzib0K9k

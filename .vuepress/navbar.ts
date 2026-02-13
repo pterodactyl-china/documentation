@@ -24,6 +24,19 @@ export default navbar([
     link: 'https://bbs.pterodactyl.top'
   },
   {
+    text: '预设下载',
+    children: [
+      {
+        text: '翼龙中国',
+        link: 'https://eggs.pterodactyl.top',
+      },
+      {
+        text: '翼龙官方',
+        link: 'https://eggs.pterodactyl.io',
+      }
+    ]
+  },
+  {
     text: 'API',
     link: 'https://dashflo.net/docs/api/pterodactyl/v1/'
   },
