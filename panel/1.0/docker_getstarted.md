@@ -130,7 +130,7 @@ chmod +x docker-compose.yml
 ``` bash
 # 在后台执行该服务
 # -d 参数是让该程序在后台执行，如果你需要排查错误等情况你可以去除该参数
-docker-compose up -d
+docker compose up -d
 ```
 
 ### 添加首位用户
@@ -138,7 +138,7 @@ docker-compose up -d
 您需要为面板创建一个管理用户，以便您可以登录面板。 为此，请运行以下命令。 并保证账户密码满足以下要求：8 个字符，大小写混合，至少一个数字。(此指令需在上文中含有 `docker-compose.yml` 的同级目录中执行）
 
 ``` bash
-docker-compose exec panel php artisan p:user:make
+docker compose exec panel php artisan p:user:make
 ```
 
 现在，你已经全部设置完毕，直接输入你的网站地址，即可访问翼龙面板
